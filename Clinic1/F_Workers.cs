@@ -98,7 +98,7 @@ namespace Clinic1
                 if (workerCheck.Rows.Count == 0)
                 {
                     int perm = Int32.Parse(CmbPermissions.SelectedValue.ToString());
-                    daWorkers.Insert(Int32.Parse(TxtID.Text), TxtFirstName.Text, fullname, TxtLastName.Text, perm, true);
+                    daWorkers.Insert(Int32.Parse(TxtID.Text), TxtFirstName.Text, fullname, TxtLastName.Text, perm, true,TxtPassword.Text);
                     BtnAddNewWorker.Visible = true;
                     BtnPermissions.Visible = true;
                     workerCheck = daWorkers.GetData();

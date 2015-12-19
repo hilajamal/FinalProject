@@ -49,5 +49,11 @@ namespace Clinic1
             workers.StartPosition = FormStartPosition.CenterScreen;
             workers.Show();
         }
+
+        private void BtnGroups_Click(object sender, EventArgs e)
+        {
+            F_Groups groups = new F_Groups();
+            groups.Show();
+        }
     }
 }

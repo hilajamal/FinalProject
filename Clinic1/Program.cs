@@ -16,7 +16,7 @@ namespace Clinic1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            F_MainForm main = new F_MainForm();
+            F_Password main = new F_Password();
             main.StartPosition = FormStartPosition.CenterScreen;
             Application.Run(main);
         }

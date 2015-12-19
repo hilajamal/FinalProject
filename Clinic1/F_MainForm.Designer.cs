@@ -31,6 +31,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.BtnWorkers = new System.Windows.Forms.Button();
+            this.BtnGroups = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -69,12 +70,25 @@
             this.BtnWorkers.UseVisualStyleBackColor = false;
             this.BtnWorkers.Click += new System.EventHandler(this.BtnWorkers_Click);
             // 
+            // BtnGroups
+            // 
+            this.BtnGroups.BackColor = System.Drawing.Color.DodgerBlue;
+            this.BtnGroups.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGroups.Location = new System.Drawing.Point(905, 418);
+            this.BtnGroups.Name = "BtnGroups";
+            this.BtnGroups.Size = new System.Drawing.Size(138, 83);
+            this.BtnGroups.TabIndex = 3;
+            this.BtnGroups.Text = "קבוצות טיפול";
+            this.BtnGroups.UseVisualStyleBackColor = false;
+            this.BtnGroups.Click += new System.EventHandler(this.BtnGroups_Click);
+            // 
             // F_MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1084, 573);
+            this.Controls.Add(this.BtnGroups);
             this.Controls.Add(this.BtnWorkers);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -89,6 +103,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button BtnWorkers;
+        private System.Windows.Forms.Button BtnGroups;
 
     }
 }

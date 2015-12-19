@@ -11,6 +11,21 @@
     <AssemblyName>Clinic1</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -60,6 +75,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Clinic.xsd</DependentUpon>
     </Compile>
+    <Compile Include="F_AddNewGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_AddNewGroup.Designer.cs">
+      <DependentUpon>F_AddNewGroup.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_Calendar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,11 +93,29 @@
     <Compile Include="F_Contacts.Designer.cs">
       <DependentUpon>F_Contacts.cs</DependentUpon>
     </Compile>
+    <Compile Include="F_Groups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Groups.Designer.cs">
+      <DependentUpon>F_Groups.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="F_MainForm.Designer.cs">
       <DependentUpon>F_MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Password.Designer.cs">
+      <DependentUpon>F_Password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_UpdateGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_UpdateGroups.Designer.cs">
+      <DependentUpon>F_UpdateGroups.cs</DependentUpon>
     </Compile>
     <Compile Include="F_Workers.cs">
       <SubType>Form</SubType>
@@ -84,16 +123,29 @@
     <Compile Include="F_Workers.Designer.cs">
       <DependentUpon>F_Workers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Globals.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="F_AddNewGroup.resx">
+      <DependentUpon>F_AddNewGroup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F_Calendar.resx">
       <DependentUpon>F_Calendar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_Contacts.resx">
       <DependentUpon>F_Contacts.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="F_Groups.resx">
+      <DependentUpon>F_Groups.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F_MainForm.resx">
       <DependentUpon>F_MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Password.resx">
+      <DependentUpon>F_Password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_UpdateGroups.resx">
+      <DependentUpon>F_UpdateGroups.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_Workers.resx">
       <DependentUpon>F_Workers.cs</DependentUpon>
@@ -131,6 +183,23 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
