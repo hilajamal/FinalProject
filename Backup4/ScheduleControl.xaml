@@ -1,0 +1,53 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:schedule="clr-namespace:Schedule;assembly=Schedule"
+    xmlns:primitives="clr-namespace:Schedule.Primitives;assembly=Schedule"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:Custom="http://schemas.microsoft.com/wpf/2008/toolkit"
+    x:Class="TestApplication.ScheduleControl"
+    Title="WPF Schedule control" Height="600" Width="800"
+    Icon="Schedule.ico">
+    
+    <Window.Resources>
+
+        <schedule:AppointmentCollection x:Key="Appointments">
+            
+        </schedule:AppointmentCollection>
+
+        <CollectionViewSource x:Key="ItemSizes">
+            <CollectionViewSource.Source>
+                <ObjectDataProvider MethodName="GetNames" ObjectType="{x:Type sys:Enum}">
+                    <ObjectDataProvider.MethodParameters>
+                        <x:Type TypeName="primitives:TimeItemSize" />
+                    </ObjectDataProvider.MethodParameters>
+                </ObjectDataProvider>
+            </CollectionViewSource.Source>
+        </CollectionViewSource>
+    </Window.Resources>
+	
+	<DockPanel>
+		<ToolBar DockPanel.Dock="Top">
+            <Button Click="Button_Click">Toevoegen</Button>
+            <Button Content="New appointment" Margin="15,0"/>
+			<Separator/>
+            <Label Content="Start date" HorizontalAlignment="Center" Margin="15,0,0,0" VerticalAlignment="Center"/>
+            <Custom:DatePicker x:Name="StartDatePicker" SelectedDate="2009-08-14" SelectedDateChanged="StartDatePicker_SelectedDateChanged" HorizontalAlignment="Center" Margin="0,0,15,0" VerticalAlignment="Center"/>
+			<Label Content="End date" HorizontalAlignment="Center" Margin="15,0,0,0" VerticalAlignment="Center"/>
+			<Custom:DatePicker x:Name="EndDatePicker" SelectedDate="2009-08-15" SelectedDateChanged="EndDatePicker_SelectedDateChanged" HorizontalAlignment="Center" Margin="0,0,15,0" VerticalAlignment="Center"/>
+            <Separator/>
+            <Label Content="Item size" HorizontalAlignment="Center" Margin="15,0,0,0" VerticalAlignment="Center"/>
+            <ComboBox Margin="0,0,15,0" DataContext="{StaticResource ItemSizes}" ItemsSource="{Binding}" Width="85" SelectedValue="" SelectedItem="{Binding ItemSize, ElementName=Scheduler, Mode=TwoWay, UpdateSourceTrigger=Default}"/>
+		</ToolBar>
+		<schedule:Schedule x:Name="Scheduler" ItemSize="OneHour" Margin="2" DockPanel.Dock="Bottom" ItemsSource="{StaticResource Appointments}">
+			<schedule:Schedule.DisplayedDates>
+				<sys:DateTime>08/14/2009</sys:DateTime>
+				<sys:DateTime>08/15/2009</sys:DateTime>
+			</schedule:Schedule.DisplayedDates>
+		</schedule:Schedule>
+
+
+        
+	</DockPanel>
+	
+</Window>

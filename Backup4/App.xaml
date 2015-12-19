@@ -1,0 +1,21 @@
+﻿<Application x:Class="TestApplication.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    StartupUri="ScheduleControl.xaml">
+    <Application.Resources>
+         
+    	<ResourceDictionary>
+    		<ResourceDictionary.MergedDictionaries>
+    			<ResourceDictionary Source="/Schedule;Component/Themes/Aero.NormalColor.xaml"/>
+    			<ResourceDictionary Source="/Schedule;Component/Themes/Classic.xaml"/>
+    			<ResourceDictionary Source="/Schedule;Component/Themes/Luna.HomeStead.xaml"/>
+    			<ResourceDictionary Source="/Schedule;Component/Themes/Luna.Metallic.xaml"/>
+    			<ResourceDictionary Source="/Schedule;Component/Themes/Luna.NormalColor.xaml"/>
+    			<ResourceDictionary Source="/Schedule;Component/Themes/Royale.NormalColor.xaml"/>
+    			<ResourceDictionary Source="/Schedule;Component/Themes/Homestead.NormalColor.xaml"/>
+    			<ResourceDictionary Source="/Schedule;Component/Themes/Luna.Blue.xaml"/>
+    		</ResourceDictionary.MergedDictionaries>
+    	</ResourceDictionary>
+         
+    </Application.Resources>
+</Application>

@@ -1,0 +1,13 @@
+c:\users\admin\documents\visual studio 2013\Projects\Clinic1\Clinic1\bin\Debug\Clinic1.exe.config
+c:\users\admin\documents\visual studio 2013\Projects\Clinic1\Clinic1\bin\Debug\Clinic1.exe
+c:\users\admin\documents\visual studio 2013\Projects\Clinic1\Clinic1\bin\Debug\Clinic1.pdb
+c:\users\admin\documents\visual studio 2013\Projects\Clinic1\Clinic1\obj\Debug\Clinic1.csprojResolveAssemblyReference.cache
+c:\users\admin\documents\visual studio 2013\Projects\Clinic1\Clinic1\obj\Debug\Clinic1.Properties.Resources.resources
+c:\users\admin\documents\visual studio 2013\Projects\Clinic1\Clinic1\obj\Debug\Clinic1.csproj.GenerateResource.Cache
+c:\users\admin\documents\visual studio 2013\Projects\Clinic1\Clinic1\obj\Debug\Clinic1.exe
+c:\users\admin\documents\visual studio 2013\Projects\Clinic1\Clinic1\obj\Debug\Clinic1.pdb
+c:\users\admin\documents\visual studio 2013\Projects\Clinic1\Clinic1\bin\Debug\CalendarDemo.exe
+c:\users\admin\documents\visual studio 2013\Projects\Clinic1\Clinic1\bin\Debug\System.Windows.Forms.Calendar.dll
+c:\users\admin\documents\visual studio 2013\Projects\Clinic1\Clinic1\bin\Debug\CalendarDemo.pdb
+c:\users\admin\documents\visual studio 2013\Projects\Clinic1\Clinic1\bin\Debug\System.Windows.Forms.Calendar.pdb
+c:\users\admin\documents\visual studio 2013\Projects\Clinic1\Clinic1\obj\Debug\Clinic1.F_MainForm.resources

@@ -1,0 +1,10 @@
+﻿<Window x:Class="CalendarWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Vikas's Calendar Control" Height="223" Width="258"
+    xmlns:local="clr-namespace:CalendarControl"    
+    >
+    <Grid>
+        <local:Calendar></local:Calendar>
+    </Grid>
+</Window>
