@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DgWorkers = new System.Windows.Forms.DataGridView();
             this.BtnAddNewWorker = new System.Windows.Forms.Button();
             this.LblID = new System.Windows.Forms.Label();
@@ -41,26 +43,52 @@
             this.BtnExitNoSave = new System.Windows.Forms.Button();
             this.BtnSave = new System.Windows.Forms.Button();
             this.BtnPermissions = new System.Windows.Forms.Button();
+            this.btnEditWorkers = new System.Windows.Forms.Button();
+            this.btnSaveEditing = new System.Windows.Forms.Button();
+            this.BtnExitNoSaveEditting = new System.Windows.Forms.Button();
+            this.LblPermission = new System.Windows.Forms.Label();
+            this.CmbPermissions = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.DgWorkers)).BeginInit();
             this.SuspendLayout();
             // 
             // DgWorkers
             // 
+            this.DgWorkers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DgWorkers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgWorkers.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.DgWorkers.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgWorkers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.DgWorkers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgWorkers.Location = new System.Drawing.Point(224, 27);
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgWorkers.DefaultCellStyle = dataGridViewCellStyle6;
+            this.DgWorkers.Location = new System.Drawing.Point(194, 42);
             this.DgWorkers.MultiSelect = false;
             this.DgWorkers.Name = "DgWorkers";
             this.DgWorkers.ReadOnly = true;
             this.DgWorkers.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.DgWorkers.Size = new System.Drawing.Size(502, 423);
+            this.DgWorkers.Size = new System.Drawing.Size(559, 423);
             this.DgWorkers.TabIndex = 0;
             // 
             // BtnAddNewWorker
             // 
             this.BtnAddNewWorker.BackColor = System.Drawing.Color.DodgerBlue;
             this.BtnAddNewWorker.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAddNewWorker.Location = new System.Drawing.Point(505, 487);
+            this.BtnAddNewWorker.Location = new System.Drawing.Point(582, 487);
             this.BtnAddNewWorker.Name = "BtnAddNewWorker";
             this.BtnAddNewWorker.Size = new System.Drawing.Size(129, 63);
             this.BtnAddNewWorker.TabIndex = 1;
@@ -185,12 +213,72 @@
             // 
             this.BtnPermissions.BackColor = System.Drawing.Color.DodgerBlue;
             this.BtnPermissions.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPermissions.Location = new System.Drawing.Point(339, 487);
+            this.BtnPermissions.Location = new System.Drawing.Point(416, 487);
             this.BtnPermissions.Name = "BtnPermissions";
             this.BtnPermissions.Size = new System.Drawing.Size(129, 63);
             this.BtnPermissions.TabIndex = 27;
             this.BtnPermissions.Text = "ניהול הרשאות";
             this.BtnPermissions.UseVisualStyleBackColor = false;
+            // 
+            // btnEditWorkers
+            // 
+            this.btnEditWorkers.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEditWorkers.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditWorkers.Location = new System.Drawing.Point(247, 487);
+            this.btnEditWorkers.Name = "btnEditWorkers";
+            this.btnEditWorkers.Size = new System.Drawing.Size(129, 63);
+            this.btnEditWorkers.TabIndex = 28;
+            this.btnEditWorkers.Text = "עריכה";
+            this.btnEditWorkers.UseVisualStyleBackColor = false;
+            this.btnEditWorkers.Click += new System.EventHandler(this.btnEditWorkers_Click);
+            // 
+            // btnSaveEditing
+            // 
+            this.btnSaveEditing.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSaveEditing.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveEditing.Location = new System.Drawing.Point(482, 487);
+            this.btnSaveEditing.Name = "btnSaveEditing";
+            this.btnSaveEditing.Size = new System.Drawing.Size(129, 63);
+            this.btnSaveEditing.TabIndex = 29;
+            this.btnSaveEditing.Text = "שמירה";
+            this.btnSaveEditing.UseVisualStyleBackColor = false;
+            this.btnSaveEditing.Visible = false;
+            this.btnSaveEditing.Click += new System.EventHandler(this.btnSaveEditing_Click);
+            // 
+            // BtnExitNoSaveEditting
+            // 
+            this.BtnExitNoSaveEditting.BackColor = System.Drawing.Color.DodgerBlue;
+            this.BtnExitNoSaveEditting.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnExitNoSaveEditting.Location = new System.Drawing.Point(330, 487);
+            this.BtnExitNoSaveEditting.Name = "BtnExitNoSaveEditting";
+            this.BtnExitNoSaveEditting.Size = new System.Drawing.Size(129, 63);
+            this.BtnExitNoSaveEditting.TabIndex = 30;
+            this.BtnExitNoSaveEditting.Text = "יציאה ללא שמירה";
+            this.BtnExitNoSaveEditting.UseVisualStyleBackColor = false;
+            this.BtnExitNoSaveEditting.Visible = false;
+            this.BtnExitNoSaveEditting.Click += new System.EventHandler(this.BtnExitNoSaveEditting_Click);
+            // 
+            // LblPermission
+            // 
+            this.LblPermission.BackColor = System.Drawing.Color.White;
+            this.LblPermission.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPermission.Location = new System.Drawing.Point(520, 321);
+            this.LblPermission.Name = "LblPermission";
+            this.LblPermission.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.LblPermission.Size = new System.Drawing.Size(104, 24);
+            this.LblPermission.TabIndex = 31;
+            this.LblPermission.Text = "הרשאה";
+            this.LblPermission.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // CmbPermissions
+            // 
+            this.CmbPermissions.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CmbPermissions.FormattingEnabled = true;
+            this.CmbPermissions.Location = new System.Drawing.Point(359, 321);
+            this.CmbPermissions.Name = "CmbPermissions";
+            this.CmbPermissions.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.CmbPermissions.Size = new System.Drawing.Size(100, 24);
+            this.CmbPermissions.TabIndex = 32;
             // 
             // F_Workers
             // 
@@ -198,6 +286,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(931, 574);
+            this.Controls.Add(this.BtnExitNoSaveEditting);
+            this.Controls.Add(this.btnSaveEditing);
+            this.Controls.Add(this.btnEditWorkers);
             this.Controls.Add(this.BtnPermissions);
             this.Controls.Add(this.BtnExitNoSave);
             this.Controls.Add(this.BtnSave);
@@ -211,6 +302,8 @@
             this.Controls.Add(this.LblLastName);
             this.Controls.Add(this.LblFirstName);
             this.Controls.Add(this.LblID);
+            this.Controls.Add(this.CmbPermissions);
+            this.Controls.Add(this.LblPermission);
             this.Name = "F_Workers";
             this.Text = "F_Workers";
             ((System.ComponentModel.ISupportInitialize)(this.DgWorkers)).EndInit();
@@ -234,5 +327,10 @@
         private System.Windows.Forms.Button BtnExitNoSave;
         private System.Windows.Forms.Button BtnSave;
         private System.Windows.Forms.Button BtnPermissions;
+        private System.Windows.Forms.Button btnEditWorkers;
+        private System.Windows.Forms.Button btnSaveEditing;
+        private System.Windows.Forms.Button BtnExitNoSaveEditting;
+        private System.Windows.Forms.Label LblPermission;
+        private System.Windows.Forms.ComboBox CmbPermissions;
     }
 }
