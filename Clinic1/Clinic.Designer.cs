@@ -5585,10 +5585,6 @@ namespace Clinic1 {
             
             private global::System.Data.DataColumn columnGroupNumber;
             
-            private global::System.Data.DataColumn columnMainTherapist;
-            
-            private global::System.Data.DataColumn columnSecondTherapist;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public PatientsInGroupDataTable() {
@@ -5640,22 +5636,6 @@ namespace Clinic1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn MainTherapistColumn {
-                get {
-                    return this.columnMainTherapist;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SecondTherapistColumn {
-                get {
-                    return this.columnSecondTherapist;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -5691,13 +5671,11 @@ namespace Clinic1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PatientsInGroupRow AddPatientsInGroupRow(int PatientID, int GroupNumber, int MainTherapist, int SecondTherapist) {
+            public PatientsInGroupRow AddPatientsInGroupRow(int PatientID, int GroupNumber) {
                 PatientsInGroupRow rowPatientsInGroupRow = ((PatientsInGroupRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         PatientID,
-                        GroupNumber,
-                        MainTherapist,
-                        SecondTherapist};
+                        GroupNumber};
                 rowPatientsInGroupRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPatientsInGroupRow);
                 return rowPatientsInGroupRow;
@@ -5730,8 +5708,6 @@ namespace Clinic1 {
             internal void InitVars() {
                 this.columnPatientID = base.Columns["PatientID"];
                 this.columnGroupNumber = base.Columns["GroupNumber"];
-                this.columnMainTherapist = base.Columns["MainTherapist"];
-                this.columnSecondTherapist = base.Columns["SecondTherapist"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5741,10 +5717,6 @@ namespace Clinic1 {
                 base.Columns.Add(this.columnPatientID);
                 this.columnGroupNumber = new global::System.Data.DataColumn("GroupNumber", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGroupNumber);
-                this.columnMainTherapist = new global::System.Data.DataColumn("MainTherapist", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMainTherapist);
-                this.columnSecondTherapist = new global::System.Data.DataColumn("SecondTherapist", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSecondTherapist);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnPatientID,
                                 this.columnGroupNumber}, true));
@@ -8240,62 +8212,6 @@ namespace Clinic1 {
                 set {
                     this[this.tablePatientsInGroup.GroupNumberColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int MainTherapist {
-                get {
-                    try {
-                        return ((int)(this[this.tablePatientsInGroup.MainTherapistColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'MainTherapist\' in table \'PatientsInGroup\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePatientsInGroup.MainTherapistColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int SecondTherapist {
-                get {
-                    try {
-                        return ((int)(this[this.tablePatientsInGroup.SecondTherapistColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SecondTherapist\' in table \'PatientsInGroup\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePatientsInGroup.SecondTherapistColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsMainTherapistNull() {
-                return this.IsNull(this.tablePatientsInGroup.MainTherapistColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetMainTherapistNull() {
-                this[this.tablePatientsInGroup.MainTherapistColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsSecondTherapistNull() {
-                return this.IsNull(this.tablePatientsInGroup.SecondTherapistColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetSecondTherapistNull() {
-                this[this.tablePatientsInGroup.SecondTherapistColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -15519,43 +15435,31 @@ SELECT ID, FirstName, FullName, LastName, Permission, Active, Password FROM Work
             tableMapping.DataSetTable = "PatientsInGroup";
             tableMapping.ColumnMappings.Add("PatientID", "PatientID");
             tableMapping.ColumnMappings.Add("GroupNumber", "GroupNumber");
-            tableMapping.ColumnMappings.Add("MainTherapist", "MainTherapist");
-            tableMapping.ColumnMappings.Add("SecondTherapist", "SecondTherapist");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [PatientsInGroup] WHERE (([PatientID] = @Original_PatientID) AND ([GroupNumber] = @Original_GroupNumber) AND ((@IsNull_MainTherapist = 1 AND [MainTherapist] IS NULL) OR ([MainTherapist] = @Original_MainTherapist)) AND ((@IsNull_SecondTherapist = 1 AND [SecondTherapist] IS NULL) OR ([SecondTherapist] = @Original_SecondTherapist)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [PatientsInGroup] WHERE (([PatientID] = @Original_PatientID) AND ([Gr" +
+                "oupNumber] = @Original_GroupNumber))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PatientID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PatientID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GroupNumber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GroupNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MainTherapist", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MainTherapist", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MainTherapist", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MainTherapist", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SecondTherapist", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SecondTherapist", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SecondTherapist", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SecondTherapist", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [PatientsInGroup] ([PatientID], [GroupNumber], [MainTherapist], [SecondTherapist]) VALUES (@PatientID, @GroupNumber, @MainTherapist, @SecondTherapist);
-SELECT PatientID, GroupNumber, MainTherapist, SecondTherapist FROM PatientsInGroup WHERE (GroupNumber = @GroupNumber) AND (PatientID = @PatientID)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [PatientsInGroup] ([PatientID], [GroupNumber]) VALUES (@PatientID, @G" +
+                "roupNumber);\r\nSELECT PatientID, GroupNumber FROM PatientsInGroup WHERE (GroupNum" +
+                "ber = @GroupNumber) AND (PatientID = @PatientID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PatientID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PatientID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GroupNumber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GroupNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MainTherapist", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MainTherapist", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SecondTherapist", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SecondTherapist", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [PatientsInGroup] SET [PatientID] = @PatientID, [GroupNumber] = @GroupNumber, [MainTherapist] = @MainTherapist, [SecondTherapist] = @SecondTherapist WHERE (([PatientID] = @Original_PatientID) AND ([GroupNumber] = @Original_GroupNumber) AND ((@IsNull_MainTherapist = 1 AND [MainTherapist] IS NULL) OR ([MainTherapist] = @Original_MainTherapist)) AND ((@IsNull_SecondTherapist = 1 AND [SecondTherapist] IS NULL) OR ([SecondTherapist] = @Original_SecondTherapist)));
-SELECT PatientID, GroupNumber, MainTherapist, SecondTherapist FROM PatientsInGroup WHERE (GroupNumber = @GroupNumber) AND (PatientID = @PatientID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [PatientsInGroup] SET [PatientID] = @PatientID, [GroupNumber] = @GroupNumber WHERE (([PatientID] = @Original_PatientID) AND ([GroupNumber] = @Original_GroupNumber));
+SELECT PatientID, GroupNumber FROM PatientsInGroup WHERE (GroupNumber = @GroupNumber) AND (PatientID = @PatientID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PatientID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PatientID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GroupNumber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GroupNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MainTherapist", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MainTherapist", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SecondTherapist", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SecondTherapist", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PatientID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PatientID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GroupNumber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GroupNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MainTherapist", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MainTherapist", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MainTherapist", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MainTherapist", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SecondTherapist", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SecondTherapist", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SecondTherapist", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SecondTherapist", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15571,13 +15475,12 @@ SELECT PatientID, GroupNumber, MainTherapist, SecondTherapist FROM PatientsInGro
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        PatientID, GroupNumber, MainTherapist, SecondTherapist\r\nFROM       " +
-                "     PatientsInGroup";
+            this._commandCollection[0].CommandText = "SELECT        PatientID, GroupNumber\r\nFROM            PatientsInGroup";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT GroupNumber, MainTherapist, PatientID, SecondTherapist FROM PatientsInGrou" +
-                "p WHERE (GroupNumber = @Group) AND (PatientID = @Patient)";
+            this._commandCollection[1].CommandText = "SELECT GroupNumber, PatientID FROM PatientsInGroup WHERE (GroupNumber = @Group) A" +
+                "ND (PatientID = @Patient)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Group", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "GroupNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Patient", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "PatientID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -15702,25 +15605,9 @@ WHERE        (PatientsInGroup.GroupNumber = @GroupNumber)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_PatientID, int Original_GroupNumber, global::System.Nullable<int> Original_MainTherapist, global::System.Nullable<int> Original_SecondTherapist) {
+        public virtual int Delete(int Original_PatientID, int Original_GroupNumber) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_PatientID));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_GroupNumber));
-            if ((Original_MainTherapist.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_MainTherapist.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            if ((Original_SecondTherapist.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_SecondTherapist.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -15741,21 +15628,9 @@ WHERE        (PatientsInGroup.GroupNumber = @GroupNumber)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int PatientID, int GroupNumber, global::System.Nullable<int> MainTherapist, global::System.Nullable<int> SecondTherapist) {
+        public virtual int Insert(int PatientID, int GroupNumber) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(PatientID));
             this.Adapter.InsertCommand.Parameters[1].Value = ((int)(GroupNumber));
-            if ((MainTherapist.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(MainTherapist.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((SecondTherapist.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(SecondTherapist.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -15776,39 +15651,11 @@ WHERE        (PatientsInGroup.GroupNumber = @GroupNumber)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int PatientID, int GroupNumber, global::System.Nullable<int> MainTherapist, global::System.Nullable<int> SecondTherapist, int Original_PatientID, int Original_GroupNumber, global::System.Nullable<int> Original_MainTherapist, global::System.Nullable<int> Original_SecondTherapist) {
+        public virtual int Update(int PatientID, int GroupNumber, int Original_PatientID, int Original_GroupNumber) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(PatientID));
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(GroupNumber));
-            if ((MainTherapist.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(MainTherapist.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((SecondTherapist.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(SecondTherapist.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_PatientID));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_GroupNumber));
-            if ((Original_MainTherapist.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_MainTherapist.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((Original_SecondTherapist.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_SecondTherapist.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_PatientID));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_GroupNumber));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -15829,8 +15676,8 @@ WHERE        (PatientsInGroup.GroupNumber = @GroupNumber)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> MainTherapist, global::System.Nullable<int> SecondTherapist, int Original_PatientID, int Original_GroupNumber, global::System.Nullable<int> Original_MainTherapist, global::System.Nullable<int> Original_SecondTherapist) {
-            return this.Update(Original_PatientID, Original_GroupNumber, MainTherapist, SecondTherapist, Original_PatientID, Original_GroupNumber, Original_MainTherapist, Original_SecondTherapist);
+        public virtual int Update(int Original_PatientID, int Original_GroupNumber) {
+            return this.Update(Original_PatientID, Original_GroupNumber, Original_PatientID, Original_GroupNumber);
         }
     }
     

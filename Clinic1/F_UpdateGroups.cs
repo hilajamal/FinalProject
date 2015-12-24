@@ -150,7 +150,7 @@ namespace Clinic1
             if (dt.Rows.Count > 0)
                 MessageBox.Show("מטופל כבר שייך לקבוצה", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
             else
-                da.Insert(patient, group, 0, 0);
+                da.Insert(patient, group);
 
             DgPatients.DataSource = daPatients.GetDataByPatientIDInnerJoinPatients(group);
             HideDgColumns();
