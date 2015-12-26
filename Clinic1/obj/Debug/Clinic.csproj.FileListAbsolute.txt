@@ -15,3 +15,4 @@ C:\Users\admin\Documents\Visual Studio 2013\Projects\Clinic1\Clinic1\obj\Debug\C
 C:\Users\admin\Documents\Visual Studio 2013\Projects\Clinic1\Clinic1\obj\Debug\Clinic1.F_AddNewGroup.resources
 C:\Users\admin\Documents\Visual Studio 2013\Projects\Clinic1\Clinic1\obj\Debug\Clinic1.F_Groups.resources
 C:\Users\admin\Documents\Visual Studio 2013\Projects\Clinic1\Clinic1\obj\Debug\Clinic1.F_UpdateGroups.resources
+C:\Users\admin\Documents\Visual Studio 2013\Projects\Clinic1\Clinic1\obj\Debug\Clinic1.F_AddNewPatient.resources

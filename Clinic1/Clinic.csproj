@@ -135,6 +135,9 @@
     <EmbeddedResource Include="F_AddNewGroup.resx">
       <DependentUpon>F_AddNewGroup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="F_AddNewPatient.resx">
+      <DependentUpon>F_AddNewPatient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F_Calendar.resx">
       <DependentUpon>F_Calendar.cs</DependentUpon>
     </EmbeddedResource>

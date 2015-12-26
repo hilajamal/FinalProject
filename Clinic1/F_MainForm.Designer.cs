@@ -32,6 +32,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.BtnWorkers = new System.Windows.Forms.Button();
             this.BtnGroups = new System.Windows.Forms.Button();
+            this.BtnPatients = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -82,17 +83,31 @@
             this.BtnGroups.UseVisualStyleBackColor = false;
             this.BtnGroups.Click += new System.EventHandler(this.BtnGroups_Click);
             // 
+            // BtnPatients
+            // 
+            this.BtnPatients.BackColor = System.Drawing.Color.DodgerBlue;
+            this.BtnPatients.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPatients.Location = new System.Drawing.Point(644, 52);
+            this.BtnPatients.Name = "BtnPatients";
+            this.BtnPatients.Size = new System.Drawing.Size(138, 83);
+            this.BtnPatients.TabIndex = 4;
+            this.BtnPatients.Text = "מטופלים";
+            this.BtnPatients.UseVisualStyleBackColor = false;
+            this.BtnPatients.Click += new System.EventHandler(this.BtnPatients_Click);
+            // 
             // F_MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1084, 573);
+            this.Controls.Add(this.BtnPatients);
             this.Controls.Add(this.BtnGroups);
             this.Controls.Add(this.BtnWorkers);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "F_MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.ResumeLayout(false);
 
@@ -104,6 +119,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button BtnWorkers;
         private System.Windows.Forms.Button BtnGroups;
+        private System.Windows.Forms.Button BtnPatients;
 
     }
 }
