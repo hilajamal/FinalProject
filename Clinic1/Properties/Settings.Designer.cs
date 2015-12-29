@@ -26,10 +26,21 @@ namespace Clinic1.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=JAMAL\\HILA;Initial Catalog=ClinicDB;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=132.75.252.109;Initial Catalog=hr2016;Persist Security Info=True;User" +
+            " ID=hr2016;Password=r165p13")]
         public string ClinicDBConnectionString {
             get {
                 return ((string)(this["ClinicDBConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=JAMAL\\HILA;Initial Catalog=ClinicDB;Integrated Security=True")]
+        public string ClinicDBConnectionString1 {
+            get {
+                return ((string)(this["ClinicDBConnectionString1"]));
             }
         }
     }
