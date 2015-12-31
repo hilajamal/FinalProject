@@ -12,6 +12,7 @@ namespace Clinic1
 {
     public partial class F_Workers : Form
     {
+        Clinic.WorkersDataTable dtWorkers;
         public F_Workers()
         {
             InitializeComponent();
@@ -22,9 +23,10 @@ namespace Clinic1
         public void fillDataTable()
         {
             ClinicTableAdapters.WorkersTableAdapter daWorkers = new ClinicTableAdapters.WorkersTableAdapter();
-            Clinic.WorkersDataTable dtWorkers = daWorkers.GetData();
-            DgWorkers.DataSource = dtWorkers.DefaultView;
-
+            dtWorkers = daWorkers.GetData();
+            BindingSource bindingSource = new BindingSource();
+            bindingSource.DataSource = dtWorkers;
+            DgWorkers.DataSource = dtWorkers;
         }
         public void AddCols()
         {
@@ -317,9 +319,13 @@ namespace Clinic1
                 if (ValidateWorkersRow(row, index) == false)
                     return;
                 else
+                {
+
                     FullName = row.Cells["FirstName"].Value.ToString() + " " + row.Cells["LastName"].Value.ToString();
-                row.Cells["FullName"].Value = FullName.ToString();
-                index ++ ;
+                    row.Cells["FullName"].Value = FullName.ToString();
+                }
+                da.Update(dtWorkers);
+                //da.Update(row);
            }
        //     da.Fill(Clinic.WorkersDataTable);
                HideEditMode();

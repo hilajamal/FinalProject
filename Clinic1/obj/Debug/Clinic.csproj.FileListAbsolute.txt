@@ -12,23 +12,6 @@ C:\Users\admin\Documents\Visual Studio 2013\Projects\Clinic1\Clinic1\obj\Debug\C
 C:\Users\admin\Documents\Visual Studio 2013\Projects\Clinic1\Clinic1\bin\Debug\System.Windows.Interactivity.dll
 C:\Users\admin\Documents\Visual Studio 2013\Projects\Clinic1\Clinic1\obj\Debug\Clinic.csprojResolveAssemblyReference.cache
 C:\Users\admin\Documents\Visual Studio 2013\Projects\Clinic1\Clinic1\obj\Debug\Clinic1.F_Password.resources
-C:\Users\admin\Documents\Visual Studio 2013\Projects\Clinic1\Clinic1\obj\Debug\Clinic1.F_AddNewGroup.resources
 C:\Users\admin\Documents\Visual Studio 2013\Projects\Clinic1\Clinic1\obj\Debug\Clinic1.F_Groups.resources
-C:\Users\admin\Documents\Visual Studio 2013\Projects\Clinic1\Clinic1\obj\Debug\Clinic1.F_UpdateGroups.resources
-C:\Users\User\Desktop\פרויקט סוף - מערכות מידע\github\Clinic1\bin\Debug\Clinic1.exe.config
-C:\Users\User\Desktop\פרויקט סוף - מערכות מידע\github\Clinic1\obj\Debug\Clinic1.exe
-C:\Users\User\Desktop\פרויקט סוף - מערכות מידע\github\Clinic1\obj\Debug\Clinic1.pdb
-C:\Users\User\Desktop\פרויקט סוף - מערכות מידע\github\Clinic1\obj\Debug\Clinic.csprojResolveAssemblyReference.cache
-C:\Users\User\Desktop\פרויקט סוף - מערכות מידע\github\Clinic1\obj\Debug\Clinic1.F_AddNewGroup.resources
-C:\Users\User\Desktop\פרויקט סוף - מערכות מידע\github\Clinic1\obj\Debug\Clinic1.F_Calendar.resources
-C:\Users\User\Desktop\פרויקט סוף - מערכות מידע\github\Clinic1\obj\Debug\Clinic1.F_Contacts.resources
-C:\Users\User\Desktop\פרויקט סוף - מערכות מידע\github\Clinic1\obj\Debug\Clinic1.F_Groups.resources
-C:\Users\User\Desktop\פרויקט סוף - מערכות מידע\github\Clinic1\obj\Debug\Clinic1.F_MainForm.resources
-C:\Users\User\Desktop\פרויקט סוף - מערכות מידע\github\Clinic1\obj\Debug\Clinic1.F_Password.resources
-C:\Users\User\Desktop\פרויקט סוף - מערכות מידע\github\Clinic1\obj\Debug\Clinic1.F_Workers.resources
-C:\Users\User\Desktop\פרויקט סוף - מערכות מידע\github\Clinic1\obj\Debug\Clinic1.Properties.Resources.resources
-C:\Users\User\Desktop\פרויקט סוף - מערכות מידע\github\Clinic1\obj\Debug\Clinic.csproj.GenerateResource.Cache
-C:\Users\User\Desktop\פרויקט סוף - מערכות מידע\github\Clinic1\obj\Debug\Clinic1.F_UpdateGroups.resources
-C:\Users\User\Desktop\פרויקט סוף - מערכות מידע\github\Clinic1\bin\Debug\Clinic1.exe
-C:\Users\User\Desktop\פרויקט סוף - מערכות מידע\github\Clinic1\bin\Debug\Clinic1.pdb
-C:\Users\User\Desktop\פרויקט סוף - מערכות מידע\github\Clinic1\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\admin\Documents\Visual Studio 2013\Projects\Clinic1\Clinic1\obj\Debug\Clinic1.F_Patients.resources
+C:\Users\admin\Documents\Visual Studio 2013\Projects\Clinic1\Clinic1\obj\Debug\Clinic1.F_GroupsMeetings.resources

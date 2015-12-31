@@ -102,7 +102,7 @@
             // 
             this.LblContents.AutoSize = true;
             this.LblContents.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblContents.ForeColor = System.Drawing.Color.Snow;
+            this.LblContents.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.LblContents.Location = new System.Drawing.Point(327, 292);
             this.LblContents.Name = "LblContents";
             this.LblContents.Size = new System.Drawing.Size(80, 16);
@@ -113,7 +113,7 @@
             // 
             this.LblRemarks.AutoSize = true;
             this.LblRemarks.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblRemarks.ForeColor = System.Drawing.Color.Snow;
+            this.LblRemarks.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.LblRemarks.Location = new System.Drawing.Point(336, 418);
             this.LblRemarks.Name = "LblRemarks";
             this.LblRemarks.Size = new System.Drawing.Size(46, 16);
@@ -124,7 +124,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Snow;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(666, 117);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 16);
@@ -135,7 +135,7 @@
             // 
             this.LblWorker.AutoSize = true;
             this.LblWorker.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblWorker.ForeColor = System.Drawing.Color.Snow;
+            this.LblWorker.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.LblWorker.Location = new System.Drawing.Point(679, 150);
             this.LblWorker.Name = "LblWorker";
             this.LblWorker.Size = new System.Drawing.Size(41, 16);
@@ -146,7 +146,7 @@
             // 
             this.LblContactFirstName.AutoSize = true;
             this.LblContactFirstName.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblContactFirstName.ForeColor = System.Drawing.Color.Snow;
+            this.LblContactFirstName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.LblContactFirstName.Location = new System.Drawing.Point(598, 184);
             this.LblContactFirstName.Name = "LblContactFirstName";
             this.LblContactFirstName.Size = new System.Drawing.Size(125, 16);
@@ -157,7 +157,7 @@
             // 
             this.LblContactPersonType.AutoSize = true;
             this.LblContactPersonType.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblContactPersonType.ForeColor = System.Drawing.Color.Snow;
+            this.LblContactPersonType.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.LblContactPersonType.Location = new System.Drawing.Point(633, 250);
             this.LblContactPersonType.Name = "LblContactPersonType";
             this.LblContactPersonType.Size = new System.Drawing.Size(89, 16);
@@ -168,7 +168,7 @@
             // 
             this.LblRelationship.AutoSize = true;
             this.LblRelationship.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblRelationship.ForeColor = System.Drawing.Color.Snow;
+            this.LblRelationship.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.LblRelationship.Location = new System.Drawing.Point(674, 280);
             this.LblRelationship.Name = "LblRelationship";
             this.LblRelationship.Size = new System.Drawing.Size(47, 16);
@@ -207,7 +207,7 @@
             // 
             this.LblPatientName.AutoSize = true;
             this.LblPatientName.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPatientName.ForeColor = System.Drawing.Color.AliceBlue;
+            this.LblPatientName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.LblPatientName.Location = new System.Drawing.Point(620, 50);
             this.LblPatientName.Name = "LblPatientName";
             this.LblPatientName.Size = new System.Drawing.Size(71, 16);
@@ -218,7 +218,7 @@
             // 
             this.LblPatientId.AutoSize = true;
             this.LblPatientId.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPatientId.ForeColor = System.Drawing.Color.AliceBlue;
+            this.LblPatientId.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.LblPatientId.Location = new System.Drawing.Point(619, 21);
             this.LblPatientId.Name = "LblPatientId";
             this.LblPatientId.Size = new System.Drawing.Size(72, 16);
@@ -291,7 +291,7 @@
             // 
             this.LblContactLastName.AutoSize = true;
             this.LblContactLastName.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblContactLastName.ForeColor = System.Drawing.Color.Snow;
+            this.LblContactLastName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.LblContactLastName.Location = new System.Drawing.Point(584, 217);
             this.LblContactLastName.Name = "LblContactLastName";
             this.LblContactLastName.Size = new System.Drawing.Size(140, 16);
@@ -302,7 +302,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(721, 578);
             this.Controls.Add(this.TxtContactLastName);
             this.Controls.Add(this.LblContactLastName);
@@ -330,6 +330,7 @@
             this.Controls.Add(this.CmbContactType);
             this.ForeColor = System.Drawing.Color.Snow;
             this.Name = "F_Contacts";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "F_Contacts";
             this.ResumeLayout(false);
             this.PerformLayout();
