@@ -330,6 +330,7 @@
             this.Controls.Add(this.CmbContactType);
             this.ForeColor = System.Drawing.Color.Snow;
             this.Name = "F_Contacts";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "F_Contacts";
             this.ResumeLayout(false);
             this.PerformLayout();

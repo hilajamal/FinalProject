@@ -1,6 +1,6 @@
 ﻿namespace Clinic1
 {
-    partial class F_AddNewPatient
+    partial class F_Patients
     {
         /// <summary>
         /// Required designer variable.
@@ -144,11 +144,13 @@
             // 
             // TabGroups
             // 
+            this.TabGroups.Appearance = System.Windows.Forms.TabAppearance.Buttons;
             this.TabGroups.Controls.Add(this.tabPage1);
             this.TabGroups.Controls.Add(this.tabPage2);
-            this.TabGroups.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TabGroups.Font = new System.Drawing.Font("David", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TabGroups.Location = new System.Drawing.Point(25, 6);
             this.TabGroups.Name = "TabGroups";
+            this.TabGroups.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TabGroups.RightToLeftLayout = true;
             this.TabGroups.SelectedIndex = 0;
             this.TabGroups.Size = new System.Drawing.Size(1105, 536);
@@ -208,10 +210,10 @@
             this.tabPage1.Controls.Add(this.LblLastName);
             this.tabPage1.Controls.Add(this.LblFirstName);
             this.tabPage1.Controls.Add(this.LblID);
-            this.tabPage1.Location = new System.Drawing.Point(4, 34);
+            this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1097, 498);
+            this.tabPage1.Size = new System.Drawing.Size(1097, 500);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "הוספת מטופל";
             // 
@@ -773,11 +775,11 @@
             this.tabPage2.Controls.Add(this.label42);
             this.tabPage2.Controls.Add(this.label43);
             this.tabPage2.Controls.Add(this.label44);
-            this.tabPage2.Location = new System.Drawing.Point(4, 34);
+            this.tabPage2.Location = new System.Drawing.Point(4, 32);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tabPage2.Size = new System.Drawing.Size(1097, 498);
+            this.tabPage2.Size = new System.Drawing.Size(1097, 500);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "עדכון פרטי מטופל";
             // 
@@ -1342,14 +1344,14 @@
             this.label44.Text = "תעודת זהות";
             this.label44.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
-            // F_AddNewPatient
+            // F_Patients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1158, 559);
             this.Controls.Add(this.TabGroups);
-            this.Name = "F_AddNewPatient";
+            this.Name = "F_Patients";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "F_AddNewPatient";
             this.TabGroups.ResumeLayout(false);

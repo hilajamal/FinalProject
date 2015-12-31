@@ -305,6 +305,7 @@
             this.Controls.Add(this.CmbPermissions);
             this.Controls.Add(this.LblPermission);
             this.Name = "F_Workers";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "F_Workers";
             ((System.ComponentModel.ISupportInitialize)(this.DgWorkers)).EndInit();
             this.ResumeLayout(false);

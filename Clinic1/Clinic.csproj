@@ -75,17 +75,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Clinic.xsd</DependentUpon>
     </Compile>
-    <Compile Include="F_AddNewGroup.cs">
+    <Compile Include="F_Groups.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_AddNewGroup.Designer.cs">
-      <DependentUpon>F_AddNewGroup.cs</DependentUpon>
+    <Compile Include="F_Groups.Designer.cs">
+      <DependentUpon>F_Groups.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_AddNewPatient.cs">
+    <Compile Include="F_Patients.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_AddNewPatient.Designer.cs">
-      <DependentUpon>F_AddNewPatient.cs</DependentUpon>
+    <Compile Include="F_Patients.Designer.cs">
+      <DependentUpon>F_Patients.cs</DependentUpon>
     </Compile>
     <Compile Include="F_Calendar.cs">
       <SubType>Form</SubType>
@@ -99,11 +99,11 @@
     <Compile Include="F_Contacts.Designer.cs">
       <DependentUpon>F_Contacts.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_Groups.cs">
+    <Compile Include="F_GroupsMeetings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_Groups.Designer.cs">
-      <DependentUpon>F_Groups.cs</DependentUpon>
+    <Compile Include="F_GroupsMeetings.Designer.cs">
+      <DependentUpon>F_GroupsMeetings.cs</DependentUpon>
     </Compile>
     <Compile Include="F_MainForm.cs">
       <SubType>Form</SubType>
@@ -117,12 +117,6 @@
     <Compile Include="F_Password.Designer.cs">
       <DependentUpon>F_Password.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_UpdateGroups.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="F_UpdateGroups.Designer.cs">
-      <DependentUpon>F_UpdateGroups.cs</DependentUpon>
-    </Compile>
     <Compile Include="F_Workers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,11 +126,11 @@
     <Compile Include="Globals.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="F_AddNewGroup.resx">
-      <DependentUpon>F_AddNewGroup.cs</DependentUpon>
+    <EmbeddedResource Include="F_Groups.resx">
+      <DependentUpon>F_Groups.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_AddNewPatient.resx">
-      <DependentUpon>F_AddNewPatient.cs</DependentUpon>
+    <EmbeddedResource Include="F_Patients.resx">
+      <DependentUpon>F_Patients.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_Calendar.resx">
       <DependentUpon>F_Calendar.cs</DependentUpon>
@@ -144,17 +138,14 @@
     <EmbeddedResource Include="F_Contacts.resx">
       <DependentUpon>F_Contacts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_Groups.resx">
-      <DependentUpon>F_Groups.cs</DependentUpon>
+    <EmbeddedResource Include="F_GroupsMeetings.resx">
+      <DependentUpon>F_GroupsMeetings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_MainForm.resx">
       <DependentUpon>F_MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_Password.resx">
       <DependentUpon>F_Password.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="F_UpdateGroups.resx">
-      <DependentUpon>F_UpdateGroups.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_Workers.resx">
       <DependentUpon>F_Workers.cs</DependentUpon>

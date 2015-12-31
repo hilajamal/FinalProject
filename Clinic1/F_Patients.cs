@@ -11,10 +11,10 @@ using System.Globalization;
 
 namespace Clinic1
 {
-    public partial class F_AddNewPatient : Form
+    public partial class F_Patients : Form
     {
         int OriginalID = 0;
-        public F_AddNewPatient()
+        public F_Patients()
         {
             InitializeComponent();
             addCombos();

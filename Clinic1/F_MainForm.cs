@@ -52,14 +52,20 @@ namespace Clinic1
 
         private void BtnGroups_Click(object sender, EventArgs e)
         {
-            F_AddNewGroup groups = new F_AddNewGroup();
+            F_Groups groups = new F_Groups();
             groups.Show();
         }
 
         private void BtnPatients_Click(object sender, EventArgs e)
         {
-            F_AddNewPatient Patients = new F_AddNewPatient();
+            F_Patients Patients = new F_Patients();
             Patients.Show();
+        }
+
+        private void btnGroupsMeetings_Click(object sender, EventArgs e)
+        {
+            F_GroupsMeetings groupsMeetings = new F_GroupsMeetings();
+            groupsMeetings.Show();
         }
     }
 }
