@@ -130,8 +130,16 @@ namespace Clinic1
 
         private void BtnAddNewPatient_Click(object sender, EventArgs e)
         {
+            ClinicTableAdapters.PatientsTableAdapter daPatients = new ClinicTableAdapters.PatientsTableAdapter();
+
             if (validateFieldsAdd())
             {
+                if (daPatients.GetDataByID(Int32.Parse(TxtID.Text)).Rows.Count > 0)
+                {
+                    MessageBox.Show("מטופל בעל תעודת זהות זו כבר קיים במערכת");
+                    return;
+                }
+           
                 DateTime dt = DateTime.ParseExact(TxtBirthDate.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
                 int streetNum = 0;
                 if(Int32.TryParse(TxtStreetNumber.Text, out streetNum))
@@ -166,12 +174,11 @@ namespace Clinic1
                 string notes = TxtNotes.Text.ToString();
                 int race = (int)CmbRace.SelectedValue;
                 string apotropus =TxtApotropus.Text.ToString();
-
-
-
-
-                ClinicTableAdapters.PatientsTableAdapter da = new ClinicTableAdapters.PatientsTableAdapter();
+               ClinicTableAdapters.PatientsTableAdapter da = new ClinicTableAdapters.PatientsTableAdapter();
                 da.Insert(id, firstname, lastname, fullName, father, mother, country, gender, city, street, streetNum, zipCode, email, phonehome, phonecellular, phonework, phonefather, phonemother, phoneanother, phonecontact, null, null, insurence, familydoctor, notes, race, apotropus, dt);
+                MessageBox.Show("מטופל נוסף בהצלחה");
+
+
             }
         }
 
@@ -493,10 +500,10 @@ namespace Clinic1
 
                 string fullName = TxtFirstNameUpdate.Text + " " + TxtLaseName.Text;
                 int id = (int)CmbPatientID.SelectedValue;
-                string father = TxtFirstNameUpdate.Text.ToString();
+                string father = TxtFatherNameUpdate.Text.ToString();
                 string mother = TxtMotherNameUpdate.Text.ToString();
                 string firstname = TxtFirstNameUpdate.Text.ToString();
-                string lastname = TxtFirstNameUpdate.Text.ToString();
+                string lastname = TxtLastNameUpdate.Text.ToString();
                 int country = (int)CmbCountryOfBirthUpdate.SelectedValue;
                 int city = (int)CmbCityUpdate.SelectedValue;
                 int gender = (int)CmbGenderUpdate.SelectedValue;
@@ -535,6 +542,182 @@ namespace Clinic1
             OriginalID = (int)CmbPatientID.SelectedValue;
 
         }
+
+        private void ExitNoSaveUpdate_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnClearFieldsUpdate_Click(object sender, EventArgs e)
+        {
+            TxtFirstNameUpdate.Text = string.Empty;
+            TxtMotherNameUpdate.Text = string.Empty;
+            TxtFatherNameUpdate.Text = string.Empty;
+            TxtFirstNameUpdate.Text = string.Empty;
+            TxtLastNameUpdate.Text = string.Empty;
+            TxtStreetUpdate.Text = string.Empty;
+            TxtEmailUpdate.Text = string.Empty;
+            TxtPhoneHomeUpdate.Text = string.Empty;
+            TxtPhoneCellularUpdate.Text = string.Empty;
+            TxtPhoneWotkUpdate.Text = string.Empty;
+            TxtPhoneAnotherUpdate.Text = string.Empty;
+            TxtPhoneContactUpdate.Text = string.Empty;
+            TxtPhoneFatherUpdate.Text = string.Empty;
+            TxtPhoneMotherUpdate.Text = string.Empty;
+            TxtFamilyDoctorUpdate.Text = string.Empty;
+            TxtNotesUpdate.Text = string.Empty;
+            TxtApotropusUpdate.Text = string.Empty;
+            TxtBirthDateUpdate.Text = string.Empty;
+            TxtStreetUpdate.Text = string.Empty;
+            TxtZipCodeUpdate.Text = string.Empty;
+            TxtStreetNumber.Text = string.Empty;
+        }
+
+        private void BtnExitNoSaveAdd_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnClearFieldsAdd_Click(object sender, EventArgs e)
+        {
+            TxtFirstName.Text = string.Empty;
+            TxtMother.Text = string.Empty;
+            TxtFather.Text = string.Empty;
+            TxtFirstName.Text = string.Empty;
+            TxtLaseName.Text = string.Empty;
+            TxtStreet.Text = string.Empty;
+            TxtEmail.Text = string.Empty;
+            TxtPhoneHome.Text = string.Empty;
+            TxtPhoneCellular.Text = string.Empty;
+            TxtPhoneWork.Text = string.Empty;
+            TxtPhoneAnother.Text = string.Empty;
+            TxtPhoneContact.Text = string.Empty;
+            TxtPhoneFather.Text = string.Empty;
+            TxtPhoneMother.Text = string.Empty;
+            TxtFamilyDoctor.Text = string.Empty;
+            TxtNotes.Text = string.Empty;
+            TxtApotropus.Text = string.Empty;
+            TxtBirthDate.Text = string.Empty;
+            TxtStreet.Text = string.Empty;
+            TxtZipCode.Text = string.Empty;
+            TxtID.Text = string.Empty;
+            TxtStreetNumber.Text = string.Empty;
+        }
+
+        private void TxtID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+         
+                e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            
+        }
+
+        private void TxtPhoneWotkUpdate_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+
+        }
+
+        private void TxtPhoneFatherUpdate_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+
+        }
+
+        private void TxtPhoneMotherUpdate_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+
+        }
+
+        private void TxtPhoneAnotherUpdate_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+
+        }
+
+        private void TxtPhoneContactUpdate_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+
+        }
+
+        private void TxtPhoneHome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+
+        }
+
+        private void TxtPhoneCellular_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+
+        }
+
+        private void TxtPhoneWork_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+
+        }
+
+        private void TxtPhoneFather_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+
+        }
+
+        private void TxtPhoneMother_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+
+        }
+
+        private void TxtPhoneAnother_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+
+        }
+
+        private void TxtPhoneContact_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+
+        }
+
+        private void TxtPhoneHomeUpdate_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+
+        }
+
+        private void TxtZipCodeUpdate_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+
+        }
+
+        private void TxtStreetNumberUpdate_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+
+        }
+
+        private void TxtStreetNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+
+        }
+
+        private void TxtZipCode_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+
+        }
+
+
+
+     
+
+  
         }
 
     }

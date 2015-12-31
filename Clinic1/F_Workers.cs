@@ -34,8 +34,10 @@ namespace Clinic1
             var col1 = new DataGridViewTextBoxColumn();
             var col2 = new DataGridViewTextBoxColumn();
             var col3 = new DataGridViewTextBoxColumn();
-            var col4 = new DataGridViewTextBoxColumn();
-            var col5 = new DataGridViewCheckBoxColumn();
+            var col4 = new DataGridViewCheckBoxColumn();
+            var col5 = new DataGridViewComboBoxColumn();
+            var col6 = new DataGridViewCheckBoxColumn();
+            ClinicTableAdapters.PermissionTypeTableAdapter daPermissions = new ClinicTableAdapters.PermissionTypeTableAdapter();
 
             col1.HeaderText = "תעודת זהות";
             col1.DataPropertyName = "ID";
@@ -52,17 +54,25 @@ namespace Clinic1
             col3.Name = "LastName";
             DgWorkers.Columns.Add(col3);
 
-            col4.HeaderText = "שם מלא";
-            col4.DataPropertyName = "FullName";
-            col4.Name = "FullName";
+            col4.HeaderText = "פעיל";
+            col4.DataPropertyName = "Active";
+            col4.Name = "Active";
             DgWorkers.Columns.Add(col4);
 
-            col5.HeaderText = "פעיל";
-            col5.DataPropertyName = "Active";
-            col5.Name = "Active";
+            col5.HeaderText = "הרשאות";
+            col5.DataSource = daPermissions.GetData();
+            col5.DisplayMember = "Name";
+            col5.ValueMember = "ID";
+            col5.Name = "Permission";
+            col5.DataPropertyName = "Permission";
+            col5.ReadOnly = false;
             DgWorkers.Columns.Add(col5);
 
-            DgWorkers.Columns["FullName"].Visible = false;
+            //col5.DataPropertyName = "Permission";
+
+
+
+            DgWorkers.Columns["Permission"].Visible = false;
 
         }
 
@@ -331,8 +341,48 @@ namespace Clinic1
                HideEditMode();
         }
 
+        private void BtnPermissions_Click(object sender, EventArgs e)
+        {
+            DgWorkers.Columns["Permission"].Visible = true;
+            DgWorkers.Columns[4].ReadOnly = false;
+            DgWorkers.Enabled = true;
+            DgWorkers.ReadOnly = false;
+            DgWorkers.Columns[0].ReadOnly = true;
+            DgWorkers.Columns[1].ReadOnly = true;
+            DgWorkers.Columns[2].ReadOnly = true;
+            DgWorkers.Columns[3].ReadOnly = true;
+            BtnAddNewWorker.Visible = false;
+            btnEditWorkers.Visible = false;
+            BtnPermissions.Visible = false;
+            BtnSavePermissions.Visible = true;
+            BtnExitNoSavePermissions.Visible = true;
 
 
+        }
+
+        private void BtnSavePermissions_Click(object sender, EventArgs e)
+        {
+            ClinicTableAdapters.WorkersTableAdapter da = new ClinicTableAdapters.WorkersTableAdapter();
+            da.Update(dtWorkers);
+            BtnExitNoSavePermissions.Visible = false;
+            MessageBox.Show("שינויים נשמרו בהצלחה");
+
+
+        }
+
+        private void BtnExitNoSavePermissions_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void TxtID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+
+        }
+
+
+ 
 
 
 

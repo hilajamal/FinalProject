@@ -70,7 +70,16 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clinic.cs">
+      <DependentUpon>Clinic.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Clinic.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Clinic.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Clinic1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Clinic.xsd</DependentUpon>
@@ -80,6 +89,12 @@
     </Compile>
     <Compile Include="F_Groups.Designer.cs">
       <DependentUpon>F_Groups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Intake.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Intake.Designer.cs">
+      <DependentUpon>F_Intake.cs</DependentUpon>
     </Compile>
     <Compile Include="F_Patients.cs">
       <SubType>Form</SubType>
@@ -129,6 +144,9 @@
     <EmbeddedResource Include="F_Groups.resx">
       <DependentUpon>F_Groups.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="F_Intake.resx">
+      <DependentUpon>F_Intake.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F_Patients.resx">
       <DependentUpon>F_Patients.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,7 +183,7 @@
     <None Include="Clinic.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Clinic.Designer.cs</LastGenOutput>
+      <LastGenOutput>Clinic1.Designer.cs</LastGenOutput>
     </None>
     <None Include="Clinic.xss">
       <DependentUpon>Clinic.xsd</DependentUpon>
