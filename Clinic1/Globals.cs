@@ -11,5 +11,9 @@ namespace Clinic1
         public static int ConnectedUserID;
         public static String ConnectedUserName;
         public static int ConnectedUserPermission;
+    
     }
+
+
+
 }

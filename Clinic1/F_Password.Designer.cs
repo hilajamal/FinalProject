@@ -39,7 +39,7 @@
             // 
             this.LblID.AutoSize = true;
             this.LblID.Font = new System.Drawing.Font("David", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblID.ForeColor = System.Drawing.Color.Snow;
+            this.LblID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.LblID.Location = new System.Drawing.Point(321, 141);
             this.LblID.Name = "LblID";
             this.LblID.Size = new System.Drawing.Size(96, 24);
@@ -50,7 +50,7 @@
             // 
             this.LblPassword.AutoSize = true;
             this.LblPassword.Font = new System.Drawing.Font("David", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPassword.ForeColor = System.Drawing.Color.Snow;
+            this.LblPassword.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.LblPassword.Location = new System.Drawing.Point(330, 198);
             this.LblPassword.Name = "LblPassword";
             this.LblPassword.Size = new System.Drawing.Size(85, 24);
@@ -83,9 +83,9 @@
             // BtnLogIn
             // 
             this.BtnLogIn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.BtnLogIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLogIn.Font = new System.Drawing.Font("David", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLogIn.ForeColor = System.Drawing.Color.Black;
-            this.BtnLogIn.Location = new System.Drawing.Point(173, 303);
+            this.BtnLogIn.Location = new System.Drawing.Point(144, 284);
             this.BtnLogIn.Name = "BtnLogIn";
             this.BtnLogIn.Size = new System.Drawing.Size(143, 40);
             this.BtnLogIn.TabIndex = 26;
@@ -97,7 +97,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(509, 370);
             this.Controls.Add(this.BtnLogIn);
             this.Controls.Add(this.txtPassword);
@@ -105,6 +105,7 @@
             this.Controls.Add(this.LblPassword);
             this.Controls.Add(this.LblID);
             this.Name = "F_Password";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "F_Password";
             this.ResumeLayout(false);
             this.PerformLayout();

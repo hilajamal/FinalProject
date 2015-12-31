@@ -36,7 +36,7 @@ namespace Clinic1
             CmbWorker.DisplayMember = "FullName";
             CmbWorker.ValueMember = "ID";
 
-            //PatientsID
+            //PatientsIDAdd
             ClinicTableAdapters.PatientsTableAdapter daPatients = new ClinicTableAdapters.PatientsTableAdapter();
             Clinic.PatientsDataTable dtPatients = daPatients.GetData();
             CmblPatientId.DataSource = dtPatients;
@@ -48,8 +48,24 @@ namespace Clinic1
             handeled = true;
             CmblPatientId.SelectedIndex = 0;
 
-            //PatientsName
+            //PatientsNameAdd
             CmbPatientName.DataSource = dtPatients;
+            CmbPatientName.AutoCompleteMode = AutoCompleteMode.Append;
+            CmbPatientName.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CmbPatientName.DisplayMember = "FullName";
+            CmbPatientName.ValueMember = "ID";
+            handeled = true;
+            CmbPatientName.SelectedIndex = 0;
+
+            //PatientsIDUpdate
+            CmblPatientId.AutoCompleteMode = AutoCompleteMode.Append;
+            CmblPatientId.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CmblPatientId.DisplayMember = "ID";
+            CmblPatientId.ValueMember = "ID";
+            handeled = true;
+            CmblPatientId.SelectedIndex = 0;
+
+            //PatientsNameUpdate
             CmbPatientName.AutoCompleteMode = AutoCompleteMode.Append;
             CmbPatientName.AutoCompleteSource = AutoCompleteSource.ListItems;
             CmbPatientName.DisplayMember = "FullName";
@@ -88,7 +104,13 @@ namespace Clinic1
             DateTime hours = DateTime.ParseExact(hour, "HH:mm",System.Globalization.CultureInfo.InvariantCulture);
 
             ClinicTableAdapters.ContactsTableAdapter da = new ClinicTableAdapters.ContactsTableAdapter();
-            da.Insert(Int32.Parse(CmbContactType.SelectedValue.ToString()), Int32.Parse(CmblPatientId.SelectedValue.ToString()), Int32.Parse(CmbWorker.SelectedValue.ToString()), TxtContactFirstName.Text, TxtContactLastName.Text, TxtContactPersonType.Text, Int32.Parse(CmbRelationship.SelectedValue.ToString()), TxtContents.Text, TxtRemarks.Text, Calendar.SelectionRange.Start,hours);
+            da.Insert(Int32.Parse(CmbContactType.SelectedValue.ToString()), Int32.Parse(CmblPatientId.SelectedValue.ToString()), Int32.Parse(CmbWorker.SelectedValue.ToString()), TxtContactFirstName.Text, TxtContactLastName.Text, Int32.Parse(CmbRelationship.SelectedValue.ToString()), TxtContents.Text, TxtRemarks.Text, Calendar.SelectionRange.Start,hours);
+            MessageBox.Show("פרטים נשמרו בהצלחה", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+            this.Close();
+        }
+
+        private void BtnExitNoSave_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
 

@@ -67,5 +67,13 @@ namespace Clinic1
             F_GroupsMeetings groupsMeetings = new F_GroupsMeetings();
             groupsMeetings.Show();
         }
+
+        private void btnIntake_Click(object sender, EventArgs e)
+        {
+            F_Intake intake = new F_Intake();
+            intake.Show();
+        }
+
+     
     }
 }
