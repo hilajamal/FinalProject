@@ -20,6 +20,13 @@ namespace Clinic1
 
         public void addCols()
         {
+
+            TxtWrittenByDateAdd.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+            TxtWrittenByAdd.Text = Globals.ConnectedUserName;
+             HourPickerStartAdd.ShowUpDown = true;
+            HourPickerStartAdd.Format = DateTimePickerFormat.Custom;
+            HourPickerStartAdd.CustomFormat = "HH:mm:ss";
+
             ClinicTableAdapters.PatientsTableAdapter daPatients = new ClinicTableAdapters.PatientsTableAdapter();
     Clinic.PatientsDataTable dtPatients = daPatients.GetData();
             CmblPatientId.DataSource = dtPatients;
@@ -50,7 +57,7 @@ namespace Clinic1
 
 
             // Workers
-            ClinicTableAdapters.DiagnosesTableAdapter daDiagnose = new ClinicTableAdapters.DiagnosesTableAdapter();
+            ClinicTableAdapters.DiagnoseTableAdapter daDiagnose = new ClinicTableAdapters.DiagnoseTableAdapter();
             Clinic.DiagnoseDataTable dt = daDiagnose.GetData();
             CmbDiagnoseCode.DataSource = daDiagnose.GetData();
             CmbDiagnoseCode.AutoCompleteMode = AutoCompleteMode.Append;
@@ -67,11 +74,23 @@ namespace Clinic1
 
         private void BtnSaveIntake_Click(object sender, EventArgs e)
         {
+            int apNumber;
+            ClinicTableAdapters.AppointmentsTableAdapter da = new ClinicTableAdapters.AppointmentsTableAdapter();
+            if ((int) da.GetMaxAppointment(1) == 0)
+                apNumber = 1;
+            else apNumber =(int) da.GetMaxAppointment(1)+1;
+            DateTime date = DateTime.Parse(TxtDate.Text);
+            DateTime now = DateTime.Now;
 
+            DateTime dt = HourPickerStartAdd.Value;
+            TimeSpan st = new TimeSpan(dt.Hour, dt.Minute, dt.Second);
 
-
-
-
+         int id = (int)da.InsertQuery(apNumber, null, 1, date, st.ToString(), (int)CmbTherapist.SelectedValue, null, TxtNotes.Text, null, Globals.ConnectedUserID, null, now,
+                null, TxtSentBy.Text, TxtReason.Text, TxtBrothersAndSisters.Text, TxtFamily.Text, TxtTraumas.Text, TxtPregnant.Text, TxtPsycho.Text,
+                TxtSocial.Text, TxtPhysical.Text);
+         ClinicTableAdapters.AppointmentsForPatientsTableAdapter app = new ClinicTableAdapters.AppointmentsForPatientsTableAdapter();
+         app.Insert(id, 1, (int)CmblPatientId.SelectedValue, true);
+         MessageBox.Show("טיפול נוסף בהצלחה");
 
         }
 

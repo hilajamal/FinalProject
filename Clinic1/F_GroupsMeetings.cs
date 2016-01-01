@@ -144,9 +144,6 @@ namespace Clinic1
             HourPickerStartAdd.Format = DateTimePickerFormat.Custom;
             HourPickerStartAdd.CustomFormat = "HH:mm:ss";
 
-            HourPickerEndAdd.ShowUpDown = true;
-            HourPickerEndAdd.Format = DateTimePickerFormat.Custom;
-            HourPickerEndAdd.CustomFormat = "HH:mm:ss";
 
             HourPickerStartUpdate.ShowUpDown = true;
             HourPickerStartUpdate.Format = DateTimePickerFormat.Custom;
@@ -208,9 +205,11 @@ namespace Clinic1
                 return;
             }
             DateTime dt1 = DateTime.ParseExact(TxtWrittenByDateAdd.Text, "dd/MM/yyyy HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
-
-
-         int id = System.Convert.ToInt32(daAp.InsertQuery(Int32.Parse(txtMeetingNumberAdd.Text), (int)CmbGroupIDAdd.SelectedValue, (int)CmbMeetingTypeAdd.SelectedValue, HourPickerStartAdd.Value.ToString(), HourPickerEndAdd.Value.ToString(), (int)CmbMainTherapistAdd.SelectedValue, (int)CmbSecondTherapistAdd.SelectedValue, TxtNotesAdd.Text, TxtSummaryAdd.Text, Globals.ConnectedUserID, null, dt1, null));
+            //DateTime date = DateTime.ParseExact(CalendarAdd.SelectionRange.Start.ToString(), "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+            DateTime dt = HourPickerStartAdd.Value;
+            TimeSpan st = new TimeSpan(dt.Hour, dt.Minute, dt.Second);
+             
+int id = System.Convert.ToInt32(daAp.InsertQuery(Int32.Parse(txtMeetingNumberAdd.Text), (int)CmbGroupIDAdd.SelectedValue, (int)CmbMeetingTypeAdd.SelectedValue, CalendarAdd.SelectionRange.Start, st.ToString(), (int)CmbMainTherapistAdd.SelectedValue, (int)CmbSecondTherapistAdd.SelectedValue, TxtNotesAdd.Text, TxtSummaryAdd.Text, Globals.ConnectedUserID, null, dt1, null, null, null, null, null, null, null, null, null, null));
             foreach (DataGridViewRow row in DgPatientsAdd.Rows)
             {
                 bool result;
@@ -331,7 +330,7 @@ namespace Clinic1
             String date = now.ToString("dd/MM/yyyy HH:mm:ss");
             DateTime dt1 = DateTime.ParseExact(date, "dd/MM/yyyy HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
 
-            da.UpdateQuery((int)CmbMainTherapistUpdate.SelectedValue, (int)CmbSecondTherapistUpdate.SelectedValue, TxtRemarksUpdate.Text, TxtSummaryUpdate.Text, Globals.ConnectedUserID, dt1, (int)CmbGroupIdUpdate.SelectedValue, (int)CmbMeetingNumberUpdate.SelectedValue);
+            //da.UpdateQuery((int)CmbMainTherapistUpdate.SelectedValue, (int)CmbSecondTherapistUpdate.SelectedValue, TxtRemarksUpdate.Text, TxtSummaryUpdate.Text, Globals.ConnectedUserID, dt1, (int)CmbGroupIdUpdate.SelectedValue, (int)CmbMeetingNumberUpdate.SelectedValue);
             foreach (DataGridViewRow row in DgPatientsUpdate.Rows)
             {
                 bool result;
