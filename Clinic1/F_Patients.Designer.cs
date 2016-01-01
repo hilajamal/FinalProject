@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.TabGroups = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.BtnExitNoSaveAdd = new System.Windows.Forms.Button();
@@ -141,6 +142,7 @@
             this.label42 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.TabGroups.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -1424,6 +1426,11 @@
             this.label44.Text = "תעודת זהות";
             this.label44.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
             // F_Patients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1558,5 +1565,6 @@
         private System.Windows.Forms.Button BtnClearFieldsUpdate;
         private System.Windows.Forms.Button BtnExitNoSaveAdd;
         private System.Windows.Forms.Button BtnClearFieldsAdd;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

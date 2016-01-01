@@ -3975,13 +3975,9 @@ namespace Clinic1 {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class DiagnosesForPatientsDataTable : global::System.Data.TypedTableBase<DiagnosesForPatientsRow> {
             
-            private global::System.Data.DataColumn columnID;
-            
             private global::System.Data.DataColumn columnDiagnoseCode;
             
             private global::System.Data.DataColumn columnPatientID;
-            
-            private global::System.Data.DataColumn columnActive;
             
             private global::System.Data.DataColumn columnStartDate;
             
@@ -4020,14 +4016,6 @@ namespace Clinic1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn IDColumn {
-                get {
-                    return this.columnID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn DiagnoseCodeColumn {
                 get {
                     return this.columnDiagnoseCode;
@@ -4039,14 +4027,6 @@ namespace Clinic1 {
             public global::System.Data.DataColumn PatientIDColumn {
                 get {
                     return this.columnPatientID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ActiveColumn {
-                get {
-                    return this.columnActive;
                 }
             }
             
@@ -4095,13 +4075,11 @@ namespace Clinic1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DiagnosesForPatientsRow AddDiagnosesForPatientsRow(int ID, string DiagnoseCode, int PatientID, bool Active, System.DateTime StartDate) {
+            public DiagnosesForPatientsRow AddDiagnosesForPatientsRow(string DiagnoseCode, int PatientID, System.DateTime StartDate) {
                 DiagnosesForPatientsRow rowDiagnosesForPatientsRow = ((DiagnosesForPatientsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ID,
                         DiagnoseCode,
                         PatientID,
-                        Active,
                         StartDate};
                 rowDiagnosesForPatientsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDiagnosesForPatientsRow);
@@ -4110,9 +4088,10 @@ namespace Clinic1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DiagnosesForPatientsRow FindByID(int ID) {
+            public DiagnosesForPatientsRow FindByDiagnoseCodePatientID(string DiagnoseCode, int PatientID) {
                 return ((DiagnosesForPatientsRow)(this.Rows.Find(new object[] {
-                            ID})));
+                            DiagnoseCode,
+                            PatientID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4132,30 +4111,24 @@ namespace Clinic1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnID = base.Columns["ID"];
                 this.columnDiagnoseCode = base.Columns["DiagnoseCode"];
                 this.columnPatientID = base.Columns["PatientID"];
-                this.columnActive = base.Columns["Active"];
                 this.columnStartDate = base.Columns["StartDate"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID);
                 this.columnDiagnoseCode = new global::System.Data.DataColumn("DiagnoseCode", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDiagnoseCode);
                 this.columnPatientID = new global::System.Data.DataColumn("PatientID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPatientID);
-                this.columnActive = new global::System.Data.DataColumn("Active", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnActive);
                 this.columnStartDate = new global::System.Data.DataColumn("StartDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnStartDate);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID}, true));
-                this.columnID.AllowDBNull = false;
-                this.columnID.Unique = true;
+                                this.columnDiagnoseCode,
+                                this.columnPatientID}, true));
+                this.columnDiagnoseCode.AllowDBNull = false;
                 this.columnDiagnoseCode.MaxLength = 50;
                 this.columnPatientID.AllowDBNull = false;
                 this.columnStartDate.AllowDBNull = false;
@@ -9019,25 +8992,9 @@ namespace Clinic1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ID {
-                get {
-                    return ((int)(this[this.tableDiagnosesForPatients.IDColumn]));
-                }
-                set {
-                    this[this.tableDiagnosesForPatients.IDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string DiagnoseCode {
                 get {
-                    try {
-                        return ((string)(this[this.tableDiagnosesForPatients.DiagnoseCodeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DiagnoseCode\' in table \'DiagnosesForPatients\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableDiagnosesForPatients.DiagnoseCodeColumn]));
                 }
                 set {
                     this[this.tableDiagnosesForPatients.DiagnoseCodeColumn] = value;
@@ -9057,22 +9014,6 @@ namespace Clinic1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Active {
-                get {
-                    try {
-                        return ((bool)(this[this.tableDiagnosesForPatients.ActiveColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Active\' in table \'DiagnosesForPatients\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDiagnosesForPatients.ActiveColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.DateTime StartDate {
                 get {
                     return ((global::System.DateTime)(this[this.tableDiagnosesForPatients.StartDateColumn]));
@@ -9080,30 +9021,6 @@ namespace Clinic1 {
                 set {
                     this[this.tableDiagnosesForPatients.StartDateColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsDiagnoseCodeNull() {
-                return this.IsNull(this.tableDiagnosesForPatients.DiagnoseCodeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetDiagnoseCodeNull() {
-                this[this.tableDiagnosesForPatients.DiagnoseCodeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsActiveNull() {
-                return this.IsNull(this.tableDiagnosesForPatients.ActiveColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetActiveNull() {
-                this[this.tableDiagnosesForPatients.ActiveColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -16117,50 +16034,38 @@ FROM            Contacts INNER JOIN
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "DiagnosesForPatients";
-            tableMapping.ColumnMappings.Add("ID", "ID");
             tableMapping.ColumnMappings.Add("DiagnoseCode", "DiagnoseCode");
             tableMapping.ColumnMappings.Add("PatientID", "PatientID");
-            tableMapping.ColumnMappings.Add("Active", "Active");
             tableMapping.ColumnMappings.Add("StartDate", "StartDate");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[DiagnosesForPatients] WHERE (([ID] = @Original_ID) AND ((@IsNull_DiagnoseCode = 1 AND [DiagnoseCode] IS NULL) OR ([DiagnoseCode] = @Original_DiagnoseCode)) AND ([PatientID] = @Original_PatientID) AND ((@IsNull_Active = 1 AND [Active] IS NULL) OR ([Active] = @Original_Active)) AND ([StartDate] = @Original_StartDate))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [DiagnosesForPatients] WHERE (([DiagnoseCode] = @Original_DiagnoseCod" +
+                "e) AND ([PatientID] = @Original_PatientID) AND ([StartDate] = @Original_StartDat" +
+                "e))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DiagnoseCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DiagnoseCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DiagnoseCode", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DiagnoseCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PatientID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PatientID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Active", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Active", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Active", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Active", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StartDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StartDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[DiagnosesForPatients] ([ID], [DiagnoseCode], [PatientID], [Active], [StartDate]) VALUES (@ID, @DiagnoseCode, @PatientID, @Active, @StartDate);
-SELECT ID, DiagnoseCode, PatientID, Active, StartDate FROM DiagnosesForPatients WHERE (ID = @ID)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [DiagnosesForPatients] ([DiagnoseCode], [PatientID], [StartDate]) VALUES (@DiagnoseCode, @PatientID, @StartDate);
+SELECT DiagnoseCode, PatientID, StartDate FROM DiagnosesForPatients WHERE (DiagnoseCode = @DiagnoseCode) AND (PatientID = @PatientID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DiagnoseCode", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DiagnoseCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PatientID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PatientID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Active", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Active", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[DiagnosesForPatients] SET [ID] = @ID, [DiagnoseCode] = @DiagnoseCode, [PatientID] = @PatientID, [Active] = @Active, [StartDate] = @StartDate WHERE (([ID] = @Original_ID) AND ((@IsNull_DiagnoseCode = 1 AND [DiagnoseCode] IS NULL) OR ([DiagnoseCode] = @Original_DiagnoseCode)) AND ([PatientID] = @Original_PatientID) AND ((@IsNull_Active = 1 AND [Active] IS NULL) OR ([Active] = @Original_Active)) AND ([StartDate] = @Original_StartDate));
-SELECT ID, DiagnoseCode, PatientID, Active, StartDate FROM DiagnosesForPatients WHERE (ID = @ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [DiagnosesForPatients] SET [DiagnoseCode] = @DiagnoseCode, [PatientID] = @PatientID, [StartDate] = @StartDate WHERE (([DiagnoseCode] = @Original_DiagnoseCode) AND ([PatientID] = @Original_PatientID) AND ([StartDate] = @Original_StartDate));
+SELECT DiagnoseCode, PatientID, StartDate FROM DiagnosesForPatients WHERE (DiagnoseCode = @DiagnoseCode) AND (PatientID = @PatientID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DiagnoseCode", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DiagnoseCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PatientID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PatientID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Active", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Active", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DiagnoseCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DiagnoseCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DiagnoseCode", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DiagnoseCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PatientID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PatientID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Active", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Active", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Active", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Active", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StartDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StartDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16176,8 +16081,8 @@ SELECT ID, DiagnoseCode, PatientID, Active, StartDate FROM DiagnosesForPatients 
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, DiagnoseCode, PatientID, Active, StartDate FROM dbo.DiagnosesForPatien" +
-                "ts";
+            this._commandCollection[0].CommandText = "SELECT        DiagnoseCode, PatientID, StartDate\r\nFROM            DiagnosesForPat" +
+                "ients";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -16238,26 +16143,15 @@ SELECT ID, DiagnoseCode, PatientID, Active, StartDate FROM DiagnosesForPatients 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, string Original_DiagnoseCode, int Original_PatientID, global::System.Nullable<bool> Original_Active, System.DateTime Original_StartDate) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
+        public virtual int Delete(string Original_DiagnoseCode, int Original_PatientID, System.DateTime Original_StartDate) {
             if ((Original_DiagnoseCode == null)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_DiagnoseCode");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_DiagnoseCode));
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_DiagnoseCode));
             }
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_PatientID));
-            if ((Original_Active.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((bool)(Original_Active.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_StartDate));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_PatientID));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_StartDate));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -16278,22 +16172,15 @@ SELECT ID, DiagnoseCode, PatientID, Active, StartDate FROM DiagnosesForPatients 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int ID, string DiagnoseCode, int PatientID, global::System.Nullable<bool> Active, System.DateTime StartDate) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID));
+        public virtual int Insert(string DiagnoseCode, int PatientID, System.DateTime StartDate) {
             if ((DiagnoseCode == null)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("DiagnoseCode");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(DiagnoseCode));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(DiagnoseCode));
             }
-            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(PatientID));
-            if ((Active.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((bool)(Active.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(StartDate));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(PatientID));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(StartDate));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -16314,41 +16201,23 @@ SELECT ID, DiagnoseCode, PatientID, Active, StartDate FROM DiagnosesForPatients 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ID, string DiagnoseCode, int PatientID, global::System.Nullable<bool> Active, System.DateTime StartDate, int Original_ID, string Original_DiagnoseCode, int Original_PatientID, global::System.Nullable<bool> Original_Active, System.DateTime Original_StartDate) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID));
+        public virtual int Update(string DiagnoseCode, int PatientID, System.DateTime StartDate, string Original_DiagnoseCode, int Original_PatientID, System.DateTime Original_StartDate) {
             if ((DiagnoseCode == null)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("DiagnoseCode");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(DiagnoseCode));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(DiagnoseCode));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(PatientID));
-            if ((Active.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((bool)(Active.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(StartDate));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_ID));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(PatientID));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(StartDate));
             if ((Original_DiagnoseCode == null)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_DiagnoseCode");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_DiagnoseCode));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_DiagnoseCode));
             }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_PatientID));
-            if ((Original_Active.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((bool)(Original_Active.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(Original_StartDate));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_PatientID));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(Original_StartDate));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -16369,8 +16238,8 @@ SELECT ID, DiagnoseCode, PatientID, Active, StartDate FROM DiagnosesForPatients 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string DiagnoseCode, int PatientID, global::System.Nullable<bool> Active, System.DateTime StartDate, int Original_ID, string Original_DiagnoseCode, int Original_PatientID, global::System.Nullable<bool> Original_Active, System.DateTime Original_StartDate) {
-            return this.Update(Original_ID, DiagnoseCode, PatientID, Active, StartDate, Original_ID, Original_DiagnoseCode, Original_PatientID, Original_Active, Original_StartDate);
+        public virtual int Update(System.DateTime StartDate, string Original_DiagnoseCode, int Original_PatientID, System.DateTime Original_StartDate) {
+            return this.Update(Original_DiagnoseCode, Original_PatientID, StartDate, Original_DiagnoseCode, Original_PatientID, Original_StartDate);
         }
     }
     
