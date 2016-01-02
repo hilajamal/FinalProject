@@ -149,10 +149,6 @@ namespace Clinic1
             HourPickerStartUpdate.Format = DateTimePickerFormat.Custom;
             HourPickerStartUpdate.CustomFormat = "HH:mm:ss";
 
-            HourPickerEndUpdate.ShowUpDown = true;
-            HourPickerEndUpdate.Format = DateTimePickerFormat.Custom;
-            HourPickerEndUpdate.CustomFormat = "HH:mm:ss";
-
             CmbMeetingTypeAdd.AutoCompleteMode = AutoCompleteMode.Append;
             CmbMeetingTypeAdd.AutoCompleteSource = AutoCompleteSource.ListItems;
             CmbMeetingTypeAdd.DisplayMember = "Name";

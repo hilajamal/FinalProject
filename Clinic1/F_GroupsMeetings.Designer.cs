@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TabGroupsMeetings = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label23 = new System.Windows.Forms.Label();
@@ -73,9 +73,7 @@
             this.label26 = new System.Windows.Forms.Label();
             this.CmbSecondTherapistUpdate = new System.Windows.Forms.ComboBox();
             this.CmbMainTherapistUpdate = new System.Windows.Forms.ComboBox();
-            this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.HourPickerEndUpdate = new System.Windows.Forms.DateTimePicker();
             this.CmbMeetingTypeUpdate = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
             this.TxtUpdatedByDateUpdate = new System.Windows.Forms.TextBox();
@@ -120,7 +118,7 @@
             this.TabGroupsMeetings.RightToLeftLayout = true;
             this.TabGroupsMeetings.SelectedIndex = 0;
             this.TabGroupsMeetings.ShowToolTips = true;
-            this.TabGroupsMeetings.Size = new System.Drawing.Size(1093, 487);
+            this.TabGroupsMeetings.Size = new System.Drawing.Size(1092, 563);
             this.TabGroupsMeetings.TabIndex = 45;
             this.TabGroupsMeetings.SelectedIndexChanged += new System.EventHandler(this.TabGroupsMeetings_SelectedIndexChanged);
             // 
@@ -157,7 +155,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1085, 451);
+            this.tabPage1.Size = new System.Drawing.Size(1084, 527);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "הוספת טיפול";
             // 
@@ -166,7 +164,7 @@
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label23.Location = new System.Drawing.Point(421, 64);
+            this.label23.Location = new System.Drawing.Point(784, 72);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(76, 16);
             this.label23.TabIndex = 115;
@@ -177,7 +175,7 @@
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label24.Location = new System.Drawing.Point(420, 35);
+            this.label24.Location = new System.Drawing.Point(783, 43);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(79, 16);
             this.label24.TabIndex = 114;
@@ -187,7 +185,7 @@
             // 
             this.CmbSecondTherapistAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbSecondTherapistAdd.FormattingEnabled = true;
-            this.CmbSecondTherapistAdd.Location = new System.Drawing.Point(290, 62);
+            this.CmbSecondTherapistAdd.Location = new System.Drawing.Point(653, 70);
             this.CmbSecondTherapistAdd.Name = "CmbSecondTherapistAdd";
             this.CmbSecondTherapistAdd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbSecondTherapistAdd.Size = new System.Drawing.Size(124, 24);
@@ -197,7 +195,7 @@
             // 
             this.CmbMainTherapistAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbMainTherapistAdd.FormattingEnabled = true;
-            this.CmbMainTherapistAdd.Location = new System.Drawing.Point(290, 31);
+            this.CmbMainTherapistAdd.Location = new System.Drawing.Point(653, 39);
             this.CmbMainTherapistAdd.Name = "CmbMainTherapistAdd";
             this.CmbMainTherapistAdd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbMainTherapistAdd.Size = new System.Drawing.Size(124, 24);
@@ -219,7 +217,7 @@
             // 
             this.CmbMeetingTypeAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbMeetingTypeAdd.FormattingEnabled = true;
-            this.CmbMeetingTypeAdd.Location = new System.Drawing.Point(601, 112);
+            this.CmbMeetingTypeAdd.Location = new System.Drawing.Point(653, 9);
             this.CmbMeetingTypeAdd.Name = "CmbMeetingTypeAdd";
             this.CmbMeetingTypeAdd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbMeetingTypeAdd.Size = new System.Drawing.Size(124, 24);
@@ -230,7 +228,7 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label19.Location = new System.Drawing.Point(731, 112);
+            this.label19.Location = new System.Drawing.Point(783, 12);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(71, 16);
             this.label19.TabIndex = 107;
@@ -241,7 +239,7 @@
             this.TxtWrittenByDateAdd.BackColor = System.Drawing.Color.Silver;
             this.TxtWrittenByDateAdd.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtWrittenByDateAdd.ForeColor = System.Drawing.Color.Black;
-            this.TxtWrittenByDateAdd.Location = new System.Drawing.Point(9, 416);
+            this.TxtWrittenByDateAdd.Location = new System.Drawing.Point(512, 480);
             this.TxtWrittenByDateAdd.Name = "TxtWrittenByDateAdd";
             this.TxtWrittenByDateAdd.ReadOnly = true;
             this.TxtWrittenByDateAdd.Size = new System.Drawing.Size(162, 23);
@@ -253,7 +251,7 @@
             this.TxtWrittenByAdd.BackColor = System.Drawing.Color.Silver;
             this.TxtWrittenByAdd.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtWrittenByAdd.ForeColor = System.Drawing.Color.Black;
-            this.TxtWrittenByAdd.Location = new System.Drawing.Point(235, 416);
+            this.TxtWrittenByAdd.Location = new System.Drawing.Point(738, 480);
             this.TxtWrittenByAdd.Name = "TxtWrittenByAdd";
             this.TxtWrittenByAdd.ReadOnly = true;
             this.TxtWrittenByAdd.Size = new System.Drawing.Size(98, 23);
@@ -265,7 +263,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label14.Location = new System.Drawing.Point(172, 421);
+            this.label14.Location = new System.Drawing.Point(675, 485);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(61, 16);
             this.label14.TabIndex = 101;
@@ -276,7 +274,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(339, 421);
+            this.label12.Location = new System.Drawing.Point(842, 485);
             this.label12.Name = "label12";
             this.label12.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label12.Size = new System.Drawing.Size(73, 16);
@@ -341,44 +339,44 @@
             this.DgPatientsAdd.AllowUserToAddRows = false;
             this.DgPatientsAdd.AllowUserToDeleteRows = false;
             this.DgPatientsAdd.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DgPatientsAdd.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DgPatientsAdd.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.DgPatientsAdd.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgPatientsAdd.BackgroundColor = System.Drawing.Color.Silver;
             this.DgPatientsAdd.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("David", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgPatientsAdd.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgPatientsAdd.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.DgPatientsAdd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("David", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgPatientsAdd.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("David", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgPatientsAdd.DefaultCellStyle = dataGridViewCellStyle13;
             this.DgPatientsAdd.GridColor = System.Drawing.Color.Silver;
             this.DgPatientsAdd.Location = new System.Drawing.Point(445, 155);
             this.DgPatientsAdd.Name = "DgPatientsAdd";
             this.DgPatientsAdd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("David", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgPatientsAdd.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DgPatientsAdd.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("David", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgPatientsAdd.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DgPatientsAdd.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.DgPatientsAdd.Size = new System.Drawing.Size(517, 123);
             this.DgPatientsAdd.TabIndex = 87;
             // 
@@ -403,7 +401,7 @@
             // 
             this.txtMeetingNumberAdd.Enabled = false;
             this.txtMeetingNumberAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMeetingNumberAdd.Location = new System.Drawing.Point(601, 77);
+            this.txtMeetingNumberAdd.Location = new System.Drawing.Point(863, 71);
             this.txtMeetingNumberAdd.Name = "txtMeetingNumberAdd";
             this.txtMeetingNumberAdd.Size = new System.Drawing.Size(124, 26);
             this.txtMeetingNumberAdd.TabIndex = 84;
@@ -414,7 +412,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(731, 77);
+            this.label3.Location = new System.Drawing.Point(993, 71);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 16);
             this.label3.TabIndex = 83;
@@ -424,7 +422,7 @@
             // 
             this.CmbGroupNameAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbGroupNameAdd.FormattingEnabled = true;
-            this.CmbGroupNameAdd.Location = new System.Drawing.Point(602, 45);
+            this.CmbGroupNameAdd.Location = new System.Drawing.Point(864, 39);
             this.CmbGroupNameAdd.Name = "CmbGroupNameAdd";
             this.CmbGroupNameAdd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbGroupNameAdd.Size = new System.Drawing.Size(124, 24);
@@ -434,7 +432,7 @@
             // 
             this.CmbGroupIDAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbGroupIDAdd.FormattingEnabled = true;
-            this.CmbGroupIDAdd.Location = new System.Drawing.Point(602, 14);
+            this.CmbGroupIDAdd.Location = new System.Drawing.Point(864, 8);
             this.CmbGroupIDAdd.Name = "CmbGroupIDAdd";
             this.CmbGroupIDAdd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbGroupIDAdd.Size = new System.Drawing.Size(124, 24);
@@ -446,7 +444,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(732, 47);
+            this.label1.Location = new System.Drawing.Point(994, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 16);
             this.label1.TabIndex = 80;
@@ -457,7 +455,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(731, 18);
+            this.label2.Location = new System.Drawing.Point(993, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 16);
             this.label2.TabIndex = 79;
@@ -468,7 +466,7 @@
             this.BtnAddNewMeeting.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.BtnAddNewMeeting.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAddNewMeeting.ForeColor = System.Drawing.Color.Black;
-            this.BtnAddNewMeeting.Location = new System.Drawing.Point(913, 41);
+            this.BtnAddNewMeeting.Location = new System.Drawing.Point(127, 435);
             this.BtnAddNewMeeting.Name = "BtnAddNewMeeting";
             this.BtnAddNewMeeting.Size = new System.Drawing.Size(109, 66);
             this.BtnAddNewMeeting.TabIndex = 41;
@@ -484,9 +482,7 @@
             this.tabPage2.Controls.Add(this.label26);
             this.tabPage2.Controls.Add(this.CmbSecondTherapistUpdate);
             this.tabPage2.Controls.Add(this.CmbMainTherapistUpdate);
-            this.tabPage2.Controls.Add(this.label21);
             this.tabPage2.Controls.Add(this.label22);
-            this.tabPage2.Controls.Add(this.HourPickerEndUpdate);
             this.tabPage2.Controls.Add(this.CmbMeetingTypeUpdate);
             this.tabPage2.Controls.Add(this.label20);
             this.tabPage2.Controls.Add(this.TxtUpdatedByDateUpdate);
@@ -515,7 +511,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 32);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1085, 451);
+            this.tabPage2.Size = new System.Drawing.Size(1084, 527);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "עדכון טיפול";
             // 
@@ -524,44 +520,44 @@
             this.DgPatientsUpdate.AllowUserToAddRows = false;
             this.DgPatientsUpdate.AllowUserToDeleteRows = false;
             this.DgPatientsUpdate.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DgPatientsUpdate.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DgPatientsUpdate.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.DgPatientsUpdate.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgPatientsUpdate.BackgroundColor = System.Drawing.Color.Silver;
             this.DgPatientsUpdate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgPatientsUpdate.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgPatientsUpdate.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.DgPatientsUpdate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgPatientsUpdate.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgPatientsUpdate.DefaultCellStyle = dataGridViewCellStyle18;
             this.DgPatientsUpdate.GridColor = System.Drawing.Color.Silver;
-            this.DgPatientsUpdate.Location = new System.Drawing.Point(442, 151);
+            this.DgPatientsUpdate.Location = new System.Drawing.Point(469, 150);
             this.DgPatientsUpdate.Name = "DgPatientsUpdate";
             this.DgPatientsUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgPatientsUpdate.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DgPatientsUpdate.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgPatientsUpdate.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DgPatientsUpdate.RowsDefaultCellStyle = dataGridViewCellStyle20;
             this.DgPatientsUpdate.Size = new System.Drawing.Size(517, 123);
             this.DgPatientsUpdate.TabIndex = 124;
             // 
@@ -570,7 +566,7 @@
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label25.Location = new System.Drawing.Point(394, 71);
+            this.label25.Location = new System.Drawing.Point(768, 79);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(76, 16);
             this.label25.TabIndex = 123;
@@ -581,7 +577,7 @@
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label26.Location = new System.Drawing.Point(393, 42);
+            this.label26.Location = new System.Drawing.Point(767, 50);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(79, 16);
             this.label26.TabIndex = 122;
@@ -591,7 +587,7 @@
             // 
             this.CmbSecondTherapistUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbSecondTherapistUpdate.FormattingEnabled = true;
-            this.CmbSecondTherapistUpdate.Location = new System.Drawing.Point(263, 69);
+            this.CmbSecondTherapistUpdate.Location = new System.Drawing.Point(637, 77);
             this.CmbSecondTherapistUpdate.Name = "CmbSecondTherapistUpdate";
             this.CmbSecondTherapistUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbSecondTherapistUpdate.Size = new System.Drawing.Size(124, 24);
@@ -601,23 +597,11 @@
             // 
             this.CmbMainTherapistUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbMainTherapistUpdate.FormattingEnabled = true;
-            this.CmbMainTherapistUpdate.Location = new System.Drawing.Point(263, 38);
+            this.CmbMainTherapistUpdate.Location = new System.Drawing.Point(637, 46);
             this.CmbMainTherapistUpdate.Name = "CmbMainTherapistUpdate";
             this.CmbMainTherapistUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbMainTherapistUpdate.Size = new System.Drawing.Size(124, 24);
             this.CmbMainTherapistUpdate.TabIndex = 120;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label21.Location = new System.Drawing.Point(165, 213);
-            this.label21.Name = "label21";
-            this.label21.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label21.Size = new System.Drawing.Size(43, 16);
-            this.label21.TabIndex = 119;
-            this.label21.Text = "סיום:";
             // 
             // label22
             // 
@@ -631,20 +615,11 @@
             this.label22.TabIndex = 118;
             this.label22.Text = "התחלה:";
             // 
-            // HourPickerEndUpdate
-            // 
-            this.HourPickerEndUpdate.AllowDrop = true;
-            this.HourPickerEndUpdate.Location = new System.Drawing.Point(76, 208);
-            this.HourPickerEndUpdate.Name = "HourPickerEndUpdate";
-            this.HourPickerEndUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.HourPickerEndUpdate.Size = new System.Drawing.Size(80, 23);
-            this.HourPickerEndUpdate.TabIndex = 117;
-            // 
             // CmbMeetingTypeUpdate
             // 
             this.CmbMeetingTypeUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbMeetingTypeUpdate.FormattingEnabled = true;
-            this.CmbMeetingTypeUpdate.Location = new System.Drawing.Point(539, 107);
+            this.CmbMeetingTypeUpdate.Location = new System.Drawing.Point(635, 15);
             this.CmbMeetingTypeUpdate.Name = "CmbMeetingTypeUpdate";
             this.CmbMeetingTypeUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbMeetingTypeUpdate.Size = new System.Drawing.Size(124, 24);
@@ -655,7 +630,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label20.Location = new System.Drawing.Point(671, 109);
+            this.label20.Location = new System.Drawing.Point(767, 17);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(71, 16);
             this.label20.TabIndex = 115;
@@ -666,7 +641,7 @@
             this.TxtUpdatedByDateUpdate.BackColor = System.Drawing.Color.Silver;
             this.TxtUpdatedByDateUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtUpdatedByDateUpdate.ForeColor = System.Drawing.Color.Black;
-            this.TxtUpdatedByDateUpdate.Location = new System.Drawing.Point(6, 417);
+            this.TxtUpdatedByDateUpdate.Location = new System.Drawing.Point(514, 501);
             this.TxtUpdatedByDateUpdate.Name = "TxtUpdatedByDateUpdate";
             this.TxtUpdatedByDateUpdate.ReadOnly = true;
             this.TxtUpdatedByDateUpdate.Size = new System.Drawing.Size(165, 23);
@@ -678,7 +653,7 @@
             this.TxtWrittenByDateUpdate.BackColor = System.Drawing.Color.Silver;
             this.TxtWrittenByDateUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtWrittenByDateUpdate.ForeColor = System.Drawing.Color.Black;
-            this.TxtWrittenByDateUpdate.Location = new System.Drawing.Point(6, 385);
+            this.TxtWrittenByDateUpdate.Location = new System.Drawing.Point(514, 469);
             this.TxtWrittenByDateUpdate.Name = "TxtWrittenByDateUpdate";
             this.TxtWrittenByDateUpdate.ReadOnly = true;
             this.TxtWrittenByDateUpdate.Size = new System.Drawing.Size(165, 23);
@@ -690,7 +665,7 @@
             this.TxtUpdatedByUpdate.BackColor = System.Drawing.Color.Silver;
             this.TxtUpdatedByUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtUpdatedByUpdate.ForeColor = System.Drawing.Color.Black;
-            this.TxtUpdatedByUpdate.Location = new System.Drawing.Point(236, 417);
+            this.TxtUpdatedByUpdate.Location = new System.Drawing.Point(744, 501);
             this.TxtUpdatedByUpdate.Name = "TxtUpdatedByUpdate";
             this.TxtUpdatedByUpdate.ReadOnly = true;
             this.TxtUpdatedByUpdate.Size = new System.Drawing.Size(112, 23);
@@ -702,7 +677,7 @@
             this.TxtWrittenByUpdate.BackColor = System.Drawing.Color.Silver;
             this.TxtWrittenByUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtWrittenByUpdate.ForeColor = System.Drawing.Color.Black;
-            this.TxtWrittenByUpdate.Location = new System.Drawing.Point(236, 385);
+            this.TxtWrittenByUpdate.Location = new System.Drawing.Point(744, 469);
             this.TxtWrittenByUpdate.Name = "TxtWrittenByUpdate";
             this.TxtWrittenByUpdate.ReadOnly = true;
             this.TxtWrittenByUpdate.Size = new System.Drawing.Size(112, 23);
@@ -714,7 +689,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label15.Location = new System.Drawing.Point(173, 420);
+            this.label15.Location = new System.Drawing.Point(681, 504);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(61, 16);
             this.label15.TabIndex = 110;
@@ -725,7 +700,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label16.Location = new System.Drawing.Point(173, 390);
+            this.label16.Location = new System.Drawing.Point(681, 474);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(61, 16);
             this.label16.TabIndex = 109;
@@ -736,7 +711,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label17.Location = new System.Drawing.Point(354, 420);
+            this.label17.Location = new System.Drawing.Point(862, 504);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(70, 16);
             this.label17.TabIndex = 108;
@@ -747,7 +722,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label18.Location = new System.Drawing.Point(354, 390);
+            this.label18.Location = new System.Drawing.Point(862, 474);
             this.label18.Name = "label18";
             this.label18.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label18.Size = new System.Drawing.Size(70, 16);
@@ -759,7 +734,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(989, 394);
+            this.label8.Location = new System.Drawing.Point(1016, 393);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(46, 16);
             this.label8.TabIndex = 94;
@@ -770,7 +745,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(964, 308);
+            this.label7.Location = new System.Drawing.Point(991, 307);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(83, 16);
             this.label7.TabIndex = 93;
@@ -779,7 +754,7 @@
             // TxtRemarksUpdate
             // 
             this.TxtRemarksUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtRemarksUpdate.Location = new System.Drawing.Point(444, 370);
+            this.TxtRemarksUpdate.Location = new System.Drawing.Point(471, 369);
             this.TxtRemarksUpdate.Name = "TxtRemarksUpdate";
             this.TxtRemarksUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TxtRemarksUpdate.Size = new System.Drawing.Size(515, 73);
@@ -789,7 +764,7 @@
             // TxtSummaryUpdate
             // 
             this.TxtSummaryUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtSummaryUpdate.Location = new System.Drawing.Point(442, 284);
+            this.TxtSummaryUpdate.Location = new System.Drawing.Point(469, 283);
             this.TxtSummaryUpdate.Name = "TxtSummaryUpdate";
             this.TxtSummaryUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TxtSummaryUpdate.Size = new System.Drawing.Size(517, 73);
@@ -801,7 +776,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(976, 199);
+            this.label6.Location = new System.Drawing.Point(1001, 202);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(69, 16);
             this.label6.TabIndex = 90;
@@ -826,7 +801,7 @@
             // 
             this.CmbMeetingNumberUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbMeetingNumberUpdate.FormattingEnabled = true;
-            this.CmbMeetingNumberUpdate.Location = new System.Drawing.Point(539, 73);
+            this.CmbMeetingNumberUpdate.Location = new System.Drawing.Point(862, 81);
             this.CmbMeetingNumberUpdate.Name = "CmbMeetingNumberUpdate";
             this.CmbMeetingNumberUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbMeetingNumberUpdate.Size = new System.Drawing.Size(124, 24);
@@ -838,7 +813,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(669, 75);
+            this.label4.Location = new System.Drawing.Point(992, 83);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 16);
             this.label4.TabIndex = 85;
@@ -848,7 +823,7 @@
             // 
             this.CmbGroupNameUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbGroupNameUpdate.FormattingEnabled = true;
-            this.CmbGroupNameUpdate.Location = new System.Drawing.Point(539, 40);
+            this.CmbGroupNameUpdate.Location = new System.Drawing.Point(862, 48);
             this.CmbGroupNameUpdate.Name = "CmbGroupNameUpdate";
             this.CmbGroupNameUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbGroupNameUpdate.Size = new System.Drawing.Size(124, 24);
@@ -858,7 +833,7 @@
             // 
             this.CmbGroupIdUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbGroupIdUpdate.FormattingEnabled = true;
-            this.CmbGroupIdUpdate.Location = new System.Drawing.Point(539, 9);
+            this.CmbGroupIdUpdate.Location = new System.Drawing.Point(862, 17);
             this.CmbGroupIdUpdate.Name = "CmbGroupIdUpdate";
             this.CmbGroupIdUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbGroupIdUpdate.Size = new System.Drawing.Size(124, 24);
@@ -870,7 +845,7 @@
             this.LblGrouptName.AutoSize = true;
             this.LblGrouptName.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblGrouptName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LblGrouptName.Location = new System.Drawing.Point(669, 42);
+            this.LblGrouptName.Location = new System.Drawing.Point(992, 50);
             this.LblGrouptName.Name = "LblGrouptName";
             this.LblGrouptName.Size = new System.Drawing.Size(71, 16);
             this.LblGrouptName.TabIndex = 76;
@@ -881,7 +856,7 @@
             this.LblGroupNumber.AutoSize = true;
             this.LblGroupNumber.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblGroupNumber.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LblGroupNumber.Location = new System.Drawing.Point(668, 13);
+            this.LblGroupNumber.Location = new System.Drawing.Point(991, 21);
             this.LblGroupNumber.Name = "LblGroupNumber";
             this.LblGroupNumber.Size = new System.Drawing.Size(85, 16);
             this.LblGroupNumber.TabIndex = 75;
@@ -892,7 +867,7 @@
             this.BtnUpdateMeeting.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.BtnUpdateMeeting.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnUpdateMeeting.ForeColor = System.Drawing.Color.Black;
-            this.BtnUpdateMeeting.Location = new System.Drawing.Point(818, 57);
+            this.BtnUpdateMeeting.Location = new System.Drawing.Point(160, 463);
             this.BtnUpdateMeeting.Name = "BtnUpdateMeeting";
             this.BtnUpdateMeeting.Size = new System.Drawing.Size(114, 57);
             this.BtnUpdateMeeting.TabIndex = 74;
@@ -910,7 +885,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1117, 496);
+            this.ClientSize = new System.Drawing.Size(1116, 575);
             this.Controls.Add(this.TabGroupsMeetings);
             this.Name = "F_GroupsMeetings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -978,9 +953,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.DataGridView DgPatientsAdd;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.DateTimePicker HourPickerEndUpdate;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.ComboBox CmbSecondTherapistAdd;
