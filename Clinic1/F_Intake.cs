@@ -12,6 +12,7 @@ namespace Clinic1
 {
     public partial class F_Intake : Form
     {
+        Clinic.DiagnosesForPatientsDataTable dtDiagnoseForPatients;
         public F_Intake()
         {
             InitializeComponent();
@@ -20,19 +21,24 @@ namespace Clinic1
 
         public void addCols()
         {
-
+            DgDiagnosesUpdate.AutoGenerateColumns = false;
             TxtWrittenByDateAdd.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
             TxtWrittenByAdd.Text = Globals.ConnectedUserName;
              HourPickerStartAdd.ShowUpDown = true;
             HourPickerStartAdd.Format = DateTimePickerFormat.Custom;
             HourPickerStartAdd.CustomFormat = "HH:mm:ss";
 
+            TxtHourUpdate.ShowUpDown = true;
+            TxtHourUpdate.Format = DateTimePickerFormat.Custom;
+            TxtHourUpdate.CustomFormat = "HH:mm:ss";
+
             ClinicTableAdapters.PatientsTableAdapter daPatients = new ClinicTableAdapters.PatientsTableAdapter();
-    Clinic.PatientsDataTable dtPatients = daPatients.GetData();
+            Clinic.PatientsDataTable dtPatients = daPatients.GetData();
+           
+            //PatientsIDAdd
             CmblPatientId.DataSource = dtPatients;
             CmblPatientId.AutoCompleteMode = AutoCompleteMode.Append;
             CmblPatientId.AutoCompleteSource = AutoCompleteSource.ListItems;
-
             CmblPatientId.DisplayMember = "ID";
             CmblPatientId.ValueMember = "ID";
             CmblPatientId.SelectedIndex = 0;
@@ -45,7 +51,29 @@ namespace Clinic1
             CmbPatientName.ValueMember = "ID";
             CmbPatientName.SelectedIndex = 0;
 
-            // Workers
+            //PatientsIDUpdate
+            ClinicTableAdapters.PatientsTableAdapter daPatientsUpdate = new ClinicTableAdapters.PatientsTableAdapter();
+            Clinic.PatientsDataTable dtPatientsUpdate = daPatientsUpdate.GetDataByPatientsWithIntake();
+            cmbPatientIdUpdate.DataSource = dtPatientsUpdate;
+            cmbPatientIdUpdate.AutoCompleteMode = AutoCompleteMode.Append;
+            cmbPatientIdUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cmbPatientIdUpdate.DisplayMember = "ID";
+            cmbPatientIdUpdate.ValueMember = "ID";
+            cmbPatientIdUpdate.SelectedIndex = 0;
+
+            ClinicTableAdapters.AppointmentsForPatientsTableAdapter daAPA = new ClinicTableAdapters.AppointmentsForPatientsTableAdapter();
+
+
+            //PatientsNameUpdate
+            CmbPatientNameUpdate.DataSource = dtPatientsUpdate;
+            CmbPatientNameUpdate.AutoCompleteMode = AutoCompleteMode.Append;
+            CmbPatientNameUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CmbPatientNameUpdate.DisplayMember = "FullName";
+            CmbPatientNameUpdate.ValueMember = "ID";
+            CmbPatientNameUpdate.SelectedIndex = 0;
+
+
+            // WorkersAdd
             ClinicTableAdapters.WorkersTableAdapter daWorkers = new ClinicTableAdapters.WorkersTableAdapter();
             Clinic.WorkersDataTable dtWorkers = daWorkers.GetDataByActiveWorkers();
             CmbTherapist.DataSource = dtWorkers;
@@ -55,8 +83,26 @@ namespace Clinic1
             CmbTherapist.DisplayMember = "FullName";
             CmbTherapist.ValueMember = "ID";
 
+            // WorkersUpdate
+            Clinic.WorkersDataTable dtWorkersUpdate = daWorkers.GetDataByActiveWorkers();
+            CmbMainTherapistUpdate.DataSource = dtWorkersUpdate;
+            CmbMainTherapistUpdate.SelectedIndex = 0;
+            CmbMainTherapistUpdate.AutoCompleteMode = AutoCompleteMode.Append;
+            CmbMainTherapistUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CmbMainTherapistUpdate.DisplayMember = "FullName";
+            CmbMainTherapistUpdate.ValueMember = "ID";
 
-            // Workers
+            //IntakeNumberUpdate
+            CmbIntakeNumber.AutoCompleteMode = AutoCompleteMode.Append;
+            CmbIntakeNumber.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CmbIntakeNumber.DisplayMember = "AppointmentNumber";
+            CmbIntakeNumber.ValueMember = "AppointmentNumber";
+            CmbIntakeNumber.SelectedIndex = -1;
+            CmbIntakeNumber.SelectedIndex = 0;
+
+
+
+            // DiagnosesAdd
             ClinicTableAdapters.DiagnoseTableAdapter daDiagnose = new ClinicTableAdapters.DiagnoseTableAdapter();
             Clinic.DiagnoseDataTable dt = daDiagnose.GetData();
             CmbDiagnoseCode.DataSource = dt;
@@ -92,13 +138,35 @@ namespace Clinic1
             col3.Name = "StartDate";
             DgDiagnoses.Columns.Add(col3);
 
+            DataGridViewTextBoxColumn col4 = new DataGridViewTextBoxColumn();
+            DataGridViewTextBoxColumn col5 = new DataGridViewTextBoxColumn();
+            DataGridViewTextBoxColumn col6 = new DataGridViewTextBoxColumn();
+
+            DgDiagnosesUpdate.AutoGenerateColumns = false;
+            col4.HeaderText = "קוד";
+            col4.DataPropertyName = "ID";
+            col4.Name = "ID";
+            DgDiagnosesUpdate.Columns.Add(col4);
+
+            col5.HeaderText = "שם אבחנה";
+            col5.DataPropertyName = "Name";
+            col5.Name = "Name";
+            DgDiagnosesUpdate.Columns.Add(col5);
+
+
+            col6.HeaderText = "תאריך התחלה";
+            col6.DataPropertyName = "StartDate";
+            col6.Name = "StartDate";
+            DgDiagnosesUpdate.Columns.Add(col6);
+
         }
+
 
         private void BtnSaveIntake_Click(object sender, EventArgs e)
         {
             int apNumber;
             ClinicTableAdapters.AppointmentsTableAdapter da = new ClinicTableAdapters.AppointmentsTableAdapter();
-            if ((int) da.GetMaxAppointment(1,(int)CmblPatientId.SelectedValue) == 0)
+            if (da.GetMaxAppointment(1,(int)CmblPatientId.SelectedValue) == null)
                 apNumber = 1;
             else apNumber =(int) da.GetMaxAppointment(1,(int)CmblPatientId.SelectedValue)+1;
             DateTime date = DateTime.Parse(TxtDate.Text);
@@ -147,7 +215,121 @@ namespace Clinic1
 
                     DgDiagnoses.Refresh();
         }
-        
 
+        private void comPatientIdUpdate_SelectedIndexChanged(object sender, EventArgs e)
+        {
+      
+        }
+
+        private void CmbPatientNameUpdate_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ClinicTableAdapters.AppointmentsForPatientsTableAdapter da = new ClinicTableAdapters.AppointmentsForPatientsTableAdapter();
+            Clinic.AppointmentsForPatientsDataTable dt = da.GetIntakeNumbersByPatientID((int)cmbPatientIdUpdate.SelectedValue);
+            CmbIntakeNumber.DataSource = null;
+            CmbIntakeNumber.DataSource = dt;
+
+        }
+
+        private void CmbIntakeNumber_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CmbIntakeNumber.SelectedIndex == -1)
+                return;
+
+            if (CmbIntakeNumber.Items.Count == 0)
+                clearAllFields();
+            else
+            {
+                ClinicTableAdapters.DiagnosesForPatientsTableAdapter daDiagsnoses = new ClinicTableAdapters.DiagnosesForPatientsTableAdapter(); 
+                DateTime now = DateTime.Now;
+                String date = now.ToString("dd/MM/yyyy HH:mm:ss");
+                ClinicTableAdapters.AppointmentsTableAdapter da = new ClinicTableAdapters.AppointmentsTableAdapter();
+                Clinic.AppointmentsDataTable dt = da.GetDataByPatientIDAndAppointmentNumberAndAppointmentTypeID((int)CmbIntakeNumber.SelectedValue, (int)cmbPatientIdUpdate.SelectedValue, 1);
+                ClinicTableAdapters.WorkersTableAdapter daWorkers = new ClinicTableAdapters.WorkersTableAdapter();
+                TxtBrothersAndSistersUpdate.Text = dt.Rows[0]["BrothersAndSisters"].ToString();
+                TxtFamilyUpdate.Text = dt.Rows[0]["Family"].ToString();
+                TxtReasonUpdate.Text = dt.Rows[0]["Reason"].ToString();
+                TxtPhysicalUpdate.Text = dt.Rows[0]["Physical"].ToString();
+                TxtSocialUpdate.Text = dt.Rows[0]["Social"].ToString();
+                TxtSentByUpdate.Text = dt.Rows[0]["SentBy"].ToString();
+                TxtTraumasUpdate.Text = dt.Rows[0]["Traumas"].ToString();
+                TxtPregnantUpdate.Text = dt.Rows[0]["Pregnant"].ToString();
+                TxtUpdatedByUpdate.Text = dt.Rows[0]["UpdatedBy"].ToString();
+                TxtWrittenByUpdate.Text = daWorkers.GetFullNameByID(Int32.Parse(dt.Rows[0]["AddedBy"].ToString()));
+                TxtWrittenByDateUpdate.Text = dt.Rows[0]["AddedByDate"].ToString();
+                TxtUpdatedByDateUpdate.Text = dt.Rows[0]["UpdatedByDate"].ToString();
+                TxtHourUpdate.Text = dt.Rows[0]["Hour"].ToString();
+                TxtNotesUpdate.Text = dt.Rows[0]["Notes"].ToString();
+                TxtPsychoUpdate.Text = dt.Rows[0]["Psycho"].ToString();
+                CmbMainTherapistUpdate.SelectedValue = Int32.Parse(dt.Rows[0]["MainTherapist"].ToString());
+                dtDiagnoseForPatients =  daDiagsnoses.GetDataByPatientID((int)cmbPatientIdUpdate.SelectedValue);
+                DgDiagnosesUpdate.DataSource = dtDiagnoseForPatients;
+
+
+            }
+        }
+
+        public void clearAllFields()
+        {
+            TxtBrothersAndSistersUpdate.Text = String.Empty;
+            TxtFamilyUpdate.Text = String.Empty;
+            TxtPhysicalUpdate.Text = String.Empty;
+            TxtSocialUpdate.Text = String.Empty;
+            TxtSentByUpdate.Text = String.Empty;
+            TxtTraumasUpdate.Text = String.Empty;
+            TxtFamilyUpdate.Text = String.Empty;
+            TxtPregnantUpdate.Text = String.Empty;
+            TxtReasonUpdate.Text = String.Empty;
+            TxtUpdatedByUpdate.Text = String.Empty;
+            TxtWrittenByUpdate.Text = String.Empty;
+            TxtWrittenByDateUpdate.Text = String.Empty;
+            TxtUpdatedByDateUpdate.Text = String.Empty;
+            TxtHourUpdate.Text = String.Empty;
+            TxtNotesUpdate.Text = String.Empty;
+            TxtPhysicalUpdate.Text = String.Empty;
+        }
+
+        private void BtnRemoveDiagnose_Click(object sender, EventArgs e)
+        {
+            if (DgDiagnosesUpdate.SelectedRows == null) { 
+                MessageBox.Show("יש לבחור אבחנה להסרה", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                return;
+            }
+            else
+            {
+                ClinicTableAdapters.DiagnosesForPatientsTableAdapter da = new ClinicTableAdapters.DiagnosesForPatientsTableAdapter();
+
+                if (DgDiagnosesUpdate.SelectedCells.Count > 0)
+                {
+                    if (MessageBox.Show("האם ברצונך להסיר אבחנה?", "Warning", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                    {
+                        int selectedrowindex = DgDiagnosesUpdate.SelectedCells[0].RowIndex;
+
+                        DataGridViewRow selectedRow = DgDiagnosesUpdate.Rows[selectedrowindex];
+                        DgDiagnosesUpdate.Rows.RemoveAt(selectedrowindex);
+
+                        //string a = Convert.ToString(selectedRow.Cells["ID"].Value);
+
+                        //da.DeleteByPatiendIDAndDiagnoseCode(a,(int)cmbPatientIdUpdate.SelectedValue);
+                        //Clinic1.ClinicTableAdapters.DiagnosesForPatientsTableAdapter daDiagnoses = new Clinic1.ClinicTableAdapters.DiagnosesForPatientsTableAdapter();
+                        //Clinic.DiagnosesForPatientsDataTable dt = daDiagnoses.GetDataByPatientID((int)cmbPatientIdUpdate.SelectedValue);
+                        //DgDiagnosesUpdate.DataSource = dt;
+
+                    }
+                }
+
+            }
+        }
+
+        private void BtnSaveUpdate_Click(object sender, EventArgs e)
+        {
+            //ClinicTableAdapters.AppointmentsTableAdapter da = new ClinicTableAdapters.AppointmentsTableAdapter();
+            //ClinicTableAdapters.AppointmentsForPatientsTableAdapter daAPA = new ClinicTableAdapters.AppointmentsForPatientsTableAdapter();
+
+            //da.UpdateQuery((int)CmbIntakeNumber.SelectedValue,null,1,TxtDateUpdate.Text,TxtHourUpdate.Text,(int)CmbMainTherapistUpdate.SelectedValue,null,TxtNotesUpdate.Text,null,
+            ////daAPA.Update(dtDiagnoseForPatients),;
+
+        }
+
+     
     }
 }

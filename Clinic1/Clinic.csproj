@@ -75,6 +75,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Clinic.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Clinic2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Clinic.xsd</DependentUpon>
+    </Compile>
     <Compile Include="F_Groups.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,7 +179,7 @@
     <None Include="Clinic.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Clinic.Designer.cs</LastGenOutput>
+      <LastGenOutput>Clinic2.Designer.cs</LastGenOutput>
     </None>
     <None Include="Clinic.xss">
       <DependentUpon>Clinic.xsd</DependentUpon>
