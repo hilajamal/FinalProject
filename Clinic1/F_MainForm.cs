@@ -74,6 +74,12 @@ namespace Clinic1
             intake.Show();
         }
 
+        private void BtnIntakeBoard_Click(object sender, EventArgs e)
+        {
+            F_Intake_Board IntakeBoard = new F_Intake_Board();
+            IntakeBoard.Show();
+        }
+
      
     }
 }

@@ -17677,16 +17677,21 @@ WHERE        (ID = @ID)";
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = @"SELECT Patients.Apotropus, Patients.BirthCountry, Patients.BirthDay, Patients.City, Patients.Email, Patients.FamilyDoctor, Patients.FatherName, Patients.FirstName, Patients.FullName, Patients.Gender, Patients.ID, Patients.InsurenceAuthority, Patients.LastName, Patients.MainTherapist, Patients.MotherName, Patients.Notes, Patients.PhoneAnother, Patients.PhoneCellular, Patients.PhoneContact, Patients.PhoneFather, Patients.PhoneHome, Patients.PhoneMother, Patients.PhoneWork, Patients.Race, Patients.SecondTherapist, Patients.Street, Patients.StreetNumber, Patients.ZipCode FROM Patients INNER JOIN PatientsInGroup ON Patients.ID = PatientsInGroup.PatientID WHERE (PatientsInGroup.GroupNumber = @GroupNumber)
-";
+            this._commandCollection[2].CommandText = @"SELECT DISTINCT 
+                         Patients.Apotropus, Patients.BirthCountry, Patients.BirthDay, Patients.City, Patients.Email, Patients.FamilyDoctor, Patients.FatherName, Patients.FirstName, Patients.FullName, Patients.Gender, Patients.ID, 
+                         Patients.InsurenceAuthority, Patients.LastName, Patients.MainTherapist, Patients.MotherName, Patients.Notes, Patients.PhoneAnother, Patients.PhoneCellular, Patients.PhoneContact, Patients.PhoneFather, 
+                         Patients.PhoneHome, Patients.PhoneMother, Patients.PhoneWork, Patients.Race, Patients.SecondTherapist, Patients.Street, Patients.StreetNumber, Patients.ZipCode
+FROM            Patients INNER JOIN
+                         PatientsInGroup ON Patients.ID = PatientsInGroup.PatientID
+WHERE        (PatientsInGroup.GroupNumber = @GroupNumber)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GroupNumber", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "GroupNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT        Patients.ID, Patients.FullName\r\nFROM            Patients INNER JOIN" +
-                "\r\n                         AppointmentsForPatients ON Patients.ID = Appointments" +
-                "ForPatients.PatientID\r\nWHERE        (AppointmentsForPatients.AppointmentTypeID =" +
-                " 1)";
+            this._commandCollection[3].CommandText = "SELECT DISTINCT Patients.ID, Patients.FullName\r\nFROM            Patients INNER JO" +
+                "IN\r\n                         AppointmentsForPatients ON Patients.ID = Appointmen" +
+                "tsForPatients.PatientID\r\nWHERE        (AppointmentsForPatients.AppointmentTypeID" +
+                " = 1)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;

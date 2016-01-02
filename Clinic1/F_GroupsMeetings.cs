@@ -28,12 +28,15 @@ namespace Clinic1
         private void loaddata()
         {
             ClinicTableAdapters.GroupsTableAdapter daGroups = new ClinicTableAdapters.GroupsTableAdapter();
-            Clinic.GroupsDataTable dtGroups1 = daGroups.GetDataByGroupsWithAppointments();
+            if (daGroups.GetDataByGroupsWithAppointments().Rows.Count > 0)
+            {
+                Clinic.GroupsDataTable dtGroups1 = daGroups.GetDataByGroupsWithAppointments();
+                CmbGroupNameUpdate.DataSource = dtGroups1;
+                CmbGroupIdUpdate.DataSource = dtGroups1;
+            }
             Clinic.GroupsDataTable dtGroups2 = daGroups.GetData();
 
-        
-            CmbGroupNameUpdate.DataSource = dtGroups1;
-            CmbGroupIdUpdate.DataSource = dtGroups1;
+       
 
             CmbGroupNameAdd.DataSource = dtGroups2;
             CmbGroupIDAdd.DataSource = dtGroups2;

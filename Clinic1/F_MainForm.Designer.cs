@@ -36,6 +36,7 @@
             this.btnGroupsMeetings = new System.Windows.Forms.Button();
             this.btnReports = new System.Windows.Forms.Button();
             this.btnIntake = new System.Windows.Forms.Button();
+            this.BtnIntakeBoard = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -141,12 +142,26 @@
             this.btnIntake.UseVisualStyleBackColor = false;
             this.btnIntake.Click += new System.EventHandler(this.btnIntake_Click);
             // 
+            // BtnIntakeBoard
+            // 
+            this.BtnIntakeBoard.BackColor = System.Drawing.Color.Purple;
+            this.BtnIntakeBoard.Font = new System.Drawing.Font("David", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnIntakeBoard.ForeColor = System.Drawing.SystemColors.Control;
+            this.BtnIntakeBoard.Location = new System.Drawing.Point(109, 14);
+            this.BtnIntakeBoard.Name = "BtnIntakeBoard";
+            this.BtnIntakeBoard.Size = new System.Drawing.Size(219, 136);
+            this.BtnIntakeBoard.TabIndex = 8;
+            this.BtnIntakeBoard.Text = "ועדות אינטייק";
+            this.BtnIntakeBoard.UseVisualStyleBackColor = false;
+            this.BtnIntakeBoard.Click += new System.EventHandler(this.BtnIntakeBoard_Click);
+            // 
             // F_MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1086, 477);
+            this.Controls.Add(this.BtnIntakeBoard);
             this.Controls.Add(this.btnIntake);
             this.Controls.Add(this.btnReports);
             this.Controls.Add(this.btnGroupsMeetings);
@@ -172,6 +187,7 @@
         private System.Windows.Forms.Button btnGroupsMeetings;
         private System.Windows.Forms.Button btnReports;
         private System.Windows.Forms.Button btnIntake;
+        private System.Windows.Forms.Button BtnIntakeBoard;
 
     }
 }
