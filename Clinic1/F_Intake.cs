@@ -13,6 +13,8 @@ namespace Clinic1
     public partial class F_Intake : Form
     {
         Clinic.DiagnosesForPatientsDataTable dtDiagnoseForPatients;
+        Clinic.DiagnosesForPatientsDataTable dtDiagnoseForPatientsAdd;
+
         public F_Intake()
         {
             InitializeComponent();
@@ -117,6 +119,20 @@ namespace Clinic1
             CmbDiagnoseName.DisplayMember = "Name";
             CmbDiagnoseName.ValueMember = "Name";
 
+            Clinic.DiagnoseDataTable dt2 = daDiagnose.GetData();
+            CmbDiagnoseCodeUpdate.DataSource = dt2;
+            CmbDiagnoseCodeUpdate.AutoCompleteMode = AutoCompleteMode.Append;
+            CmbDiagnoseCodeUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CmbDiagnoseCodeUpdate.DisplayMember = "ID";
+            CmbDiagnoseCodeUpdate.ValueMember = "ID";
+
+            CmbDiagnoseNameUpdate.DataSource = dt2;
+            CmbDiagnoseNameUpdate.AutoCompleteMode = AutoCompleteMode.Append;
+            CmbDiagnoseNameUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CmbDiagnoseNameUpdate.DisplayMember = "Name";
+            CmbDiagnoseNameUpdate.ValueMember = "Name";
+
+           ClinicTableAdapters.DiagnosesForPatientsTableAdapter daD = new ClinicTableAdapters.DiagnosesForPatientsTableAdapter();
             DataGridViewTextBoxColumn col1 = new DataGridViewTextBoxColumn();
             DataGridViewTextBoxColumn col2 = new DataGridViewTextBoxColumn();
             DataGridViewTextBoxColumn col3 = new DataGridViewTextBoxColumn();
@@ -137,6 +153,9 @@ namespace Clinic1
             col3.DataPropertyName = "StartDate";
             col3.Name = "StartDate";
             DgDiagnoses.Columns.Add(col3);
+
+            dtDiagnoseForPatientsAdd = daD.GetDataByPatientID((int)CmblPatientId.SelectedValue);
+            DgDiagnoses.DataSource = dtDiagnoseForPatientsAdd;
 
             DataGridViewTextBoxColumn col4 = new DataGridViewTextBoxColumn();
             DataGridViewTextBoxColumn col5 = new DataGridViewTextBoxColumn();
@@ -159,6 +178,8 @@ namespace Clinic1
             col6.Name = "StartDate";
             DgDiagnosesUpdate.Columns.Add(col6);
 
+            dtDiagnoseForPatientsAdd = daD.GetDataByPatientID((int)CmblPatientId.SelectedValue);
+            DgDiagnosesUpdate.DataSource = dtDiagnoseForPatientsAdd;
         }
 
 
@@ -196,6 +217,8 @@ namespace Clinic1
         private void BtnAddDiagnose_Click(object sender, EventArgs e)
         {
             ClinicTableAdapters.DiagnosesForPatientsTableAdapter da = new ClinicTableAdapters.DiagnosesForPatientsTableAdapter();
+
+      
             
            String code = CmbDiagnoseCode.SelectedValue.ToString();
             foreach (DataGridViewRow row in DgDiagnoses.Rows)
@@ -263,6 +286,19 @@ namespace Clinic1
                 CmbMainTherapistUpdate.SelectedValue = Int32.Parse(dt.Rows[0]["MainTherapist"].ToString());
                 dtDiagnoseForPatients =  daDiagsnoses.GetDataByPatientID((int)cmbPatientIdUpdate.SelectedValue);
                 DgDiagnosesUpdate.DataSource = dtDiagnoseForPatients;
+                DateTime dates = (DateTime) dt.Rows[0]["Date"];
+                TxtDateUpdate.Text = dates.ToString("dd/MM/yyyy");
+                if (!DBNull.Value.Equals(dt.Rows[0]["UpdatedByDate"]))
+                {
+                    dates = (DateTime)dt.Rows[0]["UpdatedByDate"];
+                    TxtUpdatedByDateUpdate.Text = dates.ToString("dd/MM/yyyy");
+
+                }
+                if (!DBNull.Value.Equals(dt.Rows[0]["UpdatedBy"]))
+                {
+                    TxtUpdatedByUpdate.Text = daWorkers.GetFullNameByID((int)dt.Rows[0]["UpdatedBy"]);
+
+                }
 
 
             }
@@ -307,12 +343,14 @@ namespace Clinic1
                         DataGridViewRow selectedRow = DgDiagnosesUpdate.Rows[selectedrowindex];
                         DgDiagnosesUpdate.Rows.RemoveAt(selectedrowindex);
 
+
+
                         //string a = Convert.ToString(selectedRow.Cells["ID"].Value);
 
                         //da.DeleteByPatiendIDAndDiagnoseCode(a,(int)cmbPatientIdUpdate.SelectedValue);
                         //Clinic1.ClinicTableAdapters.DiagnosesForPatientsTableAdapter daDiagnoses = new Clinic1.ClinicTableAdapters.DiagnosesForPatientsTableAdapter();
                         //Clinic.DiagnosesForPatientsDataTable dt = daDiagnoses.GetDataByPatientID((int)cmbPatientIdUpdate.SelectedValue);
-                        //DgDiagnosesUpdate.DataSource = dt;
+                        //DgDiagnosesUpdate.DataSource = dt;+
 
                     }
                 }
@@ -322,12 +360,68 @@ namespace Clinic1
 
         private void BtnSaveUpdate_Click(object sender, EventArgs e)
         {
-            //ClinicTableAdapters.AppointmentsTableAdapter da = new ClinicTableAdapters.AppointmentsTableAdapter();
-            //ClinicTableAdapters.AppointmentsForPatientsTableAdapter daAPA = new ClinicTableAdapters.AppointmentsForPatientsTableAdapter();
+            ClinicTableAdapters.AppointmentsTableAdapter da = new ClinicTableAdapters.AppointmentsTableAdapter();
+            ClinicTableAdapters.AppointmentsForPatientsTableAdapter daAPA = new ClinicTableAdapters.AppointmentsForPatientsTableAdapter();
+            ClinicTableAdapters.DiagnosesForPatientsTableAdapter daD = new ClinicTableAdapters.DiagnosesForPatientsTableAdapter();
+            DateTime date = DateTime.Parse(TxtDateUpdate.Text);
 
-            //da.UpdateQuery((int)CmbIntakeNumber.SelectedValue,null,1,TxtDateUpdate.Text,TxtHourUpdate.Text,(int)CmbMainTherapistUpdate.SelectedValue,null,TxtNotesUpdate.Text,null,
-            ////daAPA.Update(dtDiagnoseForPatients),;
 
+            da.UpdateQuery((int)CmbIntakeNumber.SelectedValue, null, 1, date, TxtHourUpdate.Text, (int)CmbMainTherapistUpdate.SelectedValue, null, TxtNotesUpdate.Text, null, Globals.ConnectedUserID, DateTime.Now, TxtSentByUpdate.Text,
+                TxtReasonUpdate.Text, TxtBrothersAndSistersUpdate.Text, TxtFamilyUpdate.Text, TxtTraumasUpdate.Text, TxtPregnant.Text, TxtPsychoUpdate.Text, TxtPhysicalUpdate.Text, TxtSocialUpdate.Text, (int)cmbPatientIdUpdate.SelectedValue);
+            daD.Update(dtDiagnoseForPatients);
+            MessageBox.Show("טיפול עודכן בהצלחה");
+
+
+        }
+
+        private void BtnAddDiagnoseUpdate_Click(object sender, EventArgs e)
+        {
+             ClinicTableAdapters.DiagnosesForPatientsTableAdapter da = new ClinicTableAdapters.DiagnosesForPatientsTableAdapter();
+            
+           String code = CmbDiagnoseCodeUpdate.SelectedValue.ToString();
+            foreach (DataGridViewRow row in DgDiagnosesUpdate.Rows)
+            {
+                if (row.Cells["ID"].Value.ToString() == code)
+                {
+                    MessageBox.Show("אבחנה כבר קיימת למטופל", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                    return;
+                }
+            }
+
+            int index = this.DgDiagnosesUpdate.Rows.Count;
+            DateTime now = DateTime.Now;
+
+            Clinic.DiagnosesForPatientsRow newRow = dtDiagnoseForPatients.NewDiagnosesForPatientsRow();
+            newRow["ID"] = CmbDiagnoseCodeUpdate.SelectedValue.ToString();
+            newRow["Name"] = CmbDiagnoseNameUpdate.SelectedValue.ToString();
+            newRow["DiagnoseCode"] = CmbDiagnoseCodeUpdate.SelectedValue.ToString();
+            newRow["PatientID"] = (int)cmbPatientIdUpdate.SelectedValue;
+            newRow["StartDate"] = now;
+            dtDiagnoseForPatients.AddDiagnosesForPatientsRow(newRow);
+
+
+            //DgDiagnoses.Rows.Add((int)CmbDiagnoseCode.SelectedValue, CmbDiagnoseName.SelectedValue.ToString());
+            //DgDiagnosesUpdate.Rows.Add(CmbDiagnoseCodeUpdate.SelectedValue.ToString(), CmbDiagnoseNameUpdate.SelectedValue.ToString(), now.ToShortDateString());
+                        DgDiagnosesUpdate.Refresh();
+        
+        }
+
+        private void CmblPatientId_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ClinicTableAdapters.DiagnosesForPatientsTableAdapter daD = new ClinicTableAdapters.DiagnosesForPatientsTableAdapter();
+            dtDiagnoseForPatientsAdd = daD.GetDataByPatientID((int)CmblPatientId.SelectedValue);
+            DgDiagnoses.DataSource = dtDiagnoseForPatientsAdd;
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //if (tabControl1.SelectedIndex == 1)
+            //{
+            //    ClinicTableAdapters.PatientsTableAdapter daPatientsUpdate = new ClinicTableAdapters.PatientsTableAdapter();
+            //    Clinic.PatientsDataTable dtPatientsUpdate = daPatientsUpdate.GetDataByPatientsWithIntake();
+            //    cmbPatientIdUpdate.DataSource = dtPatientsUpdate;
+            //    CmbPatientNameUpdate.DataSource = dtPatientsUpdate;
+            //}
         }
 
      

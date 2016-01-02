@@ -12114,23 +12114,20 @@ SELECT SCOPE_IDENTITY() AS LAST_ID;";
             this._commandCollection[7].Connection = this.Connection;
             this._commandCollection[7].CommandText = @"UPDATE       Appointments
 SET                AppointmentNumber = @AppointmentNumber, GroupNumber = @GroupNumber, AppointmentType = @AppointmentType, Date = @Date, Hour = @Hour, MainTherapist = @MainTherapist, 
-                         SecondTherapist = @SecondTherapist, Notes = @Notes, Summary = @Summary, AddedBy = @AddedBy, UpdatedBy = @UpdatedBy, AddedByDate = @AddedByDate, UpdatedByDate = @UpdatedByDate, 
-                         SentBy = @SentBy, Reason = @Reason, BrothersAndSisters = @BrothersAndSisters, Family = @Family, Traumas = @Traumas, Pregnant = @Pregnant, Psycho = @Psycho, Physical = @Physical, 
-                         Social = @Social
+                         SecondTherapist = @SecondTherapist, Notes = @Notes, Summary = @Summary, UpdatedBy = @UpdatedBy, UpdatedByDate = @UpdatedByDate, SentBy = @SentBy, Reason = @Reason, 
+                         BrothersAndSisters = @BrothersAndSisters, Family = @Family, Traumas = @Traumas, Pregnant = @Pregnant, Psycho = @Psycho, Physical = @Physical, Social = @Social
 WHERE        (ID = @Original_ID)";
             this._commandCollection[7].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AppointmentNumber", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "AppointmentNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GroupNumber", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "GroupNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AppointmentType", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "AppointmentType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Hour", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Hour", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MainTherapist", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "MainTherapist", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SecondTherapist", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "SecondTherapist", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Notes", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "Notes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Summary", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "Summary", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AddedBy", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "AddedBy", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UpdatedBy", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "UpdatedBy", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AddedByDate", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "AddedByDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UpdatedByDate", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "UpdatedByDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SentBy", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "SentBy", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Reason", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "Reason", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -13121,15 +13118,13 @@ WHERE        (ID = @Original_ID)";
                     global::System.Nullable<int> AppointmentNumber, 
                     global::System.Nullable<int> GroupNumber, 
                     global::System.Nullable<int> AppointmentType, 
-                    string Date, 
+                    global::System.Nullable<global::System.DateTime> Date, 
                     string Hour, 
                     global::System.Nullable<int> MainTherapist, 
                     global::System.Nullable<int> SecondTherapist, 
                     string Notes, 
                     string Summary, 
-                    global::System.Nullable<int> AddedBy, 
                     global::System.Nullable<int> UpdatedBy, 
-                    global::System.Nullable<global::System.DateTime> AddedByDate, 
                     global::System.Nullable<global::System.DateTime> UpdatedByDate, 
                     string SentBy, 
                     string Reason, 
@@ -13160,11 +13155,11 @@ WHERE        (ID = @Original_ID)";
             else {
                 command.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Date == null)) {
-                command.Parameters[3].Value = global::System.DBNull.Value;
+            if ((Date.HasValue == true)) {
+                command.Parameters[3].Value = ((System.DateTime)(Date.Value));
             }
             else {
-                command.Parameters[3].Value = ((string)(Date));
+                command.Parameters[3].Value = global::System.DBNull.Value;
             }
             if ((Hour == null)) {
                 command.Parameters[4].Value = global::System.DBNull.Value;
@@ -13196,85 +13191,73 @@ WHERE        (ID = @Original_ID)";
             else {
                 command.Parameters[8].Value = ((string)(Summary));
             }
-            if ((AddedBy.HasValue == true)) {
-                command.Parameters[9].Value = ((int)(AddedBy.Value));
+            if ((UpdatedBy.HasValue == true)) {
+                command.Parameters[9].Value = ((int)(UpdatedBy.Value));
             }
             else {
                 command.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((UpdatedBy.HasValue == true)) {
-                command.Parameters[10].Value = ((int)(UpdatedBy.Value));
+            if ((UpdatedByDate.HasValue == true)) {
+                command.Parameters[10].Value = ((System.DateTime)(UpdatedByDate.Value));
             }
             else {
                 command.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((AddedByDate.HasValue == true)) {
-                command.Parameters[11].Value = ((System.DateTime)(AddedByDate.Value));
-            }
-            else {
+            if ((SentBy == null)) {
                 command.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((UpdatedByDate.HasValue == true)) {
-                command.Parameters[12].Value = ((System.DateTime)(UpdatedByDate.Value));
-            }
             else {
+                command.Parameters[11].Value = ((string)(SentBy));
+            }
+            if ((Reason == null)) {
                 command.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((SentBy == null)) {
+            else {
+                command.Parameters[12].Value = ((string)(Reason));
+            }
+            if ((BrothersAndSisters == null)) {
                 command.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[13].Value = ((string)(SentBy));
+                command.Parameters[13].Value = ((string)(BrothersAndSisters));
             }
-            if ((Reason == null)) {
+            if ((Family == null)) {
                 command.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[14].Value = ((string)(Reason));
+                command.Parameters[14].Value = ((string)(Family));
             }
-            if ((BrothersAndSisters == null)) {
+            if ((Traumas == null)) {
                 command.Parameters[15].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[15].Value = ((string)(BrothersAndSisters));
+                command.Parameters[15].Value = ((string)(Traumas));
             }
-            if ((Family == null)) {
+            if ((Pregnant == null)) {
                 command.Parameters[16].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[16].Value = ((string)(Family));
+                command.Parameters[16].Value = ((string)(Pregnant));
             }
-            if ((Traumas == null)) {
+            if ((Psycho == null)) {
                 command.Parameters[17].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[17].Value = ((string)(Traumas));
+                command.Parameters[17].Value = ((string)(Psycho));
             }
-            if ((Pregnant == null)) {
+            if ((Physical == null)) {
                 command.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[18].Value = ((string)(Pregnant));
+                command.Parameters[18].Value = ((string)(Physical));
             }
-            if ((Psycho == null)) {
+            if ((Social == null)) {
                 command.Parameters[19].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[19].Value = ((string)(Psycho));
+                command.Parameters[19].Value = ((string)(Social));
             }
-            if ((Physical == null)) {
-                command.Parameters[20].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[20].Value = ((string)(Physical));
-            }
-            if ((Social == null)) {
-                command.Parameters[21].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[21].Value = ((string)(Social));
-            }
-            command.Parameters[22].Value = ((int)(Original_ID));
+            command.Parameters[20].Value = ((int)(Original_ID));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -16045,7 +16028,7 @@ SELECT DiagnoseCode, PatientID, StartDate FROM DiagnosesForPatients WHERE (Diagn
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        DiagnoseCode, PatientID, StartDate\r\nFROM            DiagnosesForPat" +
@@ -16066,6 +16049,13 @@ FROM            DiagnosesForPatients INNER JOIN
 WHERE        (DiagnosesForPatients.PatientID = @PatientID)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PatientID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "PatientID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "SELECT        DiagnoseCode, PatientID, StartDate\r\nFROM            DiagnosesForPat" +
+                "ients\r\nwhere PatientID=@PatientID and DiagnoseCode=@DiagnoseCode";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PatientID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "PatientID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DiagnoseCode", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "DiagnoseCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16099,6 +16089,24 @@ WHERE        (DiagnosesForPatients.PatientID = @PatientID)";
         public virtual Clinic.DiagnosesForPatientsDataTable GetDataByPatientID(int PatientID) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(PatientID));
+            Clinic.DiagnosesForPatientsDataTable dataTable = new Clinic.DiagnosesForPatientsDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual Clinic.DiagnosesForPatientsDataTable GetDataByPatientIDAndDiagnoseCode(int PatientID, string DiagnoseCode) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(PatientID));
+            if ((DiagnoseCode == null)) {
+                throw new global::System.ArgumentNullException("DiagnoseCode");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(DiagnoseCode));
+            }
             Clinic.DiagnosesForPatientsDataTable dataTable = new Clinic.DiagnosesForPatientsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

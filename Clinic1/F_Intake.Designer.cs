@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.TxtDate = new System.Windows.Forms.MaskedTextBox();
@@ -156,6 +156,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1051, 1016);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -219,10 +220,10 @@
             // TxtDate
             // 
             this.TxtDate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDate.Location = new System.Drawing.Point(855, 39);
+            this.TxtDate.Location = new System.Drawing.Point(832, 39);
             this.TxtDate.Mask = "##/##/####";
             this.TxtDate.Name = "TxtDate";
-            this.TxtDate.Size = new System.Drawing.Size(69, 23);
+            this.TxtDate.Size = new System.Drawing.Size(92, 23);
             this.TxtDate.TabIndex = 156;
             // 
             // DgDiagnoses
@@ -230,44 +231,45 @@
             this.DgDiagnoses.AllowUserToAddRows = false;
             this.DgDiagnoses.AllowUserToDeleteRows = false;
             this.DgDiagnoses.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DgDiagnoses.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            this.DgDiagnoses.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.DgDiagnoses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.DgDiagnoses.BackgroundColor = System.Drawing.Color.Silver;
             this.DgDiagnoses.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgDiagnoses.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgDiagnoses.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.DgDiagnoses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgDiagnoses.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgDiagnoses.DefaultCellStyle = dataGridViewCellStyle13;
             this.DgDiagnoses.GridColor = System.Drawing.Color.Silver;
             this.DgDiagnoses.Location = new System.Drawing.Point(149, 717);
             this.DgDiagnoses.Name = "DgDiagnoses";
             this.DgDiagnoses.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgDiagnoses.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DgDiagnoses.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgDiagnoses.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DgDiagnoses.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.DgDiagnoses.Size = new System.Drawing.Size(775, 99);
             this.DgDiagnoses.TabIndex = 155;
             // 
@@ -293,7 +295,8 @@
             // 
             // BtnSaveIntake
             // 
-            this.BtnSaveIntake.Location = new System.Drawing.Point(571, 934);
+            this.BtnSaveIntake.ForeColor = System.Drawing.Color.Black;
+            this.BtnSaveIntake.Location = new System.Drawing.Point(583, 912);
             this.BtnSaveIntake.Name = "BtnSaveIntake";
             this.BtnSaveIntake.Size = new System.Drawing.Size(135, 48);
             this.BtnSaveIntake.TabIndex = 150;
@@ -303,10 +306,11 @@
             // 
             // BtnAddDiagnose
             // 
-            this.BtnAddDiagnose.Location = new System.Drawing.Point(291, 846);
+            this.BtnAddDiagnose.ForeColor = System.Drawing.Color.Black;
+            this.BtnAddDiagnose.Location = new System.Drawing.Point(286, 846);
             this.BtnAddDiagnose.Name = "BtnAddDiagnose";
             this.BtnAddDiagnose.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.BtnAddDiagnose.Size = new System.Drawing.Size(75, 37);
+            this.BtnAddDiagnose.Size = new System.Drawing.Size(80, 44);
             this.BtnAddDiagnose.TabIndex = 149;
             this.BtnAddDiagnose.Text = "הוסף אבחנה";
             this.BtnAddDiagnose.UseVisualStyleBackColor = true;
@@ -694,6 +698,7 @@
             this.CmblPatientId.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmblPatientId.Size = new System.Drawing.Size(124, 24);
             this.CmblPatientId.TabIndex = 56;
+            this.CmblPatientId.SelectedIndexChanged += new System.EventHandler(this.CmblPatientId_SelectedIndexChanged);
             // 
             // LblPatientName
             // 
@@ -772,7 +777,7 @@
             this.tabPage2.Controls.Add(this.cmbPatientIdUpdate);
             this.tabPage2.Controls.Add(this.label35);
             this.tabPage2.Controls.Add(this.label36);
-            this.tabPage2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.tabPage2.Cursor = System.Windows.Forms.Cursors.Default;
             this.tabPage2.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.ForeColor = System.Drawing.Color.Silver;
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
@@ -782,7 +787,6 @@
             this.tabPage2.Size = new System.Drawing.Size(1043, 983);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "עדכון";
-            this.tabPage2.UseWaitCursor = true;
             // 
             // BtnRemoveDiagnose
             // 
@@ -795,7 +799,6 @@
             this.BtnRemoveDiagnose.TabIndex = 207;
             this.BtnRemoveDiagnose.Text = "הסר אבחנה";
             this.BtnRemoveDiagnose.UseVisualStyleBackColor = true;
-            this.BtnRemoveDiagnose.UseWaitCursor = true;
             this.BtnRemoveDiagnose.Click += new System.EventHandler(this.BtnRemoveDiagnose_Click);
             // 
             // CmbIntakeNumber
@@ -807,7 +810,6 @@
             this.CmbIntakeNumber.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbIntakeNumber.Size = new System.Drawing.Size(124, 24);
             this.CmbIntakeNumber.TabIndex = 206;
-            this.CmbIntakeNumber.UseWaitCursor = true;
             this.CmbIntakeNumber.SelectedIndexChanged += new System.EventHandler(this.CmbIntakeNumber_SelectedIndexChanged);
             // 
             // label45
@@ -820,7 +822,6 @@
             this.label45.Size = new System.Drawing.Size(83, 16);
             this.label45.TabIndex = 205;
             this.label45.Text = "מס\' אינטייק";
-            this.label45.UseWaitCursor = true;
             // 
             // TxtUpdatedByDateUpdate
             // 
@@ -833,7 +834,6 @@
             this.TxtUpdatedByDateUpdate.Size = new System.Drawing.Size(162, 23);
             this.TxtUpdatedByDateUpdate.TabIndex = 204;
             this.TxtUpdatedByDateUpdate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TxtUpdatedByDateUpdate.UseWaitCursor = true;
             // 
             // label43
             // 
@@ -846,7 +846,6 @@
             this.label43.Size = new System.Drawing.Size(71, 16);
             this.label43.TabIndex = 201;
             this.label43.Text = "עודכן ע\"י:";
-            this.label43.UseWaitCursor = true;
             // 
             // label44
             // 
@@ -859,7 +858,6 @@
             this.label44.Size = new System.Drawing.Size(61, 16);
             this.label44.TabIndex = 202;
             this.label44.Text = "בתאריך:";
-            this.label44.UseWaitCursor = true;
             // 
             // TxtUpdatedByUpdate
             // 
@@ -872,56 +870,54 @@
             this.TxtUpdatedByUpdate.Size = new System.Drawing.Size(98, 23);
             this.TxtUpdatedByUpdate.TabIndex = 203;
             this.TxtUpdatedByUpdate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TxtUpdatedByUpdate.UseWaitCursor = true;
             // 
             // DgDiagnosesUpdate
             // 
             this.DgDiagnosesUpdate.AllowUserToAddRows = false;
             this.DgDiagnosesUpdate.AllowUserToDeleteRows = false;
             this.DgDiagnosesUpdate.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            this.DgDiagnosesUpdate.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
+            this.DgDiagnosesUpdate.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.DgDiagnosesUpdate.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.DgDiagnosesUpdate.BackgroundColor = System.Drawing.Color.White;
             this.DgDiagnosesUpdate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgDiagnosesUpdate.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgDiagnosesUpdate.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.DgDiagnosesUpdate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgDiagnosesUpdate.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgDiagnosesUpdate.DefaultCellStyle = dataGridViewCellStyle18;
             this.DgDiagnosesUpdate.GridColor = System.Drawing.Color.Silver;
             this.DgDiagnosesUpdate.Location = new System.Drawing.Point(148, 722);
             this.DgDiagnosesUpdate.Name = "DgDiagnosesUpdate";
             this.DgDiagnosesUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgDiagnosesUpdate.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            this.DgDiagnosesUpdate.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgDiagnosesUpdate.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
+            this.DgDiagnosesUpdate.RowsDefaultCellStyle = dataGridViewCellStyle20;
             this.DgDiagnosesUpdate.Size = new System.Drawing.Size(748, 99);
             this.DgDiagnosesUpdate.TabIndex = 200;
-            this.DgDiagnosesUpdate.UseWaitCursor = true;
             // 
             // label37
             // 
@@ -933,7 +929,6 @@
             this.label37.TabIndex = 199;
             this.label37.Text = "אבחנות פעילות:";
             this.label37.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.label37.UseWaitCursor = true;
             // 
             // BtnSaveUpdate
             // 
@@ -945,7 +940,6 @@
             this.BtnSaveUpdate.TabIndex = 198;
             this.BtnSaveUpdate.Text = "שמירה";
             this.BtnSaveUpdate.UseVisualStyleBackColor = true;
-            this.BtnSaveUpdate.UseWaitCursor = true;
             this.BtnSaveUpdate.Click += new System.EventHandler(this.BtnSaveUpdate_Click);
             // 
             // BtnAddDiagnoseUpdate
@@ -959,7 +953,7 @@
             this.BtnAddDiagnoseUpdate.TabIndex = 197;
             this.BtnAddDiagnoseUpdate.Text = "הוסף אבחנה";
             this.BtnAddDiagnoseUpdate.UseVisualStyleBackColor = true;
-            this.BtnAddDiagnoseUpdate.UseWaitCursor = true;
+            this.BtnAddDiagnoseUpdate.Click += new System.EventHandler(this.BtnAddDiagnoseUpdate_Click);
             // 
             // CmbDiagnoseNameUpdate
             // 
@@ -970,7 +964,6 @@
             this.CmbDiagnoseNameUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbDiagnoseNameUpdate.Size = new System.Drawing.Size(478, 24);
             this.CmbDiagnoseNameUpdate.TabIndex = 196;
-            this.CmbDiagnoseNameUpdate.UseWaitCursor = true;
             // 
             // label38
             // 
@@ -982,7 +975,6 @@
             this.label38.Size = new System.Drawing.Size(73, 16);
             this.label38.TabIndex = 195;
             this.label38.Text = "שם אבחנה";
-            this.label38.UseWaitCursor = true;
             // 
             // CmbDiagnoseCodeUpdate
             // 
@@ -993,7 +985,6 @@
             this.CmbDiagnoseCodeUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbDiagnoseCodeUpdate.Size = new System.Drawing.Size(478, 24);
             this.CmbDiagnoseCodeUpdate.TabIndex = 194;
-            this.CmbDiagnoseCodeUpdate.UseWaitCursor = true;
             // 
             // label39
             // 
@@ -1005,7 +996,6 @@
             this.label39.Size = new System.Drawing.Size(73, 16);
             this.label39.TabIndex = 193;
             this.label39.Text = "קוד אבחנה";
-            this.label39.UseWaitCursor = true;
             // 
             // label40
             // 
@@ -1017,7 +1007,6 @@
             this.label40.Size = new System.Drawing.Size(93, 16);
             this.label40.TabIndex = 192;
             this.label40.Text = "מהלך הבדיקה";
-            this.label40.UseWaitCursor = true;
             // 
             // TxtNotesUpdate
             // 
@@ -1028,7 +1017,6 @@
             this.TxtNotesUpdate.Size = new System.Drawing.Size(663, 51);
             this.TxtNotesUpdate.TabIndex = 191;
             this.TxtNotesUpdate.Text = "";
-            this.TxtNotesUpdate.UseWaitCursor = true;
             // 
             // TxtWrittenByDateUpdate
             // 
@@ -1041,7 +1029,6 @@
             this.TxtWrittenByDateUpdate.Size = new System.Drawing.Size(162, 23);
             this.TxtWrittenByDateUpdate.TabIndex = 190;
             this.TxtWrittenByDateUpdate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TxtWrittenByDateUpdate.UseWaitCursor = true;
             // 
             // label41
             // 
@@ -1054,7 +1041,6 @@
             this.label41.Size = new System.Drawing.Size(73, 16);
             this.label41.TabIndex = 187;
             this.label41.Text = "נרשם ע\"י:";
-            this.label41.UseWaitCursor = true;
             // 
             // label42
             // 
@@ -1067,7 +1053,6 @@
             this.label42.Size = new System.Drawing.Size(61, 16);
             this.label42.TabIndex = 188;
             this.label42.Text = "בתאריך:";
-            this.label42.UseWaitCursor = true;
             // 
             // TxtWrittenByUpdate
             // 
@@ -1080,17 +1065,15 @@
             this.TxtWrittenByUpdate.Size = new System.Drawing.Size(98, 23);
             this.TxtWrittenByUpdate.TabIndex = 189;
             this.TxtWrittenByUpdate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TxtWrittenByUpdate.UseWaitCursor = true;
             // 
             // TxtDateUpdate
             // 
             this.TxtDateUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDateUpdate.Location = new System.Drawing.Point(841, 46);
+            this.TxtDateUpdate.Location = new System.Drawing.Point(823, 46);
             this.TxtDateUpdate.Mask = "##/##/####";
             this.TxtDateUpdate.Name = "TxtDateUpdate";
-            this.TxtDateUpdate.Size = new System.Drawing.Size(69, 23);
+            this.TxtDateUpdate.Size = new System.Drawing.Size(87, 23);
             this.TxtDateUpdate.TabIndex = 186;
-            this.TxtDateUpdate.UseWaitCursor = true;
             // 
             // TxtHourUpdate
             // 
@@ -1100,7 +1083,6 @@
             this.TxtHourUpdate.Name = "TxtHourUpdate";
             this.TxtHourUpdate.Size = new System.Drawing.Size(82, 23);
             this.TxtHourUpdate.TabIndex = 185;
-            this.TxtHourUpdate.UseWaitCursor = true;
             // 
             // label21
             // 
@@ -1112,7 +1094,6 @@
             this.label21.Size = new System.Drawing.Size(175, 16);
             this.label21.TabIndex = 184;
             this.label21.Text = "השתייכות חברתית ולימודית";
-            this.label21.UseWaitCursor = true;
             // 
             // TxtSocialUpdate
             // 
@@ -1123,7 +1104,6 @@
             this.TxtSocialUpdate.Size = new System.Drawing.Size(663, 51);
             this.TxtSocialUpdate.TabIndex = 183;
             this.TxtSocialUpdate.Text = "";
-            this.TxtSocialUpdate.UseWaitCursor = true;
             // 
             // TxtFamilyUpdate
             // 
@@ -1134,7 +1114,6 @@
             this.TxtFamilyUpdate.Size = new System.Drawing.Size(665, 51);
             this.TxtFamilyUpdate.TabIndex = 182;
             this.TxtFamilyUpdate.Text = "";
-            this.TxtFamilyUpdate.UseWaitCursor = true;
             // 
             // label22
             // 
@@ -1146,7 +1125,6 @@
             this.label22.Size = new System.Drawing.Size(156, 16);
             this.label22.TabIndex = 181;
             this.label22.Text = "מחלות גופניות/תורשתיות";
-            this.label22.UseWaitCursor = true;
             // 
             // TxtPsychoUpdate
             // 
@@ -1157,7 +1135,6 @@
             this.TxtPsychoUpdate.Size = new System.Drawing.Size(665, 51);
             this.TxtPsychoUpdate.TabIndex = 180;
             this.TxtPsychoUpdate.Text = "";
-            this.TxtPsychoUpdate.UseWaitCursor = true;
             // 
             // label23
             // 
@@ -1169,7 +1146,6 @@
             this.label23.Size = new System.Drawing.Size(153, 16);
             this.label23.TabIndex = 179;
             this.label23.Text = "התפתחות פסיכומוטורית";
-            this.label23.UseWaitCursor = true;
             // 
             // TxtPregnantUpdate
             // 
@@ -1180,7 +1156,6 @@
             this.TxtPregnantUpdate.Size = new System.Drawing.Size(666, 51);
             this.TxtPregnantUpdate.TabIndex = 178;
             this.TxtPregnantUpdate.Text = "";
-            this.TxtPregnantUpdate.UseWaitCursor = true;
             // 
             // label24
             // 
@@ -1192,7 +1167,6 @@
             this.label24.Size = new System.Drawing.Size(117, 16);
             this.label24.TabIndex = 177;
             this.label24.Text = "מהלך היריון ולידה";
-            this.label24.UseWaitCursor = true;
             // 
             // label25
             // 
@@ -1204,7 +1178,6 @@
             this.label25.Size = new System.Drawing.Size(36, 16);
             this.label25.TabIndex = 176;
             this.label25.Text = "שעה";
-            this.label25.UseWaitCursor = true;
             // 
             // label26
             // 
@@ -1216,7 +1189,6 @@
             this.label26.Size = new System.Drawing.Size(47, 16);
             this.label26.TabIndex = 175;
             this.label26.Text = "תאריך";
-            this.label26.UseWaitCursor = true;
             // 
             // label27
             // 
@@ -1228,7 +1200,6 @@
             this.label27.TabIndex = 174;
             this.label27.Text = "התפתחות:";
             this.label27.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.label27.UseWaitCursor = true;
             // 
             // TxtPhysicalUpdate
             // 
@@ -1239,7 +1210,6 @@
             this.TxtPhysicalUpdate.Size = new System.Drawing.Size(663, 51);
             this.TxtPhysicalUpdate.TabIndex = 173;
             this.TxtPhysicalUpdate.Text = "";
-            this.TxtPhysicalUpdate.UseWaitCursor = true;
             // 
             // TxtTraumasUpdate
             // 
@@ -1250,7 +1220,6 @@
             this.TxtTraumasUpdate.Size = new System.Drawing.Size(663, 51);
             this.TxtTraumasUpdate.TabIndex = 172;
             this.TxtTraumasUpdate.Text = "";
-            this.TxtTraumasUpdate.UseWaitCursor = true;
             // 
             // TxtBrothersAndSistersUpdate
             // 
@@ -1261,7 +1230,6 @@
             this.TxtBrothersAndSistersUpdate.Size = new System.Drawing.Size(663, 51);
             this.TxtBrothersAndSistersUpdate.TabIndex = 171;
             this.TxtBrothersAndSistersUpdate.Text = "";
-            this.TxtBrothersAndSistersUpdate.UseWaitCursor = true;
             // 
             // label28
             // 
@@ -1273,7 +1241,6 @@
             this.label28.Size = new System.Drawing.Size(120, 16);
             this.label28.TabIndex = 170;
             this.label28.Text = "טראומות ומשברים";
-            this.label28.UseWaitCursor = true;
             // 
             // label29
             // 
@@ -1285,7 +1252,6 @@
             this.label29.Size = new System.Drawing.Size(105, 16);
             this.label29.TabIndex = 169;
             this.label29.Text = "משפחה מורחבת";
-            this.label29.UseWaitCursor = true;
             // 
             // label30
             // 
@@ -1297,7 +1263,6 @@
             this.label30.Size = new System.Drawing.Size(85, 16);
             this.label30.TabIndex = 168;
             this.label30.Text = "הורים ואחים";
-            this.label30.UseWaitCursor = true;
             // 
             // label31
             // 
@@ -1309,7 +1274,6 @@
             this.label31.TabIndex = 167;
             this.label31.Text = "יחסים במשפחה:";
             this.label31.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.label31.UseWaitCursor = true;
             // 
             // TxtReasonUpdate
             // 
@@ -1320,7 +1284,6 @@
             this.TxtReasonUpdate.Size = new System.Drawing.Size(665, 51);
             this.TxtReasonUpdate.TabIndex = 166;
             this.TxtReasonUpdate.Text = "";
-            this.TxtReasonUpdate.UseWaitCursor = true;
             // 
             // label32
             // 
@@ -1332,7 +1295,6 @@
             this.label32.Size = new System.Drawing.Size(80, 16);
             this.label32.TabIndex = 165;
             this.label32.Text = "סיבת הפניה";
-            this.label32.UseWaitCursor = true;
             // 
             // TxtSentByUpdate
             // 
@@ -1341,7 +1303,6 @@
             this.TxtSentByUpdate.Name = "TxtSentByUpdate";
             this.TxtSentByUpdate.Size = new System.Drawing.Size(124, 23);
             this.TxtSentByUpdate.TabIndex = 164;
-            this.TxtSentByUpdate.UseWaitCursor = true;
             // 
             // label33
             // 
@@ -1353,7 +1314,6 @@
             this.label33.Size = new System.Drawing.Size(71, 16);
             this.label33.TabIndex = 163;
             this.label33.Text = "גורם מפנה";
-            this.label33.UseWaitCursor = true;
             // 
             // CmbMainTherapistUpdate
             // 
@@ -1364,7 +1324,6 @@
             this.CmbMainTherapistUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbMainTherapistUpdate.Size = new System.Drawing.Size(124, 24);
             this.CmbMainTherapistUpdate.TabIndex = 162;
-            this.CmbMainTherapistUpdate.UseWaitCursor = true;
             // 
             // label34
             // 
@@ -1376,7 +1335,6 @@
             this.label34.Size = new System.Drawing.Size(67, 16);
             this.label34.TabIndex = 161;
             this.label34.Text = "שם מטפל";
-            this.label34.UseWaitCursor = true;
             // 
             // CmbPatientNameUpdate
             // 
@@ -1387,7 +1345,6 @@
             this.CmbPatientNameUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbPatientNameUpdate.Size = new System.Drawing.Size(124, 24);
             this.CmbPatientNameUpdate.TabIndex = 160;
-            this.CmbPatientNameUpdate.UseWaitCursor = true;
             this.CmbPatientNameUpdate.SelectedIndexChanged += new System.EventHandler(this.CmbPatientNameUpdate_SelectedIndexChanged);
             // 
             // cmbPatientIdUpdate
@@ -1399,7 +1356,6 @@
             this.cmbPatientIdUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbPatientIdUpdate.Size = new System.Drawing.Size(124, 24);
             this.cmbPatientIdUpdate.TabIndex = 159;
-            this.cmbPatientIdUpdate.UseWaitCursor = true;
             this.cmbPatientIdUpdate.SelectedIndexChanged += new System.EventHandler(this.comPatientIdUpdate_SelectedIndexChanged);
             // 
             // label35
@@ -1412,7 +1368,6 @@
             this.label35.Size = new System.Drawing.Size(71, 16);
             this.label35.TabIndex = 158;
             this.label35.Text = "שם מטופל";
-            this.label35.UseWaitCursor = true;
             // 
             // label36
             // 
@@ -1424,7 +1379,6 @@
             this.label36.Size = new System.Drawing.Size(72, 16);
             this.label36.TabIndex = 157;
             this.label36.Text = "ת.ז. מטופל";
-            this.label36.UseWaitCursor = true;
             // 
             // F_Intake
             // 
