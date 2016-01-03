@@ -30,17 +30,20 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.TxtContactTypeAdd = new System.Windows.Forms.TextBox();
+            this.TxtRelationAdd = new System.Windows.Forms.TextBox();
+            this.TxtDateAdd = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.TxtContactLastName = new System.Windows.Forms.TextBox();
             this.LblContactLastName = new System.Windows.Forms.Label();
             this.BtnExitNoSave = new System.Windows.Forms.Button();
             this.BtnSave = new System.Windows.Forms.Button();
-            this.HourPicker = new System.Windows.Forms.DateTimePicker();
+            this.HourPickerAdd = new System.Windows.Forms.DateTimePicker();
             this.CmbPatientName = new System.Windows.Forms.ComboBox();
             this.CmblPatientId = new System.Windows.Forms.ComboBox();
             this.LblPatientName = new System.Windows.Forms.Label();
             this.LblPatientId = new System.Windows.Forms.Label();
-            this.CmbRelationship = new System.Windows.Forms.ComboBox();
             this.TxtContactFirstName = new System.Windows.Forms.TextBox();
             this.LblRelationship = new System.Windows.Forms.Label();
             this.LblContactFirstName = new System.Windows.Forms.Label();
@@ -51,18 +54,21 @@
             this.TxtRemarks = new System.Windows.Forms.RichTextBox();
             this.TxtContents = new System.Windows.Forms.RichTextBox();
             this.CmbWorker = new System.Windows.Forms.ComboBox();
-            this.Calendar = new System.Windows.Forms.MonthCalendar();
-            this.CmbContactType = new System.Windows.Forms.ComboBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.TxtContactTypeUpdate = new System.Windows.Forms.TextBox();
+            this.TxtRelationUpdate = new System.Windows.Forms.TextBox();
+            this.CmbHourUpdate = new System.Windows.Forms.ComboBox();
+            this.CmbDateUpdate = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.TxtContactLNameUpdate = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.BtnExitNoSaveUpdate = new System.Windows.Forms.Button();
             this.BtnSaveUpdate = new System.Windows.Forms.Button();
-            this.HourPickerUpdate = new System.Windows.Forms.DateTimePicker();
             this.CmbPatientNameUpdate = new System.Windows.Forms.ComboBox();
             this.CmbPatientIdUpdate = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.CmbRelationshipUpdate = new System.Windows.Forms.ComboBox();
             this.TxtContactFNameUpdate = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -73,8 +79,6 @@
             this.TxtRemarksUpdate = new System.Windows.Forms.RichTextBox();
             this.TxtContentsUpdate = new System.Windows.Forms.RichTextBox();
             this.CmbWorkerUpdate = new System.Windows.Forms.ComboBox();
-            this.CalendarUpdate = new System.Windows.Forms.MonthCalendar();
-            this.CmbContactTypeUpdate = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -97,16 +101,20 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Silver;
+            this.tabPage1.Controls.Add(this.TxtContactTypeAdd);
+            this.tabPage1.Controls.Add(this.TxtRelationAdd);
+            this.tabPage1.Controls.Add(this.TxtDateAdd);
+            this.tabPage1.Controls.Add(this.label13);
+            this.tabPage1.Controls.Add(this.label14);
             this.tabPage1.Controls.Add(this.TxtContactLastName);
             this.tabPage1.Controls.Add(this.LblContactLastName);
             this.tabPage1.Controls.Add(this.BtnExitNoSave);
             this.tabPage1.Controls.Add(this.BtnSave);
-            this.tabPage1.Controls.Add(this.HourPicker);
+            this.tabPage1.Controls.Add(this.HourPickerAdd);
             this.tabPage1.Controls.Add(this.CmbPatientName);
             this.tabPage1.Controls.Add(this.CmblPatientId);
             this.tabPage1.Controls.Add(this.LblPatientName);
             this.tabPage1.Controls.Add(this.LblPatientId);
-            this.tabPage1.Controls.Add(this.CmbRelationship);
             this.tabPage1.Controls.Add(this.TxtContactFirstName);
             this.tabPage1.Controls.Add(this.LblRelationship);
             this.tabPage1.Controls.Add(this.LblContactFirstName);
@@ -117,8 +125,6 @@
             this.tabPage1.Controls.Add(this.TxtRemarks);
             this.tabPage1.Controls.Add(this.TxtContents);
             this.tabPage1.Controls.Add(this.CmbWorker);
-            this.tabPage1.Controls.Add(this.Calendar);
-            this.tabPage1.Controls.Add(this.CmbContactType);
             this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -126,42 +132,59 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "הוספה";
             // 
-            // tabPage2
+            // TxtContactTypeAdd
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.Silver;
-            this.tabPage2.Controls.Add(this.TxtContactLNameUpdate);
-            this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.BtnExitNoSaveUpdate);
-            this.tabPage2.Controls.Add(this.BtnSaveUpdate);
-            this.tabPage2.Controls.Add(this.HourPickerUpdate);
-            this.tabPage2.Controls.Add(this.CmbPatientNameUpdate);
-            this.tabPage2.Controls.Add(this.CmbPatientIdUpdate);
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.CmbRelationshipUpdate);
-            this.tabPage2.Controls.Add(this.TxtContactFNameUpdate);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.label7);
-            this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Controls.Add(this.label9);
-            this.tabPage2.Controls.Add(this.label10);
-            this.tabPage2.Controls.Add(this.label11);
-            this.tabPage2.Controls.Add(this.TxtRemarksUpdate);
-            this.tabPage2.Controls.Add(this.TxtContentsUpdate);
-            this.tabPage2.Controls.Add(this.CmbWorkerUpdate);
-            this.tabPage2.Controls.Add(this.CalendarUpdate);
-            this.tabPage2.Controls.Add(this.CmbContactTypeUpdate);
-            this.tabPage2.Location = new System.Drawing.Point(4, 32);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(879, 562);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "עדכון";
+            this.TxtContactTypeAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtContactTypeAdd.Location = new System.Drawing.Point(512, 131);
+            this.TxtContactTypeAdd.Name = "TxtContactTypeAdd";
+            this.TxtContactTypeAdd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.TxtContactTypeAdd.Size = new System.Drawing.Size(124, 22);
+            this.TxtContactTypeAdd.TabIndex = 83;
+            // 
+            // TxtRelationAdd
+            // 
+            this.TxtRelationAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtRelationAdd.Location = new System.Drawing.Point(511, 262);
+            this.TxtRelationAdd.Name = "TxtRelationAdd";
+            this.TxtRelationAdd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.TxtRelationAdd.Size = new System.Drawing.Size(124, 22);
+            this.TxtRelationAdd.TabIndex = 82;
+            // 
+            // TxtDateAdd
+            // 
+            this.TxtDateAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtDateAdd.Location = new System.Drawing.Point(670, 68);
+            this.TxtDateAdd.Name = "TxtDateAdd";
+            this.TxtDateAdd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.TxtDateAdd.Size = new System.Drawing.Size(124, 22);
+            this.TxtDateAdd.TabIndex = 81;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label13.Location = new System.Drawing.Point(801, 99);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(36, 16);
+            this.label13.TabIndex = 80;
+            this.label13.Text = "שעה";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label14.Location = new System.Drawing.Point(800, 72);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(47, 16);
+            this.label14.TabIndex = 79;
+            this.label14.Text = "תאריך";
             // 
             // TxtContactLastName
             // 
             this.TxtContactLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtContactLastName.Location = new System.Drawing.Point(511, 215);
+            this.TxtContactLastName.Location = new System.Drawing.Point(511, 228);
             this.TxtContactLastName.Name = "TxtContactLastName";
             this.TxtContactLastName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TxtContactLastName.Size = new System.Drawing.Size(124, 22);
@@ -172,7 +195,7 @@
             this.LblContactLastName.AutoSize = true;
             this.LblContactLastName.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblContactLastName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LblContactLastName.Location = new System.Drawing.Point(638, 218);
+            this.LblContactLastName.Location = new System.Drawing.Point(638, 231);
             this.LblContactLastName.Name = "LblContactLastName";
             this.LblContactLastName.Size = new System.Drawing.Size(140, 16);
             this.LblContactLastName.TabIndex = 49;
@@ -189,6 +212,7 @@
             this.BtnExitNoSave.TabIndex = 48;
             this.BtnExitNoSave.Text = "יציאה ללא שמירה";
             this.BtnExitNoSave.UseVisualStyleBackColor = false;
+            this.BtnExitNoSave.Click += new System.EventHandler(this.BtnExitNoSave_Click_1);
             // 
             // BtnSave
             // 
@@ -201,20 +225,24 @@
             this.BtnSave.TabIndex = 47;
             this.BtnSave.Text = "שמירה";
             this.BtnSave.UseVisualStyleBackColor = false;
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
-            // HourPicker
+            // HourPickerAdd
             // 
-            this.HourPicker.AllowDrop = true;
-            this.HourPicker.Location = new System.Drawing.Point(113, 171);
-            this.HourPicker.Name = "HourPicker";
-            this.HourPicker.Size = new System.Drawing.Size(200, 26);
-            this.HourPicker.TabIndex = 46;
+            this.HourPickerAdd.AllowDrop = true;
+            this.HourPickerAdd.CalendarFont = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HourPickerAdd.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HourPickerAdd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.HourPickerAdd.Location = new System.Drawing.Point(670, 94);
+            this.HourPickerAdd.Name = "HourPickerAdd";
+            this.HourPickerAdd.Size = new System.Drawing.Size(124, 23);
+            this.HourPickerAdd.TabIndex = 46;
             // 
             // CmbPatientName
             // 
             this.CmbPatientName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbPatientName.FormattingEnabled = true;
-            this.CmbPatientName.Location = new System.Drawing.Point(544, 49);
+            this.CmbPatientName.Location = new System.Drawing.Point(670, 39);
             this.CmbPatientName.Name = "CmbPatientName";
             this.CmbPatientName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbPatientName.Size = new System.Drawing.Size(124, 24);
@@ -224,7 +252,7 @@
             // 
             this.CmblPatientId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmblPatientId.FormattingEnabled = true;
-            this.CmblPatientId.Location = new System.Drawing.Point(544, 18);
+            this.CmblPatientId.Location = new System.Drawing.Point(670, 8);
             this.CmblPatientId.Name = "CmblPatientId";
             this.CmblPatientId.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmblPatientId.Size = new System.Drawing.Size(124, 24);
@@ -235,7 +263,7 @@
             this.LblPatientName.AutoSize = true;
             this.LblPatientName.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPatientName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LblPatientName.Location = new System.Drawing.Point(674, 51);
+            this.LblPatientName.Location = new System.Drawing.Point(800, 41);
             this.LblPatientName.Name = "LblPatientName";
             this.LblPatientName.Size = new System.Drawing.Size(71, 16);
             this.LblPatientName.TabIndex = 43;
@@ -246,26 +274,16 @@
             this.LblPatientId.AutoSize = true;
             this.LblPatientId.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPatientId.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LblPatientId.Location = new System.Drawing.Point(673, 22);
+            this.LblPatientId.Location = new System.Drawing.Point(799, 12);
             this.LblPatientId.Name = "LblPatientId";
             this.LblPatientId.Size = new System.Drawing.Size(72, 16);
             this.LblPatientId.TabIndex = 42;
             this.LblPatientId.Text = "ת.ז. מטופל";
             // 
-            // CmbRelationship
-            // 
-            this.CmbRelationship.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CmbRelationship.FormattingEnabled = true;
-            this.CmbRelationship.Location = new System.Drawing.Point(512, 249);
-            this.CmbRelationship.Name = "CmbRelationship";
-            this.CmbRelationship.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CmbRelationship.Size = new System.Drawing.Size(124, 24);
-            this.CmbRelationship.TabIndex = 40;
-            // 
             // TxtContactFirstName
             // 
             this.TxtContactFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtContactFirstName.Location = new System.Drawing.Point(512, 183);
+            this.TxtContactFirstName.Location = new System.Drawing.Point(512, 196);
             this.TxtContactFirstName.Name = "TxtContactFirstName";
             this.TxtContactFirstName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TxtContactFirstName.Size = new System.Drawing.Size(124, 22);
@@ -276,7 +294,7 @@
             this.LblRelationship.AutoSize = true;
             this.LblRelationship.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblRelationship.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LblRelationship.Location = new System.Drawing.Point(728, 254);
+            this.LblRelationship.Location = new System.Drawing.Point(652, 266);
             this.LblRelationship.Name = "LblRelationship";
             this.LblRelationship.Size = new System.Drawing.Size(47, 16);
             this.LblRelationship.TabIndex = 38;
@@ -287,7 +305,7 @@
             this.LblContactFirstName.AutoSize = true;
             this.LblContactFirstName.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblContactFirstName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LblContactFirstName.Location = new System.Drawing.Point(652, 185);
+            this.LblContactFirstName.Location = new System.Drawing.Point(638, 199);
             this.LblContactFirstName.Name = "LblContactFirstName";
             this.LblContactFirstName.Size = new System.Drawing.Size(125, 16);
             this.LblContactFirstName.TabIndex = 36;
@@ -298,7 +316,7 @@
             this.LblWorker.AutoSize = true;
             this.LblWorker.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblWorker.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LblWorker.Location = new System.Drawing.Point(733, 151);
+            this.LblWorker.Location = new System.Drawing.Point(644, 165);
             this.LblWorker.Name = "LblWorker";
             this.LblWorker.Size = new System.Drawing.Size(41, 16);
             this.LblWorker.TabIndex = 35;
@@ -309,7 +327,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(720, 118);
+            this.label1.Location = new System.Drawing.Point(645, 133);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 16);
             this.label1.TabIndex = 34;
@@ -339,6 +357,7 @@
             // 
             // TxtRemarks
             // 
+            this.TxtRemarks.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtRemarks.Location = new System.Drawing.Point(106, 438);
             this.TxtRemarks.Name = "TxtRemarks";
             this.TxtRemarks.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -348,6 +367,7 @@
             // 
             // TxtContents
             // 
+            this.TxtContents.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtContents.Location = new System.Drawing.Point(106, 313);
             this.TxtContents.Name = "TxtContents";
             this.TxtContents.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -359,32 +379,112 @@
             // 
             this.CmbWorker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbWorker.FormattingEnabled = true;
-            this.CmbWorker.Location = new System.Drawing.Point(512, 149);
+            this.CmbWorker.Location = new System.Drawing.Point(512, 162);
             this.CmbWorker.Name = "CmbWorker";
             this.CmbWorker.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbWorker.Size = new System.Drawing.Size(124, 24);
             this.CmbWorker.TabIndex = 29;
             // 
-            // Calendar
+            // tabPage2
             // 
-            this.Calendar.Location = new System.Drawing.Point(100, 6);
-            this.Calendar.Name = "Calendar";
-            this.Calendar.TabIndex = 28;
+            this.tabPage2.BackColor = System.Drawing.Color.Silver;
+            this.tabPage2.Controls.Add(this.TxtContactTypeUpdate);
+            this.tabPage2.Controls.Add(this.TxtRelationUpdate);
+            this.tabPage2.Controls.Add(this.CmbHourUpdate);
+            this.tabPage2.Controls.Add(this.CmbDateUpdate);
+            this.tabPage2.Controls.Add(this.label6);
+            this.tabPage2.Controls.Add(this.label12);
+            this.tabPage2.Controls.Add(this.TxtContactLNameUpdate);
+            this.tabPage2.Controls.Add(this.label2);
+            this.tabPage2.Controls.Add(this.BtnExitNoSaveUpdate);
+            this.tabPage2.Controls.Add(this.BtnSaveUpdate);
+            this.tabPage2.Controls.Add(this.CmbPatientNameUpdate);
+            this.tabPage2.Controls.Add(this.CmbPatientIdUpdate);
+            this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Controls.Add(this.label4);
+            this.tabPage2.Controls.Add(this.TxtContactFNameUpdate);
+            this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Controls.Add(this.label7);
+            this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Controls.Add(this.label9);
+            this.tabPage2.Controls.Add(this.label10);
+            this.tabPage2.Controls.Add(this.label11);
+            this.tabPage2.Controls.Add(this.TxtRemarksUpdate);
+            this.tabPage2.Controls.Add(this.TxtContentsUpdate);
+            this.tabPage2.Controls.Add(this.CmbWorkerUpdate);
+            this.tabPage2.Location = new System.Drawing.Point(4, 32);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(879, 562);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "עדכון";
             // 
-            // CmbContactType
+            // TxtContactTypeUpdate
             // 
-            this.CmbContactType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CmbContactType.FormattingEnabled = true;
-            this.CmbContactType.Location = new System.Drawing.Point(512, 116);
-            this.CmbContactType.Name = "CmbContactType";
-            this.CmbContactType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CmbContactType.Size = new System.Drawing.Size(124, 24);
-            this.CmbContactType.TabIndex = 27;
+            this.TxtContactTypeUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtContactTypeUpdate.Location = new System.Drawing.Point(512, 135);
+            this.TxtContactTypeUpdate.Name = "TxtContactTypeUpdate";
+            this.TxtContactTypeUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.TxtContactTypeUpdate.Size = new System.Drawing.Size(124, 22);
+            this.TxtContactTypeUpdate.TabIndex = 84;
+            // 
+            // TxtRelationUpdate
+            // 
+            this.TxtRelationUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtRelationUpdate.Location = new System.Drawing.Point(511, 258);
+            this.TxtRelationUpdate.Name = "TxtRelationUpdate";
+            this.TxtRelationUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.TxtRelationUpdate.Size = new System.Drawing.Size(124, 22);
+            this.TxtRelationUpdate.TabIndex = 83;
+            // 
+            // CmbHourUpdate
+            // 
+            this.CmbHourUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CmbHourUpdate.FormattingEnabled = true;
+            this.CmbHourUpdate.Location = new System.Drawing.Point(663, 98);
+            this.CmbHourUpdate.Name = "CmbHourUpdate";
+            this.CmbHourUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.CmbHourUpdate.Size = new System.Drawing.Size(124, 24);
+            this.CmbHourUpdate.TabIndex = 78;
+            this.CmbHourUpdate.SelectedIndexChanged += new System.EventHandler(this.CmbHourUpdate_SelectedIndexChanged);
+            // 
+            // CmbDateUpdate
+            // 
+            this.CmbDateUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CmbDateUpdate.FormattingEnabled = true;
+            this.CmbDateUpdate.Location = new System.Drawing.Point(663, 69);
+            this.CmbDateUpdate.Name = "CmbDateUpdate";
+            this.CmbDateUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.CmbDateUpdate.Size = new System.Drawing.Size(124, 24);
+            this.CmbDateUpdate.TabIndex = 77;
+            this.CmbDateUpdate.SelectedIndexChanged += new System.EventHandler(this.CmbDateUpdate_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.Location = new System.Drawing.Point(793, 100);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(36, 16);
+            this.label6.TabIndex = 76;
+            this.label6.Text = "שעה";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label12.Location = new System.Drawing.Point(792, 73);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(47, 16);
+            this.label12.TabIndex = 75;
+            this.label12.Text = "תאריך";
             // 
             // TxtContactLNameUpdate
             // 
             this.TxtContactLNameUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtContactLNameUpdate.Location = new System.Drawing.Point(511, 213);
+            this.TxtContactLNameUpdate.Location = new System.Drawing.Point(511, 229);
             this.TxtContactLNameUpdate.Name = "TxtContactLNameUpdate";
             this.TxtContactLNameUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TxtContactLNameUpdate.Size = new System.Drawing.Size(124, 22);
@@ -395,7 +495,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(638, 216);
+            this.label2.Location = new System.Drawing.Point(638, 232);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(140, 16);
             this.label2.TabIndex = 73;
@@ -412,6 +512,7 @@
             this.BtnExitNoSaveUpdate.TabIndex = 72;
             this.BtnExitNoSaveUpdate.Text = "יציאה ללא שמירה";
             this.BtnExitNoSaveUpdate.UseVisualStyleBackColor = false;
+            this.BtnExitNoSaveUpdate.Click += new System.EventHandler(this.BtnExitNoSaveUpdate_Click);
             // 
             // BtnSaveUpdate
             // 
@@ -424,20 +525,13 @@
             this.BtnSaveUpdate.TabIndex = 71;
             this.BtnSaveUpdate.Text = "שמירה";
             this.BtnSaveUpdate.UseVisualStyleBackColor = false;
-            // 
-            // HourPickerUpdate
-            // 
-            this.HourPickerUpdate.AllowDrop = true;
-            this.HourPickerUpdate.Location = new System.Drawing.Point(113, 169);
-            this.HourPickerUpdate.Name = "HourPickerUpdate";
-            this.HourPickerUpdate.Size = new System.Drawing.Size(200, 26);
-            this.HourPickerUpdate.TabIndex = 70;
+            this.BtnSaveUpdate.Click += new System.EventHandler(this.BtnSaveUpdate_Click);
             // 
             // CmbPatientNameUpdate
             // 
             this.CmbPatientNameUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbPatientNameUpdate.FormattingEnabled = true;
-            this.CmbPatientNameUpdate.Location = new System.Drawing.Point(544, 47);
+            this.CmbPatientNameUpdate.Location = new System.Drawing.Point(662, 41);
             this.CmbPatientNameUpdate.Name = "CmbPatientNameUpdate";
             this.CmbPatientNameUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbPatientNameUpdate.Size = new System.Drawing.Size(124, 24);
@@ -447,18 +541,19 @@
             // 
             this.CmbPatientIdUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbPatientIdUpdate.FormattingEnabled = true;
-            this.CmbPatientIdUpdate.Location = new System.Drawing.Point(544, 16);
+            this.CmbPatientIdUpdate.Location = new System.Drawing.Point(662, 10);
             this.CmbPatientIdUpdate.Name = "CmbPatientIdUpdate";
             this.CmbPatientIdUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbPatientIdUpdate.Size = new System.Drawing.Size(124, 24);
             this.CmbPatientIdUpdate.TabIndex = 68;
+            this.CmbPatientIdUpdate.SelectedIndexChanged += new System.EventHandler(this.CmbPatientIdUpdate_SelectedIndexChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(674, 49);
+            this.label3.Location = new System.Drawing.Point(792, 43);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 16);
             this.label3.TabIndex = 67;
@@ -469,26 +564,16 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(673, 20);
+            this.label4.Location = new System.Drawing.Point(791, 14);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 16);
             this.label4.TabIndex = 66;
             this.label4.Text = "ת.ז. מטופל";
             // 
-            // CmbRelationshipUpdate
-            // 
-            this.CmbRelationshipUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CmbRelationshipUpdate.FormattingEnabled = true;
-            this.CmbRelationshipUpdate.Location = new System.Drawing.Point(512, 248);
-            this.CmbRelationshipUpdate.Name = "CmbRelationshipUpdate";
-            this.CmbRelationshipUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CmbRelationshipUpdate.Size = new System.Drawing.Size(124, 24);
-            this.CmbRelationshipUpdate.TabIndex = 64;
-            // 
             // TxtContactFNameUpdate
             // 
             this.TxtContactFNameUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtContactFNameUpdate.Location = new System.Drawing.Point(512, 181);
+            this.TxtContactFNameUpdate.Location = new System.Drawing.Point(512, 197);
             this.TxtContactFNameUpdate.Name = "TxtContactFNameUpdate";
             this.TxtContactFNameUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TxtContactFNameUpdate.Size = new System.Drawing.Size(124, 22);
@@ -499,7 +584,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(728, 253);
+            this.label5.Location = new System.Drawing.Point(651, 262);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 16);
             this.label5.TabIndex = 62;
@@ -510,7 +595,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(652, 183);
+            this.label7.Location = new System.Drawing.Point(645, 199);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(125, 16);
             this.label7.TabIndex = 60;
@@ -521,7 +606,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(733, 149);
+            this.label8.Location = new System.Drawing.Point(649, 169);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(41, 16);
             this.label8.TabIndex = 59;
@@ -532,7 +617,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(720, 116);
+            this.label9.Location = new System.Drawing.Point(643, 141);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(55, 16);
             this.label9.TabIndex = 58;
@@ -562,6 +647,7 @@
             // 
             // TxtRemarksUpdate
             // 
+            this.TxtRemarksUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtRemarksUpdate.Location = new System.Drawing.Point(106, 436);
             this.TxtRemarksUpdate.Name = "TxtRemarksUpdate";
             this.TxtRemarksUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -571,6 +657,7 @@
             // 
             // TxtContentsUpdate
             // 
+            this.TxtContentsUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtContentsUpdate.Location = new System.Drawing.Point(106, 311);
             this.TxtContentsUpdate.Name = "TxtContentsUpdate";
             this.TxtContentsUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -582,27 +669,11 @@
             // 
             this.CmbWorkerUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbWorkerUpdate.FormattingEnabled = true;
-            this.CmbWorkerUpdate.Location = new System.Drawing.Point(512, 147);
+            this.CmbWorkerUpdate.Location = new System.Drawing.Point(512, 163);
             this.CmbWorkerUpdate.Name = "CmbWorkerUpdate";
             this.CmbWorkerUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbWorkerUpdate.Size = new System.Drawing.Size(124, 24);
             this.CmbWorkerUpdate.TabIndex = 53;
-            // 
-            // CalendarUpdate
-            // 
-            this.CalendarUpdate.Location = new System.Drawing.Point(100, 4);
-            this.CalendarUpdate.Name = "CalendarUpdate";
-            this.CalendarUpdate.TabIndex = 52;
-            // 
-            // CmbContactTypeUpdate
-            // 
-            this.CmbContactTypeUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CmbContactTypeUpdate.FormattingEnabled = true;
-            this.CmbContactTypeUpdate.Location = new System.Drawing.Point(512, 114);
-            this.CmbContactTypeUpdate.Name = "CmbContactTypeUpdate";
-            this.CmbContactTypeUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CmbContactTypeUpdate.Size = new System.Drawing.Size(124, 24);
-            this.CmbContactTypeUpdate.TabIndex = 51;
             // 
             // F_Contacts
             // 
@@ -632,12 +703,11 @@
         private System.Windows.Forms.Label LblContactLastName;
         private System.Windows.Forms.Button BtnExitNoSave;
         private System.Windows.Forms.Button BtnSave;
-        private System.Windows.Forms.DateTimePicker HourPicker;
+        private System.Windows.Forms.DateTimePicker HourPickerAdd;
         private System.Windows.Forms.ComboBox CmbPatientName;
         private System.Windows.Forms.ComboBox CmblPatientId;
         private System.Windows.Forms.Label LblPatientName;
         private System.Windows.Forms.Label LblPatientId;
-        private System.Windows.Forms.ComboBox CmbRelationship;
         private System.Windows.Forms.TextBox TxtContactFirstName;
         private System.Windows.Forms.Label LblRelationship;
         private System.Windows.Forms.Label LblContactFirstName;
@@ -648,19 +718,15 @@
         private System.Windows.Forms.RichTextBox TxtRemarks;
         private System.Windows.Forms.RichTextBox TxtContents;
         private System.Windows.Forms.ComboBox CmbWorker;
-        private System.Windows.Forms.MonthCalendar Calendar;
-        private System.Windows.Forms.ComboBox CmbContactType;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TextBox TxtContactLNameUpdate;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BtnExitNoSaveUpdate;
         private System.Windows.Forms.Button BtnSaveUpdate;
-        private System.Windows.Forms.DateTimePicker HourPickerUpdate;
         private System.Windows.Forms.ComboBox CmbPatientNameUpdate;
         private System.Windows.Forms.ComboBox CmbPatientIdUpdate;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox CmbRelationshipUpdate;
         private System.Windows.Forms.TextBox TxtContactFNameUpdate;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
@@ -671,8 +737,17 @@
         private System.Windows.Forms.RichTextBox TxtRemarksUpdate;
         private System.Windows.Forms.RichTextBox TxtContentsUpdate;
         private System.Windows.Forms.ComboBox CmbWorkerUpdate;
-        private System.Windows.Forms.MonthCalendar CalendarUpdate;
-        private System.Windows.Forms.ComboBox CmbContactTypeUpdate;
+        private System.Windows.Forms.ComboBox CmbHourUpdate;
+        private System.Windows.Forms.ComboBox CmbDateUpdate;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox TxtDateAdd;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox TxtRelationAdd;
+        private System.Windows.Forms.TextBox TxtRelationUpdate;
+        private System.Windows.Forms.TextBox TxtContactTypeAdd;
+        private System.Windows.Forms.TextBox TxtContactTypeUpdate;
 
     }
 }

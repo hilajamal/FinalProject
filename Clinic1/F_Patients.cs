@@ -175,7 +175,7 @@ namespace Clinic1
                 int race = (int)CmbRace.SelectedValue;
                 string apotropus =TxtApotropus.Text.ToString();
                ClinicTableAdapters.PatientsTableAdapter da = new ClinicTableAdapters.PatientsTableAdapter();
-                da.Insert(id, firstname, lastname, fullName, father, mother, country, gender, city, street, streetNum, zipCode, email, phonehome, phonecellular, phonework, phonefather, phonemother, phoneanother, phonecontact, null, null, insurence, familydoctor, notes, race, apotropus, dt);
+                da.Insert(id, firstname, lastname, fullName, father, mother, country, gender, city, street, streetNum, zipCode, email, phonehome, phonecellular, phonework, phonefather, phonemother, phoneanother, phonecontact, null, null, insurence, familydoctor, notes, race, apotropus, dt,false,null,false,null);
                 MessageBox.Show("מטופל נוסף בהצלחה");
 
 

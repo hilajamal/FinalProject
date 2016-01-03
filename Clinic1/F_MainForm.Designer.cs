@@ -37,6 +37,7 @@
             this.btnReports = new System.Windows.Forms.Button();
             this.btnIntake = new System.Windows.Forms.Button();
             this.BtnIntakeBoard = new System.Windows.Forms.Button();
+            this.BtnPsycho = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -155,12 +156,26 @@
             this.BtnIntakeBoard.UseVisualStyleBackColor = false;
             this.BtnIntakeBoard.Click += new System.EventHandler(this.BtnIntakeBoard_Click);
             // 
+            // BtnPsycho
+            // 
+            this.BtnPsycho.BackColor = System.Drawing.Color.Purple;
+            this.BtnPsycho.Font = new System.Drawing.Font("David", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPsycho.ForeColor = System.Drawing.SystemColors.Control;
+            this.BtnPsycho.Location = new System.Drawing.Point(359, 339);
+            this.BtnPsycho.Name = "BtnPsycho";
+            this.BtnPsycho.Size = new System.Drawing.Size(219, 136);
+            this.BtnPsycho.TabIndex = 9;
+            this.BtnPsycho.Text = "פסיכו-תרפיה";
+            this.BtnPsycho.UseVisualStyleBackColor = false;
+            this.BtnPsycho.Click += new System.EventHandler(this.BtnPsycho_Click);
+            // 
             // F_MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1086, 477);
+            this.Controls.Add(this.BtnPsycho);
             this.Controls.Add(this.BtnIntakeBoard);
             this.Controls.Add(this.btnIntake);
             this.Controls.Add(this.btnReports);
@@ -188,6 +203,7 @@
         private System.Windows.Forms.Button btnReports;
         private System.Windows.Forms.Button btnIntake;
         private System.Windows.Forms.Button BtnIntakeBoard;
+        private System.Windows.Forms.Button BtnPsycho;
 
     }
 }
