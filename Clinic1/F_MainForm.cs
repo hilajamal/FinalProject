@@ -80,6 +80,12 @@ namespace Clinic1
             IntakeBoard.Show();
         }
 
+        private void BtnPsycho_Click(object sender, EventArgs e)
+        {
+            F_Meetings f = new F_Meetings();
+            f.Show();
+        }
+
      
     }
 }

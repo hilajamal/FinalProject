@@ -94,6 +94,12 @@
     <Compile Include="F_Intake_Board.Designer.cs">
       <DependentUpon>F_Intake_Board.cs</DependentUpon>
     </Compile>
+    <Compile Include="F_Meetings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Meetings.Designer.cs">
+      <DependentUpon>F_Meetings.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_Patients.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     <EmbeddedResource Include="F_Intake_Board.resx">
       <DependentUpon>F_Intake_Board.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="F_Meetings.resx">
+      <DependentUpon>F_Meetings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F_Patients.resx">
       <DependentUpon>F_Patients.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,9 +191,9 @@
       <DependentUpon>Clinic.xsd</DependentUpon>
     </None>
     <None Include="Clinic.xsd">
-      <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
-      <LastGenOutput>Clinic1.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Clinic.Designer.cs</LastGenOutput>
     </None>
     <None Include="Clinic.xss">
       <DependentUpon>Clinic.xsd</DependentUpon>

@@ -207,6 +207,10 @@ namespace Clinic1
          DateTime dateToAdd = DateTime.ParseExact(formatted, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
 
          daDiagnose.Update(dtDiagnoseForPatientsAdd);
+         ClinicTableAdapters.PatientsTableAdapter daPatients = new ClinicTableAdapters.PatientsTableAdapter();
+         daPatients.UpdateIntakeMeetingTrue(dateToAdd, (int)CmblPatientId.SelectedValue);
+
+
 
          MessageBox.Show("טיפול נוסף בהצלחה");
 
@@ -310,7 +314,6 @@ namespace Clinic1
                 TxtPregnantUpdate.Text = dt.Rows[0]["Pregnant"].ToString();
                 TxtWrittenByUpdate.Text = daWorkers.GetFullNameByID(Int32.Parse(dt.Rows[0]["AddedBy"].ToString()));
                 TxtWrittenByDateUpdate.Text = dt.Rows[0]["AddedByDate"].ToString();
-                TxtUpdatedByDateUpdate.Text = dt.Rows[0]["UpdatedByDate"].ToString();
                 TxtHourUpdate.Text = dt.Rows[0]["Hour"].ToString();
                 TxtNotesUpdate.Text = dt.Rows[0]["Notes"].ToString();
                 TxtPsychoUpdate.Text = dt.Rows[0]["Psycho"].ToString();
