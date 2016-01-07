@@ -181,6 +181,7 @@
             this.BtnDoctor.TabIndex = 10;
             this.BtnDoctor.Text = "מפגש רופא";
             this.BtnDoctor.UseVisualStyleBackColor = false;
+            this.BtnDoctor.Click += new System.EventHandler(this.BtnDoctor_Click);
             // 
             // F_MainForm
             // 

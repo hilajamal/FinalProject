@@ -76,6 +76,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Clinic.xsd</DependentUpon>
     </Compile>
+    <Compile Include="F_DoctorMeeting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_DoctorMeeting.Designer.cs">
+      <DependentUpon>F_DoctorMeeting.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_Groups.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
     <Compile Include="Globals.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="F_DoctorMeeting.resx">
+      <DependentUpon>F_DoctorMeeting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F_Groups.resx">
       <DependentUpon>F_Groups.cs</DependentUpon>
     </EmbeddedResource>

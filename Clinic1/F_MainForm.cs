@@ -86,6 +86,12 @@ namespace Clinic1
             f.Show();
         }
 
+        private void BtnDoctor_Click(object sender, EventArgs e)
+        {
+            F_DoctorMeeting doctor = new F_DoctorMeeting();
+            doctor.Show();
+        }
+
      
     }
 }
