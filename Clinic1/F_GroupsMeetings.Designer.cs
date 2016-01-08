@@ -385,6 +385,7 @@
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DgPatientsAdd.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.DgPatientsAdd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgPatientsAdd.Size = new System.Drawing.Size(517, 123);
             this.DgPatientsAdd.TabIndex = 87;
             // 
@@ -571,6 +572,7 @@
             dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle10.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DgPatientsUpdate.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.DgPatientsUpdate.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgPatientsUpdate.Size = new System.Drawing.Size(517, 123);
             this.DgPatientsUpdate.TabIndex = 124;
             // 
