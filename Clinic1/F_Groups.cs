@@ -34,14 +34,12 @@ namespace Clinic1
             CmblPatientIdAdd.AutoCompleteSource = AutoCompleteSource.ListItems;
             CmblPatientIdAdd.DisplayMember = "ID";
             CmblPatientIdAdd.ValueMember = "ID";
-            CmblPatientIdAdd.SelectedIndex = 0;
 
             cmbPatientIDUpdate.DataSource = dtPatients;
             cmbPatientIDUpdate.AutoCompleteMode = AutoCompleteMode.Append;
             cmbPatientIDUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
             cmbPatientIDUpdate.DisplayMember = "ID";
             cmbPatientIDUpdate.ValueMember = "ID";
-            cmbPatientIDUpdate.SelectedIndex = 0;
 
             //PatientsName
             CmbPatientNameAdd.DataSource = dtPatients;
@@ -56,7 +54,6 @@ namespace Clinic1
             cmbPatientNameUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
             cmbPatientNameUpdate.DisplayMember = "FullName";
             cmbPatientNameUpdate.ValueMember = "ID";
-            cmbPatientNameUpdate.SelectedIndex = 0;
 
             DataGridViewTextBoxColumn col1 = new DataGridViewTextBoxColumn();
             DataGridViewTextBoxColumn col2 = new DataGridViewTextBoxColumn();

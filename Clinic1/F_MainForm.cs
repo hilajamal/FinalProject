@@ -19,6 +19,8 @@ namespace Clinic1
         public F_MainForm()
         {
             InitializeComponent();
+            LblName.Text = "ברוך שובך, " + Globals.ConnectedUserName;
+
         }
 
         private void button1_Click(object sender, EventArgs e)

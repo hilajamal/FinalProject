@@ -124,7 +124,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.Silver;
+            this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPage1.Controls.Add(this.label23);
             this.tabPage1.Controls.Add(this.label24);
             this.tabPage1.Controls.Add(this.CmbSecondTherapistAdd);
@@ -183,22 +183,24 @@
             // 
             // CmbSecondTherapistAdd
             // 
-            this.CmbSecondTherapistAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CmbSecondTherapistAdd.BackColor = System.Drawing.Color.Gainsboro;
+            this.CmbSecondTherapistAdd.Font = new System.Drawing.Font("David", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbSecondTherapistAdd.FormattingEnabled = true;
             this.CmbSecondTherapistAdd.Location = new System.Drawing.Point(439, 70);
             this.CmbSecondTherapistAdd.Name = "CmbSecondTherapistAdd";
             this.CmbSecondTherapistAdd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CmbSecondTherapistAdd.Size = new System.Drawing.Size(124, 24);
+            this.CmbSecondTherapistAdd.Size = new System.Drawing.Size(124, 21);
             this.CmbSecondTherapistAdd.TabIndex = 113;
             // 
             // CmbMainTherapistAdd
             // 
-            this.CmbMainTherapistAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CmbMainTherapistAdd.BackColor = System.Drawing.Color.Gainsboro;
+            this.CmbMainTherapistAdd.Font = new System.Drawing.Font("David", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbMainTherapistAdd.FormattingEnabled = true;
             this.CmbMainTherapistAdd.Location = new System.Drawing.Point(439, 39);
             this.CmbMainTherapistAdd.Name = "CmbMainTherapistAdd";
             this.CmbMainTherapistAdd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CmbMainTherapistAdd.Size = new System.Drawing.Size(124, 24);
+            this.CmbMainTherapistAdd.Size = new System.Drawing.Size(124, 21);
             this.CmbMainTherapistAdd.TabIndex = 112;
             // 
             // label11
@@ -215,12 +217,13 @@
             // 
             // CmbMeetingTypeAdd
             // 
-            this.CmbMeetingTypeAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CmbMeetingTypeAdd.BackColor = System.Drawing.Color.Gainsboro;
+            this.CmbMeetingTypeAdd.Font = new System.Drawing.Font("David", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbMeetingTypeAdd.FormattingEnabled = true;
             this.CmbMeetingTypeAdd.Location = new System.Drawing.Point(439, 9);
             this.CmbMeetingTypeAdd.Name = "CmbMeetingTypeAdd";
             this.CmbMeetingTypeAdd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CmbMeetingTypeAdd.Size = new System.Drawing.Size(124, 24);
+            this.CmbMeetingTypeAdd.Size = new System.Drawing.Size(124, 21);
             this.CmbMeetingTypeAdd.TabIndex = 108;
             // 
             // label19
@@ -305,7 +308,9 @@
             // 
             // TxtNotesAdd
             // 
+            this.TxtNotesAdd.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtNotesAdd.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNotesAdd.ForeColor = System.Drawing.Color.Black;
             this.TxtNotesAdd.Location = new System.Drawing.Point(244, 370);
             this.TxtNotesAdd.Name = "TxtNotesAdd";
             this.TxtNotesAdd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -315,6 +320,7 @@
             // 
             // TxtSummaryAdd
             // 
+            this.TxtSummaryAdd.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtSummaryAdd.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtSummaryAdd.Location = new System.Drawing.Point(244, 284);
             this.TxtSummaryAdd.Name = "TxtSummaryAdd";
@@ -341,9 +347,11 @@
             this.DgPatientsAdd.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.DgPatientsAdd.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DgPatientsAdd.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DgPatientsAdd.BackgroundColor = System.Drawing.Color.Silver;
+            this.DgPatientsAdd.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.DgPatientsAdd.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
@@ -358,8 +366,8 @@
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("David", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DgPatientsAdd.DefaultCellStyle = dataGridViewCellStyle3;
             this.DgPatientsAdd.GridColor = System.Drawing.Color.Silver;
@@ -399,11 +407,12 @@
             // 
             // txtMeetingNumberAdd
             // 
+            this.txtMeetingNumberAdd.BackColor = System.Drawing.Color.Gainsboro;
             this.txtMeetingNumberAdd.Enabled = false;
-            this.txtMeetingNumberAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMeetingNumberAdd.Font = new System.Drawing.Font("David", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMeetingNumberAdd.Location = new System.Drawing.Point(649, 71);
             this.txtMeetingNumberAdd.Name = "txtMeetingNumberAdd";
-            this.txtMeetingNumberAdd.Size = new System.Drawing.Size(124, 26);
+            this.txtMeetingNumberAdd.Size = new System.Drawing.Size(124, 20);
             this.txtMeetingNumberAdd.TabIndex = 84;
             this.txtMeetingNumberAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -420,22 +429,24 @@
             // 
             // CmbGroupNameAdd
             // 
-            this.CmbGroupNameAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CmbGroupNameAdd.BackColor = System.Drawing.Color.Gainsboro;
+            this.CmbGroupNameAdd.Font = new System.Drawing.Font("David", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbGroupNameAdd.FormattingEnabled = true;
             this.CmbGroupNameAdd.Location = new System.Drawing.Point(650, 39);
             this.CmbGroupNameAdd.Name = "CmbGroupNameAdd";
             this.CmbGroupNameAdd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CmbGroupNameAdd.Size = new System.Drawing.Size(124, 24);
+            this.CmbGroupNameAdd.Size = new System.Drawing.Size(124, 21);
             this.CmbGroupNameAdd.TabIndex = 82;
             // 
             // CmbGroupIDAdd
             // 
-            this.CmbGroupIDAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CmbGroupIDAdd.BackColor = System.Drawing.Color.Gainsboro;
+            this.CmbGroupIDAdd.Font = new System.Drawing.Font("David", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbGroupIDAdd.FormattingEnabled = true;
             this.CmbGroupIDAdd.Location = new System.Drawing.Point(650, 8);
             this.CmbGroupIDAdd.Name = "CmbGroupIDAdd";
             this.CmbGroupIDAdd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CmbGroupIDAdd.Size = new System.Drawing.Size(124, 24);
+            this.CmbGroupIDAdd.Size = new System.Drawing.Size(124, 21);
             this.CmbGroupIDAdd.TabIndex = 81;
             this.CmbGroupIDAdd.SelectedIndexChanged += new System.EventHandler(this.CmbGroupIDAdd_SelectedIndexChanged);
             // 
@@ -463,7 +474,7 @@
             // 
             // BtnAddNewMeeting
             // 
-            this.BtnAddNewMeeting.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.BtnAddNewMeeting.BackColor = System.Drawing.Color.CornflowerBlue;
             this.BtnAddNewMeeting.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAddNewMeeting.ForeColor = System.Drawing.Color.Black;
             this.BtnAddNewMeeting.Location = new System.Drawing.Point(56, 369);
@@ -476,7 +487,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.Silver;
+            this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPage2.Controls.Add(this.DgPatientsUpdate);
             this.tabPage2.Controls.Add(this.label25);
             this.tabPage2.Controls.Add(this.label26);
@@ -522,9 +533,11 @@
             this.DgPatientsUpdate.AllowUserToOrderColumns = true;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
             this.DgPatientsUpdate.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.DgPatientsUpdate.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DgPatientsUpdate.BackgroundColor = System.Drawing.Color.Silver;
+            this.DgPatientsUpdate.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.DgPatientsUpdate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
@@ -539,8 +552,8 @@
             dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle8.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DgPatientsUpdate.DefaultCellStyle = dataGridViewCellStyle8;
             this.DgPatientsUpdate.GridColor = System.Drawing.Color.Silver;
@@ -585,6 +598,7 @@
             // 
             // CmbSecondTherapistUpdate
             // 
+            this.CmbSecondTherapistUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.CmbSecondTherapistUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbSecondTherapistUpdate.FormattingEnabled = true;
             this.CmbSecondTherapistUpdate.Location = new System.Drawing.Point(423, 72);
@@ -595,6 +609,7 @@
             // 
             // CmbMainTherapistUpdate
             // 
+            this.CmbMainTherapistUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.CmbMainTherapistUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbMainTherapistUpdate.FormattingEnabled = true;
             this.CmbMainTherapistUpdate.Location = new System.Drawing.Point(423, 41);
@@ -617,6 +632,7 @@
             // 
             // CmbMeetingTypeUpdate
             // 
+            this.CmbMeetingTypeUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.CmbMeetingTypeUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbMeetingTypeUpdate.FormattingEnabled = true;
             this.CmbMeetingTypeUpdate.Location = new System.Drawing.Point(421, 10);
@@ -638,7 +654,7 @@
             // 
             // TxtUpdatedByDateUpdate
             // 
-            this.TxtUpdatedByDateUpdate.BackColor = System.Drawing.Color.Silver;
+            this.TxtUpdatedByDateUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtUpdatedByDateUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtUpdatedByDateUpdate.ForeColor = System.Drawing.Color.Black;
             this.TxtUpdatedByDateUpdate.Location = new System.Drawing.Point(300, 468);
@@ -650,7 +666,7 @@
             // 
             // TxtWrittenByDateUpdate
             // 
-            this.TxtWrittenByDateUpdate.BackColor = System.Drawing.Color.Silver;
+            this.TxtWrittenByDateUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtWrittenByDateUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtWrittenByDateUpdate.ForeColor = System.Drawing.Color.Black;
             this.TxtWrittenByDateUpdate.Location = new System.Drawing.Point(300, 436);
@@ -662,7 +678,7 @@
             // 
             // TxtUpdatedByUpdate
             // 
-            this.TxtUpdatedByUpdate.BackColor = System.Drawing.Color.Silver;
+            this.TxtUpdatedByUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtUpdatedByUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtUpdatedByUpdate.ForeColor = System.Drawing.Color.Black;
             this.TxtUpdatedByUpdate.Location = new System.Drawing.Point(530, 468);
@@ -674,7 +690,7 @@
             // 
             // TxtWrittenByUpdate
             // 
-            this.TxtWrittenByUpdate.BackColor = System.Drawing.Color.Silver;
+            this.TxtWrittenByUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtWrittenByUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtWrittenByUpdate.ForeColor = System.Drawing.Color.Black;
             this.TxtWrittenByUpdate.Location = new System.Drawing.Point(530, 436);
@@ -753,6 +769,7 @@
             // 
             // TxtRemarksUpdate
             // 
+            this.TxtRemarksUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtRemarksUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtRemarksUpdate.Location = new System.Drawing.Point(255, 347);
             this.TxtRemarksUpdate.Name = "TxtRemarksUpdate";
@@ -763,6 +780,7 @@
             // 
             // TxtSummaryUpdate
             // 
+            this.TxtSummaryUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtSummaryUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtSummaryUpdate.Location = new System.Drawing.Point(255, 261);
             this.TxtSummaryUpdate.Name = "TxtSummaryUpdate";
@@ -799,6 +817,7 @@
             // 
             // CmbMeetingNumberUpdate
             // 
+            this.CmbMeetingNumberUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.CmbMeetingNumberUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbMeetingNumberUpdate.FormattingEnabled = true;
             this.CmbMeetingNumberUpdate.Location = new System.Drawing.Point(648, 76);
@@ -821,6 +840,7 @@
             // 
             // CmbGroupNameUpdate
             // 
+            this.CmbGroupNameUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.CmbGroupNameUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbGroupNameUpdate.FormattingEnabled = true;
             this.CmbGroupNameUpdate.Location = new System.Drawing.Point(648, 43);
@@ -831,6 +851,7 @@
             // 
             // CmbGroupIdUpdate
             // 
+            this.CmbGroupIdUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.CmbGroupIdUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbGroupIdUpdate.FormattingEnabled = true;
             this.CmbGroupIdUpdate.Location = new System.Drawing.Point(648, 12);
@@ -864,7 +885,7 @@
             // 
             // BtnUpdateMeeting
             // 
-            this.BtnUpdateMeeting.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.BtnUpdateMeeting.BackColor = System.Drawing.Color.CornflowerBlue;
             this.BtnUpdateMeeting.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnUpdateMeeting.ForeColor = System.Drawing.Color.Black;
             this.BtnUpdateMeeting.Location = new System.Drawing.Point(59, 388);
@@ -888,8 +909,8 @@
             this.ClientSize = new System.Drawing.Size(885, 538);
             this.Controls.Add(this.TabGroupsMeetings);
             this.Name = "F_GroupsMeetings";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "F_GroupsMeetings";
             this.TabGroupsMeetings.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

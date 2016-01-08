@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_MainForm));
             this.button1 = new System.Windows.Forms.Button();
             this.btnContacts = new System.Windows.Forms.Button();
             this.BtnWorkers = new System.Windows.Forms.Button();
@@ -39,6 +40,8 @@
             this.BtnIntakeBoard = new System.Windows.Forms.Button();
             this.BtnPsycho = new System.Windows.Forms.Button();
             this.BtnDoctor = new System.Windows.Forms.Button();
+            this.LblName = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -46,9 +49,9 @@
             this.button1.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.button1.Font = new System.Drawing.Font("David", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(32, 154);
+            this.button1.Location = new System.Drawing.Point(25, 205);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(214, 133);
+            this.button1.Size = new System.Drawing.Size(214, 135);
             this.button1.TabIndex = 0;
             this.button1.Text = "יומן";
             this.button1.UseVisualStyleBackColor = false;
@@ -56,12 +59,12 @@
             // 
             // btnContacts
             // 
-            this.btnContacts.BackColor = System.Drawing.Color.Purple;
+            this.btnContacts.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnContacts.Font = new System.Drawing.Font("David", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnContacts.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnContacts.Location = new System.Drawing.Point(32, 12);
+            this.btnContacts.Location = new System.Drawing.Point(25, 63);
             this.btnContacts.Name = "btnContacts";
-            this.btnContacts.Size = new System.Drawing.Size(214, 136);
+            this.btnContacts.Size = new System.Drawing.Size(214, 135);
             this.btnContacts.TabIndex = 1;
             this.btnContacts.Text = "מגעים";
             this.btnContacts.UseVisualStyleBackColor = false;
@@ -69,10 +72,10 @@
             // 
             // BtnWorkers
             // 
-            this.BtnWorkers.BackColor = System.Drawing.Color.Purple;
+            this.BtnWorkers.BackColor = System.Drawing.Color.CornflowerBlue;
             this.BtnWorkers.Font = new System.Drawing.Font("David", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnWorkers.ForeColor = System.Drawing.SystemColors.Control;
-            this.BtnWorkers.Location = new System.Drawing.Point(508, 298);
+            this.BtnWorkers.Location = new System.Drawing.Point(501, 348);
             this.BtnWorkers.Name = "BtnWorkers";
             this.BtnWorkers.Size = new System.Drawing.Size(219, 136);
             this.BtnWorkers.TabIndex = 2;
@@ -85,7 +88,7 @@
             this.BtnGroups.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.BtnGroups.Font = new System.Drawing.Font("David", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGroups.ForeColor = System.Drawing.SystemColors.Control;
-            this.BtnGroups.Location = new System.Drawing.Point(267, 440);
+            this.BtnGroups.Location = new System.Drawing.Point(260, 490);
             this.BtnGroups.Name = "BtnGroups";
             this.BtnGroups.Size = new System.Drawing.Size(219, 136);
             this.BtnGroups.TabIndex = 3;
@@ -95,10 +98,10 @@
             // 
             // BtnPatients
             // 
-            this.BtnPatients.BackColor = System.Drawing.Color.Purple;
+            this.BtnPatients.BackColor = System.Drawing.Color.CornflowerBlue;
             this.BtnPatients.Font = new System.Drawing.Font("David", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnPatients.ForeColor = System.Drawing.SystemColors.Control;
-            this.BtnPatients.Location = new System.Drawing.Point(508, 12);
+            this.BtnPatients.Location = new System.Drawing.Point(501, 63);
             this.BtnPatients.Name = "BtnPatients";
             this.BtnPatients.Size = new System.Drawing.Size(219, 135);
             this.BtnPatients.TabIndex = 4;
@@ -111,9 +114,9 @@
             this.btnGroupsMeetings.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnGroupsMeetings.Font = new System.Drawing.Font("David", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGroupsMeetings.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnGroupsMeetings.Location = new System.Drawing.Point(508, 154);
+            this.btnGroupsMeetings.Location = new System.Drawing.Point(501, 205);
             this.btnGroupsMeetings.Name = "btnGroupsMeetings";
-            this.btnGroupsMeetings.Size = new System.Drawing.Size(219, 133);
+            this.btnGroupsMeetings.Size = new System.Drawing.Size(219, 135);
             this.btnGroupsMeetings.TabIndex = 5;
             this.btnGroupsMeetings.Text = "פגישות קבוצתיות";
             this.btnGroupsMeetings.UseVisualStyleBackColor = false;
@@ -121,12 +124,12 @@
             // 
             // btnReports
             // 
-            this.btnReports.BackColor = System.Drawing.Color.Purple;
+            this.btnReports.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnReports.Font = new System.Drawing.Font("David", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReports.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnReports.Location = new System.Drawing.Point(267, 12);
+            this.btnReports.Location = new System.Drawing.Point(260, 63);
             this.btnReports.Name = "btnReports";
-            this.btnReports.Size = new System.Drawing.Size(219, 133);
+            this.btnReports.Size = new System.Drawing.Size(219, 135);
             this.btnReports.TabIndex = 6;
             this.btnReports.Text = "דו\"חות";
             this.btnReports.UseVisualStyleBackColor = false;
@@ -136,9 +139,9 @@
             this.btnIntake.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnIntake.Font = new System.Drawing.Font("David", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIntake.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnIntake.Location = new System.Drawing.Point(267, 154);
+            this.btnIntake.Location = new System.Drawing.Point(260, 205);
             this.btnIntake.Name = "btnIntake";
-            this.btnIntake.Size = new System.Drawing.Size(219, 133);
+            this.btnIntake.Size = new System.Drawing.Size(219, 135);
             this.btnIntake.TabIndex = 7;
             this.btnIntake.Text = "אינטייק";
             this.btnIntake.UseVisualStyleBackColor = false;
@@ -146,10 +149,10 @@
             // 
             // BtnIntakeBoard
             // 
-            this.BtnIntakeBoard.BackColor = System.Drawing.Color.Purple;
+            this.BtnIntakeBoard.BackColor = System.Drawing.Color.CornflowerBlue;
             this.BtnIntakeBoard.Font = new System.Drawing.Font("David", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnIntakeBoard.ForeColor = System.Drawing.SystemColors.Control;
-            this.BtnIntakeBoard.Location = new System.Drawing.Point(32, 300);
+            this.BtnIntakeBoard.Location = new System.Drawing.Point(25, 348);
             this.BtnIntakeBoard.Name = "BtnIntakeBoard";
             this.BtnIntakeBoard.Size = new System.Drawing.Size(214, 136);
             this.BtnIntakeBoard.TabIndex = 8;
@@ -159,10 +162,10 @@
             // 
             // BtnPsycho
             // 
-            this.BtnPsycho.BackColor = System.Drawing.Color.Purple;
+            this.BtnPsycho.BackColor = System.Drawing.Color.CornflowerBlue;
             this.BtnPsycho.Font = new System.Drawing.Font("David", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnPsycho.ForeColor = System.Drawing.SystemColors.Control;
-            this.BtnPsycho.Location = new System.Drawing.Point(267, 298);
+            this.BtnPsycho.Location = new System.Drawing.Point(260, 348);
             this.BtnPsycho.Name = "BtnPsycho";
             this.BtnPsycho.Size = new System.Drawing.Size(219, 136);
             this.BtnPsycho.TabIndex = 9;
@@ -175,7 +178,7 @@
             this.BtnDoctor.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.BtnDoctor.Font = new System.Drawing.Font("David", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnDoctor.ForeColor = System.Drawing.SystemColors.Control;
-            this.BtnDoctor.Location = new System.Drawing.Point(508, 440);
+            this.BtnDoctor.Location = new System.Drawing.Point(501, 490);
             this.BtnDoctor.Name = "BtnDoctor";
             this.BtnDoctor.Size = new System.Drawing.Size(219, 136);
             this.BtnDoctor.TabIndex = 10;
@@ -183,12 +186,41 @@
             this.BtnDoctor.UseVisualStyleBackColor = false;
             this.BtnDoctor.Click += new System.EventHandler(this.BtnDoctor_Click);
             // 
+            // LblName
+            // 
+            this.LblName.AutoSize = true;
+            this.LblName.BackColor = System.Drawing.Color.Transparent;
+            this.LblName.Font = new System.Drawing.Font("Narkisim", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.LblName.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LblName.Location = new System.Drawing.Point(263, 20);
+            this.LblName.Name = "LblName";
+            this.LblName.Size = new System.Drawing.Size(216, 27);
+            this.LblName.TabIndex = 11;
+            this.LblName.Text = "ברוך שובך, הילה גל";
+            this.LblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.button2.Font = new System.Drawing.Font("David", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Control;
+            this.button2.Location = new System.Drawing.Point(25, 490);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(214, 136);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "כפתור";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // F_MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(743, 585);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(745, 631);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.LblName);
             this.Controls.Add(this.BtnDoctor);
             this.Controls.Add(this.BtnPsycho);
             this.Controls.Add(this.BtnIntakeBoard);
@@ -201,9 +233,10 @@
             this.Controls.Add(this.btnContacts);
             this.Controls.Add(this.button1);
             this.Name = "F_MainForm";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -220,6 +253,8 @@
         private System.Windows.Forms.Button BtnIntakeBoard;
         private System.Windows.Forms.Button BtnPsycho;
         private System.Windows.Forms.Button BtnDoctor;
+        private System.Windows.Forms.Label LblName;
+        private System.Windows.Forms.Button button2;
 
     }
 }

@@ -83,6 +83,7 @@
             this.LblFatherName = new System.Windows.Forms.Label();
             this.LblLastName = new System.Windows.Forms.Label();
             this.LblFirstName = new System.Windows.Forms.Label();
+            this.LblID = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.ExitNoSaveUpdate = new System.Windows.Forms.Button();
             this.BtnClearFieldsUpdate = new System.Windows.Forms.Button();
@@ -142,7 +143,6 @@
             this.label43 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.LblID = new System.Windows.Forms.Label();
             this.TabGroups.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -164,7 +164,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.Silver;
+            this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPage1.Controls.Add(this.BtnExitNoSaveAdd);
             this.tabPage1.Controls.Add(this.BtnClearFieldsAdd);
             this.tabPage1.Controls.Add(this.CmbRace);
@@ -227,8 +227,8 @@
             // 
             // BtnExitNoSaveAdd
             // 
-            this.BtnExitNoSaveAdd.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.BtnExitNoSaveAdd.Font = new System.Drawing.Font("David", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnExitNoSaveAdd.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnExitNoSaveAdd.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnExitNoSaveAdd.ForeColor = System.Drawing.Color.Black;
             this.BtnExitNoSaveAdd.Location = new System.Drawing.Point(509, 412);
             this.BtnExitNoSaveAdd.Name = "BtnExitNoSaveAdd";
@@ -240,8 +240,8 @@
             // 
             // BtnClearFieldsAdd
             // 
-            this.BtnClearFieldsAdd.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.BtnClearFieldsAdd.Font = new System.Drawing.Font("David", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnClearFieldsAdd.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnClearFieldsAdd.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnClearFieldsAdd.ForeColor = System.Drawing.Color.Black;
             this.BtnClearFieldsAdd.Location = new System.Drawing.Point(198, 412);
             this.BtnClearFieldsAdd.Name = "BtnClearFieldsAdd";
@@ -253,6 +253,7 @@
             // 
             // CmbRace
             // 
+            this.CmbRace.BackColor = System.Drawing.Color.Gainsboro;
             this.CmbRace.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbRace.FormattingEnabled = true;
             this.CmbRace.Location = new System.Drawing.Point(451, 16);
@@ -263,6 +264,7 @@
             // 
             // TxtBirthDate
             // 
+            this.TxtBirthDate.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtBirthDate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtBirthDate.Location = new System.Drawing.Point(651, 143);
             this.TxtBirthDate.Name = "TxtBirthDate";
@@ -271,6 +273,7 @@
             // 
             // CmbCountry
             // 
+            this.CmbCountry.BackColor = System.Drawing.Color.Gainsboro;
             this.CmbCountry.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbCountry.FormattingEnabled = true;
             this.CmbCountry.Location = new System.Drawing.Point(451, 99);
@@ -281,6 +284,7 @@
             // 
             // CmbCity
             // 
+            this.CmbCity.BackColor = System.Drawing.Color.Gainsboro;
             this.CmbCity.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbCity.FormattingEnabled = true;
             this.CmbCity.Location = new System.Drawing.Point(451, 186);
@@ -291,6 +295,7 @@
             // 
             // TxtPhoneContact
             // 
+            this.TxtPhoneContact.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtPhoneContact.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPhoneContact.Location = new System.Drawing.Point(7, 185);
             this.TxtPhoneContact.Name = "TxtPhoneContact";
@@ -311,8 +316,8 @@
             // 
             // BtnAddNewPatient
             // 
-            this.BtnAddNewPatient.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.BtnAddNewPatient.Font = new System.Drawing.Font("David", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAddNewPatient.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnAddNewPatient.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAddNewPatient.ForeColor = System.Drawing.Color.Black;
             this.BtnAddNewPatient.Location = new System.Drawing.Point(353, 412);
             this.BtnAddNewPatient.Name = "BtnAddNewPatient";
@@ -324,6 +329,7 @@
             // 
             // TxtStreet
             // 
+            this.TxtStreet.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtStreet.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtStreet.Location = new System.Drawing.Point(451, 228);
             this.TxtStreet.Name = "TxtStreet";
@@ -354,6 +360,7 @@
             // 
             // TxtNotes
             // 
+            this.TxtNotes.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtNotes.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNotes.Location = new System.Drawing.Point(37, 301);
             this.TxtNotes.Name = "TxtNotes";
@@ -364,6 +371,7 @@
             // 
             // CmbInsurence
             // 
+            this.CmbInsurence.BackColor = System.Drawing.Color.Gainsboro;
             this.CmbInsurence.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbInsurence.FormattingEnabled = true;
             this.CmbInsurence.Location = new System.Drawing.Point(235, 100);
@@ -374,6 +382,7 @@
             // 
             // CmbGender
             // 
+            this.CmbGender.BackColor = System.Drawing.Color.Gainsboro;
             this.CmbGender.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbGender.FormattingEnabled = true;
             this.CmbGender.Location = new System.Drawing.Point(451, 55);
@@ -384,6 +393,7 @@
             // 
             // TxtPhoneHome
             // 
+            this.TxtPhoneHome.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtPhoneHome.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPhoneHome.Location = new System.Drawing.Point(237, 185);
             this.TxtPhoneHome.Name = "TxtPhoneHome";
@@ -393,6 +403,7 @@
             // 
             // TxtEmail
             // 
+            this.TxtEmail.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtEmail.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtEmail.Location = new System.Drawing.Point(7, 223);
             this.TxtEmail.Name = "TxtEmail";
@@ -401,6 +412,7 @@
             // 
             // TxtPhoneAnother
             // 
+            this.TxtPhoneAnother.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtPhoneAnother.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPhoneAnother.Location = new System.Drawing.Point(7, 144);
             this.TxtPhoneAnother.Name = "TxtPhoneAnother";
@@ -410,6 +422,7 @@
             // 
             // TxtPhoneMother
             // 
+            this.TxtPhoneMother.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtPhoneMother.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPhoneMother.Location = new System.Drawing.Point(7, 101);
             this.TxtPhoneMother.Name = "TxtPhoneMother";
@@ -419,6 +432,7 @@
             // 
             // TxtPhoneFather
             // 
+            this.TxtPhoneFather.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtPhoneFather.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPhoneFather.Location = new System.Drawing.Point(7, 58);
             this.TxtPhoneFather.Name = "TxtPhoneFather";
@@ -428,6 +442,7 @@
             // 
             // TxtPhoneWork
             // 
+            this.TxtPhoneWork.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtPhoneWork.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPhoneWork.Location = new System.Drawing.Point(7, 16);
             this.TxtPhoneWork.Name = "TxtPhoneWork";
@@ -437,6 +452,7 @@
             // 
             // TxtFamilyDoctor
             // 
+            this.TxtFamilyDoctor.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtFamilyDoctor.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtFamilyDoctor.Location = new System.Drawing.Point(235, 144);
             this.TxtFamilyDoctor.Name = "TxtFamilyDoctor";
@@ -445,6 +461,7 @@
             // 
             // TxtZipCode
             // 
+            this.TxtZipCode.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtZipCode.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtZipCode.Location = new System.Drawing.Point(235, 57);
             this.TxtZipCode.Name = "TxtZipCode";
@@ -454,6 +471,7 @@
             // 
             // TxtStreetNumber
             // 
+            this.TxtStreetNumber.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtStreetNumber.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtStreetNumber.Location = new System.Drawing.Point(235, 14);
             this.TxtStreetNumber.Name = "TxtStreetNumber";
@@ -463,6 +481,7 @@
             // 
             // TxtApotropus
             // 
+            this.TxtApotropus.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtApotropus.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtApotropus.Location = new System.Drawing.Point(451, 142);
             this.TxtApotropus.Name = "TxtApotropus";
@@ -471,6 +490,7 @@
             // 
             // TxtMother
             // 
+            this.TxtMother.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtMother.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtMother.Location = new System.Drawing.Point(651, 228);
             this.TxtMother.Name = "TxtMother";
@@ -479,6 +499,7 @@
             // 
             // TxtFather
             // 
+            this.TxtFather.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtFather.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtFather.Location = new System.Drawing.Point(651, 185);
             this.TxtFather.Name = "TxtFather";
@@ -487,6 +508,7 @@
             // 
             // TxtLaseName
             // 
+            this.TxtLaseName.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtLaseName.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtLaseName.Location = new System.Drawing.Point(651, 100);
             this.TxtLaseName.Name = "TxtLaseName";
@@ -495,6 +517,7 @@
             // 
             // TxtFirstName
             // 
+            this.TxtFirstName.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtFirstName.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtFirstName.Location = new System.Drawing.Point(651, 57);
             this.TxtFirstName.Name = "TxtFirstName";
@@ -503,6 +526,7 @@
             // 
             // TxtID
             // 
+            this.TxtID.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtID.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtID.Location = new System.Drawing.Point(651, 14);
             this.TxtID.Name = "TxtID";
@@ -512,6 +536,7 @@
             // 
             // TxtPhoneCellular
             // 
+            this.TxtPhoneCellular.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtPhoneCellular.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPhoneCellular.Location = new System.Drawing.Point(237, 226);
             this.TxtPhoneCellular.Name = "TxtPhoneCellular";
@@ -750,9 +775,20 @@
             this.LblFirstName.Text = "שם פרטי";
             this.LblFirstName.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
+            // LblID
+            // 
+            this.LblID.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.LblID.Location = new System.Drawing.Point(773, 5);
+            this.LblID.Name = "LblID";
+            this.LblID.Size = new System.Drawing.Size(122, 31);
+            this.LblID.TabIndex = 0;
+            this.LblID.Text = "תעודת זהות";
+            this.LblID.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.Silver;
+            this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPage2.Controls.Add(this.ExitNoSaveUpdate);
             this.tabPage2.Controls.Add(this.BtnClearFieldsUpdate);
             this.tabPage2.Controls.Add(this.CmbRaceUpdate);
@@ -821,8 +857,8 @@
             // 
             // ExitNoSaveUpdate
             // 
-            this.ExitNoSaveUpdate.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.ExitNoSaveUpdate.Font = new System.Drawing.Font("David", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitNoSaveUpdate.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.ExitNoSaveUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitNoSaveUpdate.ForeColor = System.Drawing.Color.Black;
             this.ExitNoSaveUpdate.Location = new System.Drawing.Point(633, 410);
             this.ExitNoSaveUpdate.Name = "ExitNoSaveUpdate";
@@ -834,8 +870,8 @@
             // 
             // BtnClearFieldsUpdate
             // 
-            this.BtnClearFieldsUpdate.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.BtnClearFieldsUpdate.Font = new System.Drawing.Font("David", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnClearFieldsUpdate.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnClearFieldsUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnClearFieldsUpdate.ForeColor = System.Drawing.Color.Black;
             this.BtnClearFieldsUpdate.Location = new System.Drawing.Point(322, 410);
             this.BtnClearFieldsUpdate.Name = "BtnClearFieldsUpdate";
@@ -847,6 +883,7 @@
             // 
             // CmbRaceUpdate
             // 
+            this.CmbRaceUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.CmbRaceUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbRaceUpdate.FormattingEnabled = true;
             this.CmbRaceUpdate.Location = new System.Drawing.Point(446, 15);
@@ -857,6 +894,7 @@
             // 
             // TxtLastNameUpdate
             // 
+            this.TxtLastNameUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtLastNameUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtLastNameUpdate.Location = new System.Drawing.Point(645, 100);
             this.TxtLastNameUpdate.Name = "TxtLastNameUpdate";
@@ -866,6 +904,7 @@
             // 
             // TxtMainTherapistUpdate
             // 
+            this.TxtMainTherapistUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtMainTherapistUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtMainTherapistUpdate.Location = new System.Drawing.Point(6, 296);
             this.TxtMainTherapistUpdate.Name = "TxtMainTherapistUpdate";
@@ -886,6 +925,7 @@
             // 
             // TxtSecondTherapistUpdate
             // 
+            this.TxtSecondTherapistUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtSecondTherapistUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtSecondTherapistUpdate.Location = new System.Drawing.Point(6, 334);
             this.TxtSecondTherapistUpdate.Name = "TxtSecondTherapistUpdate";
@@ -906,6 +946,7 @@
             // 
             // CmbPatientID
             // 
+            this.CmbPatientID.BackColor = System.Drawing.Color.Gainsboro;
             this.CmbPatientID.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbPatientID.FormattingEnabled = true;
             this.CmbPatientID.Location = new System.Drawing.Point(644, 13);
@@ -917,6 +958,7 @@
             // 
             // TxtBirthDateUpdate
             // 
+            this.TxtBirthDateUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtBirthDateUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtBirthDateUpdate.Location = new System.Drawing.Point(648, 140);
             this.TxtBirthDateUpdate.Mask = "##-##-####";
@@ -927,6 +969,7 @@
             // 
             // CmbCountryOfBirthUpdate
             // 
+            this.CmbCountryOfBirthUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.CmbCountryOfBirthUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbCountryOfBirthUpdate.FormattingEnabled = true;
             this.CmbCountryOfBirthUpdate.Location = new System.Drawing.Point(446, 97);
@@ -937,6 +980,7 @@
             // 
             // CmbCityUpdate
             // 
+            this.CmbCityUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.CmbCityUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbCityUpdate.FormattingEnabled = true;
             this.CmbCityUpdate.Location = new System.Drawing.Point(446, 184);
@@ -947,6 +991,7 @@
             // 
             // TxtPhoneContactUpdate
             // 
+            this.TxtPhoneContactUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtPhoneContactUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPhoneContactUpdate.Location = new System.Drawing.Point(6, 185);
             this.TxtPhoneContactUpdate.Name = "TxtPhoneContactUpdate";
@@ -968,8 +1013,8 @@
             // 
             // BtnSaveChanges
             // 
-            this.BtnSaveChanges.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.BtnSaveChanges.Font = new System.Drawing.Font("David", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSaveChanges.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnSaveChanges.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSaveChanges.ForeColor = System.Drawing.Color.Black;
             this.BtnSaveChanges.Location = new System.Drawing.Point(477, 410);
             this.BtnSaveChanges.Name = "BtnSaveChanges";
@@ -981,6 +1026,7 @@
             // 
             // TxtStreetUpdate
             // 
+            this.TxtStreetUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtStreetUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtStreetUpdate.Location = new System.Drawing.Point(446, 226);
             this.TxtStreetUpdate.Name = "TxtStreetUpdate";
@@ -1012,6 +1058,7 @@
             // 
             // TxtNotesUpdate
             // 
+            this.TxtNotesUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtNotesUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNotesUpdate.Location = new System.Drawing.Point(240, 309);
             this.TxtNotesUpdate.Name = "TxtNotesUpdate";
@@ -1022,6 +1069,7 @@
             // 
             // CmbInsurenceUpdate
             // 
+            this.CmbInsurenceUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.CmbInsurenceUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbInsurenceUpdate.FormattingEnabled = true;
             this.CmbInsurenceUpdate.Location = new System.Drawing.Point(235, 100);
@@ -1032,6 +1080,7 @@
             // 
             // CmbGenderUpdate
             // 
+            this.CmbGenderUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.CmbGenderUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbGenderUpdate.FormattingEnabled = true;
             this.CmbGenderUpdate.Location = new System.Drawing.Point(446, 53);
@@ -1042,6 +1091,7 @@
             // 
             // TxtPhoneHomeUpdate
             // 
+            this.TxtPhoneHomeUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtPhoneHomeUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPhoneHomeUpdate.Location = new System.Drawing.Point(235, 185);
             this.TxtPhoneHomeUpdate.Name = "TxtPhoneHomeUpdate";
@@ -1052,6 +1102,7 @@
             // 
             // TxtEmailUpdate
             // 
+            this.TxtEmailUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtEmailUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtEmailUpdate.Location = new System.Drawing.Point(6, 223);
             this.TxtEmailUpdate.Name = "TxtEmailUpdate";
@@ -1061,6 +1112,7 @@
             // 
             // TxtPhoneAnotherUpdate
             // 
+            this.TxtPhoneAnotherUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtPhoneAnotherUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPhoneAnotherUpdate.Location = new System.Drawing.Point(6, 144);
             this.TxtPhoneAnotherUpdate.Name = "TxtPhoneAnotherUpdate";
@@ -1071,6 +1123,7 @@
             // 
             // TxtPhoneMotherUpdate
             // 
+            this.TxtPhoneMotherUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtPhoneMotherUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPhoneMotherUpdate.Location = new System.Drawing.Point(6, 101);
             this.TxtPhoneMotherUpdate.Name = "TxtPhoneMotherUpdate";
@@ -1081,6 +1134,7 @@
             // 
             // TxtPhoneFatherUpdate
             // 
+            this.TxtPhoneFatherUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtPhoneFatherUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPhoneFatherUpdate.Location = new System.Drawing.Point(6, 58);
             this.TxtPhoneFatherUpdate.Name = "TxtPhoneFatherUpdate";
@@ -1091,6 +1145,7 @@
             // 
             // TxtPhoneWotkUpdate
             // 
+            this.TxtPhoneWotkUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtPhoneWotkUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPhoneWotkUpdate.Location = new System.Drawing.Point(6, 16);
             this.TxtPhoneWotkUpdate.Name = "TxtPhoneWotkUpdate";
@@ -1101,6 +1156,7 @@
             // 
             // TxtFamilyDoctorUpdate
             // 
+            this.TxtFamilyDoctorUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtFamilyDoctorUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtFamilyDoctorUpdate.Location = new System.Drawing.Point(235, 144);
             this.TxtFamilyDoctorUpdate.Name = "TxtFamilyDoctorUpdate";
@@ -1110,6 +1166,7 @@
             // 
             // TxtZipCodeUpdate
             // 
+            this.TxtZipCodeUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtZipCodeUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtZipCodeUpdate.Location = new System.Drawing.Point(235, 57);
             this.TxtZipCodeUpdate.Name = "TxtZipCodeUpdate";
@@ -1120,6 +1177,7 @@
             // 
             // TxtStreetNumberUpdate
             // 
+            this.TxtStreetNumberUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtStreetNumberUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtStreetNumberUpdate.Location = new System.Drawing.Point(235, 14);
             this.TxtStreetNumberUpdate.Name = "TxtStreetNumberUpdate";
@@ -1130,6 +1188,7 @@
             // 
             // TxtApotropusUpdate
             // 
+            this.TxtApotropusUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtApotropusUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtApotropusUpdate.Location = new System.Drawing.Point(446, 140);
             this.TxtApotropusUpdate.Name = "TxtApotropusUpdate";
@@ -1139,6 +1198,7 @@
             // 
             // TxtMotherNameUpdate
             // 
+            this.TxtMotherNameUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtMotherNameUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtMotherNameUpdate.Location = new System.Drawing.Point(648, 225);
             this.TxtMotherNameUpdate.Name = "TxtMotherNameUpdate";
@@ -1148,6 +1208,7 @@
             // 
             // TxtFatherNameUpdate
             // 
+            this.TxtFatherNameUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtFatherNameUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtFatherNameUpdate.Location = new System.Drawing.Point(648, 182);
             this.TxtFatherNameUpdate.Name = "TxtFatherNameUpdate";
@@ -1157,6 +1218,7 @@
             // 
             // TxtFirstNameUpdate
             // 
+            this.TxtFirstNameUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtFirstNameUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtFirstNameUpdate.Location = new System.Drawing.Point(648, 56);
             this.TxtFirstNameUpdate.Name = "TxtFirstNameUpdate";
@@ -1166,6 +1228,7 @@
             // 
             // TxtPhoneCellularUpdate
             // 
+            this.TxtPhoneCellularUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtPhoneCellularUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPhoneCellularUpdate.Location = new System.Drawing.Point(237, 226);
             this.TxtPhoneCellularUpdate.Name = "TxtPhoneCellularUpdate";
@@ -1420,17 +1483,6 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // LblID
-            // 
-            this.LblID.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LblID.Location = new System.Drawing.Point(773, 5);
-            this.LblID.Name = "LblID";
-            this.LblID.Size = new System.Drawing.Size(122, 31);
-            this.LblID.TabIndex = 0;
-            this.LblID.Text = "תעודת זהות";
-            this.LblID.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
             // F_Patients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1439,8 +1491,8 @@
             this.ClientSize = new System.Drawing.Size(904, 559);
             this.Controls.Add(this.TabGroups);
             this.Name = "F_Patients";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "F_AddNewPatient";
             this.TabGroups.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

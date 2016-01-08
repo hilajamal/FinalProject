@@ -42,8 +42,8 @@ namespace Clinic1
             CmbGroupIDAdd.DataSource = dtGroups2;
 
             ClinicTableAdapters.AppointmentTypeTableAdapter daType = new ClinicTableAdapters.AppointmentTypeTableAdapter();
-            CmbMeetingTypeAdd.DataSource = daType.GetData();
-            CmbMeetingTypeUpdate.DataSource = daType.GetData();
+            CmbMeetingTypeAdd.DataSource = daType.GetDataByGroupsAppointments();
+            CmbMeetingTypeUpdate.DataSource = daType.GetDataByGroupsAppointments();
             ClinicTableAdapters.PatientsTableAdapter daPatients = new ClinicTableAdapters.PatientsTableAdapter();
             Clinic.PatientsDataTable dtPatients = daPatients.GetDataByPatientIDInnerJoinPatients((int)CmbGroupIDAdd.SelectedValue);
             DgPatientsAdd.DataSource = dtPatients;
@@ -290,7 +290,6 @@ int id = System.Convert.ToInt32(daAp.InsertQuery(Int32.Parse(txtMeetingNumberAdd
                         CmbMeetingTypeUpdate.SelectedValue = Int32.Parse(dt.Rows[0]["AppointmentType"].ToString());
                         CmbMainTherapistUpdate.SelectedValue = Int32.Parse(dt.Rows[0]["MainTherapist"].ToString());
                         CmbSecondTherapistUpdate.SelectedValue = Int32.Parse(dt.Rows[0]["SecondTherapist"].ToString());
-                        
 
                     }
                     else
@@ -329,9 +328,11 @@ int id = System.Convert.ToInt32(daAp.InsertQuery(Int32.Parse(txtMeetingNumberAdd
 
             DateTime now = DateTime.Now;
             String date = now.ToString("dd/MM/yyyy HH:mm:ss");
-            DateTime dt1 = DateTime.ParseExact(date, "dd/MM/yyyy HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
+            DateTime dt = HourPickerStartUpdate.Value;
+            TimeSpan st = new TimeSpan(dt.Hour, dt.Minute, dt.Second);
 
-            //da.UpdateQuery((int)CmbMainTherapistUpdate.SelectedValue, (int)CmbSecondTherapistUpdate.SelectedValue, TxtRemarksUpdate.Text, TxtSummaryUpdate.Text, Globals.ConnectedUserID, dt1, (int)CmbGroupIdUpdate.SelectedValue, (int)CmbMeetingNumberUpdate.SelectedValue);
+            da.UpdateQuery((int)CmbMeetingNumberUpdate.SelectedValue, (int)CmbGroupIdUpdate.SelectedValue, (int)CmbMeetingTypeUpdate.SelectedValue, CalendarUpdate.SelectionRange.Start, st.ToString(), (int)CmbMainTherapistUpdate.SelectedValue, (int)CmbSecondTherapistUpdate.SelectedValue, TxtRemarksUpdate.Text,
+                TxtSummaryUpdate.Text, Globals.ConnectedUserID, now,null,null,null,null,null,null,null,null,null,appId);
             foreach (DataGridViewRow row in DgPatientsUpdate.Rows)
             {
                 bool result;

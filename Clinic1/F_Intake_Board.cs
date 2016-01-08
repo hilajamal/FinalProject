@@ -36,6 +36,11 @@ namespace Clinic1
             CmblPatientIdAdd.AutoCompleteSource = AutoCompleteSource.ListItems;
             CmblPatientIdAdd.DisplayMember = "ID";
             CmblPatientIdAdd.ValueMember = "ID";
+            if (CmblPatientIdAdd.Items.Count > 0)
+            {
+                CmblPatientIdAdd.SelectedIndex = -1;
+                CmblPatientIdAdd.SelectedIndex = 0;
+            }
 
             //PatientsNameAdd
             CmbPatientNameAdd.DataSource = dtPatients;
@@ -64,14 +69,12 @@ namespace Clinic1
 
             Clinic.WorkersDataTable dtWorkersUpdate = daWorkers.GetDataByActiveWorkers();
             CmbMainTherapistUpdate.DataSource = dtWorkersUpdate;
-            CmbMainTherapistUpdate.SelectedIndex = 0;
             CmbMainTherapistUpdate.AutoCompleteMode = AutoCompleteMode.Append;
             CmbMainTherapistUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
             CmbMainTherapistUpdate.DisplayMember = "FullName";
             CmbMainTherapistUpdate.ValueMember = "ID";
 
             CmbSecondTherapistUpdate.DataSource = dtWorkersUpdate;
-            CmbSecondTherapistUpdate.SelectedIndex = 0;
             CmbSecondTherapistUpdate.AutoCompleteMode = AutoCompleteMode.Append;
             CmbSecondTherapistUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
             CmbSecondTherapistUpdate.DisplayMember = "FullName";
@@ -85,8 +88,11 @@ namespace Clinic1
             CmbPatientIDUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
             CmbPatientIDUpdate.DisplayMember = "ID";
             CmbPatientIDUpdate.ValueMember = "ID";
-            CmbPatientIDUpdate.SelectedIndex = -1;
-            CmbPatientIDUpdate.SelectedIndex = 0;
+            if (CmbPatientIDUpdate.Items.Count > 0)
+            {
+                CmbPatientIDUpdate.SelectedIndex = -1;
+                CmbPatientIDUpdate.SelectedIndex = 0;
+            }
 
             //PatientsNameAdd
             CmbPatientNameUpdate.DataSource = dtPatientsUpdate;
