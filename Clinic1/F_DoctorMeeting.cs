@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
+using System.Globalization;
+
 
 namespace Clinic1
 {
@@ -520,8 +522,9 @@ namespace Clinic1
          if (da.GetMaxAppointment(6, (int)CmblPatientIdAdd.SelectedValue) == null)
              apNumber = 1;
          else apNumber = (int)da.GetMaxAppointment(6, (int)CmblPatientIdAdd.SelectedValue) + 1;
-         DateTime DateCheck;
-         if (DateTime.TryParse(TxtDateAdd.Text, out DateCheck) == false)
+         DateTime rs;
+         CultureInfo ci = new CultureInfo("en-IE");
+         if (!DateTime.TryParseExact(this.TxtDateAdd.Text, "dd/MM/yyyy", ci, DateTimeStyles.None, out rs))
          {
              MessageBox.Show("יש להזין תאריך תקין");
              return;
@@ -546,13 +549,12 @@ namespace Clinic1
          }
 
 
-         DateTime date = DateTime.Parse(TxtDateAdd.Text);
          DateTime now = DateTime.Now;
 
          DateTime dt = HourAdd.Value;
          TimeSpan st = new TimeSpan(dt.Hour, dt.Minute, dt.Second);
 
-         int id = Int32.Parse(da.InsertQuery(apNumber, null, 6, date, st.ToString(), (int)CmbTherapistAdd.SelectedValue, null, TxtNotesAdd.Text, null, Globals.ConnectedUserID, null, now,
+         int id = Int32.Parse(da.InsertQuery(apNumber, null, 6, rs, st.ToString(), (int)CmbTherapistAdd.SelectedValue, null, TxtNotesAdd.Text, null, Globals.ConnectedUserID, null, now,
                 null, null, null, null, null, null, null, null,
                 null, null).ToString());
          ClinicTableAdapters.AppointmentsForPatientsTableAdapter app = new ClinicTableAdapters.AppointmentsForPatientsTableAdapter();
@@ -864,9 +866,10 @@ namespace Clinic1
 
      private void BtnSaveUpdates_Click(object sender, EventArgs e)
      {
-  
-         DateTime DateCheck;
-         if (DateTime.TryParse(TxtDateUpdate.Text, out DateCheck) == false)
+
+         DateTime rs;
+         CultureInfo ci = new CultureInfo("en-IE");
+         if (!DateTime.TryParseExact(this.TxtDateUpdate.Text, "dd/MM/yyyy", ci, DateTimeStyles.None, out rs))
          {
              MessageBox.Show("יש להזין תאריך תקין");
              return;
@@ -894,7 +897,6 @@ namespace Clinic1
          ClinicTableAdapters.AppointmentsTableAdapter da = new ClinicTableAdapters.AppointmentsTableAdapter();
          DateTime dt = HourUpdate.Value;
          TimeSpan st = new TimeSpan(dt.Hour, dt.Minute, dt.Second);
-         DateTime date = DateTime.Parse(TxtDateUpdate.Text);
          DateTime now = DateTime.Now;
 
          int Number;
@@ -905,7 +907,7 @@ namespace Clinic1
 
          Clinic.AppointmentsDataTable dtToAdd = da.GetDataByAppointmentTypeDatePatientID((int)CmbPatientIDUpdate.SelectedValue, (DateTime)CmbDateUpdate.SelectedValue, 6);
 
-         da.UpdateQuery(Number, null, 6, DateTime.Now, st.ToString(), (int)CmbTherapistUpdate.SelectedValue, null, TxtNotesUpdate.Text, null, Globals.ConnectedUserID, now, null, null, null, null, null, null, null, null, null, Int32.Parse(dtToAdd.Rows[0]["ID"].ToString()));
+         da.UpdateQuery(Number, null, 6, rs, st.ToString(), (int)CmbTherapistUpdate.SelectedValue, null, TxtNotesUpdate.Text, null, Globals.ConnectedUserID, now, null, null, null, null, null, null, null, null, null, Int32.Parse(dtToAdd.Rows[0]["ID"].ToString()));
          MessageBox.Show("טיפול עודכן בהצלחה");
 
          ClinicTableAdapters.DiagnosesForPatientsTableAdapter daDiagnose = new ClinicTableAdapters.DiagnosesForPatientsTableAdapter();
@@ -944,6 +946,21 @@ namespace Clinic1
 
          Clinic.PatientsDataTable dtPatients = daPatients.GetData();
          CmblPatientIdAdd.DataSource = dtPatients;
+     }
+
+     private void label19_Click(object sender, EventArgs e)
+     {
+
+     }
+
+     private void label5_Click(object sender, EventArgs e)
+     {
+
+     }
+
+     private void HourUpdate_ValueChanged(object sender, EventArgs e)
+     {
+
      }
 
 

@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.DgDiagnoses = new System.Windows.Forms.DataGridView();
             this.TxtDate = new System.Windows.Forms.MaskedTextBox();
+            this.DgDiagnoses = new System.Windows.Forms.DataGridView();
             this.label20 = new System.Windows.Forms.Label();
             this.HourPickerStartAdd = new System.Windows.Forms.DateTimePicker();
             this.BtnSaveIntake = new System.Windows.Forms.Button();
@@ -80,8 +80,7 @@
             this.LblPatientName = new System.Windows.Forms.Label();
             this.LblPatientId = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.CmbIntakeNumber = new System.Windows.Forms.ComboBox();
-            this.label45 = new System.Windows.Forms.Label();
+            this.CmbDateUpdate = new System.Windows.Forms.ComboBox();
             this.TxtUpdatedByDateUpdate = new System.Windows.Forms.TextBox();
             this.label43 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
@@ -95,7 +94,6 @@
             this.label41 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.TxtWrittenByUpdate = new System.Windows.Forms.TextBox();
-            this.TxtDateUpdate = new System.Windows.Forms.MaskedTextBox();
             this.TxtHourUpdate = new System.Windows.Forms.DateTimePicker();
             this.label21 = new System.Windows.Forms.Label();
             this.TxtSocialUpdate = new System.Windows.Forms.RichTextBox();
@@ -125,6 +123,8 @@
             this.cmbPatientIdUpdate = new System.Windows.Forms.ComboBox();
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
+            this.TxtDateUpdate = new System.Windows.Forms.MaskedTextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgDiagnoses)).BeginInit();
@@ -152,8 +152,8 @@
             this.tabPage1.AutoScrollMargin = new System.Drawing.Size(15, 15);
             this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage1.Controls.Add(this.DgDiagnoses);
             this.tabPage1.Controls.Add(this.TxtDate);
+            this.tabPage1.Controls.Add(this.DgDiagnoses);
             this.tabPage1.Controls.Add(this.label20);
             this.tabPage1.Controls.Add(this.HourPickerStartAdd);
             this.tabPage1.Controls.Add(this.BtnSaveIntake);
@@ -201,50 +201,61 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "הוספה";
             // 
+            // TxtDate
+            // 
+            this.TxtDate.BackColor = System.Drawing.Color.Gainsboro;
+            this.TxtDate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtDate.Location = new System.Drawing.Point(564, 40);
+            this.TxtDate.Mask = "##/##/####";
+            this.TxtDate.Name = "TxtDate";
+            this.TxtDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.TxtDate.Size = new System.Drawing.Size(89, 23);
+            this.TxtDate.TabIndex = 206;
+            // 
             // DgDiagnoses
             // 
             this.DgDiagnoses.AllowUserToDeleteRows = false;
             this.DgDiagnoses.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
-            this.DgDiagnoses.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgDiagnoses.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle26;
             this.DgDiagnoses.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.DgDiagnoses.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgDiagnoses.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgDiagnoses.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
             this.DgDiagnoses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgDiagnoses.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgDiagnoses.DefaultCellStyle = dataGridViewCellStyle28;
             this.DgDiagnoses.GridColor = System.Drawing.Color.Silver;
             this.DgDiagnoses.Location = new System.Drawing.Point(59, 691);
             this.DgDiagnoses.Name = "DgDiagnoses";
             this.DgDiagnoses.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgDiagnoses.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DgDiagnoses.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgDiagnoses.RowHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DgDiagnoses.RowsDefaultCellStyle = dataGridViewCellStyle30;
             this.DgDiagnoses.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgDiagnoses.ShowEditingIcon = false;
             this.DgDiagnoses.Size = new System.Drawing.Size(724, 112);
@@ -252,16 +263,6 @@
             this.DgDiagnoses.DefaultValuesNeeded += new System.Windows.Forms.DataGridViewRowEventHandler(this.DgDiagnoses_DefaultValuesNeeded);
             this.DgDiagnoses.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.DgDiagnoses_EditingControlShowing);
             this.DgDiagnoses.Validating += new System.ComponentModel.CancelEventHandler(this.DgDiagnoses_Validating);
-            // 
-            // TxtDate
-            // 
-            this.TxtDate.BackColor = System.Drawing.Color.Gainsboro;
-            this.TxtDate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDate.Location = new System.Drawing.Point(561, 38);
-            this.TxtDate.Mask = "##/##/####";
-            this.TxtDate.Name = "TxtDate";
-            this.TxtDate.Size = new System.Drawing.Size(92, 23);
-            this.TxtDate.TabIndex = 156;
             // 
             // label20
             // 
@@ -677,8 +678,9 @@
             // 
             this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage2.Controls.Add(this.CmbIntakeNumber);
-            this.tabPage2.Controls.Add(this.label45);
+            this.tabPage2.Controls.Add(this.TxtDateUpdate);
+            this.tabPage2.Controls.Add(this.label18);
+            this.tabPage2.Controls.Add(this.CmbDateUpdate);
             this.tabPage2.Controls.Add(this.TxtUpdatedByDateUpdate);
             this.tabPage2.Controls.Add(this.label43);
             this.tabPage2.Controls.Add(this.label44);
@@ -692,7 +694,6 @@
             this.tabPage2.Controls.Add(this.label41);
             this.tabPage2.Controls.Add(this.label42);
             this.tabPage2.Controls.Add(this.TxtWrittenByUpdate);
-            this.tabPage2.Controls.Add(this.TxtDateUpdate);
             this.tabPage2.Controls.Add(this.TxtHourUpdate);
             this.tabPage2.Controls.Add(this.label21);
             this.tabPage2.Controls.Add(this.TxtSocialUpdate);
@@ -729,32 +730,21 @@
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tabPage2.Size = new System.Drawing.Size(910, 922);
+            this.tabPage2.Size = new System.Drawing.Size(910, 865);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "עדכון";
             // 
-            // CmbIntakeNumber
+            // CmbDateUpdate
             // 
-            this.CmbIntakeNumber.BackColor = System.Drawing.Color.Gainsboro;
-            this.CmbIntakeNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CmbIntakeNumber.FormattingEnabled = true;
-            this.CmbIntakeNumber.Location = new System.Drawing.Point(114, 7);
-            this.CmbIntakeNumber.Name = "CmbIntakeNumber";
-            this.CmbIntakeNumber.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CmbIntakeNumber.Size = new System.Drawing.Size(124, 24);
-            this.CmbIntakeNumber.TabIndex = 206;
-            this.CmbIntakeNumber.SelectedIndexChanged += new System.EventHandler(this.CmbIntakeNumber_SelectedIndexChanged);
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label45.Location = new System.Drawing.Point(241, 12);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(83, 16);
-            this.label45.TabIndex = 205;
-            this.label45.Text = "מס\' אינטייק";
+            this.CmbDateUpdate.BackColor = System.Drawing.Color.Gainsboro;
+            this.CmbDateUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CmbDateUpdate.FormattingEnabled = true;
+            this.CmbDateUpdate.Location = new System.Drawing.Point(534, 39);
+            this.CmbDateUpdate.Name = "CmbDateUpdate";
+            this.CmbDateUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.CmbDateUpdate.Size = new System.Drawing.Size(124, 24);
+            this.CmbDateUpdate.TabIndex = 207;
+            this.CmbDateUpdate.SelectedIndexChanged += new System.EventHandler(this.CmbDateUpdate_SelectedIndexChanged);
             // 
             // TxtUpdatedByDateUpdate
             // 
@@ -807,50 +797,50 @@
             // DgDiagnosesUpdate
             // 
             this.DgDiagnosesUpdate.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
-            this.DgDiagnosesUpdate.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgDiagnosesUpdate.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
             this.DgDiagnosesUpdate.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.DgDiagnosesUpdate.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.DgDiagnosesUpdate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgDiagnosesUpdate.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgDiagnosesUpdate.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.DgDiagnosesUpdate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgDiagnosesUpdate.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgDiagnosesUpdate.DefaultCellStyle = dataGridViewCellStyle23;
             this.DgDiagnosesUpdate.GridColor = System.Drawing.Color.Silver;
             this.DgDiagnosesUpdate.Location = new System.Drawing.Point(59, 698);
             this.DgDiagnosesUpdate.Name = "DgDiagnosesUpdate";
             this.DgDiagnosesUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgDiagnosesUpdate.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
-            this.DgDiagnosesUpdate.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgDiagnosesUpdate.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.Black;
+            this.DgDiagnosesUpdate.RowsDefaultCellStyle = dataGridViewCellStyle25;
             this.DgDiagnosesUpdate.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgDiagnosesUpdate.ShowEditingIcon = false;
             this.DgDiagnosesUpdate.Size = new System.Drawing.Size(728, 99);
@@ -952,22 +942,12 @@
             this.TxtWrittenByUpdate.TabIndex = 189;
             this.TxtWrittenByUpdate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // TxtDateUpdate
-            // 
-            this.TxtDateUpdate.BackColor = System.Drawing.Color.Gainsboro;
-            this.TxtDateUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDateUpdate.Location = new System.Drawing.Point(571, 39);
-            this.TxtDateUpdate.Mask = "##/##/####";
-            this.TxtDateUpdate.Name = "TxtDateUpdate";
-            this.TxtDateUpdate.Size = new System.Drawing.Size(87, 23);
-            this.TxtDateUpdate.TabIndex = 186;
-            // 
             // TxtHourUpdate
             // 
             this.TxtHourUpdate.AllowDrop = true;
             this.TxtHourUpdate.CalendarTrailingForeColor = System.Drawing.Color.Gainsboro;
             this.TxtHourUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtHourUpdate.Location = new System.Drawing.Point(371, 40);
+            this.TxtHourUpdate.Location = new System.Drawing.Point(576, 70);
             this.TxtHourUpdate.Name = "TxtHourUpdate";
             this.TxtHourUpdate.Size = new System.Drawing.Size(82, 23);
             this.TxtHourUpdate.TabIndex = 185;
@@ -1065,7 +1045,7 @@
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label25.Location = new System.Drawing.Point(459, 45);
+            this.label25.Location = new System.Drawing.Point(667, 75);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(36, 16);
             this.label25.TabIndex = 176;
@@ -1196,7 +1176,7 @@
             // 
             this.TxtSentByUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtSentByUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtSentByUpdate.Location = new System.Drawing.Point(534, 71);
+            this.TxtSentByUpdate.Location = new System.Drawing.Point(328, 38);
             this.TxtSentByUpdate.Name = "TxtSentByUpdate";
             this.TxtSentByUpdate.Size = new System.Drawing.Size(124, 23);
             this.TxtSentByUpdate.TabIndex = 164;
@@ -1206,7 +1186,7 @@
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label33.Location = new System.Drawing.Point(665, 74);
+            this.label33.Location = new System.Drawing.Point(459, 41);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(71, 16);
             this.label33.TabIndex = 163;
@@ -1217,7 +1197,7 @@
             this.CmbMainTherapistUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.CmbMainTherapistUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbMainTherapistUpdate.FormattingEnabled = true;
-            this.CmbMainTherapistUpdate.Location = new System.Drawing.Point(116, 40);
+            this.CmbMainTherapistUpdate.Location = new System.Drawing.Point(329, 70);
             this.CmbMainTherapistUpdate.Name = "CmbMainTherapistUpdate";
             this.CmbMainTherapistUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbMainTherapistUpdate.Size = new System.Drawing.Size(124, 24);
@@ -1228,7 +1208,7 @@
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label34.Location = new System.Drawing.Point(250, 44);
+            this.label34.Location = new System.Drawing.Point(463, 74);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(67, 16);
             this.label34.TabIndex = 161;
@@ -1279,6 +1259,27 @@
             this.label36.Size = new System.Drawing.Size(72, 16);
             this.label36.TabIndex = 157;
             this.label36.Text = "ת.ז. מטופל";
+            // 
+            // TxtDateUpdate
+            // 
+            this.TxtDateUpdate.BackColor = System.Drawing.Color.Gainsboro;
+            this.TxtDateUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtDateUpdate.Location = new System.Drawing.Point(711, 72);
+            this.TxtDateUpdate.Name = "TxtDateUpdate";
+            this.TxtDateUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.TxtDateUpdate.Size = new System.Drawing.Size(89, 23);
+            this.TxtDateUpdate.TabIndex = 209;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label18.Location = new System.Drawing.Point(806, 74);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(85, 16);
+            this.label18.TabIndex = 208;
+            this.label18.Text = "תאריך חדש:";
             // 
             // F_Intake
             // 
@@ -1344,7 +1345,6 @@
         private System.Windows.Forms.Button BtnSaveIntake;
         private System.Windows.Forms.DateTimePicker HourPickerStartAdd;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.MaskedTextBox TxtDate;
         private System.Windows.Forms.TextBox TxtUpdatedByDateUpdate;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label44;
@@ -1357,7 +1357,6 @@
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.TextBox TxtWrittenByUpdate;
-        private System.Windows.Forms.MaskedTextBox TxtDateUpdate;
         private System.Windows.Forms.DateTimePicker TxtHourUpdate;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.RichTextBox TxtSocialUpdate;
@@ -1387,9 +1386,11 @@
         private System.Windows.Forms.ComboBox cmbPatientIdUpdate;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.ComboBox CmbIntakeNumber;
-        private System.Windows.Forms.Label label45;
         private System.Windows.Forms.DataGridView DgDiagnosesUpdate;
         private System.Windows.Forms.DataGridView DgDiagnoses;
+        private System.Windows.Forms.MaskedTextBox TxtDate;
+        private System.Windows.Forms.ComboBox CmbDateUpdate;
+        private System.Windows.Forms.MaskedTextBox TxtDateUpdate;
+        private System.Windows.Forms.Label label18;
     }
 }

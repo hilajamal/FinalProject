@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
+
 
 namespace Clinic1
 {
@@ -109,12 +111,20 @@ namespace Clinic1
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
+            DateTime rs;
+            CultureInfo ci = new CultureInfo("en-IE");
+            if (!DateTime.TryParseExact(this.TxtDateAdd.Text, "dd/MM/yyyy", ci, DateTimeStyles.None, out rs))
+            {
+                MessageBox.Show("יש להזין תאריך תקין");
+                return;
+            }
+
+
             DateTime dt = HourPickerAdd.Value;
             TimeSpan st = new TimeSpan(dt.Hour, dt.Minute, dt.Second);
-            DateTime date = DateTime.Parse(TxtDateAdd.Text);
 
             ClinicTableAdapters.ContactsTableAdapter da = new ClinicTableAdapters.ContactsTableAdapter();
-            da.Insert(TxtContactTypeAdd.Text, Int32.Parse(CmblPatientId.SelectedValue.ToString()), Int32.Parse(CmbWorker.SelectedValue.ToString()), TxtContactName.Text, TxtRelationAdd.Text, TxtContents.Text, TxtRemarks.Text, date, st);
+            da.Insert(TxtContactTypeAdd.Text, Int32.Parse(CmblPatientId.SelectedValue.ToString()), Int32.Parse(CmbWorker.SelectedValue.ToString()), TxtContactName.Text, TxtRelationAdd.Text, TxtContents.Text, TxtRemarks.Text, rs, st);
             MessageBox.Show("פרטים נשמרו בהצלחה", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
             this.Close();
         }

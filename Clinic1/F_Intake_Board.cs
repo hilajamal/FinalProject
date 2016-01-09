@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
+
 
 namespace Clinic1
 {
@@ -22,6 +24,7 @@ namespace Clinic1
         private void addcols()
         {
             ClinicTableAdapters.PatientsTableAdapter daPatients = new ClinicTableAdapters.PatientsTableAdapter();
+
             Clinic.PatientsDataTable dtPatients = daPatients.GetPatientsWaitingForIntakeBoard();
 
 
@@ -51,15 +54,14 @@ namespace Clinic1
 
             // WorkersAdd
             ClinicTableAdapters.WorkersTableAdapter daWorkers = new ClinicTableAdapters.WorkersTableAdapter();
-            Clinic.WorkersDataTable dtWorkers = daWorkers.GetDataByActiveWorkers();
-            CmbMainTherapistAdd.DataSource = dtWorkers;
+            CmbMainTherapistAdd.DataSource = daWorkers.GetDataByActiveWorkers(); ;
             CmbMainTherapistAdd.SelectedIndex = 0;
             CmbMainTherapistAdd.AutoCompleteMode = AutoCompleteMode.Append;
             CmbMainTherapistAdd.AutoCompleteSource = AutoCompleteSource.ListItems;
             CmbMainTherapistAdd.DisplayMember = "FullName";
             CmbMainTherapistAdd.ValueMember = "ID";
 
-            CmbSecondTherapistAdd.DataSource = dtWorkers;
+            CmbSecondTherapistAdd.DataSource = daWorkers.GetDataByActiveWorkers();
             CmbSecondTherapistAdd.SelectedIndex = 0;
             CmbSecondTherapistAdd.AutoCompleteMode = AutoCompleteMode.Append;
             CmbSecondTherapistAdd.AutoCompleteSource = AutoCompleteSource.ListItems;
@@ -74,7 +76,7 @@ namespace Clinic1
             CmbMainTherapistUpdate.DisplayMember = "FullName";
             CmbMainTherapistUpdate.ValueMember = "ID";
 
-            CmbSecondTherapistUpdate.DataSource = dtWorkersUpdate;
+            CmbSecondTherapistUpdate.DataSource = daWorkers.GetDataByActiveWorkers(); ;
             CmbSecondTherapistUpdate.AutoCompleteMode = AutoCompleteMode.Append;
             CmbSecondTherapistUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
             CmbSecondTherapistUpdate.DisplayMember = "FullName";
@@ -112,19 +114,28 @@ namespace Clinic1
 
         private void BtnSaveAdd_Click(object sender, EventArgs e)
         {
-            DateTime date = DateTime.Parse(TxtDateAdd.Text);
+            DateTime rs;
+            CultureInfo ci = new CultureInfo("en-IE");
+            if (!DateTime.TryParseExact(this.TxtDateAdd.Text, "dd/MM/yyyy", ci, DateTimeStyles.None, out rs))
+            {
+                MessageBox.Show("יש להזין תאריך תקין");
+                return;
+            }
+            
             DateTime now = DateTime.Now;
             DateTime dt = HourPickerAdd.Value;
             TimeSpan st = new TimeSpan(dt.Hour, dt.Minute, dt.Second);
             ClinicTableAdapters.PatientsTableAdapter daPatients = new ClinicTableAdapters.PatientsTableAdapter();
             ClinicTableAdapters.IntakeBoardTableAdapter daIntake = new ClinicTableAdapters.IntakeBoardTableAdapter();
-            daIntake.Insert((int)CmblPatientIdAdd.SelectedValue, (int)CmbMainTherapistAdd.SelectedValue, (int)CmbSecondTherapistAdd.SelectedValue, now, st, Txtnotes.Text, Globals.ConnectedUserID, now, null, null);
+            daIntake.Insert((int)CmblPatientIdAdd.SelectedValue, (int)CmbMainTherapistAdd.SelectedValue, (int)CmbSecondTherapistAdd.SelectedValue, rs, st, Txtnotes.Text, Globals.ConnectedUserID, now, null, null);
             daPatients.UpdateIntakeBoardTrue(now, (int)CmblPatientIdAdd.SelectedValue);
             MessageBox.Show("פרטים נשמרו בהצלחה");
 
             Clinic.PatientsDataTable dtPatients = daPatients.GetPatientsWaitingForIntakeBoard();
             CmbPatientNameAdd.DataSource = dtPatients;
             CmblPatientIdAdd.DataSource = dtPatients;
+            Txtnotes.Text = String.Empty;
+
 
         }
 
@@ -169,6 +180,21 @@ namespace Clinic1
             CmbPatientIDUpdate.SelectedIndex = lastIndex;
 
 
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ClinicTableAdapters.PatientsTableAdapter daPatients = new ClinicTableAdapters.PatientsTableAdapter();
+            Clinic.PatientsDataTable dtPatientsUpdate = daPatients.GetPatientsWhoDidIntakeBoard();
+            CmbPatientIDUpdate.DataSource = dtPatientsUpdate;
+            CmbPatientNameUpdate.DataSource = dtPatientsUpdate;
+            Txtnotes.Text = String.Empty;
+        }
+
+        private void CmblPatientIdAdd_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TxtWrittenByAdd.Text = Globals.ConnectedUserName;
+            TxtWrittenByDateAdd.Text = DateTime.Now.ToString();
         }
 
 

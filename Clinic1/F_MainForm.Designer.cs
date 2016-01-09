@@ -41,7 +41,7 @@
             this.BtnPsycho = new System.Windows.Forms.Button();
             this.BtnDoctor = new System.Windows.Forms.Button();
             this.LblName = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtnHistory = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -133,6 +133,7 @@
             this.btnReports.TabIndex = 6;
             this.btnReports.Text = "דו\"חות";
             this.btnReports.UseVisualStyleBackColor = false;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // btnIntake
             // 
@@ -199,17 +200,18 @@
             this.LblName.Text = "ברוך שובך, הילה גל";
             this.LblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button2
+            // BtnHistory
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.button2.Font = new System.Drawing.Font("David", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(25, 490);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(214, 136);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "כפתור";
-            this.button2.UseVisualStyleBackColor = false;
+            this.BtnHistory.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.BtnHistory.Font = new System.Drawing.Font("David", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnHistory.ForeColor = System.Drawing.SystemColors.Control;
+            this.BtnHistory.Location = new System.Drawing.Point(25, 490);
+            this.BtnHistory.Name = "BtnHistory";
+            this.BtnHistory.Size = new System.Drawing.Size(214, 136);
+            this.BtnHistory.TabIndex = 12;
+            this.BtnHistory.Text = "היסטוריית טיפולים למטופל";
+            this.BtnHistory.UseVisualStyleBackColor = false;
+            this.BtnHistory.Click += new System.EventHandler(this.BtnHistory_Click);
             // 
             // F_MainForm
             // 
@@ -219,7 +221,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(745, 631);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.BtnHistory);
             this.Controls.Add(this.LblName);
             this.Controls.Add(this.BtnDoctor);
             this.Controls.Add(this.BtnPsycho);
@@ -254,7 +256,7 @@
         private System.Windows.Forms.Button BtnPsycho;
         private System.Windows.Forms.Button BtnDoctor;
         private System.Windows.Forms.Label LblName;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BtnHistory;
 
     }
 }

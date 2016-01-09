@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
+
 
 namespace Clinic1
 {
@@ -14,6 +16,7 @@ namespace Clinic1
     {
         Clinic.DiagnosesForPatientsDataTable dtDiagnoseForPatients;
         Clinic.DiagnosesForPatientsDataTable dtDiagnoseForPatientsAdd;
+        DateTime dateBeforeChange;
 
 
         public F_Intake()
@@ -37,7 +40,14 @@ namespace Clinic1
 
             ClinicTableAdapters.PatientsTableAdapter daPatients = new ClinicTableAdapters.PatientsTableAdapter();
             Clinic.PatientsDataTable dtPatients = daPatients.GetData();
-           
+
+
+
+            CmbDateUpdate.AutoCompleteMode = AutoCompleteMode.Append;
+            CmbDateUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CmbDateUpdate.DisplayMember = "Date";
+            CmbDateUpdate.ValueMember = "Date";
+
             //PatientsIDAdd
             CmblPatientId.DataSource = dtPatients;
             CmblPatientId.AutoCompleteMode = AutoCompleteMode.Append;
@@ -94,15 +104,15 @@ namespace Clinic1
             CmbMainTherapistUpdate.ValueMember = "ID";
 
             //IntakeNumberUpdate
-            CmbIntakeNumber.AutoCompleteMode = AutoCompleteMode.Append;
-            CmbIntakeNumber.AutoCompleteSource = AutoCompleteSource.ListItems;
-            CmbIntakeNumber.DisplayMember = "AppointmentNumber";
-            CmbIntakeNumber.ValueMember = "AppointmentNumber";
-            if (CmbIntakeNumber.Items.Count > 0)
-            {
-                CmbIntakeNumber.SelectedIndex = -1;
-                CmbIntakeNumber.SelectedIndex = 0;
-            }
+            //CmbIntakeNumber.AutoCompleteMode = AutoCompleteMode.Append;
+            //CmbIntakeNumber.AutoCompleteSource = AutoCompleteSource.ListItems;
+            //CmbIntakeNumber.DisplayMember = "AppointmentNumber";
+            //CmbIntakeNumber.ValueMember = "AppointmentNumber";
+            //if (CmbIntakeNumber.Items.Count > 0)
+            //{
+            //    CmbIntakeNumber.SelectedIndex = -1;
+            //    CmbIntakeNumber.SelectedIndex = 0;
+            //}
 
 
            ClinicTableAdapters.DiagnosesForPatientsTableAdapter daD = new ClinicTableAdapters.DiagnosesForPatientsTableAdapter();
@@ -194,8 +204,9 @@ namespace Clinic1
 
         private void BtnSaveIntake_Click(object sender, EventArgs e)
         {
-            DateTime date;
-            if(DateTime.TryParse(TxtDate.Text, out date) == false)
+            DateTime rs;
+            CultureInfo ci = new CultureInfo("en-IE");
+            if (!DateTime.TryParseExact(this.TxtDate.Text, "dd/MM/yyyy", ci, DateTimeStyles.None, out rs))
             {
                 MessageBox.Show("יש להזין תאריך תקין");
                 return;
@@ -208,11 +219,10 @@ namespace Clinic1
             else apNumber =(int) da.GetMaxAppointment(1,(int)CmblPatientId.SelectedValue)+1;
             
             DateTime now = DateTime.Now;
-            date = DateTime.Parse(TxtDate.Text);
             DateTime dt = HourPickerStartAdd.Value;
             TimeSpan st = new TimeSpan(dt.Hour, dt.Minute, dt.Second);
 
-         int id = Int32.Parse(da.InsertQuery(apNumber, null, 1, date, st.ToString(), (int)CmbTherapist.SelectedValue, null, TxtNotes.Text, null, Globals.ConnectedUserID, null, now,
+            int id = Int32.Parse(da.InsertQuery(apNumber, null, 1, rs, st.ToString(), (int)CmbTherapist.SelectedValue, null, TxtNotes.Text, null, Globals.ConnectedUserID, null, now,
                 null, TxtSentBy.Text, TxtReason.Text, TxtBrothersAndSisters.Text, TxtFamily.Text, TxtTraumas.Text, TxtPregnant.Text, TxtPsycho.Text,
                 TxtSocial.Text, TxtPhysical.Text).ToString());
          ClinicTableAdapters.AppointmentsForPatientsTableAdapter app = new ClinicTableAdapters.AppointmentsForPatientsTableAdapter();
@@ -238,28 +248,31 @@ namespace Clinic1
 
         private void CmbPatientNameUpdate_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ClinicTableAdapters.AppointmentsForPatientsTableAdapter da = new ClinicTableAdapters.AppointmentsForPatientsTableAdapter();
-            Clinic.AppointmentsForPatientsDataTable dt = da.GetIntakeNumbersByPatientID((int)cmbPatientIdUpdate.SelectedValue);
+            ClinicTableAdapters.AppointmentsTableAdapter da = new ClinicTableAdapters.AppointmentsTableAdapter();
+            Clinic.AppointmentsDataTable dt = da.GetDataByAppointmentTypeAndPatientID(1,(int)cmbPatientIdUpdate.SelectedValue);
             if (dt.Rows.Count > 0)
-                CmbIntakeNumber.DataSource = dt;
+                CmbDateUpdate.DataSource = dt;
             else
-                CmbIntakeNumber.DataSource = null;
+                CmbDateUpdate.DataSource = new Clinic.AppointmentsDataTable();
         }
 
-        private void CmbIntakeNumber_SelectedIndexChanged(object sender, EventArgs e)
+        private void CmbDateUpdate_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (CmbIntakeNumber.SelectedIndex == -1)
+            if (CmbDateUpdate.SelectedIndex == -1)
                 return;
 
-            if (CmbIntakeNumber.Items.Count == 0)
+            if (CmbDateUpdate.Items.Count == 0)
                 clearAllFields();
             else
             {
+                DateTime d = (DateTime)CmbDateUpdate.SelectedValue;
+                TxtDateUpdate.Text = d.ToString("dd/MM/yyyy");
+                dateBeforeChange = (DateTime)CmbDateUpdate.SelectedValue;
                 ClinicTableAdapters.DiagnosesForPatientsTableAdapter daDiagsnoses = new ClinicTableAdapters.DiagnosesForPatientsTableAdapter(); 
                 DateTime now = DateTime.Now;
                 String date = now.ToString("dd/MM/yyyy HH:mm:ss");
                 ClinicTableAdapters.AppointmentsTableAdapter da = new ClinicTableAdapters.AppointmentsTableAdapter();
-                Clinic.AppointmentsDataTable dt = da.GetDataByPatientIDAndAppointmentNumberAndAppointmentTypeID((int)CmbIntakeNumber.SelectedValue, (int)cmbPatientIdUpdate.SelectedValue, 1);
+                Clinic.AppointmentsDataTable dt = da.GetDataByAppointmentTypeDatePatientID((int)cmbPatientIdUpdate.SelectedValue,(DateTime)CmbDateUpdate.SelectedValue,  1);
                 ClinicTableAdapters.WorkersTableAdapter daWorkers = new ClinicTableAdapters.WorkersTableAdapter();
                 TxtBrothersAndSistersUpdate.Text = dt.Rows[0]["BrothersAndSisters"].ToString();
                 TxtFamilyUpdate.Text = dt.Rows[0]["Family"].ToString();
@@ -278,7 +291,6 @@ namespace Clinic1
                 dtDiagnoseForPatients =  daDiagsnoses.GetDataByPatientID((int)cmbPatientIdUpdate.SelectedValue);
                 DgDiagnosesUpdate.DataSource = dtDiagnoseForPatients;
                 DateTime dates = (DateTime) dt.Rows[0]["Date"];
-                TxtDateUpdate.Text = dates.ToString("dd/MM/yyyy");
                 if (!DBNull.Value.Equals(dt.Rows[0]["UpdatedByDate"]))
                 {
                     dates = (DateTime)dt.Rows[0]["UpdatedByDate"];
@@ -321,20 +333,21 @@ namespace Clinic1
             ClinicTableAdapters.AppointmentsTableAdapter da = new ClinicTableAdapters.AppointmentsTableAdapter();
             ClinicTableAdapters.AppointmentsForPatientsTableAdapter daAPA = new ClinicTableAdapters.AppointmentsForPatientsTableAdapter();
             ClinicTableAdapters.DiagnosesForPatientsTableAdapter daD = new ClinicTableAdapters.DiagnosesForPatientsTableAdapter();
-
-            DateTime date;
-            if (DateTime.TryParse(TxtDateUpdate.Text, out date) == false)
+            Clinic.AppointmentsDataTable dt = da.GetDataByAppointmentTypeDatePatientID((int)cmbPatientIdUpdate.SelectedValue, dateBeforeChange, 1);
+            DateTime rs;
+            CultureInfo ci = new CultureInfo("en-IE");
+            if (!DateTime.TryParseExact(TxtDateUpdate.Text, "dd/MM/yyyy", ci, DateTimeStyles.None, out rs))
             {
                 MessageBox.Show("יש להזין תאריך תקין");
                 return;
             }
+            int apNumber;
+            if (da.GetMaxAppointment(1, (int)CmblPatientId.SelectedValue) == null)
+                apNumber = 1;
+            else apNumber = (int)da.GetMaxAppointment(1, (int)CmblPatientId.SelectedValue);
 
-
-         date = DateTime.Parse(TxtDateUpdate.Text);
-
-
-            da.UpdateQuery((int)CmbIntakeNumber.SelectedValue, null, 1, date, TxtHourUpdate.Text, (int)CmbMainTherapistUpdate.SelectedValue, null, TxtNotesUpdate.Text, null, Globals.ConnectedUserID, DateTime.Now, TxtSentByUpdate.Text,
-                TxtReasonUpdate.Text, TxtBrothersAndSistersUpdate.Text, TxtFamilyUpdate.Text, TxtTraumasUpdate.Text, TxtPregnant.Text, TxtPsychoUpdate.Text, TxtPhysicalUpdate.Text, TxtSocialUpdate.Text, (int)cmbPatientIdUpdate.SelectedValue);
+            da.UpdateQuery(apNumber, null, 1, rs, TxtHourUpdate.Text, (int)CmbMainTherapistUpdate.SelectedValue, null, TxtNotesUpdate.Text, null, Globals.ConnectedUserID, DateTime.Now, TxtSentByUpdate.Text,
+                TxtReasonUpdate.Text, TxtBrothersAndSistersUpdate.Text, TxtFamilyUpdate.Text, TxtTraumasUpdate.Text, TxtPregnant.Text, TxtPsychoUpdate.Text, TxtPhysicalUpdate.Text, TxtSocialUpdate.Text, Int32.Parse(dt.Rows[0]["ID"].ToString()));
             daD.Update(dtDiagnoseForPatients);
             MessageBox.Show("טיפול עודכן בהצלחה");
 
@@ -457,6 +470,17 @@ namespace Clinic1
 
             e.Row.Cells["PatientID"].Value = (int)CmblPatientId.SelectedValue;
         }
+
+        private void BtnSaveUpdates_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CmbDateUpdate_SelectedValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
 
      
 

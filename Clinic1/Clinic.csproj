@@ -71,6 +71,10 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clinic.cs">
+      <DependentUpon>Clinic.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Clinic.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -87,6 +91,12 @@
     </Compile>
     <Compile Include="F_Groups.Designer.cs">
       <DependentUpon>F_Groups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_History.Designer.cs">
+      <DependentUpon>F_History.cs</DependentUpon>
     </Compile>
     <Compile Include="F_Intake.cs">
       <SubType>Form</SubType>
@@ -142,6 +152,12 @@
     <Compile Include="F_Password.Designer.cs">
       <DependentUpon>F_Password.cs</DependentUpon>
     </Compile>
+    <Compile Include="F_Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Reports.Designer.cs">
+      <DependentUpon>F_Reports.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_Workers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_Groups.resx">
       <DependentUpon>F_Groups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_History.resx">
+      <DependentUpon>F_History.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_Intake.resx">
       <DependentUpon>F_Intake.cs</DependentUpon>
@@ -183,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_Password.resx">
       <DependentUpon>F_Password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Reports.resx">
+      <DependentUpon>F_Reports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_Workers.resx">
       <DependentUpon>F_Workers.cs</DependentUpon>

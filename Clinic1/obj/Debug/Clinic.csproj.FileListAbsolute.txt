@@ -36,3 +36,5 @@ C:\Users\admin\Documents\Visual Studio 2013\Projects\Clinic1\Clinic1\obj\Debug\C
 C:\Users\admin\Documents\Visual Studio 2013\Projects\Clinic1\Clinic1\obj\Debug\Clinic1.F_Meetings.resources
 C:\Users\admin\Documents\Visual Studio 2013\Projects\Clinic1\Clinic1\obj\Debug\Clinic1.F_DoctorMeeting.resources
 C:\Users\admin\Documents\Visual Studio 2013\Projects\Clinic1\Clinic1\obj\Debug\Clinic.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\Visual Studio 2013\Projects\Clinic1\Clinic1\obj\Debug\Clinic1.F_Reports.resources
+C:\Users\admin\Documents\Visual Studio 2013\Projects\Clinic1\Clinic1\obj\Debug\Clinic1.F_History.resources

@@ -22999,9 +22999,9 @@ SELECT ID, PatientID, MainTherapist, SecondTherapist, Date, Hour, Notes, Written
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        ID, PatientID, MainTherapist, SecondTherapist, Date, Hour, Notes, W" +
-                "rittenBy, WrittenByDate, UpdatedBy, UpdatedByDate\r\nFROM            IntakeBoard\r\n" +
-                "WHERE        (PatientID = @PatientID)";
+            this._commandCollection[1].CommandText = "SELECT Date, Hour, ID, MainTherapist, Notes, PatientID, SecondTherapist, UpdatedB" +
+                "y, UpdatedByDate, WrittenBy, WrittenByDate FROM IntakeBoard WHERE (PatientID = @" +
+                "PatientID)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PatientID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "PatientID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
@@ -24123,7 +24123,7 @@ SELECT ID, PatientID, MedicineID, Frequency, Morning, Noon, AfterNoon, Evening, 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ID, PatientID, MedicineID, Frequency, Morning, Noon, AfterNoon, Evening, D" +
@@ -24141,13 +24141,20 @@ SELECT ID, PatientID, MedicineID, Frequency, Morning, Noon, AfterNoon, Evening, 
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Now", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "EndDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = @"SELECT        TOP (1) ID, PatientID, MedicineID, Frequency, Morning, Noon, AfterNoon, Evening, Duration, LastDuration, Units, Dosage, StartDate, EndDate
+            this._commandCollection[2].CommandText = "SELECT        ID, PatientID, MedicineID, Frequency, Morning, Noon, AfterNoon, Eve" +
+                "ning, Duration, LastDuration, Units, Dosage, StartDate, EndDate\r\nFROM           " +
+                " MedicinesForPatients\r\nWHERE        (PatientID = @PatientID)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PatientID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "PatientID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = @"SELECT        TOP (1) ID, PatientID, MedicineID, Frequency, Morning, Noon, AfterNoon, Evening, Duration, LastDuration, Units, Dosage, StartDate, EndDate
 FROM            MedicinesForPatients
 WHERE        (MedicineID = @MedicineID) AND (PatientID = @PatientID)
 ORDER BY EndDate DESC";
-            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MedicineID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "MedicineID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PatientID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "PatientID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MedicineID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "MedicineID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PatientID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "PatientID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -24201,8 +24208,25 @@ ORDER BY EndDate DESC";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual Clinic.MedicinesForPatientsDataTable GetLastDurationByPatientIDAndMedicineID(global::System.Nullable<int> MedicineID, global::System.Nullable<int> PatientID) {
+        public virtual Clinic.MedicinesForPatientsDataTable GetAllMedicinesByPatientID(global::System.Nullable<int> PatientID) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((PatientID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(PatientID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            Clinic.MedicinesForPatientsDataTable dataTable = new Clinic.MedicinesForPatientsDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual Clinic.MedicinesForPatientsDataTable GetLastDurationByPatientIDAndMedicineID(global::System.Nullable<int> MedicineID, global::System.Nullable<int> PatientID) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
             if ((MedicineID.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((int)(MedicineID.Value));
             }

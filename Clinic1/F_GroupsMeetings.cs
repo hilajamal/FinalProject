@@ -205,12 +205,17 @@ namespace Clinic1
                 MessageBox.Show("טיפול כבר קיים");
                 return;
             }
-            DateTime dt1 = DateTime.ParseExact(TxtWrittenByDateAdd.Text, "dd/MM/yyyy HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
-            //DateTime date = DateTime.ParseExact(CalendarAdd.SelectionRange.Start.ToString(), "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+            DateTime rs;
+            CultureInfo ci = new CultureInfo("en-IE");
+            if (!DateTime.TryParseExact(this.TxtDateAdd.Text, "dd/MM/yyyy", ci, DateTimeStyles.None, out rs))
+            {
+                MessageBox.Show("יש להזין תאריך תקין");
+                return;
+            }
             DateTime dt = HourPickerStartAdd.Value;
             TimeSpan st = new TimeSpan(dt.Hour, dt.Minute, dt.Second);
-             
-int id = System.Convert.ToInt32(daAp.InsertQuery(Int32.Parse(txtMeetingNumberAdd.Text), (int)CmbGroupIDAdd.SelectedValue, (int)CmbMeetingTypeAdd.SelectedValue, CalendarAdd.SelectionRange.Start, st.ToString(), (int)CmbMainTherapistAdd.SelectedValue, (int)CmbSecondTherapistAdd.SelectedValue, TxtNotesAdd.Text, TxtSummaryAdd.Text, Globals.ConnectedUserID, null, dt1, null, null, null, null, null, null, null, null, null, null));
+
+            int id = System.Convert.ToInt32(daAp.InsertQuery(Int32.Parse(txtMeetingNumberAdd.Text), (int)CmbGroupIDAdd.SelectedValue, (int)CmbMeetingTypeAdd.SelectedValue, rs, st.ToString(), (int)CmbMainTherapistAdd.SelectedValue, (int)CmbSecondTherapistAdd.SelectedValue, TxtNotesAdd.Text, TxtSummaryAdd.Text, Globals.ConnectedUserID, null, DateTime.Now, null, null, null, null, null, null, null, null, null, null));
             foreach (DataGridViewRow row in DgPatientsAdd.Rows)
             {
                 bool result;
@@ -331,7 +336,16 @@ int id = System.Convert.ToInt32(daAp.InsertQuery(Int32.Parse(txtMeetingNumberAdd
             DateTime dt = HourPickerStartUpdate.Value;
             TimeSpan st = new TimeSpan(dt.Hour, dt.Minute, dt.Second);
 
-            da.UpdateQuery((int)CmbMeetingNumberUpdate.SelectedValue, (int)CmbGroupIdUpdate.SelectedValue, (int)CmbMeetingTypeUpdate.SelectedValue, CalendarUpdate.SelectionRange.Start, st.ToString(), (int)CmbMainTherapistUpdate.SelectedValue, (int)CmbSecondTherapistUpdate.SelectedValue, TxtRemarksUpdate.Text,
+            DateTime rs;
+            CultureInfo ci = new CultureInfo("en-IE");
+            if (!DateTime.TryParseExact(this.TxtDateUpdate.Text, "dd/MM/yyyy", ci, DateTimeStyles.None, out rs))
+            {
+                MessageBox.Show("יש להזין תאריך תקין");
+                return;
+            }
+
+
+            da.UpdateQuery((int)CmbMeetingNumberUpdate.SelectedValue, (int)CmbGroupIdUpdate.SelectedValue, (int)CmbMeetingTypeUpdate.SelectedValue, rs, st.ToString(), (int)CmbMainTherapistUpdate.SelectedValue, (int)CmbSecondTherapistUpdate.SelectedValue, TxtRemarksUpdate.Text,
                 TxtSummaryUpdate.Text, Globals.ConnectedUserID, now,null,null,null,null,null,null,null,null,null,appId);
             foreach (DataGridViewRow row in DgPatientsUpdate.Rows)
             {

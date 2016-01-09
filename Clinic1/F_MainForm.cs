@@ -94,6 +94,18 @@ namespace Clinic1
             doctor.Show();
         }
 
+        private void btnReports_Click(object sender, EventArgs e)
+        {
+            F_Reports reports = new F_Reports();
+            reports.Show();
+        }
+
+        private void BtnHistory_Click(object sender, EventArgs e)
+        {
+            F_History history = new F_History();
+            history.Show();
+        }
+
      
     }
 }

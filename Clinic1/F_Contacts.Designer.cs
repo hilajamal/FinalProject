@@ -32,9 +32,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.TxtContactTypeAdd = new System.Windows.Forms.TextBox();
             this.TxtRelationAdd = new System.Windows.Forms.TextBox();
-            this.TxtDateAdd = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.TxtContactName = new System.Windows.Forms.TextBox();
             this.LblContactName = new System.Windows.Forms.Label();
             this.BtnExitNoSave = new System.Windows.Forms.Button();
@@ -56,9 +54,7 @@
             this.TxtContactTypeUpdate = new System.Windows.Forms.TextBox();
             this.TxtRelationUpdate = new System.Windows.Forms.TextBox();
             this.CmbHourUpdate = new System.Windows.Forms.ComboBox();
-            this.CmbDateUpdate = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.BtnExitNoSaveUpdate = new System.Windows.Forms.Button();
             this.BtnSaveUpdate = new System.Windows.Forms.Button();
             this.CmbPatientNameUpdate = new System.Windows.Forms.ComboBox();
@@ -75,6 +71,10 @@
             this.TxtRemarksUpdate = new System.Windows.Forms.RichTextBox();
             this.TxtContentsUpdate = new System.Windows.Forms.RichTextBox();
             this.CmbWorkerUpdate = new System.Windows.Forms.ComboBox();
+            this.TxtDateAdd = new System.Windows.Forms.MaskedTextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.CmbDateUpdate = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -97,11 +97,11 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage1.Controls.Add(this.TxtDateAdd);
+            this.tabPage1.Controls.Add(this.label33);
             this.tabPage1.Controls.Add(this.TxtContactTypeAdd);
             this.tabPage1.Controls.Add(this.TxtRelationAdd);
-            this.tabPage1.Controls.Add(this.TxtDateAdd);
             this.tabPage1.Controls.Add(this.label13);
-            this.tabPage1.Controls.Add(this.label14);
             this.tabPage1.Controls.Add(this.TxtContactName);
             this.tabPage1.Controls.Add(this.LblContactName);
             this.tabPage1.Controls.Add(this.BtnExitNoSave);
@@ -147,16 +147,6 @@
             this.TxtRelationAdd.Size = new System.Drawing.Size(124, 20);
             this.TxtRelationAdd.TabIndex = 82;
             // 
-            // TxtDateAdd
-            // 
-            this.TxtDateAdd.BackColor = System.Drawing.Color.Gainsboro;
-            this.TxtDateAdd.Font = new System.Drawing.Font("David", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDateAdd.Location = new System.Drawing.Point(379, 89);
-            this.TxtDateAdd.Name = "TxtDateAdd";
-            this.TxtDateAdd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.TxtDateAdd.Size = new System.Drawing.Size(124, 20);
-            this.TxtDateAdd.TabIndex = 81;
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -168,18 +158,6 @@
             this.label13.Size = new System.Drawing.Size(36, 16);
             this.label13.TabIndex = 80;
             this.label13.Text = "שעה";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(509, 93);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(47, 16);
-            this.label14.TabIndex = 79;
-            this.label14.Text = "תאריך";
             // 
             // TxtContactName
             // 
@@ -439,18 +417,6 @@
             this.CmbHourUpdate.TabIndex = 78;
             this.CmbHourUpdate.SelectedIndexChanged += new System.EventHandler(this.CmbHourUpdate_SelectedIndexChanged);
             // 
-            // CmbDateUpdate
-            // 
-            this.CmbDateUpdate.BackColor = System.Drawing.Color.Gainsboro;
-            this.CmbDateUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CmbDateUpdate.FormattingEnabled = true;
-            this.CmbDateUpdate.Location = new System.Drawing.Point(381, 85);
-            this.CmbDateUpdate.Name = "CmbDateUpdate";
-            this.CmbDateUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CmbDateUpdate.Size = new System.Drawing.Size(124, 24);
-            this.CmbDateUpdate.TabIndex = 77;
-            this.CmbDateUpdate.SelectedIndexChanged += new System.EventHandler(this.CmbDateUpdate_SelectedIndexChanged);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -461,17 +427,6 @@
             this.label6.Size = new System.Drawing.Size(36, 16);
             this.label6.TabIndex = 76;
             this.label6.Text = "שעה";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(510, 89);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(47, 16);
-            this.label12.TabIndex = 75;
-            this.label12.Text = "תאריך";
             // 
             // BtnExitNoSaveUpdate
             // 
@@ -654,6 +609,51 @@
             this.CmbWorkerUpdate.Size = new System.Drawing.Size(124, 24);
             this.CmbWorkerUpdate.TabIndex = 53;
             // 
+            // TxtDateAdd
+            // 
+            this.TxtDateAdd.BackColor = System.Drawing.Color.Gainsboro;
+            this.TxtDateAdd.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtDateAdd.Location = new System.Drawing.Point(413, 86);
+            this.TxtDateAdd.Mask = "##/##/####";
+            this.TxtDateAdd.Name = "TxtDateAdd";
+            this.TxtDateAdd.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.TxtDateAdd.Size = new System.Drawing.Size(89, 23);
+            this.TxtDateAdd.TabIndex = 196;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label33.Location = new System.Drawing.Point(508, 89);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(47, 16);
+            this.label33.TabIndex = 195;
+            this.label33.Text = "תאריך";
+            // 
+            // CmbDateUpdate
+            // 
+            this.CmbDateUpdate.BackColor = System.Drawing.Color.Gainsboro;
+            this.CmbDateUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CmbDateUpdate.FormattingEnabled = true;
+            this.CmbDateUpdate.Location = new System.Drawing.Point(381, 85);
+            this.CmbDateUpdate.Name = "CmbDateUpdate";
+            this.CmbDateUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.CmbDateUpdate.Size = new System.Drawing.Size(124, 24);
+            this.CmbDateUpdate.TabIndex = 77;
+            this.CmbDateUpdate.SelectedIndexChanged += new System.EventHandler(this.CmbDateUpdate_SelectedIndexChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label12.Location = new System.Drawing.Point(510, 89);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(47, 16);
+            this.label12.TabIndex = 75;
+            this.label12.Text = "תאריך";
+            // 
             // F_Contacts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -713,16 +713,16 @@
         private System.Windows.Forms.RichTextBox TxtContentsUpdate;
         private System.Windows.Forms.ComboBox CmbWorkerUpdate;
         private System.Windows.Forms.ComboBox CmbHourUpdate;
-        private System.Windows.Forms.ComboBox CmbDateUpdate;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox TxtDateAdd;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox TxtRelationAdd;
         private System.Windows.Forms.TextBox TxtRelationUpdate;
         private System.Windows.Forms.TextBox TxtContactTypeAdd;
         private System.Windows.Forms.TextBox TxtContactTypeUpdate;
+        private System.Windows.Forms.MaskedTextBox TxtDateAdd;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.ComboBox CmbDateUpdate;
+        private System.Windows.Forms.Label label12;
 
     }
 }
