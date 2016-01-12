@@ -203,8 +203,7 @@ namespace Clinic1
             TxtWrittenByAdd.Text = Globals.ConnectedUserName;
             TxtWrittenByDateAdd.Text = DateTime.Now.ToString();
             TxtIntakeBoardLeft.Text = CmblPatientIdAdd.Items.Count.ToString();
-            ClinicTableAdapters.IntakeBoardTableAdapter da = new ClinicTableAdapters.IntakeBoardTableAdapter();
-            TxtLastIntakeBoard.Text = da.GetLastIntakeBoardDate().ToString();
+         
         }
 
 

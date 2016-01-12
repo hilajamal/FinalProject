@@ -77,8 +77,6 @@
             this.CmbPatientIDUpdate = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.TxtLastIntakeBoard = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -102,8 +100,6 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tabPage1.Controls.Add(this.TxtLastIntakeBoard);
-            this.tabPage1.Controls.Add(this.label20);
             this.tabPage1.Controls.Add(this.TxtIntakeBoardLeft);
             this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.TxtDateAdd);
@@ -689,29 +685,6 @@
             this.label4.TabIndex = 120;
             this.label4.Text = "ת.ז. מטופל";
             // 
-            // TxtLastIntakeBoard
-            // 
-            this.TxtLastIntakeBoard.AutoSize = true;
-            this.TxtLastIntakeBoard.Font = new System.Drawing.Font("David", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtLastIntakeBoard.ForeColor = System.Drawing.Color.Red;
-            this.TxtLastIntakeBoard.Location = new System.Drawing.Point(92, 105);
-            this.TxtLastIntakeBoard.Name = "TxtLastIntakeBoard";
-            this.TxtLastIntakeBoard.Size = new System.Drawing.Size(17, 19);
-            this.TxtLastIntakeBoard.TabIndex = 201;
-            this.TxtLastIntakeBoard.Text = "5";
-            this.TxtLastIntakeBoard.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("David", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.Red;
-            this.label20.Location = new System.Drawing.Point(70, 84);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(220, 19);
-            this.label20.TabIndex = 200;
-            this.label20.Text = "ועדה אחרונה נעשתה בתאריך:";
-            // 
             // F_Intake_Board
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -782,7 +755,5 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label TxtIntakeBoardLeft;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label TxtLastIntakeBoard;
-        private System.Windows.Forms.Label label20;
     }
 }
