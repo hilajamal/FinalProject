@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.TabGroups = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.TxtBirthDate = new System.Windows.Forms.MaskedTextBox();
             this.BtnExitNoSaveAdd = new System.Windows.Forms.Button();
             this.BtnClearFieldsAdd = new System.Windows.Forms.Button();
             this.CmbRace = new System.Windows.Forms.ComboBox();
-            this.TxtBirthDate = new System.Windows.Forms.MaskedTextBox();
             this.CmbCountry = new System.Windows.Forms.ComboBox();
             this.CmbCity = new System.Windows.Forms.ComboBox();
             this.TxtPhoneContact = new System.Windows.Forms.TextBox();
@@ -85,6 +85,7 @@
             this.LblFirstName = new System.Windows.Forms.Label();
             this.LblID = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.TxtBirthDateUpdate = new System.Windows.Forms.MaskedTextBox();
             this.ExitNoSaveUpdate = new System.Windows.Forms.Button();
             this.BtnClearFieldsUpdate = new System.Windows.Forms.Button();
             this.CmbRaceUpdate = new System.Windows.Forms.ComboBox();
@@ -94,7 +95,6 @@
             this.TxtSecondTherapistUpdate = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
             this.CmbPatientID = new System.Windows.Forms.ComboBox();
-            this.TxtBirthDateUpdate = new System.Windows.Forms.MaskedTextBox();
             this.CmbCountryOfBirthUpdate = new System.Windows.Forms.ComboBox();
             this.CmbCityUpdate = new System.Windows.Forms.ComboBox();
             this.TxtPhoneContactUpdate = new System.Windows.Forms.TextBox();
@@ -165,10 +165,10 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage1.Controls.Add(this.TxtBirthDate);
             this.tabPage1.Controls.Add(this.BtnExitNoSaveAdd);
             this.tabPage1.Controls.Add(this.BtnClearFieldsAdd);
             this.tabPage1.Controls.Add(this.CmbRace);
-            this.tabPage1.Controls.Add(this.TxtBirthDate);
             this.tabPage1.Controls.Add(this.CmbCountry);
             this.tabPage1.Controls.Add(this.CmbCity);
             this.tabPage1.Controls.Add(this.TxtPhoneContact);
@@ -225,6 +225,17 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "הוספת מטופל";
             // 
+            // TxtBirthDate
+            // 
+            this.TxtBirthDate.BackColor = System.Drawing.Color.Gainsboro;
+            this.TxtBirthDate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtBirthDate.Location = new System.Drawing.Point(651, 144);
+            this.TxtBirthDate.Mask = "##/##/####";
+            this.TxtBirthDate.Name = "TxtBirthDate";
+            this.TxtBirthDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.TxtBirthDate.Size = new System.Drawing.Size(120, 23);
+            this.TxtBirthDate.TabIndex = 195;
+            // 
             // BtnExitNoSaveAdd
             // 
             this.BtnExitNoSaveAdd.BackColor = System.Drawing.Color.CornflowerBlue;
@@ -261,15 +272,6 @@
             this.CmbRace.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbRace.Size = new System.Drawing.Size(127, 24);
             this.CmbRace.TabIndex = 81;
-            // 
-            // TxtBirthDate
-            // 
-            this.TxtBirthDate.BackColor = System.Drawing.Color.Gainsboro;
-            this.TxtBirthDate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtBirthDate.Location = new System.Drawing.Point(651, 143);
-            this.TxtBirthDate.Name = "TxtBirthDate";
-            this.TxtBirthDate.Size = new System.Drawing.Size(117, 23);
-            this.TxtBirthDate.TabIndex = 80;
             // 
             // CmbCountry
             // 
@@ -691,9 +693,9 @@
             // 
             this.LblBirthDate.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblBirthDate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LblBirthDate.Location = new System.Drawing.Point(770, 140);
+            this.LblBirthDate.Location = new System.Drawing.Point(772, 140);
             this.LblBirthDate.Name = "LblBirthDate";
-            this.LblBirthDate.Size = new System.Drawing.Size(116, 25);
+            this.LblBirthDate.Size = new System.Drawing.Size(78, 25);
             this.LblBirthDate.TabIndex = 8;
             this.LblBirthDate.Text = "תאריך לידה";
             this.LblBirthDate.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -789,6 +791,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage2.Controls.Add(this.TxtBirthDateUpdate);
             this.tabPage2.Controls.Add(this.ExitNoSaveUpdate);
             this.tabPage2.Controls.Add(this.BtnClearFieldsUpdate);
             this.tabPage2.Controls.Add(this.CmbRaceUpdate);
@@ -798,7 +801,6 @@
             this.tabPage2.Controls.Add(this.TxtSecondTherapistUpdate);
             this.tabPage2.Controls.Add(this.label46);
             this.tabPage2.Controls.Add(this.CmbPatientID);
-            this.tabPage2.Controls.Add(this.TxtBirthDateUpdate);
             this.tabPage2.Controls.Add(this.CmbCountryOfBirthUpdate);
             this.tabPage2.Controls.Add(this.CmbCityUpdate);
             this.tabPage2.Controls.Add(this.TxtPhoneContactUpdate);
@@ -854,6 +856,16 @@
             this.tabPage2.Size = new System.Drawing.Size(877, 500);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "עדכון פרטי מטופל";
+            // 
+            // TxtBirthDateUpdate
+            // 
+            this.TxtBirthDateUpdate.BackColor = System.Drawing.Color.Gainsboro;
+            this.TxtBirthDateUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtBirthDateUpdate.Location = new System.Drawing.Point(645, 140);
+            this.TxtBirthDateUpdate.Name = "TxtBirthDateUpdate";
+            this.TxtBirthDateUpdate.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.TxtBirthDateUpdate.Size = new System.Drawing.Size(120, 23);
+            this.TxtBirthDateUpdate.TabIndex = 196;
             // 
             // ExitNoSaveUpdate
             // 
@@ -955,17 +967,6 @@
             this.CmbPatientID.Size = new System.Drawing.Size(121, 24);
             this.CmbPatientID.TabIndex = 132;
             this.CmbPatientID.SelectedIndexChanged += new System.EventHandler(this.CmbPatientID_SelectedIndexChanged);
-            // 
-            // TxtBirthDateUpdate
-            // 
-            this.TxtBirthDateUpdate.BackColor = System.Drawing.Color.Gainsboro;
-            this.TxtBirthDateUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtBirthDateUpdate.Location = new System.Drawing.Point(648, 140);
-            this.TxtBirthDateUpdate.Mask = "##-##-####";
-            this.TxtBirthDateUpdate.Name = "TxtBirthDateUpdate";
-            this.TxtBirthDateUpdate.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.TxtBirthDateUpdate.Size = new System.Drawing.Size(117, 23);
-            this.TxtBirthDateUpdate.TabIndex = 131;
             // 
             // CmbCountryOfBirthUpdate
             // 
@@ -1200,20 +1201,20 @@
             // 
             this.TxtMotherNameUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtMotherNameUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtMotherNameUpdate.Location = new System.Drawing.Point(648, 225);
+            this.TxtMotherNameUpdate.Location = new System.Drawing.Point(644, 225);
             this.TxtMotherNameUpdate.Name = "TxtMotherNameUpdate";
             this.TxtMotherNameUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.TxtMotherNameUpdate.Size = new System.Drawing.Size(120, 23);
+            this.TxtMotherNameUpdate.Size = new System.Drawing.Size(124, 23);
             this.TxtMotherNameUpdate.TabIndex = 108;
             // 
             // TxtFatherNameUpdate
             // 
             this.TxtFatherNameUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtFatherNameUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtFatherNameUpdate.Location = new System.Drawing.Point(648, 182);
+            this.TxtFatherNameUpdate.Location = new System.Drawing.Point(644, 182);
             this.TxtFatherNameUpdate.Name = "TxtFatherNameUpdate";
             this.TxtFatherNameUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.TxtFatherNameUpdate.Size = new System.Drawing.Size(120, 23);
+            this.TxtFatherNameUpdate.Size = new System.Drawing.Size(124, 23);
             this.TxtFatherNameUpdate.TabIndex = 107;
             // 
             // TxtFirstNameUpdate
@@ -1555,9 +1556,7 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.ComboBox CmbCity;
         private System.Windows.Forms.ComboBox CmbCountry;
-        private System.Windows.Forms.MaskedTextBox TxtBirthDate;
         private System.Windows.Forms.ComboBox CmbPatientID;
-        private System.Windows.Forms.MaskedTextBox TxtBirthDateUpdate;
         private System.Windows.Forms.ComboBox CmbCountryOfBirthUpdate;
         private System.Windows.Forms.ComboBox CmbCityUpdate;
         private System.Windows.Forms.TextBox TxtPhoneContactUpdate;
@@ -1618,5 +1617,7 @@
         private System.Windows.Forms.Button BtnClearFieldsAdd;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label LblID;
+        private System.Windows.Forms.MaskedTextBox TxtBirthDate;
+        private System.Windows.Forms.MaskedTextBox TxtBirthDateUpdate;
     }
 }

@@ -16,7 +16,6 @@ namespace Clinic1
     {
         Clinic.DiagnosesForPatientsDataTable dtDiagnoseForPatients;
         Clinic.DiagnosesForPatientsDataTable dtDiagnoseForPatientsAdd;
-        DateTime dateBeforeChange;
 
 
         public F_Intake()
@@ -27,6 +26,13 @@ namespace Clinic1
 
         public void addCols()
         {
+
+
+            CmbAppointmenrNumber.AutoCompleteMode = AutoCompleteMode.Append;
+            CmbAppointmenrNumber.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CmbAppointmenrNumber.DisplayMember = "AppointmentNumber";
+            CmbAppointmenrNumber.ValueMember = "AppointmentNumber";
+
             DgDiagnosesUpdate.AutoGenerateColumns = false;
             TxtWrittenByDateAdd.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
             TxtWrittenByAdd.Text = Globals.ConnectedUserName;
@@ -263,48 +269,64 @@ namespace Clinic1
 
             if (CmbDateUpdate.Items.Count == 0)
                 clearAllFields();
+
             else
             {
                 DateTime d = (DateTime)CmbDateUpdate.SelectedValue;
                 TxtDateUpdate.Text = d.ToString("dd/MM/yyyy");
-                dateBeforeChange = (DateTime)CmbDateUpdate.SelectedValue;
-                ClinicTableAdapters.DiagnosesForPatientsTableAdapter daDiagsnoses = new ClinicTableAdapters.DiagnosesForPatientsTableAdapter(); 
-                DateTime now = DateTime.Now;
-                String date = now.ToString("dd/MM/yyyy HH:mm:ss");
                 ClinicTableAdapters.AppointmentsTableAdapter da = new ClinicTableAdapters.AppointmentsTableAdapter();
-                Clinic.AppointmentsDataTable dt = da.GetDataByAppointmentTypeDatePatientID((int)cmbPatientIdUpdate.SelectedValue,(DateTime)CmbDateUpdate.SelectedValue,  1);
-                ClinicTableAdapters.WorkersTableAdapter daWorkers = new ClinicTableAdapters.WorkersTableAdapter();
-                TxtBrothersAndSistersUpdate.Text = dt.Rows[0]["BrothersAndSisters"].ToString();
-                TxtFamilyUpdate.Text = dt.Rows[0]["Family"].ToString();
-                TxtReasonUpdate.Text = dt.Rows[0]["Reason"].ToString();
-                TxtPhysicalUpdate.Text = dt.Rows[0]["Physical"].ToString();
-                TxtSocialUpdate.Text = dt.Rows[0]["Social"].ToString();
-                TxtSentByUpdate.Text = dt.Rows[0]["SentBy"].ToString();
-                TxtTraumasUpdate.Text = dt.Rows[0]["Traumas"].ToString();
-                TxtPregnantUpdate.Text = dt.Rows[0]["Pregnant"].ToString();
-                TxtWrittenByUpdate.Text = daWorkers.GetFullNameByID(Int32.Parse(dt.Rows[0]["AddedBy"].ToString()));
-                TxtWrittenByDateUpdate.Text = dt.Rows[0]["AddedByDate"].ToString();
-                TxtHourUpdate.Text = dt.Rows[0]["Hour"].ToString();
-                TxtNotesUpdate.Text = dt.Rows[0]["Notes"].ToString();
-                TxtPsychoUpdate.Text = dt.Rows[0]["Psycho"].ToString();
-                CmbMainTherapistUpdate.SelectedValue = Int32.Parse(dt.Rows[0]["MainTherapist"].ToString());
-                dtDiagnoseForPatients =  daDiagsnoses.GetDataByPatientID((int)cmbPatientIdUpdate.SelectedValue);
-                DgDiagnosesUpdate.DataSource = dtDiagnoseForPatients;
-                DateTime dates = (DateTime) dt.Rows[0]["Date"];
-                if (!DBNull.Value.Equals(dt.Rows[0]["UpdatedByDate"]))
+                Clinic.AppointmentsDataTable dt = da.GetDataByPatientIDAppointmentTypeAndDate((int)cmbPatientIdUpdate.SelectedValue, 1, (DateTime)CmbDateUpdate.SelectedValue);
+                if (dt.Rows.Count > 0)
                 {
-                    dates = (DateTime)dt.Rows[0]["UpdatedByDate"];
-                    TxtUpdatedByDateUpdate.Text = dates.ToString("dd/MM/yyyy");
+                    CmbAppointmenrNumber.DataSource = dt;
 
                 }
-                if (!DBNull.Value.Equals(dt.Rows[0]["UpdatedBy"]))
-                {
-                    TxtUpdatedByUpdate.Text = daWorkers.GetFullNameByID((int)dt.Rows[0]["UpdatedBy"]);
-
-                }
-
+                else
+                    clearAllFields();
 
             }
+            //else
+            //{
+            //    DateTime d = (DateTime)CmbDateUpdate.SelectedValue;
+            //    TxtDateUpdate.Text = d.ToString("dd/MM/yyyy");
+            //    dateBeforeChange = (DateTime)CmbDateUpdate.SelectedValue;
+            //    ClinicTableAdapters.DiagnosesForPatientsTableAdapter daDiagsnoses = new ClinicTableAdapters.DiagnosesForPatientsTableAdapter(); 
+            //    DateTime now = DateTime.Now;
+            //    String date = now.ToString("dd/MM/yyyy HH:mm:ss");
+            //    ClinicTableAdapters.AppointmentsTableAdapter da = new ClinicTableAdapters.AppointmentsTableAdapter();
+            //    Clinic.AppointmentsDataTable dt = da.GetDataByAppointmentTypeDatePatientID((int)cmbPatientIdUpdate.SelectedValue,(DateTime)CmbDateUpdate.SelectedValue,  1);
+            //    ClinicTableAdapters.WorkersTableAdapter daWorkers = new ClinicTableAdapters.WorkersTableAdapter();
+            //    TxtBrothersAndSistersUpdate.Text = dt.Rows[0]["BrothersAndSisters"].ToString();
+            //    TxtFamilyUpdate.Text = dt.Rows[0]["Family"].ToString();
+            //    TxtReasonUpdate.Text = dt.Rows[0]["Reason"].ToString();
+            //    TxtPhysicalUpdate.Text = dt.Rows[0]["Physical"].ToString();
+            //    TxtSocialUpdate.Text = dt.Rows[0]["Social"].ToString();
+            //    TxtSentByUpdate.Text = dt.Rows[0]["SentBy"].ToString();
+            //    TxtTraumasUpdate.Text = dt.Rows[0]["Traumas"].ToString();
+            //    TxtPregnantUpdate.Text = dt.Rows[0]["Pregnant"].ToString();
+            //    TxtWrittenByUpdate.Text = daWorkers.GetFullNameByID(Int32.Parse(dt.Rows[0]["AddedBy"].ToString()));
+            //    TxtWrittenByDateUpdate.Text = dt.Rows[0]["AddedByDate"].ToString();
+            //    TxtHourUpdate.Text = dt.Rows[0]["Hour"].ToString();
+            //    TxtNotesUpdate.Text = dt.Rows[0]["Notes"].ToString();
+            //    TxtPsychoUpdate.Text = dt.Rows[0]["Psycho"].ToString();
+            //    CmbMainTherapistUpdate.SelectedValue = Int32.Parse(dt.Rows[0]["MainTherapist"].ToString());
+            //    dtDiagnoseForPatients =  daDiagsnoses.GetDataByPatientID((int)cmbPatientIdUpdate.SelectedValue);
+            //    DgDiagnosesUpdate.DataSource = dtDiagnoseForPatients;
+            //    DateTime dates = (DateTime) dt.Rows[0]["Date"];
+            //    if (!DBNull.Value.Equals(dt.Rows[0]["UpdatedByDate"]))
+            //    {
+            //        dates = (DateTime)dt.Rows[0]["UpdatedByDate"];
+            //        TxtUpdatedByDateUpdate.Text = dates.ToString("dd/MM/yyyy");
+
+            //    }
+            //    if (!DBNull.Value.Equals(dt.Rows[0]["UpdatedBy"]))
+            //    {
+            //        TxtUpdatedByUpdate.Text = daWorkers.GetFullNameByID((int)dt.Rows[0]["UpdatedBy"]);
+
+            //    }
+
+
+            //}
         }
 
         public void clearAllFields()
@@ -333,7 +355,7 @@ namespace Clinic1
             ClinicTableAdapters.AppointmentsTableAdapter da = new ClinicTableAdapters.AppointmentsTableAdapter();
             ClinicTableAdapters.AppointmentsForPatientsTableAdapter daAPA = new ClinicTableAdapters.AppointmentsForPatientsTableAdapter();
             ClinicTableAdapters.DiagnosesForPatientsTableAdapter daD = new ClinicTableAdapters.DiagnosesForPatientsTableAdapter();
-            Clinic.AppointmentsDataTable dt = da.GetDataByAppointmentTypeDatePatientID((int)cmbPatientIdUpdate.SelectedValue, dateBeforeChange, 1);
+            Clinic.AppointmentsDataTable dt = da.GetDataByAppointmentTypeDatePatientID((int)cmbPatientIdUpdate.SelectedValue, (DateTime) CmbDateUpdate.SelectedValue, 1);
             DateTime rs;
             CultureInfo ci = new CultureInfo("en-IE");
             if (!DateTime.TryParseExact(TxtDateUpdate.Text, "dd/MM/yyyy", ci, DateTimeStyles.None, out rs))
@@ -341,12 +363,8 @@ namespace Clinic1
                 MessageBox.Show("יש להזין תאריך תקין");
                 return;
             }
-            int apNumber;
-            if (da.GetMaxAppointment(1, (int)CmblPatientId.SelectedValue) == null)
-                apNumber = 1;
-            else apNumber = (int)da.GetMaxAppointment(1, (int)CmblPatientId.SelectedValue);
 
-            da.UpdateQuery(apNumber, null, 1, rs, TxtHourUpdate.Text, (int)CmbMainTherapistUpdate.SelectedValue, null, TxtNotesUpdate.Text, null, Globals.ConnectedUserID, DateTime.Now, TxtSentByUpdate.Text,
+            da.UpdateQuery(Int32.Parse(dt.Rows[0]["AppointmentNumber"].ToString()), null, 1, rs, TxtHourUpdate.Text, (int)CmbMainTherapistUpdate.SelectedValue, null, TxtNotesUpdate.Text, null, Globals.ConnectedUserID, DateTime.Now, TxtSentByUpdate.Text,
                 TxtReasonUpdate.Text, TxtBrothersAndSistersUpdate.Text, TxtFamilyUpdate.Text, TxtTraumasUpdate.Text, TxtPregnant.Text, TxtPsychoUpdate.Text, TxtPhysicalUpdate.Text, TxtSocialUpdate.Text, Int32.Parse(dt.Rows[0]["ID"].ToString()));
             daD.Update(dtDiagnoseForPatients);
             MessageBox.Show("טיפול עודכן בהצלחה");
@@ -479,6 +497,80 @@ namespace Clinic1
         private void CmbDateUpdate_SelectedValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnClearFields_Click(object sender, EventArgs e)
+        {
+            TxtBrothersAndSisters.Text = String.Empty;
+            TxtFamily.Text = String.Empty;
+            TxtPhysical.Text = String.Empty;
+            TxtSocial.Text = String.Empty;
+            TxtSentBy.Text = String.Empty;
+            TxtTraumas.Text = String.Empty;
+            TxtFamily.Text = String.Empty;
+            TxtPregnant.Text = String.Empty;
+            TxtReason.Text = String.Empty;
+            TxtWrittenByAdd.Text = String.Empty;
+            TxtWrittenByDateAdd.Text = String.Empty;
+            HourPickerStartAdd.Text = String.Empty;
+            TxtNotes.Text = String.Empty;
+            TxtPhysical.Text = String.Empty;
+        }
+
+        private void CmbAppointmenrNumber_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+              if (CmbDateUpdate.SelectedIndex == -1)
+                return;
+
+            if (CmbDateUpdate.Items.Count == 0)
+                clearAllFields();
+
+
+                ClinicTableAdapters.AppointmentsTableAdapter da = new ClinicTableAdapters.AppointmentsTableAdapter();
+                Clinic.AppointmentsDataTable dt = da.GetDataByPatientIDAppointmentTypeDateAppointmentNumber((int)cmbPatientIdUpdate.SelectedValue, 1, (DateTime)CmbDateUpdate.SelectedValue,(int)CmbAppointmenrNumber.SelectedValue);
+                if (dt.Rows.Count == 0)
+                {
+                clearAllFields();
+            }
+            else
+            {
+   
+                ClinicTableAdapters.DiagnosesForPatientsTableAdapter daDiagsnoses = new ClinicTableAdapters.DiagnosesForPatientsTableAdapter(); 
+                DateTime now = DateTime.Now;
+                String date = now.ToString("dd/MM/yyyy HH:mm:ss");
+                 ClinicTableAdapters.WorkersTableAdapter daWorkers = new ClinicTableAdapters.WorkersTableAdapter();
+                TxtBrothersAndSistersUpdate.Text = dt.Rows[0]["BrothersAndSisters"].ToString();
+                TxtFamilyUpdate.Text = dt.Rows[0]["Family"].ToString();
+                TxtReasonUpdate.Text = dt.Rows[0]["Reason"].ToString();
+                TxtPhysicalUpdate.Text = dt.Rows[0]["Physical"].ToString();
+                TxtSocialUpdate.Text = dt.Rows[0]["Social"].ToString();
+                TxtSentByUpdate.Text = dt.Rows[0]["SentBy"].ToString();
+                TxtTraumasUpdate.Text = dt.Rows[0]["Traumas"].ToString();
+                TxtPregnantUpdate.Text = dt.Rows[0]["Pregnant"].ToString();
+                TxtWrittenByUpdate.Text = daWorkers.GetFullNameByID(Int32.Parse(dt.Rows[0]["AddedBy"].ToString()));
+                TxtWrittenByDateUpdate.Text = dt.Rows[0]["AddedByDate"].ToString();
+                TxtHourUpdate.Text = dt.Rows[0]["Hour"].ToString();
+                TxtNotesUpdate.Text = dt.Rows[0]["Notes"].ToString();
+                TxtPsychoUpdate.Text = dt.Rows[0]["Psycho"].ToString();
+                CmbMainTherapistUpdate.SelectedValue = Int32.Parse(dt.Rows[0]["MainTherapist"].ToString());
+                dtDiagnoseForPatients =  daDiagsnoses.GetDataByPatientID((int)cmbPatientIdUpdate.SelectedValue);
+                DgDiagnosesUpdate.DataSource = dtDiagnoseForPatients;
+                DateTime dates = (DateTime) dt.Rows[0]["Date"];
+                if (!DBNull.Value.Equals(dt.Rows[0]["UpdatedByDate"]))
+                {
+                    dates = (DateTime)dt.Rows[0]["UpdatedByDate"];
+                    TxtUpdatedByDateUpdate.Text = dates.ToString("dd/MM/yyyy");
+
+                }
+                if (!DBNull.Value.Equals(dt.Rows[0]["UpdatedBy"]))
+                {
+                    TxtUpdatedByUpdate.Text = daWorkers.GetFullNameByID((int)dt.Rows[0]["UpdatedBy"]);
+
+                }
+
+
+            }
         }
 
 

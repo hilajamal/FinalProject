@@ -30,6 +30,11 @@ namespace Clinic1
 
      private void AddCols(){
 
+         CmbAppointmentNumber.AutoCompleteMode = AutoCompleteMode.Append;
+         CmbAppointmentNumber.AutoCompleteSource = AutoCompleteSource.ListItems;
+         CmbAppointmentNumber.DisplayMember = "AppointmentNumber";
+         CmbAppointmentNumber.ValueMember = "AppointmentNumber";
+
          DgDiagnosesUpdate.AutoGenerateColumns = false;
          DgDiagnosesAdd.AutoGenerateColumns = false;
          DgMedicine.AutoGenerateColumns = false;
@@ -815,34 +820,72 @@ namespace Clinic1
 
      private void CmbDateUpdate_SelectedIndexChanged(object sender, EventArgs e)
      {
-         if (CmbDateUpdate.Items.Count > 0)
+
+         if (CmbDateUpdate.SelectedIndex == -1)
+             return;
+
+         if (CmbDateUpdate.Items.Count == 0)
+
          {
-             ClinicTableAdapters.AppointmentsTableAdapter daAPA = new ClinicTableAdapters.AppointmentsTableAdapter();
-             ClinicTableAdapters.WorkersTableAdapter daWorkers = new ClinicTableAdapters.WorkersTableAdapter();
-             Clinic.AppointmentsDataTable dt = daAPA.GetDataByAppointmentTypeDatePatientID((int)CmbPatientIDUpdate.SelectedValue, (DateTime)CmbDateUpdate.SelectedValue, 6);
-             TxtNotesUpdate.Text = dt.Rows[0]["Notes"].ToString();
-             TxtWrittenByUpdate.Text = daWorkers.GetFullNameByID(Int32.Parse(dt.Rows[0]["AddedBy"].ToString()));
-             TxtWrittenByDateUpdate.Text = dt.Rows[0]["Date"].ToString();
-             DateTime d = (DateTime)dt.Rows[0]["AddedByDate"];
-             TxtDateUpdate.Text = d.ToString("dd/MM/yyyy");
-             HourUpdate.Text = dt.Rows[0]["Hour"].ToString();
 
-             CmbTherapistUpdate.SelectedValue = Int32.Parse(dt.Rows[0]["MainTherapist"].ToString());
-             DateTime Dates = new DateTime();
-             //HourPickerUpdate.va
-             if (!DBNull.Value.Equals(dt.Rows[0]["UpdatedByDate"]))
-             {
-                 Dates = (DateTime)dt.Rows[0]["UpdatedByDate"];
-                 TxtUpdatedByDate.Text = Dates.ToString("dd/MM/yyyy");
-
-             }
-             if (!DBNull.Value.Equals(dt.Rows[0]["UpdatedBy"]))
-             {
-                 TxtUpdatedBy.Text = daWorkers.GetFullNameByID((int)dt.Rows[0]["UpdatedBy"]);
-
-             }
+             TxtNotesUpdate.Text = String.Empty;
+             TxtWrittenByDateUpdate.Text = String.Empty;
+             TxtWrittenByUpdate.Text = String.Empty;
+             TxtUpdatedBy.Text = String.Empty;
+             TxtUpdatedByDate.Text = String.Empty;
+             return;
+         
+         
          }
-         else TxtNotesUpdate.Text = String.Empty;
+         else
+         {
+             ClinicTableAdapters.AppointmentsTableAdapter da = new ClinicTableAdapters.AppointmentsTableAdapter();
+             Clinic.AppointmentsDataTable dt = da.GetDataByPatientIDAppointmentTypeAndDate((int)CmbPatientIDUpdate.SelectedValue, 6, (DateTime)CmbDateUpdate.SelectedValue);
+             if (dt.Rows.Count == 0)
+             {
+
+                 TxtNotesUpdate.Text = String.Empty;
+                 TxtWrittenByDateUpdate.Text = String.Empty;
+                 TxtWrittenByUpdate.Text = String.Empty;
+                 TxtUpdatedBy.Text = String.Empty;
+                 TxtUpdatedByDate.Text = String.Empty;
+
+             }
+             else
+                 CmbAppointmentNumber.DataSource = dt;
+             DateTime d = (DateTime)CmbDateUpdate.SelectedValue;
+             TxtDateUpdate.Text = d.ToString("dd/MM/yyyy");
+
+         }
+
+         //if (CmbDateUpdate.Items.Count > 0)
+         //{
+         //    ClinicTableAdapters.AppointmentsTableAdapter daAPA = new ClinicTableAdapters.AppointmentsTableAdapter();
+         //    ClinicTableAdapters.WorkersTableAdapter daWorkers = new ClinicTableAdapters.WorkersTableAdapter();
+         //    Clinic.AppointmentsDataTable dt = daAPA.GetDataByAppointmentTypeDatePatientID((int)CmbPatientIDUpdate.SelectedValue, (DateTime)CmbDateUpdate.SelectedValue, 6);
+         //    TxtNotesUpdate.Text = dt.Rows[0]["Notes"].ToString();
+         //    TxtWrittenByUpdate.Text = daWorkers.GetFullNameByID(Int32.Parse(dt.Rows[0]["AddedBy"].ToString()));
+         //    TxtWrittenByDateUpdate.Text = dt.Rows[0]["Date"].ToString();
+         //    DateTime d = (DateTime)dt.Rows[0]["AddedByDate"];
+         //    TxtDateUpdate.Text = d.ToString("dd/MM/yyyy");
+         //    HourUpdate.Text = dt.Rows[0]["Hour"].ToString();
+
+         //    CmbTherapistUpdate.SelectedValue = Int32.Parse(dt.Rows[0]["MainTherapist"].ToString());
+         //    DateTime Dates = new DateTime();
+         //    //HourPickerUpdate.va
+         //    if (!DBNull.Value.Equals(dt.Rows[0]["UpdatedByDate"]))
+         //    {
+         //        Dates = (DateTime)dt.Rows[0]["UpdatedByDate"];
+         //        TxtUpdatedByDate.Text = Dates.ToString("dd/MM/yyyy");
+
+         //    }
+         //    if (!DBNull.Value.Equals(dt.Rows[0]["UpdatedBy"]))
+         //    {
+         //        TxtUpdatedBy.Text = daWorkers.GetFullNameByID((int)dt.Rows[0]["UpdatedBy"]);
+
+         //    }
+         //}
+         //else TxtNotesUpdate.Text = String.Empty;
      }
 
      private void DgMedicineUpdate_DefaultValuesNeeded(object sender, DataGridViewRowEventArgs e)
@@ -899,15 +942,10 @@ namespace Clinic1
          TimeSpan st = new TimeSpan(dt.Hour, dt.Minute, dt.Second);
          DateTime now = DateTime.Now;
 
-         int Number;
-         if (da.GetMaxAppointment(6,(int)CmblPatientIdAdd.SelectedValue) == null)
-             Number = 1;
-         else
-             Number = (Int32.Parse(da.GetMaxAppointment(6,(int)CmblPatientIdAdd.SelectedValue).ToString())) + 1;
 
          Clinic.AppointmentsDataTable dtToAdd = da.GetDataByAppointmentTypeDatePatientID((int)CmbPatientIDUpdate.SelectedValue, (DateTime)CmbDateUpdate.SelectedValue, 6);
 
-         da.UpdateQuery(Number, null, 6, rs, st.ToString(), (int)CmbTherapistUpdate.SelectedValue, null, TxtNotesUpdate.Text, null, Globals.ConnectedUserID, now, null, null, null, null, null, null, null, null, null, Int32.Parse(dtToAdd.Rows[0]["ID"].ToString()));
+         da.UpdateQuery(Int32.Parse(dtToAdd.Rows[0]["AppointmentNumber"].ToString()), null, 6, rs, st.ToString(), (int)CmbTherapistUpdate.SelectedValue, null, TxtNotesUpdate.Text, null, Globals.ConnectedUserID, now, null, null, null, null, null, null, null, null, null, Int32.Parse(dtToAdd.Rows[0]["ID"].ToString()));
          MessageBox.Show("טיפול עודכן בהצלחה");
 
          ClinicTableAdapters.DiagnosesForPatientsTableAdapter daDiagnose = new ClinicTableAdapters.DiagnosesForPatientsTableAdapter();
@@ -961,6 +999,37 @@ namespace Clinic1
      private void HourUpdate_ValueChanged(object sender, EventArgs e)
      {
 
+     }
+
+     private void CmbAppointmentNumber_SelectedIndexChanged(object sender, EventArgs e)
+     {
+         if (CmbAppointmentNumber.Items.Count > 0)
+         {
+             ClinicTableAdapters.AppointmentsTableAdapter daAPA = new ClinicTableAdapters.AppointmentsTableAdapter();
+             ClinicTableAdapters.WorkersTableAdapter daWorkers = new ClinicTableAdapters.WorkersTableAdapter();
+             Clinic.AppointmentsDataTable dt = daAPA.GetDataByPatientIDAppointmentTypeDateAppointmentNumber((int)CmbPatientIDUpdate.SelectedValue,6, (DateTime)CmbDateUpdate.SelectedValue, (int)CmbAppointmentNumber.SelectedValue);
+             TxtNotesUpdate.Text = dt.Rows[0]["Notes"].ToString();
+             TxtWrittenByUpdate.Text = daWorkers.GetFullNameByID(Int32.Parse(dt.Rows[0]["AddedBy"].ToString()));
+             TxtWrittenByDateUpdate.Text = dt.Rows[0]["Date"].ToString();
+             DateTime d = (DateTime)dt.Rows[0]["AddedByDate"];
+             TxtDateUpdate.Text = d.ToString("dd/MM/yyyy");
+             HourUpdate.Text = dt.Rows[0]["Hour"].ToString();
+
+             CmbTherapistUpdate.SelectedValue = Int32.Parse(dt.Rows[0]["MainTherapist"].ToString());
+             DateTime Dates = new DateTime();
+             //HourPickerUpdate.va
+             if (!DBNull.Value.Equals(dt.Rows[0]["UpdatedByDate"]))
+             {
+                 Dates = (DateTime)dt.Rows[0]["UpdatedByDate"];
+                 TxtUpdatedByDate.Text = Dates.ToString("dd/MM/yyyy");
+
+             }
+             if (!DBNull.Value.Equals(dt.Rows[0]["UpdatedBy"]))
+             {
+                 TxtUpdatedBy.Text = daWorkers.GetFullNameByID((int)dt.Rows[0]["UpdatedBy"]);
+
+             }
+         }
      }
 
 

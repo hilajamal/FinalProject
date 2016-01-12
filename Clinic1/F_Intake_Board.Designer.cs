@@ -30,6 +30,9 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.TxtIntakeBoardLeft = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.TxtDateAdd = new System.Windows.Forms.MaskedTextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.HourPickerAdd = new System.Windows.Forms.DateTimePicker();
@@ -49,6 +52,8 @@
             this.LblPatientName = new System.Windows.Forms.Label();
             this.LblPatientId = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.TxtDateUpdate = new System.Windows.Forms.MaskedTextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.CmbDateUpdate = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -72,7 +77,8 @@
             this.CmbPatientIDUpdate = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.TxtDateAdd = new System.Windows.Forms.MaskedTextBox();
+            this.TxtLastIntakeBoard = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -96,6 +102,10 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage1.Controls.Add(this.TxtLastIntakeBoard);
+            this.tabPage1.Controls.Add(this.label20);
+            this.tabPage1.Controls.Add(this.TxtIntakeBoardLeft);
+            this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.TxtDateAdd);
             this.tabPage1.Controls.Add(this.label15);
             this.tabPage1.Controls.Add(this.label16);
@@ -124,6 +134,39 @@
             this.tabPage1.Size = new System.Drawing.Size(764, 408);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "ועדות לביצוע";
+            // 
+            // TxtIntakeBoardLeft
+            // 
+            this.TxtIntakeBoardLeft.AutoSize = true;
+            this.TxtIntakeBoardLeft.Font = new System.Drawing.Font("David", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIntakeBoardLeft.ForeColor = System.Drawing.Color.Red;
+            this.TxtIntakeBoardLeft.Location = new System.Drawing.Point(166, 59);
+            this.TxtIntakeBoardLeft.Name = "TxtIntakeBoardLeft";
+            this.TxtIntakeBoardLeft.Size = new System.Drawing.Size(17, 19);
+            this.TxtIntakeBoardLeft.TabIndex = 199;
+            this.TxtIntakeBoardLeft.Text = "5";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("David", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Red;
+            this.label13.Location = new System.Drawing.Point(74, 37);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(195, 19);
+            this.label13.TabIndex = 198;
+            this.label13.Text = "סך ועדות ממתינות לביצוע:";
+            // 
+            // TxtDateAdd
+            // 
+            this.TxtDateAdd.BackColor = System.Drawing.Color.Gainsboro;
+            this.TxtDateAdd.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtDateAdd.Location = new System.Drawing.Point(366, 11);
+            this.TxtDateAdd.Mask = "##/##/####";
+            this.TxtDateAdd.Name = "TxtDateAdd";
+            this.TxtDateAdd.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.TxtDateAdd.Size = new System.Drawing.Size(89, 23);
+            this.TxtDateAdd.TabIndex = 197;
             // 
             // label15
             // 
@@ -331,6 +374,8 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage2.Controls.Add(this.TxtDateUpdate);
+            this.tabPage2.Controls.Add(this.label18);
             this.tabPage2.Controls.Add(this.label17);
             this.tabPage2.Controls.Add(this.CmbDateUpdate);
             this.tabPage2.Controls.Add(this.label11);
@@ -362,6 +407,27 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "עדכון ועדות";
             // 
+            // TxtDateUpdate
+            // 
+            this.TxtDateUpdate.BackColor = System.Drawing.Color.Gainsboro;
+            this.TxtDateUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtDateUpdate.Location = new System.Drawing.Point(580, 149);
+            this.TxtDateUpdate.Name = "TxtDateUpdate";
+            this.TxtDateUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.TxtDateUpdate.Size = new System.Drawing.Size(89, 23);
+            this.TxtDateUpdate.TabIndex = 211;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label18.Location = new System.Drawing.Point(675, 151);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(85, 16);
+            this.label18.TabIndex = 210;
+            this.label18.Text = "תאריך חדש:";
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -390,7 +456,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(679, 151);
+            this.label11.Location = new System.Drawing.Point(544, 153);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(36, 16);
             this.label11.TabIndex = 186;
@@ -400,7 +466,7 @@
             // 
             this.HourPickerUpdate.AllowDrop = true;
             this.HourPickerUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HourPickerUpdate.Location = new System.Drawing.Point(586, 147);
+            this.HourPickerUpdate.Location = new System.Drawing.Point(451, 149);
             this.HourPickerUpdate.Name = "HourPickerUpdate";
             this.HourPickerUpdate.Size = new System.Drawing.Size(89, 23);
             this.HourPickerUpdate.TabIndex = 184;
@@ -410,7 +476,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(378, 170);
+            this.label10.Location = new System.Drawing.Point(364, 171);
             this.label10.Name = "label10";
             this.label10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label10.Size = new System.Drawing.Size(84, 16);
@@ -623,16 +689,28 @@
             this.label4.TabIndex = 120;
             this.label4.Text = "ת.ז. מטופל";
             // 
-            // TxtDateAdd
+            // TxtLastIntakeBoard
             // 
-            this.TxtDateAdd.BackColor = System.Drawing.Color.Gainsboro;
-            this.TxtDateAdd.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDateAdd.Location = new System.Drawing.Point(366, 11);
-            this.TxtDateAdd.Mask = "##/##/####";
-            this.TxtDateAdd.Name = "TxtDateAdd";
-            this.TxtDateAdd.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.TxtDateAdd.Size = new System.Drawing.Size(89, 23);
-            this.TxtDateAdd.TabIndex = 197;
+            this.TxtLastIntakeBoard.AutoSize = true;
+            this.TxtLastIntakeBoard.Font = new System.Drawing.Font("David", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtLastIntakeBoard.ForeColor = System.Drawing.Color.Red;
+            this.TxtLastIntakeBoard.Location = new System.Drawing.Point(92, 105);
+            this.TxtLastIntakeBoard.Name = "TxtLastIntakeBoard";
+            this.TxtLastIntakeBoard.Size = new System.Drawing.Size(17, 19);
+            this.TxtLastIntakeBoard.TabIndex = 201;
+            this.TxtLastIntakeBoard.Text = "5";
+            this.TxtLastIntakeBoard.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("David", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.Red;
+            this.label20.Location = new System.Drawing.Point(70, 84);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(220, 19);
+            this.label20.TabIndex = 200;
+            this.label20.Text = "ועדה אחרונה נעשתה בתאריך:";
             // 
             // F_Intake_Board
             // 
@@ -700,5 +778,11 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ComboBox CmbDateUpdate;
         private System.Windows.Forms.MaskedTextBox TxtDateAdd;
+        private System.Windows.Forms.MaskedTextBox TxtDateUpdate;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label TxtIntakeBoardLeft;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label TxtLastIntakeBoard;
+        private System.Windows.Forms.Label label20;
     }
 }

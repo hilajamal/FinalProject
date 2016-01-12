@@ -41,6 +41,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TabGroupsMeetings = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.TxtDateAdd = new System.Windows.Forms.MaskedTextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.CmbSecondTherapistAdd = new System.Windows.Forms.ComboBox();
@@ -67,6 +69,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.BtnAddNewMeeting = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label21 = new System.Windows.Forms.Label();
             this.DgPatientsUpdate = new System.Windows.Forms.DataGridView();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -97,10 +100,9 @@
             this.LblGroupNumber = new System.Windows.Forms.Label();
             this.BtnUpdateMeeting = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.TxtDateAdd = new System.Windows.Forms.MaskedTextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.CmbDateUpdate = new System.Windows.Forms.ComboBox();
             this.TxtDateUpdate = new System.Windows.Forms.MaskedTextBox();
-            this.label21 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
             this.TabGroupsMeetings.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgPatientsAdd)).BeginInit();
@@ -162,6 +164,28 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "הוספת טיפול";
             // 
+            // TxtDateAdd
+            // 
+            this.TxtDateAdd.BackColor = System.Drawing.Color.Gainsboro;
+            this.TxtDateAdd.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtDateAdd.Location = new System.Drawing.Point(684, 100);
+            this.TxtDateAdd.Mask = "##/##/####";
+            this.TxtDateAdd.Name = "TxtDateAdd";
+            this.TxtDateAdd.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.TxtDateAdd.Size = new System.Drawing.Size(89, 23);
+            this.TxtDateAdd.TabIndex = 199;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label13.Location = new System.Drawing.Point(775, 102);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(47, 16);
+            this.label13.TabIndex = 198;
+            this.label13.Text = "תאריך";
+            // 
             // label23
             // 
             this.label23.AutoSize = true;
@@ -187,23 +211,23 @@
             // CmbSecondTherapistAdd
             // 
             this.CmbSecondTherapistAdd.BackColor = System.Drawing.Color.Gainsboro;
-            this.CmbSecondTherapistAdd.Font = new System.Drawing.Font("David", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CmbSecondTherapistAdd.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbSecondTherapistAdd.FormattingEnabled = true;
             this.CmbSecondTherapistAdd.Location = new System.Drawing.Point(439, 70);
             this.CmbSecondTherapistAdd.Name = "CmbSecondTherapistAdd";
             this.CmbSecondTherapistAdd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CmbSecondTherapistAdd.Size = new System.Drawing.Size(124, 21);
+            this.CmbSecondTherapistAdd.Size = new System.Drawing.Size(124, 24);
             this.CmbSecondTherapistAdd.TabIndex = 113;
             // 
             // CmbMainTherapistAdd
             // 
             this.CmbMainTherapistAdd.BackColor = System.Drawing.Color.Gainsboro;
-            this.CmbMainTherapistAdd.Font = new System.Drawing.Font("David", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CmbMainTherapistAdd.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbMainTherapistAdd.FormattingEnabled = true;
             this.CmbMainTherapistAdd.Location = new System.Drawing.Point(439, 39);
             this.CmbMainTherapistAdd.Name = "CmbMainTherapistAdd";
             this.CmbMainTherapistAdd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CmbMainTherapistAdd.Size = new System.Drawing.Size(124, 21);
+            this.CmbMainTherapistAdd.Size = new System.Drawing.Size(124, 24);
             this.CmbMainTherapistAdd.TabIndex = 112;
             // 
             // label11
@@ -221,12 +245,12 @@
             // CmbMeetingTypeAdd
             // 
             this.CmbMeetingTypeAdd.BackColor = System.Drawing.Color.Gainsboro;
-            this.CmbMeetingTypeAdd.Font = new System.Drawing.Font("David", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CmbMeetingTypeAdd.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbMeetingTypeAdd.FormattingEnabled = true;
             this.CmbMeetingTypeAdd.Location = new System.Drawing.Point(439, 9);
             this.CmbMeetingTypeAdd.Name = "CmbMeetingTypeAdd";
             this.CmbMeetingTypeAdd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CmbMeetingTypeAdd.Size = new System.Drawing.Size(124, 21);
+            this.CmbMeetingTypeAdd.Size = new System.Drawing.Size(124, 24);
             this.CmbMeetingTypeAdd.TabIndex = 108;
             // 
             // label19
@@ -404,11 +428,11 @@
             // txtMeetingNumberAdd
             // 
             this.txtMeetingNumberAdd.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtMeetingNumberAdd.Enabled = false;
-            this.txtMeetingNumberAdd.Font = new System.Drawing.Font("David", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMeetingNumberAdd.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMeetingNumberAdd.Location = new System.Drawing.Point(649, 71);
             this.txtMeetingNumberAdd.Name = "txtMeetingNumberAdd";
-            this.txtMeetingNumberAdd.Size = new System.Drawing.Size(124, 20);
+            this.txtMeetingNumberAdd.ReadOnly = true;
+            this.txtMeetingNumberAdd.Size = new System.Drawing.Size(124, 23);
             this.txtMeetingNumberAdd.TabIndex = 84;
             this.txtMeetingNumberAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -426,23 +450,23 @@
             // CmbGroupNameAdd
             // 
             this.CmbGroupNameAdd.BackColor = System.Drawing.Color.Gainsboro;
-            this.CmbGroupNameAdd.Font = new System.Drawing.Font("David", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CmbGroupNameAdd.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbGroupNameAdd.FormattingEnabled = true;
             this.CmbGroupNameAdd.Location = new System.Drawing.Point(650, 39);
             this.CmbGroupNameAdd.Name = "CmbGroupNameAdd";
             this.CmbGroupNameAdd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CmbGroupNameAdd.Size = new System.Drawing.Size(124, 21);
+            this.CmbGroupNameAdd.Size = new System.Drawing.Size(124, 24);
             this.CmbGroupNameAdd.TabIndex = 82;
             // 
             // CmbGroupIDAdd
             // 
             this.CmbGroupIDAdd.BackColor = System.Drawing.Color.Gainsboro;
-            this.CmbGroupIDAdd.Font = new System.Drawing.Font("David", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CmbGroupIDAdd.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbGroupIDAdd.FormattingEnabled = true;
             this.CmbGroupIDAdd.Location = new System.Drawing.Point(650, 8);
             this.CmbGroupIDAdd.Name = "CmbGroupIDAdd";
             this.CmbGroupIDAdd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CmbGroupIDAdd.Size = new System.Drawing.Size(124, 21);
+            this.CmbGroupIDAdd.Size = new System.Drawing.Size(124, 24);
             this.CmbGroupIDAdd.TabIndex = 81;
             this.CmbGroupIDAdd.SelectedIndexChanged += new System.EventHandler(this.CmbGroupIDAdd_SelectedIndexChanged);
             // 
@@ -485,6 +509,8 @@
             // 
             this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPage2.Controls.Add(this.TxtDateUpdate);
+            this.tabPage2.Controls.Add(this.label27);
+            this.tabPage2.Controls.Add(this.CmbDateUpdate);
             this.tabPage2.Controls.Add(this.label21);
             this.tabPage2.Controls.Add(this.DgPatientsUpdate);
             this.tabPage2.Controls.Add(this.label25);
@@ -522,6 +548,17 @@
             this.tabPage2.Size = new System.Drawing.Size(864, 563);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "עדכון טיפול";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label21.Location = new System.Drawing.Point(774, 77);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(47, 16);
+            this.label21.TabIndex = 200;
+            this.label21.Text = "תאריך";
             // 
             // DgPatientsUpdate
             // 
@@ -621,7 +658,7 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label22.Location = new System.Drawing.Point(777, 143);
+            this.label22.Location = new System.Drawing.Point(632, 143);
             this.label22.Name = "label22";
             this.label22.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label22.Size = new System.Drawing.Size(42, 16);
@@ -638,6 +675,7 @@
             this.CmbMeetingTypeUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbMeetingTypeUpdate.Size = new System.Drawing.Size(124, 24);
             this.CmbMeetingTypeUpdate.TabIndex = 116;
+            this.CmbMeetingTypeUpdate.SelectedIndexChanged += new System.EventHandler(this.CmbMeetingTypeUpdate_SelectedIndexChanged);
             // 
             // label20
             // 
@@ -801,7 +839,7 @@
             // HourPickerStartUpdate
             // 
             this.HourPickerStartUpdate.AllowDrop = true;
-            this.HourPickerStartUpdate.Location = new System.Drawing.Point(692, 139);
+            this.HourPickerStartUpdate.Location = new System.Drawing.Point(547, 139);
             this.HourPickerStartUpdate.Name = "HourPickerStartUpdate";
             this.HourPickerStartUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.HourPickerStartUpdate.Size = new System.Drawing.Size(80, 23);
@@ -812,7 +850,7 @@
             this.CmbMeetingNumberUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.CmbMeetingNumberUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbMeetingNumberUpdate.FormattingEnabled = true;
-            this.CmbMeetingNumberUpdate.Location = new System.Drawing.Point(648, 76);
+            this.CmbMeetingNumberUpdate.Location = new System.Drawing.Point(648, 106);
             this.CmbMeetingNumberUpdate.Name = "CmbMeetingNumberUpdate";
             this.CmbMeetingNumberUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbMeetingNumberUpdate.Size = new System.Drawing.Size(124, 24);
@@ -824,7 +862,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(778, 78);
+            this.label4.Location = new System.Drawing.Point(778, 108);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 16);
             this.label4.TabIndex = 85;
@@ -893,49 +931,38 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // TxtDateAdd
+            // CmbDateUpdate
             // 
-            this.TxtDateAdd.BackColor = System.Drawing.Color.Gainsboro;
-            this.TxtDateAdd.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDateAdd.Location = new System.Drawing.Point(684, 100);
-            this.TxtDateAdd.Mask = "##/##/####";
-            this.TxtDateAdd.Name = "TxtDateAdd";
-            this.TxtDateAdd.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.TxtDateAdd.Size = new System.Drawing.Size(89, 23);
-            this.TxtDateAdd.TabIndex = 199;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label13.Location = new System.Drawing.Point(775, 102);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(47, 16);
-            this.label13.TabIndex = 198;
-            this.label13.Text = "תאריך";
+            this.CmbDateUpdate.BackColor = System.Drawing.Color.Gainsboro;
+            this.CmbDateUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CmbDateUpdate.FormattingEnabled = true;
+            this.CmbDateUpdate.Location = new System.Drawing.Point(648, 74);
+            this.CmbDateUpdate.Name = "CmbDateUpdate";
+            this.CmbDateUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.CmbDateUpdate.Size = new System.Drawing.Size(124, 24);
+            this.CmbDateUpdate.TabIndex = 201;
+            this.CmbDateUpdate.SelectedIndexChanged += new System.EventHandler(this.CmbDateUpdate_SelectedIndexChanged);
             // 
             // TxtDateUpdate
             // 
             this.TxtDateUpdate.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtDateUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDateUpdate.Location = new System.Drawing.Point(683, 108);
-            this.TxtDateUpdate.Mask = "##/##/####";
+            this.TxtDateUpdate.Location = new System.Drawing.Point(683, 138);
             this.TxtDateUpdate.Name = "TxtDateUpdate";
             this.TxtDateUpdate.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.TxtDateUpdate.Size = new System.Drawing.Size(89, 23);
-            this.TxtDateUpdate.TabIndex = 201;
+            this.TxtDateUpdate.TabIndex = 203;
             // 
-            // label21
+            // label27
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label21.Location = new System.Drawing.Point(774, 110);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(47, 16);
-            this.label21.TabIndex = 200;
-            this.label21.Text = "תאריך";
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label27.Location = new System.Drawing.Point(774, 141);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(85, 16);
+            this.label27.TabIndex = 202;
+            this.label27.Text = "תאריך חדש:";
             // 
             // F_GroupsMeetings
             // 
@@ -1020,7 +1047,9 @@
         private System.Windows.Forms.DataGridView DgPatientsUpdate;
         private System.Windows.Forms.MaskedTextBox TxtDateAdd;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.MaskedTextBox TxtDateUpdate;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.ComboBox CmbDateUpdate;
+        private System.Windows.Forms.MaskedTextBox TxtDateUpdate;
+        private System.Windows.Forms.Label label27;
     }
 }

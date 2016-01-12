@@ -14,7 +14,6 @@ namespace Clinic1
 {
     public partial class F_Intake_Board : Form
     {
-        String dateBeforeChange;
         public F_Intake_Board()
         {
             InitializeComponent();
@@ -149,7 +148,6 @@ namespace Clinic1
 
         private void CmbDateUpdate_SelectedIndexChanged(object sender, EventArgs e)
         {
-            dateBeforeChange = CmbDateUpdate.SelectedValue.ToString();
             ClinicTableAdapters.IntakeBoardTableAdapter da = new ClinicTableAdapters.IntakeBoardTableAdapter();
             Clinic.IntakeBoardDataTable dt = da.GetDataByPatientIDAndDate((int)CmbPatientIDUpdate.SelectedValue,(DateTime) CmbDateUpdate.SelectedValue);
             TxtnotesUpdate.Text = dt.Rows[0]["Notes"].ToString();
@@ -160,20 +158,29 @@ namespace Clinic1
             TxtUpdatedByUpdate.Text = dt.Rows[0]["UpdatedBy"].ToString();
             CmbMainTherapistUpdate.SelectedValue = Int32.Parse(dt.Rows[0]["MainTherapist"].ToString());
             CmbSecondTherapistUpdate.SelectedValue = Int32.Parse(dt.Rows[0]["SecondTherapist"].ToString());
+            DateTime d = (DateTime)CmbDateUpdate.SelectedValue;
+            TxtDateUpdate.Text = d.ToString("dd/MM/yyyy");
         }
 
         private void BtnSaveUpdates_Click(object sender, EventArgs e)
         {
-            DateTime date1 = DateTime.Parse(dateBeforeChange);
-            DateTime date2 = DateTime.Parse(CmbDateUpdate.Text);
+
+            DateTime rs;
+            CultureInfo ci = new CultureInfo("en-IE");
+            if (!DateTime.TryParseExact(TxtDateUpdate.Text, "dd/MM/yyyy", ci, DateTimeStyles.None, out rs))
+            {
+                MessageBox.Show("יש להזין תאריך תקין");
+                return;
+            }
+
 
             DateTime now = DateTime.Now;
             DateTime dt = HourPickerAdd.Value;
             TimeSpan st = new TimeSpan(dt.Hour, dt.Minute, dt.Second);
             ClinicTableAdapters.IntakeBoardTableAdapter da = new ClinicTableAdapters.IntakeBoardTableAdapter();
-            Clinic.IntakeBoardDataTable dts = da.GetDataByPatientIDAndDate((int)CmbPatientIDUpdate.SelectedValue, date1);
+            Clinic.IntakeBoardDataTable dts = da.GetDataByPatientIDAndDate((int)CmbPatientIDUpdate.SelectedValue, (DateTime)CmbDateUpdate.SelectedValue);
 
-            da.UpdateQuery((int)CmbMainTherapistUpdate.SelectedValue, (int)CmbSecondTherapistUpdate.SelectedValue, date2, st.ToString(), TxtnotesUpdate.Text, Globals.ConnectedUserID, now, Int32.Parse(dts.Rows[0]["ID"].ToString()));
+            da.UpdateQuery((int)CmbMainTherapistUpdate.SelectedValue, (int)CmbSecondTherapistUpdate.SelectedValue, rs, st.ToString(), TxtnotesUpdate.Text, Globals.ConnectedUserID, now, Int32.Parse(dts.Rows[0]["ID"].ToString()));
             MessageBox.Show("עדכון בוצע בהצלחה");
             int lastIndex = CmbPatientIDUpdate.SelectedIndex;
             CmbPatientIDUpdate.SelectedIndex = -1;
@@ -195,6 +202,9 @@ namespace Clinic1
         {
             TxtWrittenByAdd.Text = Globals.ConnectedUserName;
             TxtWrittenByDateAdd.Text = DateTime.Now.ToString();
+            TxtIntakeBoardLeft.Text = CmblPatientIdAdd.Items.Count.ToString();
+            ClinicTableAdapters.IntakeBoardTableAdapter da = new ClinicTableAdapters.IntakeBoardTableAdapter();
+            TxtLastIntakeBoard.Text = da.GetLastIntakeBoardDate().ToString();
         }
 
 

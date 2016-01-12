@@ -139,8 +139,14 @@ namespace Clinic1
                     MessageBox.Show("מטופל בעל תעודת זהות זו כבר קיים במערכת");
                     return;
                 }
-           
-                DateTime dt = DateTime.ParseExact(TxtBirthDate.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+
+                DateTime rs;
+                CultureInfo ci = new CultureInfo("en-IE");
+                if (!DateTime.TryParseExact(this.TxtBirthDate.Text, "dd/MM/yyyy", ci, DateTimeStyles.None, out rs))
+                {
+                    MessageBox.Show("יש להזין תאריך לידה תקין");
+                    return;
+                }
                 int streetNum = 0;
                 if(Int32.TryParse(TxtStreetNumber.Text, out streetNum))
                     streetNum = Int32.Parse(TxtStreetNumber.Text);
@@ -175,7 +181,7 @@ namespace Clinic1
                 int race = (int)CmbRace.SelectedValue;
                 string apotropus =TxtApotropus.Text.ToString();
                ClinicTableAdapters.PatientsTableAdapter da = new ClinicTableAdapters.PatientsTableAdapter();
-                da.Insert(id, firstname, lastname, fullName, father, mother, country, gender, city, street, streetNum, zipCode, email, phonehome, phonecellular, phonework, phonefather, phonemother, phoneanother, phonecontact, null, null, insurence, familydoctor, notes, race, apotropus, dt,false,null,false,null);
+                da.Insert(id, firstname, lastname, fullName, father, mother, country, gender, city, street, streetNum, zipCode, email, phonehome, phonecellular, phonework, phonefather, phonemother, phoneanother, phonecontact, null, null, insurence, familydoctor, notes, race, apotropus, rs,false,null,false,null);
                 MessageBox.Show("מטופל נוסף בהצלחה");
 
 
@@ -480,6 +486,8 @@ namespace Clinic1
             CmbGenderUpdate.SelectedValue = Int32.Parse(dr["Gender"].ToString());
             TxtNotesUpdate.Text = dr["Notes"].ToString();
             TxtEmailUpdate.Text = dr["Email"].ToString();
+             DateTime d = (DateTime) dr["BirthDay"];
+            TxtBirthDateUpdate.Text = d.ToString("dd/MM/yyyy");
 
         }
 
@@ -487,6 +495,13 @@ namespace Clinic1
         {
             if (validateFieldsUpdate())
             {
+                DateTime rs;
+                CultureInfo ci = new CultureInfo("en-IE");
+                if (!DateTime.TryParseExact(this.TxtBirthDateUpdate.Text, "dd/MM/yyyy", ci, DateTimeStyles.None, out rs))
+                {
+                    MessageBox.Show("יש להזין תאריך לידה תקין");
+                    return;
+                }
 
                 int streetNum = 0;
                 if (Int32.TryParse(TxtStreetNumber.Text, out streetNum))
@@ -527,8 +542,8 @@ namespace Clinic1
 
 
                 ClinicTableAdapters.PatientsTableAdapter da = new ClinicTableAdapters.PatientsTableAdapter();
-                da.UpdateQuery(id, firstname, lastname, fullName, father, mother, country, gender, city, street, streetNum, zipCode, email, phonehome, phonecellular, phonework, phonefather, phonemother, phoneanother, phonecontact, null, null, insurence, familydoctor, notes, race, apotropus, TxtBirthDateUpdate.Text, OriginalID);
-
+                da.UpdateQuery(id, firstname, lastname, fullName, father, mother, country, gender, city, street, streetNum, zipCode, email, phonehome, phonecellular, phonework, phonefather, phonemother, phoneanother, phonecontact, null, null, insurence, familydoctor, notes, race, apotropus,rs, OriginalID);
+                MessageBox.Show("פרטי מטופל עודכנו בהצלחה");
 
 
 
