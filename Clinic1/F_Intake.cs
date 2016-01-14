@@ -23,6 +23,13 @@ namespace Clinic1
 
         public void addCols()
         {
+
+
+            CmbIntakeNumber.AutoCompleteMode = AutoCompleteMode.Append;
+            CmbIntakeNumber.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CmbIntakeNumber.DisplayMember = "AppointmentNumber";
+            CmbIntakeNumber.ValueMember = "AppointmentNumber";
+
             DgDiagnosesUpdate.AutoGenerateColumns = false;
             TxtWrittenByDateAdd.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
             TxtWrittenByAdd.Text = Globals.ConnectedUserName;
@@ -38,42 +45,36 @@ namespace Clinic1
             Clinic.PatientsDataTable dtPatients = daPatients.GetData();
            
             //PatientsIDAdd
-            CmblPatientId.DataSource = dtPatients;
-            CmblPatientId.AutoCompleteMode = AutoCompleteMode.Append;
-            CmblPatientId.AutoCompleteSource = AutoCompleteSource.ListItems;
-            CmblPatientId.DisplayMember = "ID";
-            CmblPatientId.ValueMember = "ID";
-            CmblPatientId.SelectedIndex = 0;
-
-            //PatientsNameAdd
-            CmbPatientName.DataSource = dtPatients;
             CmbPatientName.AutoCompleteMode = AutoCompleteMode.Append;
             CmbPatientName.AutoCompleteSource = AutoCompleteSource.ListItems;
             CmbPatientName.DisplayMember = "FullName";
             CmbPatientName.ValueMember = "ID";
+            CmblPatientId.AutoCompleteMode = AutoCompleteMode.Append;
+            CmblPatientId.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CmblPatientId.DisplayMember = "ID";
+            CmblPatientId.ValueMember = "ID";
+            CmblPatientId.DataSource = dtPatients;
+            CmblPatientId.SelectedIndex = 0;
+            CmbPatientName.DataSource = dtPatients;
             CmbPatientName.SelectedIndex = 0;
 
             //PatientsIDUpdate
             ClinicTableAdapters.PatientsTableAdapter daPatientsUpdate = new ClinicTableAdapters.PatientsTableAdapter();
             Clinic.PatientsDataTable dtPatientsUpdate = daPatientsUpdate.GetDataByPatientsWithIntake();
-            cmbPatientIdUpdate.DataSource = dtPatientsUpdate;
             cmbPatientIdUpdate.AutoCompleteMode = AutoCompleteMode.Append;
             cmbPatientIdUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
             cmbPatientIdUpdate.DisplayMember = "ID";
             cmbPatientIdUpdate.ValueMember = "ID";
-            cmbPatientIdUpdate.SelectedIndex = 0;
-
-            ClinicTableAdapters.AppointmentsForPatientsTableAdapter daAPA = new ClinicTableAdapters.AppointmentsForPatientsTableAdapter();
-
-
-            //PatientsNameUpdate
-            CmbPatientNameUpdate.DataSource = dtPatientsUpdate;
             CmbPatientNameUpdate.AutoCompleteMode = AutoCompleteMode.Append;
             CmbPatientNameUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
             CmbPatientNameUpdate.DisplayMember = "FullName";
             CmbPatientNameUpdate.ValueMember = "ID";
+            cmbPatientIdUpdate.DataSource = dtPatientsUpdate;
+            cmbPatientIdUpdate.SelectedIndex = 0;
+            CmbPatientNameUpdate.DataSource = dtPatientsUpdate;
             CmbPatientNameUpdate.SelectedIndex = 0;
 
+            ClinicTableAdapters.AppointmentsForPatientsTableAdapter daAPA = new ClinicTableAdapters.AppointmentsForPatientsTableAdapter();
 
             // WorkersAdd
             ClinicTableAdapters.WorkersTableAdapter daWorkers = new ClinicTableAdapters.WorkersTableAdapter();
@@ -95,10 +96,7 @@ namespace Clinic1
             CmbMainTherapistUpdate.ValueMember = "ID";
 
             //IntakeNumberUpdate
-            CmbIntakeNumber.AutoCompleteMode = AutoCompleteMode.Append;
-            CmbIntakeNumber.AutoCompleteSource = AutoCompleteSource.ListItems;
-            CmbIntakeNumber.DisplayMember = "AppointmentNumber";
-            CmbIntakeNumber.ValueMember = "AppointmentNumber";
+   
             CmbIntakeNumber.SelectedIndex = -1;
             CmbIntakeNumber.SelectedIndex = 0;
 

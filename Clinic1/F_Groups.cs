@@ -87,23 +87,19 @@ namespace Clinic1
 
             ClinicTableAdapters.GroupsTableAdapter daGroups = new ClinicTableAdapters.GroupsTableAdapter();
             Clinic.GroupsDataTable dtGroups = daGroups.GetData();
-            CmbGroupIdUpdate.DataSource = dtGroups;
             CmbGroupIdUpdate.AutoCompleteMode = AutoCompleteMode.Append;
             CmbGroupIdUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
             CmbGroupIdUpdate.DisplayMember = "GroupNumber";
             CmbGroupIdUpdate.ValueMember = "GroupNumber";
-            handeled = true;
+            CmbGroupIdUpdate.DataSource = dtGroups;
             CmbGroupIdUpdate.SelectedIndex = 0;
-            DgPatientsUpdate.DataSource = daPatients.GetDataByPatientIDInnerJoinPatients(Int32.Parse(CmbGroupIdUpdate.SelectedValue.ToString()));
-            DgPatientsUpdate.Refresh();
-
-            //Group Name
-            CmbGroupNameUpdate.DataSource = dtGroups;
             CmbGroupNameUpdate.AutoCompleteMode = AutoCompleteMode.Append;
             CmbGroupNameUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
             CmbGroupNameUpdate.DisplayMember = "Name";
             CmbGroupNameUpdate.ValueMember = "GroupNumber";
-            handeled = true;
+            DgPatientsUpdate.DataSource = daPatients.GetDataByPatientIDInnerJoinPatients(Int32.Parse(CmbGroupIdUpdate.SelectedValue.ToString()));
+            DgPatientsUpdate.Refresh();
+            CmbGroupNameUpdate.DataSource = dtGroups;
             CmbGroupNameUpdate.SelectedIndex = 0;
 
                        

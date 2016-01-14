@@ -83,7 +83,6 @@
             this.LblFatherName = new System.Windows.Forms.Label();
             this.LblLastName = new System.Windows.Forms.Label();
             this.LblFirstName = new System.Windows.Forms.Label();
-            this.LblID = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.ExitNoSaveUpdate = new System.Windows.Forms.Button();
             this.BtnClearFieldsUpdate = new System.Windows.Forms.Button();
@@ -143,6 +142,7 @@
             this.label43 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.LblID = new System.Windows.Forms.Label();
             this.TabGroups.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -159,7 +159,7 @@
             this.TabGroups.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TabGroups.RightToLeftLayout = true;
             this.TabGroups.SelectedIndex = 0;
-            this.TabGroups.Size = new System.Drawing.Size(1105, 536);
+            this.TabGroups.Size = new System.Drawing.Size(885, 536);
             this.TabGroups.TabIndex = 45;
             // 
             // tabPage1
@@ -221,7 +221,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1097, 500);
+            this.tabPage1.Size = new System.Drawing.Size(877, 500);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "הוספת מטופל";
             // 
@@ -230,7 +230,7 @@
             this.BtnExitNoSaveAdd.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.BtnExitNoSaveAdd.Font = new System.Drawing.Font("David", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnExitNoSaveAdd.ForeColor = System.Drawing.Color.Black;
-            this.BtnExitNoSaveAdd.Location = new System.Drawing.Point(682, 420);
+            this.BtnExitNoSaveAdd.Location = new System.Drawing.Point(509, 412);
             this.BtnExitNoSaveAdd.Name = "BtnExitNoSaveAdd";
             this.BtnExitNoSaveAdd.Size = new System.Drawing.Size(119, 63);
             this.BtnExitNoSaveAdd.TabIndex = 143;
@@ -243,7 +243,7 @@
             this.BtnClearFieldsAdd.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.BtnClearFieldsAdd.Font = new System.Drawing.Font("David", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnClearFieldsAdd.ForeColor = System.Drawing.Color.Black;
-            this.BtnClearFieldsAdd.Location = new System.Drawing.Point(371, 420);
+            this.BtnClearFieldsAdd.Location = new System.Drawing.Point(198, 412);
             this.BtnClearFieldsAdd.Name = "BtnClearFieldsAdd";
             this.BtnClearFieldsAdd.Size = new System.Drawing.Size(119, 63);
             this.BtnClearFieldsAdd.TabIndex = 142;
@@ -255,7 +255,7 @@
             // 
             this.CmbRace.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbRace.FormattingEnabled = true;
-            this.CmbRace.Location = new System.Drawing.Point(621, 15);
+            this.CmbRace.Location = new System.Drawing.Point(451, 16);
             this.CmbRace.Name = "CmbRace";
             this.CmbRace.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbRace.Size = new System.Drawing.Size(127, 24);
@@ -264,7 +264,7 @@
             // TxtBirthDate
             // 
             this.TxtBirthDate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtBirthDate.Location = new System.Drawing.Point(856, 141);
+            this.TxtBirthDate.Location = new System.Drawing.Point(651, 143);
             this.TxtBirthDate.Name = "TxtBirthDate";
             this.TxtBirthDate.Size = new System.Drawing.Size(117, 23);
             this.TxtBirthDate.TabIndex = 80;
@@ -273,7 +273,7 @@
             // 
             this.CmbCountry.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbCountry.FormattingEnabled = true;
-            this.CmbCountry.Location = new System.Drawing.Point(621, 98);
+            this.CmbCountry.Location = new System.Drawing.Point(451, 99);
             this.CmbCountry.Name = "CmbCountry";
             this.CmbCountry.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbCountry.Size = new System.Drawing.Size(127, 24);
@@ -283,7 +283,7 @@
             // 
             this.CmbCity.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbCity.FormattingEnabled = true;
-            this.CmbCity.Location = new System.Drawing.Point(621, 185);
+            this.CmbCity.Location = new System.Drawing.Point(451, 186);
             this.CmbCity.Name = "CmbCity";
             this.CmbCity.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbCity.Size = new System.Drawing.Size(127, 24);
@@ -292,7 +292,7 @@
             // TxtPhoneContact
             // 
             this.TxtPhoneContact.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPhoneContact.Location = new System.Drawing.Point(67, 184);
+            this.TxtPhoneContact.Location = new System.Drawing.Point(7, 185);
             this.TxtPhoneContact.Name = "TxtPhoneContact";
             this.TxtPhoneContact.Size = new System.Drawing.Size(124, 23);
             this.TxtPhoneContact.TabIndex = 77;
@@ -302,9 +302,9 @@
             // 
             this.label21.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label21.Location = new System.Drawing.Point(199, 177);
+            this.label21.Location = new System.Drawing.Point(140, 180);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(130, 27);
+            this.label21.Size = new System.Drawing.Size(95, 27);
             this.label21.TabIndex = 76;
             this.label21.Text = "טלפון איש קשר";
             this.label21.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -314,7 +314,7 @@
             this.BtnAddNewPatient.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.BtnAddNewPatient.Font = new System.Drawing.Font("David", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAddNewPatient.ForeColor = System.Drawing.Color.Black;
-            this.BtnAddNewPatient.Location = new System.Drawing.Point(526, 420);
+            this.BtnAddNewPatient.Location = new System.Drawing.Point(353, 412);
             this.BtnAddNewPatient.Name = "BtnAddNewPatient";
             this.BtnAddNewPatient.Size = new System.Drawing.Size(119, 63);
             this.BtnAddNewPatient.TabIndex = 75;
@@ -325,7 +325,7 @@
             // TxtStreet
             // 
             this.TxtStreet.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtStreet.Location = new System.Drawing.Point(621, 227);
+            this.TxtStreet.Location = new System.Drawing.Point(451, 228);
             this.TxtStreet.Name = "TxtStreet";
             this.TxtStreet.Size = new System.Drawing.Size(127, 23);
             this.TxtStreet.TabIndex = 52;
@@ -334,7 +334,7 @@
             // 
             this.label12.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(754, 224);
+            this.label12.Location = new System.Drawing.Point(584, 225);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(56, 25);
             this.label12.TabIndex = 51;
@@ -345,7 +345,7 @@
             // 
             this.label5.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(536, 286);
+            this.label5.Location = new System.Drawing.Point(346, 273);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(139, 25);
             this.label5.TabIndex = 50;
@@ -355,7 +355,7 @@
             // TxtNotes
             // 
             this.TxtNotes.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNotes.Location = new System.Drawing.Point(227, 314);
+            this.TxtNotes.Location = new System.Drawing.Point(37, 301);
             this.TxtNotes.Name = "TxtNotes";
             this.TxtNotes.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TxtNotes.Size = new System.Drawing.Size(749, 95);
@@ -366,7 +366,7 @@
             // 
             this.CmbInsurence.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbInsurence.FormattingEnabled = true;
-            this.CmbInsurence.Location = new System.Drawing.Point(350, 99);
+            this.CmbInsurence.Location = new System.Drawing.Point(235, 100);
             this.CmbInsurence.Name = "CmbInsurence";
             this.CmbInsurence.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbInsurence.Size = new System.Drawing.Size(127, 24);
@@ -376,7 +376,7 @@
             // 
             this.CmbGender.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbGender.FormattingEnabled = true;
-            this.CmbGender.Location = new System.Drawing.Point(621, 54);
+            this.CmbGender.Location = new System.Drawing.Point(451, 55);
             this.CmbGender.Name = "CmbGender";
             this.CmbGender.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbGender.Size = new System.Drawing.Size(127, 24);
@@ -385,7 +385,7 @@
             // TxtPhoneHome
             // 
             this.TxtPhoneHome.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPhoneHome.Location = new System.Drawing.Point(352, 184);
+            this.TxtPhoneHome.Location = new System.Drawing.Point(237, 185);
             this.TxtPhoneHome.Name = "TxtPhoneHome";
             this.TxtPhoneHome.Size = new System.Drawing.Size(125, 23);
             this.TxtPhoneHome.TabIndex = 46;
@@ -394,7 +394,7 @@
             // TxtEmail
             // 
             this.TxtEmail.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtEmail.Location = new System.Drawing.Point(67, 222);
+            this.TxtEmail.Location = new System.Drawing.Point(7, 223);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(124, 23);
             this.TxtEmail.TabIndex = 45;
@@ -402,7 +402,7 @@
             // TxtPhoneAnother
             // 
             this.TxtPhoneAnother.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPhoneAnother.Location = new System.Drawing.Point(67, 143);
+            this.TxtPhoneAnother.Location = new System.Drawing.Point(7, 144);
             this.TxtPhoneAnother.Name = "TxtPhoneAnother";
             this.TxtPhoneAnother.Size = new System.Drawing.Size(124, 23);
             this.TxtPhoneAnother.TabIndex = 44;
@@ -411,7 +411,7 @@
             // TxtPhoneMother
             // 
             this.TxtPhoneMother.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPhoneMother.Location = new System.Drawing.Point(67, 100);
+            this.TxtPhoneMother.Location = new System.Drawing.Point(7, 101);
             this.TxtPhoneMother.Name = "TxtPhoneMother";
             this.TxtPhoneMother.Size = new System.Drawing.Size(124, 23);
             this.TxtPhoneMother.TabIndex = 43;
@@ -420,7 +420,7 @@
             // TxtPhoneFather
             // 
             this.TxtPhoneFather.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPhoneFather.Location = new System.Drawing.Point(67, 57);
+            this.TxtPhoneFather.Location = new System.Drawing.Point(7, 58);
             this.TxtPhoneFather.Name = "TxtPhoneFather";
             this.TxtPhoneFather.Size = new System.Drawing.Size(124, 23);
             this.TxtPhoneFather.TabIndex = 42;
@@ -429,7 +429,7 @@
             // TxtPhoneWork
             // 
             this.TxtPhoneWork.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPhoneWork.Location = new System.Drawing.Point(67, 15);
+            this.TxtPhoneWork.Location = new System.Drawing.Point(7, 16);
             this.TxtPhoneWork.Name = "TxtPhoneWork";
             this.TxtPhoneWork.Size = new System.Drawing.Size(124, 23);
             this.TxtPhoneWork.TabIndex = 41;
@@ -438,7 +438,7 @@
             // TxtFamilyDoctor
             // 
             this.TxtFamilyDoctor.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtFamilyDoctor.Location = new System.Drawing.Point(350, 143);
+            this.TxtFamilyDoctor.Location = new System.Drawing.Point(235, 144);
             this.TxtFamilyDoctor.Name = "TxtFamilyDoctor";
             this.TxtFamilyDoctor.Size = new System.Drawing.Size(127, 23);
             this.TxtFamilyDoctor.TabIndex = 40;
@@ -446,7 +446,7 @@
             // TxtZipCode
             // 
             this.TxtZipCode.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtZipCode.Location = new System.Drawing.Point(350, 56);
+            this.TxtZipCode.Location = new System.Drawing.Point(235, 57);
             this.TxtZipCode.Name = "TxtZipCode";
             this.TxtZipCode.Size = new System.Drawing.Size(127, 23);
             this.TxtZipCode.TabIndex = 38;
@@ -455,7 +455,7 @@
             // TxtStreetNumber
             // 
             this.TxtStreetNumber.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtStreetNumber.Location = new System.Drawing.Point(350, 13);
+            this.TxtStreetNumber.Location = new System.Drawing.Point(235, 14);
             this.TxtStreetNumber.Name = "TxtStreetNumber";
             this.TxtStreetNumber.Size = new System.Drawing.Size(127, 23);
             this.TxtStreetNumber.TabIndex = 37;
@@ -464,7 +464,7 @@
             // TxtApotropus
             // 
             this.TxtApotropus.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtApotropus.Location = new System.Drawing.Point(621, 141);
+            this.TxtApotropus.Location = new System.Drawing.Point(451, 142);
             this.TxtApotropus.Name = "TxtApotropus";
             this.TxtApotropus.Size = new System.Drawing.Size(127, 23);
             this.TxtApotropus.TabIndex = 34;
@@ -472,7 +472,7 @@
             // TxtMother
             // 
             this.TxtMother.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtMother.Location = new System.Drawing.Point(856, 226);
+            this.TxtMother.Location = new System.Drawing.Point(651, 228);
             this.TxtMother.Name = "TxtMother";
             this.TxtMother.Size = new System.Drawing.Size(120, 23);
             this.TxtMother.TabIndex = 30;
@@ -480,7 +480,7 @@
             // TxtFather
             // 
             this.TxtFather.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtFather.Location = new System.Drawing.Point(856, 183);
+            this.TxtFather.Location = new System.Drawing.Point(651, 185);
             this.TxtFather.Name = "TxtFather";
             this.TxtFather.Size = new System.Drawing.Size(120, 23);
             this.TxtFather.TabIndex = 29;
@@ -488,7 +488,7 @@
             // TxtLaseName
             // 
             this.TxtLaseName.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtLaseName.Location = new System.Drawing.Point(856, 98);
+            this.TxtLaseName.Location = new System.Drawing.Point(651, 100);
             this.TxtLaseName.Name = "TxtLaseName";
             this.TxtLaseName.Size = new System.Drawing.Size(120, 23);
             this.TxtLaseName.TabIndex = 27;
@@ -496,7 +496,7 @@
             // TxtFirstName
             // 
             this.TxtFirstName.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtFirstName.Location = new System.Drawing.Point(856, 55);
+            this.TxtFirstName.Location = new System.Drawing.Point(651, 57);
             this.TxtFirstName.Name = "TxtFirstName";
             this.TxtFirstName.Size = new System.Drawing.Size(120, 23);
             this.TxtFirstName.TabIndex = 26;
@@ -504,7 +504,7 @@
             // TxtID
             // 
             this.TxtID.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtID.Location = new System.Drawing.Point(856, 12);
+            this.TxtID.Location = new System.Drawing.Point(651, 14);
             this.TxtID.Name = "TxtID";
             this.TxtID.Size = new System.Drawing.Size(120, 23);
             this.TxtID.TabIndex = 25;
@@ -513,7 +513,7 @@
             // TxtPhoneCellular
             // 
             this.TxtPhoneCellular.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPhoneCellular.Location = new System.Drawing.Point(352, 225);
+            this.TxtPhoneCellular.Location = new System.Drawing.Point(237, 226);
             this.TxtPhoneCellular.Name = "TxtPhoneCellular";
             this.TxtPhoneCellular.Size = new System.Drawing.Size(125, 23);
             this.TxtPhoneCellular.TabIndex = 24;
@@ -523,7 +523,7 @@
             // 
             this.label20.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label20.Location = new System.Drawing.Point(197, 13);
+            this.label20.Location = new System.Drawing.Point(137, 14);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(119, 25);
             this.label20.TabIndex = 23;
@@ -534,7 +534,7 @@
             // 
             this.label9.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(483, 223);
+            this.label9.Location = new System.Drawing.Point(368, 224);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(88, 25);
             this.label9.TabIndex = 22;
@@ -545,7 +545,7 @@
             // 
             this.label6.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(200, 217);
+            this.label6.Location = new System.Drawing.Point(140, 218);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 27);
             this.label6.TabIndex = 21;
@@ -556,7 +556,7 @@
             // 
             this.label4.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(483, 52);
+            this.label4.Location = new System.Drawing.Point(368, 53);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 25);
             this.label4.TabIndex = 19;
@@ -567,7 +567,7 @@
             // 
             this.label19.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label19.Location = new System.Drawing.Point(197, 141);
+            this.label19.Location = new System.Drawing.Point(137, 142);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(101, 25);
             this.label19.TabIndex = 18;
@@ -578,7 +578,7 @@
             // 
             this.label18.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label18.Location = new System.Drawing.Point(199, 54);
+            this.label18.Location = new System.Drawing.Point(139, 55);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(88, 25);
             this.label18.TabIndex = 17;
@@ -589,7 +589,7 @@
             // 
             this.label17.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label17.Location = new System.Drawing.Point(199, 98);
+            this.label17.Location = new System.Drawing.Point(139, 99);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(85, 25);
             this.label17.TabIndex = 16;
@@ -600,7 +600,7 @@
             // 
             this.label16.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label16.Location = new System.Drawing.Point(483, 181);
+            this.label16.Location = new System.Drawing.Point(368, 182);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(97, 25);
             this.label16.TabIndex = 15;
@@ -611,7 +611,7 @@
             // 
             this.label15.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label15.Location = new System.Drawing.Point(483, 140);
+            this.label15.Location = new System.Drawing.Point(368, 141);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(109, 25);
             this.label15.TabIndex = 14;
@@ -622,7 +622,7 @@
             // 
             this.label14.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label14.Location = new System.Drawing.Point(483, 97);
+            this.label14.Location = new System.Drawing.Point(368, 98);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(105, 25);
             this.label14.TabIndex = 13;
@@ -633,7 +633,7 @@
             // 
             this.label11.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(483, 11);
+            this.label11.Location = new System.Drawing.Point(368, 12);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(96, 25);
             this.label11.TabIndex = 12;
@@ -644,7 +644,7 @@
             // 
             this.label13.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label13.Location = new System.Drawing.Point(754, 184);
+            this.label13.Location = new System.Drawing.Point(584, 185);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(56, 25);
             this.label13.TabIndex = 10;
@@ -655,7 +655,7 @@
             // 
             this.label3.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(751, 137);
+            this.label3.Location = new System.Drawing.Point(581, 138);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 25);
             this.label3.TabIndex = 9;
@@ -666,7 +666,7 @@
             // 
             this.LblBirthDate.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblBirthDate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LblBirthDate.Location = new System.Drawing.Point(975, 138);
+            this.LblBirthDate.Location = new System.Drawing.Point(770, 140);
             this.LblBirthDate.Name = "LblBirthDate";
             this.LblBirthDate.Size = new System.Drawing.Size(116, 25);
             this.LblBirthDate.TabIndex = 8;
@@ -677,7 +677,7 @@
             // 
             this.label10.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(754, 95);
+            this.label10.Location = new System.Drawing.Point(584, 96);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(87, 25);
             this.label10.TabIndex = 7;
@@ -688,7 +688,7 @@
             // 
             this.label8.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(757, 43);
+            this.label8.Location = new System.Drawing.Point(587, 44);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(42, 32);
             this.label8.TabIndex = 6;
@@ -699,7 +699,7 @@
             // 
             this.label7.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(755, 11);
+            this.label7.Location = new System.Drawing.Point(585, 12);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 29);
             this.label7.TabIndex = 5;
@@ -710,7 +710,7 @@
             // 
             this.LblMotherName.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblMotherName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LblMotherName.Location = new System.Drawing.Point(987, 223);
+            this.LblMotherName.Location = new System.Drawing.Point(782, 225);
             this.LblMotherName.Name = "LblMotherName";
             this.LblMotherName.Size = new System.Drawing.Size(86, 26);
             this.LblMotherName.TabIndex = 4;
@@ -721,7 +721,7 @@
             // 
             this.LblFatherName.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblFatherName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LblFatherName.Location = new System.Drawing.Point(987, 178);
+            this.LblFatherName.Location = new System.Drawing.Point(782, 180);
             this.LblFatherName.Name = "LblFatherName";
             this.LblFatherName.Size = new System.Drawing.Size(86, 31);
             this.LblFatherName.TabIndex = 3;
@@ -732,7 +732,7 @@
             // 
             this.LblLastName.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblLastName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LblLastName.Location = new System.Drawing.Point(975, 90);
+            this.LblLastName.Location = new System.Drawing.Point(770, 92);
             this.LblLastName.Name = "LblLastName";
             this.LblLastName.Size = new System.Drawing.Size(118, 29);
             this.LblLastName.TabIndex = 2;
@@ -743,23 +743,12 @@
             // 
             this.LblFirstName.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblFirstName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LblFirstName.Location = new System.Drawing.Point(982, 48);
+            this.LblFirstName.Location = new System.Drawing.Point(777, 50);
             this.LblFirstName.Name = "LblFirstName";
             this.LblFirstName.Size = new System.Drawing.Size(89, 29);
             this.LblFirstName.TabIndex = 1;
             this.LblFirstName.Text = "שם פרטי";
             this.LblFirstName.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // LblID
-            // 
-            this.LblID.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LblID.Location = new System.Drawing.Point(978, 3);
-            this.LblID.Name = "LblID";
-            this.LblID.Size = new System.Drawing.Size(122, 31);
-            this.LblID.TabIndex = 0;
-            this.LblID.Text = "תעודת זהות";
-            this.LblID.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // tabPage2
             // 
@@ -826,7 +815,7 @@
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tabPage2.Size = new System.Drawing.Size(1097, 500);
+            this.tabPage2.Size = new System.Drawing.Size(877, 500);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "עדכון פרטי מטופל";
             // 
@@ -835,7 +824,7 @@
             this.ExitNoSaveUpdate.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ExitNoSaveUpdate.Font = new System.Drawing.Font("David", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitNoSaveUpdate.ForeColor = System.Drawing.Color.Black;
-            this.ExitNoSaveUpdate.Location = new System.Drawing.Point(752, 422);
+            this.ExitNoSaveUpdate.Location = new System.Drawing.Point(633, 410);
             this.ExitNoSaveUpdate.Name = "ExitNoSaveUpdate";
             this.ExitNoSaveUpdate.Size = new System.Drawing.Size(119, 63);
             this.ExitNoSaveUpdate.TabIndex = 141;
@@ -848,7 +837,7 @@
             this.BtnClearFieldsUpdate.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.BtnClearFieldsUpdate.Font = new System.Drawing.Font("David", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnClearFieldsUpdate.ForeColor = System.Drawing.Color.Black;
-            this.BtnClearFieldsUpdate.Location = new System.Drawing.Point(441, 422);
+            this.BtnClearFieldsUpdate.Location = new System.Drawing.Point(322, 410);
             this.BtnClearFieldsUpdate.Name = "BtnClearFieldsUpdate";
             this.BtnClearFieldsUpdate.Size = new System.Drawing.Size(119, 63);
             this.BtnClearFieldsUpdate.TabIndex = 140;
@@ -860,7 +849,7 @@
             // 
             this.CmbRaceUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbRaceUpdate.FormattingEnabled = true;
-            this.CmbRaceUpdate.Location = new System.Drawing.Point(596, 26);
+            this.CmbRaceUpdate.Location = new System.Drawing.Point(446, 15);
             this.CmbRaceUpdate.Name = "CmbRaceUpdate";
             this.CmbRaceUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbRaceUpdate.Size = new System.Drawing.Size(127, 24);
@@ -869,7 +858,7 @@
             // TxtLastNameUpdate
             // 
             this.TxtLastNameUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtLastNameUpdate.Location = new System.Drawing.Point(828, 111);
+            this.TxtLastNameUpdate.Location = new System.Drawing.Point(645, 100);
             this.TxtLastNameUpdate.Name = "TxtLastNameUpdate";
             this.TxtLastNameUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TxtLastNameUpdate.Size = new System.Drawing.Size(120, 23);
@@ -878,7 +867,7 @@
             // TxtMainTherapistUpdate
             // 
             this.TxtMainTherapistUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtMainTherapistUpdate.Location = new System.Drawing.Point(42, 305);
+            this.TxtMainTherapistUpdate.Location = new System.Drawing.Point(6, 296);
             this.TxtMainTherapistUpdate.Name = "TxtMainTherapistUpdate";
             this.TxtMainTherapistUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TxtMainTherapistUpdate.Size = new System.Drawing.Size(124, 23);
@@ -886,9 +875,9 @@
             // 
             // label45
             // 
-            this.label45.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label45.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label45.Location = new System.Drawing.Point(172, 300);
+            this.label45.Location = new System.Drawing.Point(136, 291);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(100, 27);
             this.label45.TabIndex = 136;
@@ -898,7 +887,7 @@
             // TxtSecondTherapistUpdate
             // 
             this.TxtSecondTherapistUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtSecondTherapistUpdate.Location = new System.Drawing.Point(42, 343);
+            this.TxtSecondTherapistUpdate.Location = new System.Drawing.Point(6, 334);
             this.TxtSecondTherapistUpdate.Name = "TxtSecondTherapistUpdate";
             this.TxtSecondTherapistUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TxtSecondTherapistUpdate.Size = new System.Drawing.Size(124, 23);
@@ -906,9 +895,9 @@
             // 
             // label46
             // 
-            this.label46.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label46.Location = new System.Drawing.Point(172, 338);
+            this.label46.Location = new System.Drawing.Point(136, 329);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(98, 27);
             this.label46.TabIndex = 134;
@@ -919,7 +908,7 @@
             // 
             this.CmbPatientID.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbPatientID.FormattingEnabled = true;
-            this.CmbPatientID.Location = new System.Drawing.Point(827, 24);
+            this.CmbPatientID.Location = new System.Drawing.Point(644, 13);
             this.CmbPatientID.Name = "CmbPatientID";
             this.CmbPatientID.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbPatientID.Size = new System.Drawing.Size(121, 24);
@@ -929,7 +918,7 @@
             // TxtBirthDateUpdate
             // 
             this.TxtBirthDateUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtBirthDateUpdate.Location = new System.Drawing.Point(831, 151);
+            this.TxtBirthDateUpdate.Location = new System.Drawing.Point(648, 140);
             this.TxtBirthDateUpdate.Mask = "##-##-####";
             this.TxtBirthDateUpdate.Name = "TxtBirthDateUpdate";
             this.TxtBirthDateUpdate.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -940,7 +929,7 @@
             // 
             this.CmbCountryOfBirthUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbCountryOfBirthUpdate.FormattingEnabled = true;
-            this.CmbCountryOfBirthUpdate.Location = new System.Drawing.Point(596, 108);
+            this.CmbCountryOfBirthUpdate.Location = new System.Drawing.Point(446, 97);
             this.CmbCountryOfBirthUpdate.Name = "CmbCountryOfBirthUpdate";
             this.CmbCountryOfBirthUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbCountryOfBirthUpdate.Size = new System.Drawing.Size(127, 24);
@@ -950,7 +939,7 @@
             // 
             this.CmbCityUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbCityUpdate.FormattingEnabled = true;
-            this.CmbCityUpdate.Location = new System.Drawing.Point(596, 195);
+            this.CmbCityUpdate.Location = new System.Drawing.Point(446, 184);
             this.CmbCityUpdate.Name = "CmbCityUpdate";
             this.CmbCityUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbCityUpdate.Size = new System.Drawing.Size(127, 24);
@@ -959,7 +948,7 @@
             // TxtPhoneContactUpdate
             // 
             this.TxtPhoneContactUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPhoneContactUpdate.Location = new System.Drawing.Point(42, 194);
+            this.TxtPhoneContactUpdate.Location = new System.Drawing.Point(6, 185);
             this.TxtPhoneContactUpdate.Name = "TxtPhoneContactUpdate";
             this.TxtPhoneContactUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TxtPhoneContactUpdate.Size = new System.Drawing.Size(124, 23);
@@ -968,11 +957,11 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(172, 193);
+            this.label1.Location = new System.Drawing.Point(136, 184);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 27);
+            this.label1.Size = new System.Drawing.Size(97, 27);
             this.label1.TabIndex = 127;
             this.label1.Text = "טלפון איש קשר";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -982,7 +971,7 @@
             this.BtnSaveChanges.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.BtnSaveChanges.Font = new System.Drawing.Font("David", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSaveChanges.ForeColor = System.Drawing.Color.Black;
-            this.BtnSaveChanges.Location = new System.Drawing.Point(596, 422);
+            this.BtnSaveChanges.Location = new System.Drawing.Point(477, 410);
             this.BtnSaveChanges.Name = "BtnSaveChanges";
             this.BtnSaveChanges.Size = new System.Drawing.Size(119, 63);
             this.BtnSaveChanges.TabIndex = 126;
@@ -993,7 +982,7 @@
             // TxtStreetUpdate
             // 
             this.TxtStreetUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtStreetUpdate.Location = new System.Drawing.Point(596, 237);
+            this.TxtStreetUpdate.Location = new System.Drawing.Point(446, 226);
             this.TxtStreetUpdate.Name = "TxtStreetUpdate";
             this.TxtStreetUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TxtStreetUpdate.Size = new System.Drawing.Size(127, 23);
@@ -1001,9 +990,9 @@
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(729, 236);
+            this.label2.Location = new System.Drawing.Point(579, 225);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 25);
             this.label2.TabIndex = 124;
@@ -1014,7 +1003,7 @@
             // 
             this.label22.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label22.Location = new System.Drawing.Point(686, 290);
+            this.label22.Location = new System.Drawing.Point(497, 281);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(139, 25);
             this.label22.TabIndex = 123;
@@ -1024,10 +1013,10 @@
             // TxtNotesUpdate
             // 
             this.TxtNotesUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNotesUpdate.Location = new System.Drawing.Point(327, 318);
+            this.TxtNotesUpdate.Location = new System.Drawing.Point(240, 309);
             this.TxtNotesUpdate.Name = "TxtNotesUpdate";
             this.TxtNotesUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.TxtNotesUpdate.Size = new System.Drawing.Size(749, 86);
+            this.TxtNotesUpdate.Size = new System.Drawing.Size(631, 86);
             this.TxtNotesUpdate.TabIndex = 122;
             this.TxtNotesUpdate.Text = "";
             // 
@@ -1035,7 +1024,7 @@
             // 
             this.CmbInsurenceUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbInsurenceUpdate.FormattingEnabled = true;
-            this.CmbInsurenceUpdate.Location = new System.Drawing.Point(325, 109);
+            this.CmbInsurenceUpdate.Location = new System.Drawing.Point(235, 100);
             this.CmbInsurenceUpdate.Name = "CmbInsurenceUpdate";
             this.CmbInsurenceUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbInsurenceUpdate.Size = new System.Drawing.Size(127, 24);
@@ -1045,7 +1034,7 @@
             // 
             this.CmbGenderUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbGenderUpdate.FormattingEnabled = true;
-            this.CmbGenderUpdate.Location = new System.Drawing.Point(596, 64);
+            this.CmbGenderUpdate.Location = new System.Drawing.Point(446, 53);
             this.CmbGenderUpdate.Name = "CmbGenderUpdate";
             this.CmbGenderUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbGenderUpdate.Size = new System.Drawing.Size(127, 24);
@@ -1054,17 +1043,17 @@
             // TxtPhoneHomeUpdate
             // 
             this.TxtPhoneHomeUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPhoneHomeUpdate.Location = new System.Drawing.Point(327, 194);
+            this.TxtPhoneHomeUpdate.Location = new System.Drawing.Point(235, 185);
             this.TxtPhoneHomeUpdate.Name = "TxtPhoneHomeUpdate";
             this.TxtPhoneHomeUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.TxtPhoneHomeUpdate.Size = new System.Drawing.Size(125, 23);
+            this.TxtPhoneHomeUpdate.Size = new System.Drawing.Size(127, 23);
             this.TxtPhoneHomeUpdate.TabIndex = 119;
             this.TxtPhoneHomeUpdate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPhoneHomeUpdate_KeyPress);
             // 
             // TxtEmailUpdate
             // 
             this.TxtEmailUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtEmailUpdate.Location = new System.Drawing.Point(42, 232);
+            this.TxtEmailUpdate.Location = new System.Drawing.Point(6, 223);
             this.TxtEmailUpdate.Name = "TxtEmailUpdate";
             this.TxtEmailUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TxtEmailUpdate.Size = new System.Drawing.Size(124, 23);
@@ -1073,7 +1062,7 @@
             // TxtPhoneAnotherUpdate
             // 
             this.TxtPhoneAnotherUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPhoneAnotherUpdate.Location = new System.Drawing.Point(42, 153);
+            this.TxtPhoneAnotherUpdate.Location = new System.Drawing.Point(6, 144);
             this.TxtPhoneAnotherUpdate.Name = "TxtPhoneAnotherUpdate";
             this.TxtPhoneAnotherUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TxtPhoneAnotherUpdate.Size = new System.Drawing.Size(124, 23);
@@ -1083,7 +1072,7 @@
             // TxtPhoneMotherUpdate
             // 
             this.TxtPhoneMotherUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPhoneMotherUpdate.Location = new System.Drawing.Point(42, 110);
+            this.TxtPhoneMotherUpdate.Location = new System.Drawing.Point(6, 101);
             this.TxtPhoneMotherUpdate.Name = "TxtPhoneMotherUpdate";
             this.TxtPhoneMotherUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TxtPhoneMotherUpdate.Size = new System.Drawing.Size(124, 23);
@@ -1093,7 +1082,7 @@
             // TxtPhoneFatherUpdate
             // 
             this.TxtPhoneFatherUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPhoneFatherUpdate.Location = new System.Drawing.Point(42, 67);
+            this.TxtPhoneFatherUpdate.Location = new System.Drawing.Point(6, 58);
             this.TxtPhoneFatherUpdate.Name = "TxtPhoneFatherUpdate";
             this.TxtPhoneFatherUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TxtPhoneFatherUpdate.Size = new System.Drawing.Size(124, 23);
@@ -1103,7 +1092,7 @@
             // TxtPhoneWotkUpdate
             // 
             this.TxtPhoneWotkUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPhoneWotkUpdate.Location = new System.Drawing.Point(42, 25);
+            this.TxtPhoneWotkUpdate.Location = new System.Drawing.Point(6, 16);
             this.TxtPhoneWotkUpdate.Name = "TxtPhoneWotkUpdate";
             this.TxtPhoneWotkUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TxtPhoneWotkUpdate.Size = new System.Drawing.Size(124, 23);
@@ -1113,7 +1102,7 @@
             // TxtFamilyDoctorUpdate
             // 
             this.TxtFamilyDoctorUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtFamilyDoctorUpdate.Location = new System.Drawing.Point(325, 153);
+            this.TxtFamilyDoctorUpdate.Location = new System.Drawing.Point(235, 144);
             this.TxtFamilyDoctorUpdate.Name = "TxtFamilyDoctorUpdate";
             this.TxtFamilyDoctorUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TxtFamilyDoctorUpdate.Size = new System.Drawing.Size(127, 23);
@@ -1122,7 +1111,7 @@
             // TxtZipCodeUpdate
             // 
             this.TxtZipCodeUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtZipCodeUpdate.Location = new System.Drawing.Point(325, 66);
+            this.TxtZipCodeUpdate.Location = new System.Drawing.Point(235, 57);
             this.TxtZipCodeUpdate.Name = "TxtZipCodeUpdate";
             this.TxtZipCodeUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TxtZipCodeUpdate.Size = new System.Drawing.Size(127, 23);
@@ -1132,7 +1121,7 @@
             // TxtStreetNumberUpdate
             // 
             this.TxtStreetNumberUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtStreetNumberUpdate.Location = new System.Drawing.Point(325, 23);
+            this.TxtStreetNumberUpdate.Location = new System.Drawing.Point(235, 14);
             this.TxtStreetNumberUpdate.Name = "TxtStreetNumberUpdate";
             this.TxtStreetNumberUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TxtStreetNumberUpdate.Size = new System.Drawing.Size(127, 23);
@@ -1142,7 +1131,7 @@
             // TxtApotropusUpdate
             // 
             this.TxtApotropusUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtApotropusUpdate.Location = new System.Drawing.Point(596, 151);
+            this.TxtApotropusUpdate.Location = new System.Drawing.Point(446, 140);
             this.TxtApotropusUpdate.Name = "TxtApotropusUpdate";
             this.TxtApotropusUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TxtApotropusUpdate.Size = new System.Drawing.Size(127, 23);
@@ -1151,7 +1140,7 @@
             // TxtMotherNameUpdate
             // 
             this.TxtMotherNameUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtMotherNameUpdate.Location = new System.Drawing.Point(831, 236);
+            this.TxtMotherNameUpdate.Location = new System.Drawing.Point(648, 225);
             this.TxtMotherNameUpdate.Name = "TxtMotherNameUpdate";
             this.TxtMotherNameUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TxtMotherNameUpdate.Size = new System.Drawing.Size(120, 23);
@@ -1160,7 +1149,7 @@
             // TxtFatherNameUpdate
             // 
             this.TxtFatherNameUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtFatherNameUpdate.Location = new System.Drawing.Point(831, 193);
+            this.TxtFatherNameUpdate.Location = new System.Drawing.Point(648, 182);
             this.TxtFatherNameUpdate.Name = "TxtFatherNameUpdate";
             this.TxtFatherNameUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TxtFatherNameUpdate.Size = new System.Drawing.Size(120, 23);
@@ -1169,7 +1158,7 @@
             // TxtFirstNameUpdate
             // 
             this.TxtFirstNameUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtFirstNameUpdate.Location = new System.Drawing.Point(831, 67);
+            this.TxtFirstNameUpdate.Location = new System.Drawing.Point(648, 56);
             this.TxtFirstNameUpdate.Name = "TxtFirstNameUpdate";
             this.TxtFirstNameUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TxtFirstNameUpdate.Size = new System.Drawing.Size(120, 23);
@@ -1178,7 +1167,7 @@
             // TxtPhoneCellularUpdate
             // 
             this.TxtPhoneCellularUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPhoneCellularUpdate.Location = new System.Drawing.Point(327, 235);
+            this.TxtPhoneCellularUpdate.Location = new System.Drawing.Point(237, 226);
             this.TxtPhoneCellularUpdate.Name = "TxtPhoneCellularUpdate";
             this.TxtPhoneCellularUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TxtPhoneCellularUpdate.Size = new System.Drawing.Size(125, 23);
@@ -1186,9 +1175,9 @@
             // 
             // label23
             // 
-            this.label23.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label23.Location = new System.Drawing.Point(167, 23);
+            this.label23.Location = new System.Drawing.Point(131, 14);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(119, 25);
             this.label23.TabIndex = 102;
@@ -1197,9 +1186,9 @@
             // 
             // label24
             // 
-            this.label24.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label24.Location = new System.Drawing.Point(458, 235);
+            this.label24.Location = new System.Drawing.Point(368, 226);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(88, 25);
             this.label24.TabIndex = 101;
@@ -1208,9 +1197,9 @@
             // 
             // label25
             // 
-            this.label25.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label25.Location = new System.Drawing.Point(174, 229);
+            this.label25.Location = new System.Drawing.Point(138, 220);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(64, 27);
             this.label25.TabIndex = 100;
@@ -1219,9 +1208,9 @@
             // 
             // label26
             // 
-            this.label26.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label26.Location = new System.Drawing.Point(458, 64);
+            this.label26.Location = new System.Drawing.Point(368, 55);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(64, 25);
             this.label26.TabIndex = 99;
@@ -1230,9 +1219,9 @@
             // 
             // label27
             // 
-            this.label27.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label27.Location = new System.Drawing.Point(173, 150);
+            this.label27.Location = new System.Drawing.Point(137, 141);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(101, 25);
             this.label27.TabIndex = 98;
@@ -1241,9 +1230,9 @@
             // 
             // label28
             // 
-            this.label28.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label28.Location = new System.Drawing.Point(172, 66);
+            this.label28.Location = new System.Drawing.Point(136, 57);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(68, 25);
             this.label28.TabIndex = 97;
@@ -1252,9 +1241,9 @@
             // 
             // label29
             // 
-            this.label29.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label29.Location = new System.Drawing.Point(172, 108);
+            this.label29.Location = new System.Drawing.Point(136, 99);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(85, 25);
             this.label29.TabIndex = 96;
@@ -1263,9 +1252,9 @@
             // 
             // label30
             // 
-            this.label30.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label30.Location = new System.Drawing.Point(458, 189);
+            this.label30.Location = new System.Drawing.Point(368, 180);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(97, 25);
             this.label30.TabIndex = 95;
@@ -1274,9 +1263,9 @@
             // 
             // label31
             // 
-            this.label31.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label31.Location = new System.Drawing.Point(454, 151);
+            this.label31.Location = new System.Drawing.Point(364, 142);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(109, 25);
             this.label31.TabIndex = 94;
@@ -1285,9 +1274,9 @@
             // 
             // label32
             // 
-            this.label32.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label32.Location = new System.Drawing.Point(458, 109);
+            this.label32.Location = new System.Drawing.Point(368, 100);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(105, 25);
             this.label32.TabIndex = 93;
@@ -1296,9 +1285,9 @@
             // 
             // label33
             // 
-            this.label33.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label33.Location = new System.Drawing.Point(458, 23);
+            this.label33.Location = new System.Drawing.Point(368, 14);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(96, 25);
             this.label33.TabIndex = 92;
@@ -1307,9 +1296,9 @@
             // 
             // label34
             // 
-            this.label34.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label34.Location = new System.Drawing.Point(729, 197);
+            this.label34.Location = new System.Drawing.Point(579, 186);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(56, 25);
             this.label34.TabIndex = 91;
@@ -1318,9 +1307,9 @@
             // 
             // label35
             // 
-            this.label35.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label35.Location = new System.Drawing.Point(726, 147);
+            this.label35.Location = new System.Drawing.Point(576, 136);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(90, 25);
             this.label35.TabIndex = 90;
@@ -1329,9 +1318,9 @@
             // 
             // label36
             // 
-            this.label36.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label36.Location = new System.Drawing.Point(951, 147);
+            this.label36.Location = new System.Drawing.Point(768, 136);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(116, 25);
             this.label36.TabIndex = 89;
@@ -1340,9 +1329,9 @@
             // 
             // label37
             // 
-            this.label37.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label37.Location = new System.Drawing.Point(729, 106);
+            this.label37.Location = new System.Drawing.Point(579, 95);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(87, 25);
             this.label37.TabIndex = 88;
@@ -1351,9 +1340,9 @@
             // 
             // label38
             // 
-            this.label38.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label38.Location = new System.Drawing.Point(730, 55);
+            this.label38.Location = new System.Drawing.Point(580, 44);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(42, 32);
             this.label38.TabIndex = 87;
@@ -1362,9 +1351,9 @@
             // 
             // label39
             // 
-            this.label39.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label39.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label39.Location = new System.Drawing.Point(730, 21);
+            this.label39.Location = new System.Drawing.Point(580, 10);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(58, 29);
             this.label39.TabIndex = 86;
@@ -1373,9 +1362,9 @@
             // 
             // label40
             // 
-            this.label40.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label40.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label40.Location = new System.Drawing.Point(957, 233);
+            this.label40.Location = new System.Drawing.Point(774, 222);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(86, 26);
             this.label40.TabIndex = 85;
@@ -1384,9 +1373,9 @@
             // 
             // label41
             // 
-            this.label41.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label41.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label41.Location = new System.Drawing.Point(957, 183);
+            this.label41.Location = new System.Drawing.Point(774, 172);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(86, 31);
             this.label41.TabIndex = 84;
@@ -1395,9 +1384,9 @@
             // 
             // label42
             // 
-            this.label42.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label42.Location = new System.Drawing.Point(948, 105);
+            this.label42.Location = new System.Drawing.Point(765, 94);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(118, 29);
             this.label42.TabIndex = 83;
@@ -1406,9 +1395,9 @@
             // 
             // label43
             // 
-            this.label43.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label43.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label43.Location = new System.Drawing.Point(957, 59);
+            this.label43.Location = new System.Drawing.Point(774, 48);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(89, 29);
             this.label43.TabIndex = 82;
@@ -1417,9 +1406,9 @@
             // 
             // label44
             // 
-            this.label44.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label44.Location = new System.Drawing.Point(951, 19);
+            this.label44.Location = new System.Drawing.Point(768, 8);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(122, 31);
             this.label44.TabIndex = 81;
@@ -1431,12 +1420,23 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // LblID
+            // 
+            this.LblID.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.LblID.Location = new System.Drawing.Point(773, 5);
+            this.LblID.Name = "LblID";
+            this.LblID.Size = new System.Drawing.Size(122, 31);
+            this.LblID.TabIndex = 0;
+            this.LblID.Text = "תעודת זהות";
+            this.LblID.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
             // F_Patients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1158, 559);
+            this.ClientSize = new System.Drawing.Size(904, 559);
             this.Controls.Add(this.TabGroups);
             this.Name = "F_Patients";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1473,7 +1473,6 @@
         private System.Windows.Forms.Label LblFatherName;
         private System.Windows.Forms.Label LblLastName;
         private System.Windows.Forms.Label LblFirstName;
-        private System.Windows.Forms.Label LblID;
         private System.Windows.Forms.TextBox TxtPhoneHome;
         private System.Windows.Forms.TextBox TxtEmail;
         private System.Windows.Forms.TextBox TxtPhoneAnother;
@@ -1566,5 +1565,6 @@
         private System.Windows.Forms.Button BtnExitNoSaveAdd;
         private System.Windows.Forms.Button BtnClearFieldsAdd;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Label LblID;
     }
 }

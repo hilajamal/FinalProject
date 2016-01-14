@@ -80,9 +80,10 @@ namespace Clinic1
             DgPatientsAdd.Columns.Add(col3);
 
             col4.Name = "Active";
+            col4.DataPropertyName = "Active";
             col4.HeaderText = "משתתף";
-            col4.FalseValue = 0;
-            col4.TrueValue = 1;
+            col4.FalseValue = false;
+            col4.TrueValue = true;
             DgPatientsAdd.Columns.Insert(0, col4);
 
             TxtWrittenByAdd.Text = Globals.ConnectedUserName;
@@ -187,8 +188,9 @@ namespace Clinic1
 
             col8.Name = "Active";
             col8.HeaderText = "משתתף";
-            col8.FalseValue = 0;
-            col8.TrueValue = 1;
+            col8.FalseValue = false;
+            col8.TrueValue = true;
+            col8.DataPropertyName = "Active";
             DgPatientsUpdate.Columns.Add(col8);
         }
 
@@ -213,7 +215,7 @@ int id = System.Convert.ToInt32(daAp.InsertQuery(Int32.Parse(txtMeetingNumberAdd
             {
                 bool result;
                 if (row.Cells["Active"].Value != null)
-                    result = Int32.Parse(row.Cells["Active"].Value.ToString()) == 1;
+                    result = row.Cells["Active"].Value.ToString() == "True";
                 else result = false;
 
                 daAForPatients.Insert(id, (int)CmbMeetingTypeAdd.SelectedValue, Int32.Parse(row.Cells["ID"].Value.ToString()), result);
@@ -334,7 +336,7 @@ int id = System.Convert.ToInt32(daAp.InsertQuery(Int32.Parse(txtMeetingNumberAdd
             {
                 bool result;
                 if (row.Cells["Active"].Value != null)
-                    result = Int32.Parse(row.Cells["Active"].Value.ToString()) == 1;
+                    result = row.Cells["Active"].Value.ToString() == "True";
                 else result = false;
 
                 //daAFP.UpdateQuery(id, (int)CmbMeetingTypeAdd.SelectedValue, Int32.Parse(row.Cells["ID"].Value.ToString()), result);

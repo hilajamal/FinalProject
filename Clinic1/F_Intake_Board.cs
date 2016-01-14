@@ -24,6 +24,10 @@ namespace Clinic1
             ClinicTableAdapters.PatientsTableAdapter daPatients = new ClinicTableAdapters.PatientsTableAdapter();
             Clinic.PatientsDataTable dtPatients = daPatients.GetPatientsWaitingForIntakeBoard();
 
+            CmbPatientIDUpdate.AutoCompleteMode = AutoCompleteMode.Append;
+            CmbPatientIDUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CmbPatientIDUpdate.DisplayMember = "ID";
+            CmbPatientIDUpdate.ValueMember = "ID";
 
             CmbDateUpdate.AutoCompleteMode = AutoCompleteMode.Append;
             CmbDateUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
@@ -81,10 +85,7 @@ namespace Clinic1
 
             //PatientsIDAdd
             CmbPatientIDUpdate.DataSource = dtPatientsUpdate;
-            CmbPatientIDUpdate.AutoCompleteMode = AutoCompleteMode.Append;
-            CmbPatientIDUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
-            CmbPatientIDUpdate.DisplayMember = "ID";
-            CmbPatientIDUpdate.ValueMember = "ID";
+          
             CmbPatientIDUpdate.SelectedIndex = -1;
             CmbPatientIDUpdate.SelectedIndex = 0;
 

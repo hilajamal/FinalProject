@@ -78,13 +78,12 @@ namespace Clinic1
             Clinic.PatientsDataTable dtPatients = daPatients.GetData();
 
             //PatientsID
-            CmbPatientID.DataSource = dtPatients;
             CmbPatientID.AutoCompleteMode = AutoCompleteMode.Append;
             CmbPatientID.AutoCompleteSource = AutoCompleteSource.ListItems;
             CmbPatientID.DisplayMember = "ID";
             CmbPatientID.ValueMember = "ID";
-            CmbPatientID.SelectedIndex = 0;
-
+            CmbPatientID.DataSource = dtPatients;
+            
             Clinic.CountryDataTable countriesUpdate = countryDa.GetData();
             CmbCountryOfBirthUpdate.DataSource = countriesUpdate;
             CmbCountryOfBirthUpdate.AutoCompleteMode = AutoCompleteMode.Append;

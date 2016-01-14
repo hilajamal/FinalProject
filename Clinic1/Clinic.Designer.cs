@@ -20941,8 +20941,8 @@ WHERE        (ID = @Original_ID)";
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContactType", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "ContactType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PatientID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "PatientID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WorkerID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "WorkerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContactPersonFName", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "ContactPersonFName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContactPersonLName", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "ContactPersonLName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContactPersonFName", global::System.Data.SqlDbType.Variant, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "ContactPersonFName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContactPersonLName", global::System.Data.SqlDbType.Variant, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "ContactPersonLName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Relationship", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Relationship", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Contents", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "Contents", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Remarks", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "Remarks", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -21371,7 +21371,7 @@ WHERE        (ID = @Original_ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int UpdateQuery(string ContactType, int PatientID, int WorkerID, string ContactPersonFName, string ContactPersonLName, string Relationship, string Contents, string Remarks, string Date, string Hour, int Original_ID) {
+        public virtual int UpdateQuery(string ContactType, int PatientID, int WorkerID, object ContactPersonFName, object ContactPersonLName, string Relationship, string Contents, string Remarks, string Date, string Hour, int Original_ID) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
             if ((ContactType == null)) {
                 throw new global::System.ArgumentNullException("ContactType");
@@ -21382,16 +21382,16 @@ WHERE        (ID = @Original_ID)";
             command.Parameters[1].Value = ((int)(PatientID));
             command.Parameters[2].Value = ((int)(WorkerID));
             if ((ContactPersonFName == null)) {
-                command.Parameters[3].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("ContactPersonFName");
             }
             else {
-                command.Parameters[3].Value = ((string)(ContactPersonFName));
+                command.Parameters[3].Value = ((object)(ContactPersonFName));
             }
             if ((ContactPersonLName == null)) {
-                command.Parameters[4].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("ContactPersonLName");
             }
             else {
-                command.Parameters[4].Value = ((string)(ContactPersonLName));
+                command.Parameters[4].Value = ((object)(ContactPersonLName));
             }
             if ((Relationship == null)) {
                 command.Parameters[5].Value = global::System.DBNull.Value;
