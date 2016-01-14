@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
+
 
 namespace Clinic1
 {
@@ -85,11 +87,9 @@ namespace Clinic1
             Clinic.PatientsDataTable dtPatientsUpdate = daPatients.GetDataByPatientsWithContacts();
 
             CmbPatientIdUpdate.DataSource = dtPatientsUpdate;
-            CmbPatientIdUpdate.SelectedIndex = 0;
 
             //PatientsNameUpdate
             CmbPatientNameUpdate.DataSource = dtPatientsUpdate;
-            CmbPatientNameUpdate.SelectedIndex = 0;
 
             HourPickerAdd.Format = DateTimePickerFormat.Time;
             HourPickerAdd.ShowUpDown = true;
@@ -111,12 +111,20 @@ namespace Clinic1
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
+            DateTime rs;
+            CultureInfo ci = new CultureInfo("en-IE");
+            if (!DateTime.TryParseExact(this.TxtDateAdd.Text, "dd/MM/yyyy", ci, DateTimeStyles.None, out rs))
+            {
+                MessageBox.Show("יש להזין תאריך תקין");
+                return;
+            }
+
+
             DateTime dt = HourPickerAdd.Value;
             TimeSpan st = new TimeSpan(dt.Hour, dt.Minute, dt.Second);
-            DateTime date = DateTime.Parse(TxtDateAdd.Text);
 
             ClinicTableAdapters.ContactsTableAdapter da = new ClinicTableAdapters.ContactsTableAdapter();
-            da.Insert(TxtContactTypeAdd.Text, Int32.Parse(CmblPatientId.SelectedValue.ToString()), Int32.Parse(CmbWorker.SelectedValue.ToString()), TxtContactFirstName.Text, TxtContactLastName.Text, TxtRelationAdd.Text, TxtContents.Text, TxtRemarks.Text, date, st);
+            da.Insert(TxtContactTypeAdd.Text, Int32.Parse(CmblPatientId.SelectedValue.ToString()), Int32.Parse(CmbWorker.SelectedValue.ToString()), TxtContactName.Text, TxtRelationAdd.Text, TxtContents.Text, TxtRemarks.Text, rs, st);
             MessageBox.Show("פרטים נשמרו בהצלחה", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
             this.Close();
         }
@@ -143,8 +151,7 @@ namespace Clinic1
             TxtRemarksUpdate.Text = dt.Rows[0]["Remarks"].ToString();
             TxtRelationUpdate.Text = dt.Rows[0]["Relationship"].ToString();
             TxtContentsUpdate.Text = dt.Rows[0]["Contents"].ToString();
-            TxtContactFNameUpdate.Text = dt.Rows[0]["ContactPersonFName"].ToString();
-            TxtContactLNameUpdate.Text = dt.Rows[0]["ContactPersonLName"].ToString();
+            TxtContactNameUpdate.Text = dt.Rows[0]["ContactPersonFName"].ToString();
             CmbWorkerUpdate.SelectedValue = Int32.Parse(dt.Rows[0]["WorkerID"].ToString());
             TxtContactTypeUpdate.Text = dt.Rows[0]["ContactType"].ToString();
             OriginalID = Int32.Parse(dt.Rows[0]["ID"].ToString());
@@ -169,10 +176,17 @@ namespace Clinic1
             DateTime now = DateTime.Now;
             TimeSpan ds = (TimeSpan)CmbHourUpdate.SelectedValue;
             //TimeSpan st = new TimeSpan(ds.Hour, ds.Minute, ds.Second);
-            da.UpdateQuery(TxtContactTypeUpdate.Text, (int)CmbPatientIdUpdate.SelectedValue, (int)CmbWorker.SelectedValue, TxtContactFNameUpdate.Text, TxtContactLNameUpdate.Text, TxtRelationUpdate.Text, TxtContentsUpdate.Text, TxtRemarksUpdate.Text, date.ToString(), ds.ToString().ToString(), OriginalID);
+            da.UpdateQuery(TxtContactTypeUpdate.Text, (int)CmbPatientIdUpdate.SelectedValue, (int)CmbWorker.SelectedValue, TxtContactNameUpdate.Text, TxtRelationUpdate.Text, TxtContentsUpdate.Text, TxtRemarksUpdate.Text, date.ToString(), ds.ToString().ToString(), OriginalID);
             MessageBox.Show("עדכון בוצע בהצלחה", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
 
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+      
 
  
 

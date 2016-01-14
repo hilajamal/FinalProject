@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
+
 
 namespace Clinic1
 {
     public partial class F_Intake_Board : Form
     {
-        String dateBeforeChange;
         public F_Intake_Board()
         {
             InitializeComponent();
@@ -22,6 +23,7 @@ namespace Clinic1
         private void addcols()
         {
             ClinicTableAdapters.PatientsTableAdapter daPatients = new ClinicTableAdapters.PatientsTableAdapter();
+
             Clinic.PatientsDataTable dtPatients = daPatients.GetPatientsWaitingForIntakeBoard();
 
             CmbPatientIDUpdate.AutoCompleteMode = AutoCompleteMode.Append;
@@ -40,6 +42,11 @@ namespace Clinic1
             CmblPatientIdAdd.AutoCompleteSource = AutoCompleteSource.ListItems;
             CmblPatientIdAdd.DisplayMember = "ID";
             CmblPatientIdAdd.ValueMember = "ID";
+            if (CmblPatientIdAdd.Items.Count > 0)
+            {
+                CmblPatientIdAdd.SelectedIndex = -1;
+                CmblPatientIdAdd.SelectedIndex = 0;
+            }
 
             //PatientsNameAdd
             CmbPatientNameAdd.DataSource = dtPatients;
@@ -50,15 +57,14 @@ namespace Clinic1
 
             // WorkersAdd
             ClinicTableAdapters.WorkersTableAdapter daWorkers = new ClinicTableAdapters.WorkersTableAdapter();
-            Clinic.WorkersDataTable dtWorkers = daWorkers.GetDataByActiveWorkers();
-            CmbMainTherapistAdd.DataSource = dtWorkers;
+            CmbMainTherapistAdd.DataSource = daWorkers.GetDataByActiveWorkers(); ;
             CmbMainTherapistAdd.SelectedIndex = 0;
             CmbMainTherapistAdd.AutoCompleteMode = AutoCompleteMode.Append;
             CmbMainTherapistAdd.AutoCompleteSource = AutoCompleteSource.ListItems;
             CmbMainTherapistAdd.DisplayMember = "FullName";
             CmbMainTherapistAdd.ValueMember = "ID";
 
-            CmbSecondTherapistAdd.DataSource = dtWorkers;
+            CmbSecondTherapistAdd.DataSource = daWorkers.GetDataByActiveWorkers();
             CmbSecondTherapistAdd.SelectedIndex = 0;
             CmbSecondTherapistAdd.AutoCompleteMode = AutoCompleteMode.Append;
             CmbSecondTherapistAdd.AutoCompleteSource = AutoCompleteSource.ListItems;
@@ -68,14 +74,12 @@ namespace Clinic1
 
             Clinic.WorkersDataTable dtWorkersUpdate = daWorkers.GetDataByActiveWorkers();
             CmbMainTherapistUpdate.DataSource = dtWorkersUpdate;
-            CmbMainTherapistUpdate.SelectedIndex = 0;
             CmbMainTherapistUpdate.AutoCompleteMode = AutoCompleteMode.Append;
             CmbMainTherapistUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
             CmbMainTherapistUpdate.DisplayMember = "FullName";
             CmbMainTherapistUpdate.ValueMember = "ID";
 
-            CmbSecondTherapistUpdate.DataSource = dtWorkersUpdate;
-            CmbSecondTherapistUpdate.SelectedIndex = 0;
+            CmbSecondTherapistUpdate.DataSource = daWorkers.GetDataByActiveWorkers(); ;
             CmbSecondTherapistUpdate.AutoCompleteMode = AutoCompleteMode.Append;
             CmbSecondTherapistUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
             CmbSecondTherapistUpdate.DisplayMember = "FullName";
@@ -86,8 +90,11 @@ namespace Clinic1
             //PatientsIDAdd
             CmbPatientIDUpdate.DataSource = dtPatientsUpdate;
           
-            CmbPatientIDUpdate.SelectedIndex = -1;
-            CmbPatientIDUpdate.SelectedIndex = 0;
+            if (CmbPatientIDUpdate.Items.Count > 0)
+            {
+                CmbPatientIDUpdate.SelectedIndex = -1;
+                CmbPatientIDUpdate.SelectedIndex = 0;
+            }
 
             //PatientsNameAdd
             CmbPatientNameUpdate.DataSource = dtPatientsUpdate;
@@ -107,19 +114,28 @@ namespace Clinic1
 
         private void BtnSaveAdd_Click(object sender, EventArgs e)
         {
-            DateTime date = DateTime.Parse(TxtDateAdd.Text);
+            DateTime rs;
+            CultureInfo ci = new CultureInfo("en-IE");
+            if (!DateTime.TryParseExact(this.TxtDateAdd.Text, "dd/MM/yyyy", ci, DateTimeStyles.None, out rs))
+            {
+                MessageBox.Show("יש להזין תאריך תקין");
+                return;
+            }
+            
             DateTime now = DateTime.Now;
             DateTime dt = HourPickerAdd.Value;
             TimeSpan st = new TimeSpan(dt.Hour, dt.Minute, dt.Second);
             ClinicTableAdapters.PatientsTableAdapter daPatients = new ClinicTableAdapters.PatientsTableAdapter();
             ClinicTableAdapters.IntakeBoardTableAdapter daIntake = new ClinicTableAdapters.IntakeBoardTableAdapter();
-            daIntake.Insert((int)CmblPatientIdAdd.SelectedValue, (int)CmbMainTherapistAdd.SelectedValue, (int)CmbSecondTherapistAdd.SelectedValue, now, st, Txtnotes.Text, Globals.ConnectedUserID, now, null, null);
+            daIntake.Insert((int)CmblPatientIdAdd.SelectedValue, (int)CmbMainTherapistAdd.SelectedValue, (int)CmbSecondTherapistAdd.SelectedValue, rs, st, Txtnotes.Text, Globals.ConnectedUserID, now, null, null);
             daPatients.UpdateIntakeBoardTrue(now, (int)CmblPatientIdAdd.SelectedValue);
             MessageBox.Show("פרטים נשמרו בהצלחה");
 
             Clinic.PatientsDataTable dtPatients = daPatients.GetPatientsWaitingForIntakeBoard();
             CmbPatientNameAdd.DataSource = dtPatients;
             CmblPatientIdAdd.DataSource = dtPatients;
+            Txtnotes.Text = String.Empty;
+
 
         }
 
@@ -133,7 +149,6 @@ namespace Clinic1
 
         private void CmbDateUpdate_SelectedIndexChanged(object sender, EventArgs e)
         {
-            dateBeforeChange = CmbDateUpdate.SelectedValue.ToString();
             ClinicTableAdapters.IntakeBoardTableAdapter da = new ClinicTableAdapters.IntakeBoardTableAdapter();
             Clinic.IntakeBoardDataTable dt = da.GetDataByPatientIDAndDate((int)CmbPatientIDUpdate.SelectedValue,(DateTime) CmbDateUpdate.SelectedValue);
             TxtnotesUpdate.Text = dt.Rows[0]["Notes"].ToString();
@@ -144,26 +159,52 @@ namespace Clinic1
             TxtUpdatedByUpdate.Text = dt.Rows[0]["UpdatedBy"].ToString();
             CmbMainTherapistUpdate.SelectedValue = Int32.Parse(dt.Rows[0]["MainTherapist"].ToString());
             CmbSecondTherapistUpdate.SelectedValue = Int32.Parse(dt.Rows[0]["SecondTherapist"].ToString());
+            DateTime d = (DateTime)CmbDateUpdate.SelectedValue;
+            TxtDateUpdate.Text = d.ToString("dd/MM/yyyy");
         }
 
         private void BtnSaveUpdates_Click(object sender, EventArgs e)
         {
-            DateTime date1 = DateTime.Parse(dateBeforeChange);
-            DateTime date2 = DateTime.Parse(CmbDateUpdate.Text);
+
+            DateTime rs;
+            CultureInfo ci = new CultureInfo("en-IE");
+            if (!DateTime.TryParseExact(TxtDateUpdate.Text, "dd/MM/yyyy", ci, DateTimeStyles.None, out rs))
+            {
+                MessageBox.Show("יש להזין תאריך תקין");
+                return;
+            }
+
 
             DateTime now = DateTime.Now;
             DateTime dt = HourPickerAdd.Value;
             TimeSpan st = new TimeSpan(dt.Hour, dt.Minute, dt.Second);
             ClinicTableAdapters.IntakeBoardTableAdapter da = new ClinicTableAdapters.IntakeBoardTableAdapter();
-            Clinic.IntakeBoardDataTable dts = da.GetDataByPatientIDAndDate((int)CmbPatientIDUpdate.SelectedValue, date1);
+            Clinic.IntakeBoardDataTable dts = da.GetDataByPatientIDAndDate((int)CmbPatientIDUpdate.SelectedValue, (DateTime)CmbDateUpdate.SelectedValue);
 
-            da.UpdateQuery((int)CmbMainTherapistUpdate.SelectedValue, (int)CmbSecondTherapistUpdate.SelectedValue, date2, st.ToString(), TxtnotesUpdate.Text, Globals.ConnectedUserID, now, Int32.Parse(dts.Rows[0]["ID"].ToString()));
+            da.UpdateQuery((int)CmbMainTherapistUpdate.SelectedValue, (int)CmbSecondTherapistUpdate.SelectedValue, rs, st.ToString(), TxtnotesUpdate.Text, Globals.ConnectedUserID, now, Int32.Parse(dts.Rows[0]["ID"].ToString()));
             MessageBox.Show("עדכון בוצע בהצלחה");
             int lastIndex = CmbPatientIDUpdate.SelectedIndex;
             CmbPatientIDUpdate.SelectedIndex = -1;
             CmbPatientIDUpdate.SelectedIndex = lastIndex;
 
 
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ClinicTableAdapters.PatientsTableAdapter daPatients = new ClinicTableAdapters.PatientsTableAdapter();
+            Clinic.PatientsDataTable dtPatientsUpdate = daPatients.GetPatientsWhoDidIntakeBoard();
+            CmbPatientIDUpdate.DataSource = dtPatientsUpdate;
+            CmbPatientNameUpdate.DataSource = dtPatientsUpdate;
+            Txtnotes.Text = String.Empty;
+        }
+
+        private void CmblPatientIdAdd_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TxtWrittenByAdd.Text = Globals.ConnectedUserName;
+            TxtWrittenByDateAdd.Text = DateTime.Now.ToString();
+            TxtIntakeBoardLeft.Text = CmblPatientIdAdd.Items.Count.ToString();
+         
         }
 
 

@@ -52,10 +52,24 @@
     </StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Excel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Excel.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Expression.Blend.Sdk.1.0.2\lib\net45\System.Windows.Interactivity.dll</HintPath>
     </Reference>
@@ -71,16 +85,38 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clinic.cs">
+      <DependentUpon>Clinic.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Clinic.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Clinic.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="F_ChooseDates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_ChooseDates.Designer.cs">
+      <DependentUpon>F_ChooseDates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_DoctorMeeting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_DoctorMeeting.Designer.cs">
+      <DependentUpon>F_DoctorMeeting.cs</DependentUpon>
     </Compile>
     <Compile Include="F_Groups.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="F_Groups.Designer.cs">
       <DependentUpon>F_Groups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_History.Designer.cs">
+      <DependentUpon>F_History.cs</DependentUpon>
     </Compile>
     <Compile Include="F_Intake.cs">
       <SubType>Form</SubType>
@@ -136,6 +172,12 @@
     <Compile Include="F_Password.Designer.cs">
       <DependentUpon>F_Password.cs</DependentUpon>
     </Compile>
+    <Compile Include="F_Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Reports.Designer.cs">
+      <DependentUpon>F_Reports.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_Workers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,8 +187,17 @@
     <Compile Include="Globals.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="F_ChooseDates.resx">
+      <DependentUpon>F_ChooseDates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_DoctorMeeting.resx">
+      <DependentUpon>F_DoctorMeeting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F_Groups.resx">
       <DependentUpon>F_Groups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_History.resx">
+      <DependentUpon>F_History.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_Intake.resx">
       <DependentUpon>F_Intake.cs</DependentUpon>
@@ -174,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_Password.resx">
       <DependentUpon>F_Password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Reports.resx">
+      <DependentUpon>F_Reports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_Workers.resx">
       <DependentUpon>F_Workers.cs</DependentUpon>

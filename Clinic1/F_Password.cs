@@ -12,12 +12,17 @@ namespace Clinic1
 {
     public partial class F_Password : Form
     {
+        public bool first = true;
+        ToolTip toolTip1 = new ToolTip();
 
                         public F_Password()
         {
             InitializeComponent();
             setComboBox();
             txtPassword.Focus();
+
+            txtPassword.MouseHover += new EventHandler(txtPassword_MouseHover);
+            txtPassword.MouseLeave += new EventHandler(txtPassword_MouseLeave);
         }
 
         public void setComboBox()
@@ -31,6 +36,23 @@ namespace Clinic1
             CmbWorker.AutoCompleteSource = AutoCompleteSource.ListItems;
             CmbWorker.DisplayMember = "FullName";
             CmbWorker.ValueMember = "ID";
+        }
+
+        void txtPassword_MouseLeave(object sender, EventArgs e)
+        {
+            toolTip1.Hide(txtPassword);
+        }
+        void txtPassword_MouseHover(object sender, EventArgs e)
+        {
+            if (Control.IsKeyLocked(Keys.CapsLock))
+            {
+
+                toolTip1.ToolTipTitle = "Caps Lock מופעל";
+                toolTip1.ToolTipIcon = ToolTipIcon.Warning;
+                toolTip1.IsBalloon = true;
+                toolTip1.SetToolTip(txtPassword, "");
+                toolTip1.Show("", txtPassword, 5, txtPassword.Height - 5);
+            }
         }
 
         private void BtnLogIn_Click(object sender, EventArgs e)
@@ -68,6 +90,28 @@ namespace Clinic1
         {
             if (e.KeyCode == Keys.Enter)
             BtnLogIn.PerformClick();
+        }
+
+        private void BtnShowPassword_Click(object sender, EventArgs e)
+        {
+            if (first == true)
+            {
+                txtPassword.PasswordChar = '\0';
+                first = false;
+                BtnShowPassword.Text = "הסתר סיסמה";
+            }
+            else
+            {
+                txtPassword.PasswordChar = '*';
+                first = true;
+                BtnShowPassword.Text = "הצג סיסמה";
+
+            }
+        }
+
+        private void F_Password_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

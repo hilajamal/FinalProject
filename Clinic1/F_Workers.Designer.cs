@@ -53,19 +53,25 @@
             this.CmbPermissions = new System.Windows.Forms.ComboBox();
             this.BtnExitNoSavePermissions = new System.Windows.Forms.Button();
             this.BtnSavePermissions = new System.Windows.Forms.Button();
+            this.TxtEmail = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DgWorkers)).BeginInit();
             this.SuspendLayout();
             // 
             // DgWorkers
             // 
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gainsboro;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.DgWorkers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DgWorkers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DgWorkers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DgWorkers.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.DgWorkers.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.DgWorkers.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
@@ -77,14 +83,14 @@
             this.DgWorkers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DgWorkers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gainsboro;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DgWorkers.DefaultCellStyle = dataGridViewCellStyle3;
-            this.DgWorkers.Location = new System.Drawing.Point(194, 42);
+            this.DgWorkers.Location = new System.Drawing.Point(72, 23);
             this.DgWorkers.MultiSelect = false;
             this.DgWorkers.Name = "DgWorkers";
             this.DgWorkers.ReadOnly = true;
@@ -100,12 +106,13 @@
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DgWorkers.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.DgWorkers.Size = new System.Drawing.Size(559, 423);
+            this.DgWorkers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgWorkers.Size = new System.Drawing.Size(782, 423);
             this.DgWorkers.TabIndex = 0;
             // 
             // BtnAddNewWorker
             // 
-            this.BtnAddNewWorker.BackColor = System.Drawing.Color.DodgerBlue;
+            this.BtnAddNewWorker.BackColor = System.Drawing.Color.CornflowerBlue;
             this.BtnAddNewWorker.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAddNewWorker.Location = new System.Drawing.Point(582, 487);
             this.BtnAddNewWorker.Name = "BtnAddNewWorker";
@@ -203,7 +210,7 @@
             // 
             // BtnExitNoSave
             // 
-            this.BtnExitNoSave.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.BtnExitNoSave.BackColor = System.Drawing.Color.CornflowerBlue;
             this.BtnExitNoSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnExitNoSave.ForeColor = System.Drawing.Color.Black;
             this.BtnExitNoSave.Location = new System.Drawing.Point(194, 496);
@@ -217,7 +224,7 @@
             // 
             // BtnSave
             // 
-            this.BtnSave.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.BtnSave.BackColor = System.Drawing.Color.CornflowerBlue;
             this.BtnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSave.ForeColor = System.Drawing.Color.Black;
             this.BtnSave.Location = new System.Drawing.Point(610, 496);
@@ -231,7 +238,7 @@
             // 
             // BtnPermissions
             // 
-            this.BtnPermissions.BackColor = System.Drawing.Color.DodgerBlue;
+            this.BtnPermissions.BackColor = System.Drawing.Color.CornflowerBlue;
             this.BtnPermissions.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnPermissions.Location = new System.Drawing.Point(416, 487);
             this.BtnPermissions.Name = "BtnPermissions";
@@ -243,7 +250,7 @@
             // 
             // btnEditWorkers
             // 
-            this.btnEditWorkers.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEditWorkers.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnEditWorkers.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditWorkers.Location = new System.Drawing.Point(247, 487);
             this.btnEditWorkers.Name = "btnEditWorkers";
@@ -283,7 +290,7 @@
             // 
             this.LblPermission.BackColor = System.Drawing.Color.White;
             this.LblPermission.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPermission.Location = new System.Drawing.Point(520, 321);
+            this.LblPermission.Location = new System.Drawing.Point(520, 317);
             this.LblPermission.Name = "LblPermission";
             this.LblPermission.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.LblPermission.Size = new System.Drawing.Size(104, 24);
@@ -295,7 +302,7 @@
             // 
             this.CmbPermissions.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbPermissions.FormattingEnabled = true;
-            this.CmbPermissions.Location = new System.Drawing.Point(359, 321);
+            this.CmbPermissions.Location = new System.Drawing.Point(359, 317);
             this.CmbPermissions.Name = "CmbPermissions";
             this.CmbPermissions.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbPermissions.Size = new System.Drawing.Size(100, 24);
@@ -303,7 +310,7 @@
             // 
             // BtnExitNoSavePermissions
             // 
-            this.BtnExitNoSavePermissions.BackColor = System.Drawing.Color.DodgerBlue;
+            this.BtnExitNoSavePermissions.BackColor = System.Drawing.Color.CornflowerBlue;
             this.BtnExitNoSavePermissions.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnExitNoSavePermissions.Location = new System.Drawing.Point(330, 487);
             this.BtnExitNoSavePermissions.Name = "BtnExitNoSavePermissions";
@@ -316,7 +323,7 @@
             // 
             // BtnSavePermissions
             // 
-            this.BtnSavePermissions.BackColor = System.Drawing.Color.DodgerBlue;
+            this.BtnSavePermissions.BackColor = System.Drawing.Color.CornflowerBlue;
             this.BtnSavePermissions.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSavePermissions.Location = new System.Drawing.Point(482, 487);
             this.BtnSavePermissions.Name = "BtnSavePermissions";
@@ -327,11 +334,32 @@
             this.BtnSavePermissions.Visible = false;
             this.BtnSavePermissions.Click += new System.EventHandler(this.BtnSavePermissions_Click);
             // 
+            // TxtEmail
+            // 
+            this.TxtEmail.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtEmail.Location = new System.Drawing.Point(359, 362);
+            this.TxtEmail.Name = "TxtEmail";
+            this.TxtEmail.Size = new System.Drawing.Size(100, 23);
+            this.TxtEmail.TabIndex = 36;
+            this.TxtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(522, 360);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label1.Size = new System.Drawing.Size(100, 22);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "דואר אלקטרוני";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // F_Workers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(931, 574);
             this.Controls.Add(this.BtnExitNoSavePermissions);
             this.Controls.Add(this.BtnSavePermissions);
@@ -353,9 +381,11 @@
             this.Controls.Add(this.LblID);
             this.Controls.Add(this.CmbPermissions);
             this.Controls.Add(this.LblPermission);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.TxtEmail);
             this.Name = "F_Workers";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "F_Workers";
             ((System.ComponentModel.ISupportInitialize)(this.DgWorkers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -384,5 +414,7 @@
         private System.Windows.Forms.ComboBox CmbPermissions;
         private System.Windows.Forms.Button BtnExitNoSavePermissions;
         private System.Windows.Forms.Button BtnSavePermissions;
+        private System.Windows.Forms.TextBox TxtEmail;
+        private System.Windows.Forms.Label label1;
     }
 }

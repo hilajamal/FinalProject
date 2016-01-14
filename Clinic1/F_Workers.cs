@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Mail;
 
 namespace Clinic1
 {
@@ -37,6 +38,10 @@ namespace Clinic1
             var col4 = new DataGridViewCheckBoxColumn();
             var col5 = new DataGridViewComboBoxColumn();
             var col6 = new DataGridViewCheckBoxColumn();
+            var col7 = new DataGridViewTextBoxColumn();
+            var col8 = new DataGridViewTextBoxColumn();
+
+
             ClinicTableAdapters.PermissionTypeTableAdapter daPermissions = new ClinicTableAdapters.PermissionTypeTableAdapter();
 
             col1.HeaderText = "תעודת זהות";
@@ -68,11 +73,19 @@ namespace Clinic1
             col5.ReadOnly = false;
             DgWorkers.Columns.Add(col5);
 
-            //col5.DataPropertyName = "Permission";
+            col7.HeaderText = "שם מלא";
+            col7.DataPropertyName = "FullName";
+            col7.Name = "FullName";
+            DgWorkers.Columns.Add(col7);
 
+            col8.HeaderText = "דואר אלקטרוני";
+            col8.DataPropertyName = "Email";
+            col8.Name = "Email";
+            DgWorkers.Columns.Add(col8);
 
-
+            DgWorkers.Columns["FullName"].Visible = false;
             DgWorkers.Columns["Permission"].Visible = false;
+
 
         }
 
@@ -101,6 +114,8 @@ namespace Clinic1
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
+
+
             ClinicTableAdapters.WorkersTableAdapter daWorkers = new ClinicTableAdapters.WorkersTableAdapter();
             if (!ValidateWorkerTextBox() == false)
             {
@@ -110,7 +125,7 @@ namespace Clinic1
                 if (workerCheck.Rows.Count == 0)
                 {
                     int perm = Int32.Parse(CmbPermissions.SelectedValue.ToString());
-                    daWorkers.Insert(Int32.Parse(TxtID.Text), TxtFirstName.Text, fullname, TxtLastName.Text, perm, true,TxtPassword.Text);
+                    daWorkers.Insert(Int32.Parse(TxtID.Text), TxtFirstName.Text, fullname, TxtLastName.Text, perm, true, TxtPassword.Text,TxtEmail.Text);
                     BtnAddNewWorker.Visible = true;
                     BtnPermissions.Visible = true;
                     workerCheck = daWorkers.GetData();
@@ -209,6 +224,24 @@ namespace Clinic1
                     First_ItemNull = true;
                 }
                 HasErrors = true;
+                 }
+                try
+                {
+                    var test = new MailAddress(TxtEmail.Text);
+                }
+                catch (Exception e)
+                {
+                    if (First_ItemNull == true)
+                    {
+                        str.Append(", דואר אלקטרוני תקין");
+                    }
+                    else
+                    {
+                        str.Append(" דואר אלקטרוני תקין");
+                        First_ItemNull = true;
+                    }
+                    HasErrors = true;
+                
             }
 
             if (HasErrors)
@@ -270,17 +303,18 @@ namespace Clinic1
         private Boolean ValidateWorkersRow(DataGridViewRow row, int index)
         {
             StringBuilder str = new StringBuilder();
-            str.Append(" הוסף בשורה " + index + 1 );
+            int num = index + 1;
+            str.Append(" הוסף בשורה " + num);
             Boolean HasErrors = false; //במידה והמשתמש מילא את כל הפרטים לא נדפיס הודעה
             Boolean First_ItemNull = false; //בהוספה ראשונה נשמיט את הפסיק
-            if (DgWorkers.Rows[index].Cells[0].Value == System.DBNull.Value)
+            if (row.Cells[0].Value == System.DBNull.Value)
             {
                 str.Append(" תעודת זהות");
                 HasErrors = true;
                 First_ItemNull = true;
             }
 
-            if (DgWorkers.Rows[index].Cells[1].Value == System.DBNull.Value)
+            if (row.Cells[1].Value == System.DBNull.Value)
             {
                 if (First_ItemNull == true)
                 {
@@ -294,7 +328,7 @@ namespace Clinic1
                 HasErrors = true;
             }
 
-            if (DgWorkers.Rows[index].Cells[2].Value == System.DBNull.Value)
+            if (row.Cells[2].Value == System.DBNull.Value)
             {
                 if (First_ItemNull == true)
                 {
@@ -333,10 +367,11 @@ namespace Clinic1
 
                     FullName = row.Cells["FirstName"].Value.ToString() + " " + row.Cells["LastName"].Value.ToString();
                     row.Cells["FullName"].Value = FullName.ToString();
-                }
+                    index++;
+                }}
                 da.Update(dtWorkers);
                 //da.Update(row);
-           }
+          
        //     da.Fill(Clinic.WorkersDataTable);
                HideEditMode();
         }

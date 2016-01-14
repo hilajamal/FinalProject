@@ -19,6 +19,8 @@ namespace Clinic1
         public F_MainForm()
         {
             InitializeComponent();
+            LblName.Text = "ברוך שובך, " + Globals.ConnectedUserName;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -84,6 +86,30 @@ namespace Clinic1
         {
             F_Meetings f = new F_Meetings();
             f.Show();
+        }
+
+        private void BtnDoctor_Click(object sender, EventArgs e)
+        {
+            F_DoctorMeeting doctor = new F_DoctorMeeting();
+            doctor.Show();
+        }
+
+        private void btnReports_Click(object sender, EventArgs e)
+        {
+            F_Reports reports = new F_Reports();
+            reports.Show();
+        }
+
+        private void BtnHistory_Click(object sender, EventArgs e)
+        {
+            F_History history = new F_History();
+            history.Show();
+        }
+
+        private void F_MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+
         }
 
      

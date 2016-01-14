@@ -18,19 +18,18 @@ namespace Clinic1
         public F_GroupsMeetings()
         {
             InitializeComponent();
-            CmbMeetingNumberUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
-            CmbMeetingNumberUpdate.DisplayMember = "AppointmentNumber";
-            CmbMeetingNumberUpdate.ValueMember = "AppointmentNumber";
+    
             addCols();
             loaddata();
         }
 
         private void loaddata()
         {
+            ClinicTableAdapters.AppointmentsTableAdapter daAppointments = new ClinicTableAdapters.AppointmentsTableAdapter(); 
             ClinicTableAdapters.GroupsTableAdapter daGroups = new ClinicTableAdapters.GroupsTableAdapter();
-            if (daGroups.GetDataByGroupsWithAppointments().Rows.Count > 0)
+            if (daAppointments.GetDataByGroupsWithAppointments().Rows.Count > 0)
             {
-                Clinic.GroupsDataTable dtGroups1 = daGroups.GetDataByGroupsWithAppointments();
+                Clinic.AppointmentsDataTable dtGroups1 = daAppointments.GetDataByGroupsWithAppointments();
                 CmbGroupNameUpdate.DataSource = dtGroups1;
                 CmbGroupIdUpdate.DataSource = dtGroups1;
             }
@@ -42,8 +41,7 @@ namespace Clinic1
             CmbGroupIDAdd.DataSource = dtGroups2;
 
             ClinicTableAdapters.AppointmentTypeTableAdapter daType = new ClinicTableAdapters.AppointmentTypeTableAdapter();
-            CmbMeetingTypeAdd.DataSource = daType.GetData();
-            CmbMeetingTypeUpdate.DataSource = daType.GetData();
+            CmbMeetingTypeAdd.DataSource = daType.GetDataByGroupsAppointments();
             ClinicTableAdapters.PatientsTableAdapter daPatients = new ClinicTableAdapters.PatientsTableAdapter();
             Clinic.PatientsDataTable dtPatients = daPatients.GetDataByPatientIDInnerJoinPatients((int)CmbGroupIDAdd.SelectedValue);
             DgPatientsAdd.DataSource = dtPatients;
@@ -58,6 +56,27 @@ namespace Clinic1
 
         private void addCols()
         {
+
+            CmbGroupIdUpdate.AutoCompleteMode = AutoCompleteMode.Append;
+            CmbGroupIdUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CmbGroupIdUpdate.DisplayMember = "GroupNumber";
+            CmbGroupIdUpdate.ValueMember = "GroupNumber";
+
+            CmbGroupNameUpdate.AutoCompleteMode = AutoCompleteMode.Append;
+            CmbGroupNameUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CmbGroupNameUpdate.DisplayMember = "Name";
+            CmbGroupNameUpdate.ValueMember = "GroupNumber";
+
+            CmbGroupIDAdd.AutoCompleteMode = AutoCompleteMode.Append;
+            CmbGroupIDAdd.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CmbGroupIDAdd.DisplayMember = "GroupNumber";
+            CmbGroupIDAdd.ValueMember = "GroupNumber";
+
+            CmbGroupNameAdd.AutoCompleteMode = AutoCompleteMode.Append;
+            CmbGroupNameAdd.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CmbGroupNameAdd.DisplayMember = "Name";
+            CmbGroupNameAdd.ValueMember = "GroupNumber";
+
             DataGridViewTextBoxColumn col1 = new DataGridViewTextBoxColumn();
             DataGridViewTextBoxColumn col2 = new DataGridViewTextBoxColumn();
             DataGridViewTextBoxColumn col3 = new DataGridViewTextBoxColumn();
@@ -88,20 +107,37 @@ namespace Clinic1
 
             TxtWrittenByAdd.Text = Globals.ConnectedUserName;
             TxtWrittenByDateAdd.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
-            TxtUpdatedByUpdate.Text = Globals.ConnectedUserName;
-            TxtUpdatedByDateUpdate.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+       
+
+            CmbMeetingNumberUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CmbMeetingNumberUpdate.DisplayMember = "AppointmentNumber";
+            CmbMeetingNumberUpdate.ValueMember = "AppointmentNumber";
 
             ClinicTableAdapters.WorkersTableAdapter daWorker = new ClinicTableAdapters.WorkersTableAdapter();
             Clinic.WorkersDataTable dtWorkers1 = daWorker.GetDataByActiveWorkers();
-            Clinic.WorkersDataTable dtWorkers2 = daWorker.GetDataByActiveWorkers();
+            Clinic.WorkersDataTable dtWorkers2 = new Clinic.WorkersDataTable();
             Clinic.WorkersDataTable dtWorkers3 = daWorker.GetDataByActiveWorkers();
-            Clinic.WorkersDataTable dtWorkers4 = daWorker.GetDataByActiveWorkers();
-            
+            Clinic.WorkersDataTable dtWorkers4 = new Clinic.WorkersDataTable();
+
+
+            DataRow row = dtWorkers2.NewRow();
+            row["ID"] = 0;
+            row["FullName"] = "";
+            dtWorkers2.Rows.InsertAt(row, 0);
+            dtWorkers2.Merge(daWorker.GetDataByActiveWorkers());
+
+            DataRow row2 = dtWorkers4.NewRow();
+            row2["ID"] = 0;
+            row2["FullName"] = "";
+            dtWorkers4.Rows.InsertAt(row2, 0);
+            dtWorkers4.Merge(daWorker.GetDataByActiveWorkers());
+       
             CmbMainTherapistAdd.DataSource = dtWorkers1;
             CmbSecondTherapistAdd.DataSource = dtWorkers2;
             CmbMainTherapistUpdate.DataSource = dtWorkers3;
             CmbSecondTherapistUpdate.DataSource = dtWorkers4;
-
+            CmbSecondTherapistAdd.SelectedIndex = 0;
+            CmbSecondTherapistUpdate.SelectedIndex = 0;
 
             CmbMainTherapistAdd.AutoCompleteSource = AutoCompleteSource.ListItems;
             CmbMainTherapistAdd.DisplayMember = "FullName";
@@ -121,23 +157,12 @@ namespace Clinic1
             CmbSecondTherapistUpdate.DisplayMember = "FullName";
             CmbSecondTherapistUpdate.ValueMember = "ID";
 
-            CmbGroupIdUpdate.AutoCompleteMode = AutoCompleteMode.Append;
-            CmbGroupIdUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
-            CmbGroupIdUpdate.DisplayMember = "GroupNumber";
-            CmbGroupIdUpdate.ValueMember = "GroupNumber";
-            CmbGroupNameUpdate.AutoCompleteMode = AutoCompleteMode.Append;
-            CmbGroupNameUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
-            CmbGroupNameUpdate.DisplayMember = "Name";
-            CmbGroupNameUpdate.ValueMember = "GroupNumber";
+     
 
-            CmbGroupIDAdd.AutoCompleteMode = AutoCompleteMode.Append;
-            CmbGroupIDAdd.AutoCompleteSource = AutoCompleteSource.ListItems;
-            CmbGroupIDAdd.DisplayMember = "GroupNumber";
-            CmbGroupIDAdd.ValueMember = "GroupNumber";
-            CmbGroupNameAdd.AutoCompleteMode = AutoCompleteMode.Append;
-            CmbGroupNameAdd.AutoCompleteSource = AutoCompleteSource.ListItems;
-            CmbGroupNameAdd.DisplayMember = "Name";
-            CmbGroupNameAdd.ValueMember = "GroupNumber";
+            CmbDateUpdate.AutoCompleteMode = AutoCompleteMode.Append;
+            CmbDateUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CmbDateUpdate.DisplayMember = "Date";
+            CmbDateUpdate.ValueMember = "Date";
 
 
             CmbMeetingNumberUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
@@ -161,7 +186,7 @@ namespace Clinic1
             CmbMeetingTypeUpdate.AutoCompleteMode = AutoCompleteMode.Append;
             CmbMeetingTypeUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
             CmbMeetingTypeUpdate.DisplayMember = "Name";
-            CmbMeetingTypeUpdate.ValueMember = "ID";
+            CmbMeetingTypeUpdate.ValueMember = "AppointmentType";
 
 
             DataGridViewTextBoxColumn col5 = new DataGridViewTextBoxColumn();
@@ -205,12 +230,17 @@ namespace Clinic1
                 MessageBox.Show("טיפול כבר קיים");
                 return;
             }
-            DateTime dt1 = DateTime.ParseExact(TxtWrittenByDateAdd.Text, "dd/MM/yyyy HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
-            //DateTime date = DateTime.ParseExact(CalendarAdd.SelectionRange.Start.ToString(), "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+            DateTime rs;
+            CultureInfo ci = new CultureInfo("en-IE");
+            if (!DateTime.TryParseExact(this.TxtDateAdd.Text, "dd/MM/yyyy", ci, DateTimeStyles.None, out rs))
+            {
+                MessageBox.Show("יש להזין תאריך תקין");
+                return;
+            }
             DateTime dt = HourPickerStartAdd.Value;
             TimeSpan st = new TimeSpan(dt.Hour, dt.Minute, dt.Second);
-             
-int id = System.Convert.ToInt32(daAp.InsertQuery(Int32.Parse(txtMeetingNumberAdd.Text), (int)CmbGroupIDAdd.SelectedValue, (int)CmbMeetingTypeAdd.SelectedValue, CalendarAdd.SelectionRange.Start, st.ToString(), (int)CmbMainTherapistAdd.SelectedValue, (int)CmbSecondTherapistAdd.SelectedValue, TxtNotesAdd.Text, TxtSummaryAdd.Text, Globals.ConnectedUserID, null, dt1, null, null, null, null, null, null, null, null, null, null));
+
+            int id = System.Convert.ToInt32(daAp.InsertQuery(Int32.Parse(txtMeetingNumberAdd.Text), (int)CmbGroupIDAdd.SelectedValue, (int)CmbMeetingTypeAdd.SelectedValue, rs, st.ToString(), (int)CmbMainTherapistAdd.SelectedValue, (int)CmbSecondTherapistAdd.SelectedValue, TxtNotesAdd.Text, TxtSummaryAdd.Text, Globals.ConnectedUserID, null, DateTime.Now, null, null, null, null, null, null, null, null, null, null));
             foreach (DataGridViewRow row in DgPatientsAdd.Rows)
             {
                 bool result;
@@ -250,9 +280,12 @@ int id = System.Convert.ToInt32(daAp.InsertQuery(Int32.Parse(txtMeetingNumberAdd
             if (CmbGroupIdUpdate.Items.Count > 0)
                 if (CmbGroupIdUpdate.SelectedIndex != -1)
                 {
-                    Clinic.AppointmentsDataTable dt = da.GetDataByGroupNumber((int)CmbGroupIdUpdate.SelectedValue);
-                    if(dt.Rows.Count > 0)
-                    CmbMeetingNumberUpdate.DataSource = dt;
+                    Clinic.AppointmentsDataTable dt = da.GetAppointmentsTypesByGroupNumber((int)CmbGroupIdUpdate.SelectedValue);
+                    if (dt.Rows.Count > 0)
+                    {
+                        CmbMeetingTypeUpdate.DataSource = dt;
+                        CmbMeetingTypeUpdate.SelectedIndex = 0;
+                    }
                     else
                     {
                         TxtRemarksUpdate.Text = String.Empty;
@@ -260,7 +293,7 @@ int id = System.Convert.ToInt32(daAp.InsertQuery(Int32.Parse(txtMeetingNumberAdd
                         TxtWrittenByDateUpdate.Text = String.Empty;
                         TxtWrittenByUpdate.Text = String.Empty;
                         if (DgPatientsUpdate.Rows.Count > 0)
-                        DgPatientsUpdate.DataSource = null;
+                            DgPatientsUpdate.DataSource = null;
 
                     }
             
@@ -277,7 +310,7 @@ int id = System.Convert.ToInt32(daAp.InsertQuery(Int32.Parse(txtMeetingNumberAdd
             {
                 if (CmbMeetingNumberUpdate.SelectedIndex != -1)
                 {
-                    Clinic.AppointmentsDataTable dt = da.GetDataByGroupNumberAndAppointmentNumber((int)CmbGroupIdUpdate.SelectedValue, (int)CmbMeetingNumberUpdate.SelectedValue);
+                    Clinic.AppointmentsDataTable dt = da.GetDataByGroupNumberAppointmentTypeAppointmentNumberDate((int)CmbGroupIdUpdate.SelectedValue,(int)CmbMeetingTypeUpdate.SelectedValue, (int)CmbMeetingNumberUpdate.SelectedValue,(DateTime)CmbDateUpdate.SelectedValue);
                     if (dt.Rows.Count > 0)
                     {
                         DgPatientsUpdate.DataSource = daAFP.GetDataByAppointmentNumbrInnerJoinPatients(Int32.Parse(dt.Rows[0]["ID"].ToString()));
@@ -290,7 +323,19 @@ int id = System.Convert.ToInt32(daAp.InsertQuery(Int32.Parse(txtMeetingNumberAdd
                         CmbMeetingTypeUpdate.SelectedValue = Int32.Parse(dt.Rows[0]["AppointmentType"].ToString());
                         CmbMainTherapistUpdate.SelectedValue = Int32.Parse(dt.Rows[0]["MainTherapist"].ToString());
                         CmbSecondTherapistUpdate.SelectedValue = Int32.Parse(dt.Rows[0]["SecondTherapist"].ToString());
-                        
+                        DateTime Dates = new DateTime();
+
+                        if (!DBNull.Value.Equals(dt.Rows[0]["UpdatedByDate"]))
+                        {
+                            Dates = (DateTime)dt.Rows[0]["UpdatedByDate"];
+                            TxtUpdatedByDateUpdate.Text = Dates.ToString("dd/MM/yyyy HH:mm:ss");
+
+                        }
+                        if (!DBNull.Value.Equals(dt.Rows[0]["UpdatedBy"]))
+                        {
+                            TxtUpdatedByUpdate.Text = daWorkers.GetFullNameByID((int)dt.Rows[0]["UpdatedBy"]);
+
+                        }
 
                     }
                     else
@@ -300,6 +345,8 @@ int id = System.Convert.ToInt32(daAp.InsertQuery(Int32.Parse(txtMeetingNumberAdd
                         TxtSummaryUpdate.Text = String.Empty;
                         TxtWrittenByDateUpdate.Text = String.Empty;
                         TxtWrittenByUpdate.Text = String.Empty;
+                        TxtUpdatedByDateUpdate.Text = String.Empty;
+                        TxtUpdatedByUpdate.Text = String.Empty;
                         DgPatientsUpdate.Rows.Clear();
 
 
@@ -313,8 +360,8 @@ int id = System.Convert.ToInt32(daAp.InsertQuery(Int32.Parse(txtMeetingNumberAdd
 
         private void TabGroupsMeetings_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ClinicTableAdapters.GroupsTableAdapter da = new ClinicTableAdapters.GroupsTableAdapter();
-            Clinic.GroupsDataTable dt = da.GetDataByGroupsWithAppointments();
+            ClinicTableAdapters.AppointmentsTableAdapter daAppointments = new ClinicTableAdapters.AppointmentsTableAdapter();
+            Clinic.AppointmentsDataTable dt = daAppointments.GetDataByGroupsWithAppointments();
             CmbGroupIdUpdate.DataSource = dt;
             CmbGroupNameUpdate.DataSource = dt;
         }
@@ -324,14 +371,25 @@ int id = System.Convert.ToInt32(daAp.InsertQuery(Int32.Parse(txtMeetingNumberAdd
 
             ClinicTableAdapters.AppointmentsTableAdapter da = new ClinicTableAdapters.AppointmentsTableAdapter();
             ClinicTableAdapters.AppointmentsForPatientsTableAdapter daAFP = new ClinicTableAdapters.AppointmentsForPatientsTableAdapter();
-            Clinic.AppointmentsDataTable dtApp = da.GetDataByGroupNumberAndAppointmentNumber((int)CmbGroupIdUpdate.SelectedValue,(int)CmbMeetingNumberUpdate.SelectedValue);
+            Clinic.AppointmentsDataTable dtApp = da.GetDataByGroupNumberAppointmentTypeAppointmentNumberDate((int)CmbGroupIdUpdate.SelectedValue,(int)CmbMeetingTypeUpdate.SelectedValue,(int)CmbMeetingNumberUpdate.SelectedValue,(DateTime)CmbDateUpdate.SelectedValue);
             int appId = Int32.Parse(dtApp.Rows[0]["ID"].ToString());
 
             DateTime now = DateTime.Now;
             String date = now.ToString("dd/MM/yyyy HH:mm:ss");
-            DateTime dt1 = DateTime.ParseExact(date, "dd/MM/yyyy HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
+            DateTime dt = HourPickerStartUpdate.Value;
+            TimeSpan st = new TimeSpan(dt.Hour, dt.Minute, dt.Second);
 
-            //da.UpdateQuery((int)CmbMainTherapistUpdate.SelectedValue, (int)CmbSecondTherapistUpdate.SelectedValue, TxtRemarksUpdate.Text, TxtSummaryUpdate.Text, Globals.ConnectedUserID, dt1, (int)CmbGroupIdUpdate.SelectedValue, (int)CmbMeetingNumberUpdate.SelectedValue);
+            DateTime rs;
+            CultureInfo ci = new CultureInfo("en-IE");
+            if (!DateTime.TryParseExact(this.TxtDateUpdate.Text, "dd/MM/yyyy", ci, DateTimeStyles.None, out rs))
+            {
+                MessageBox.Show("יש להזין תאריך תקין");
+                return;
+            }
+
+
+            da.UpdateQuery((int)CmbMeetingNumberUpdate.SelectedValue, (int)CmbGroupIdUpdate.SelectedValue, (int)CmbMeetingTypeUpdate.SelectedValue, rs, st.ToString(), (int)CmbMainTherapistUpdate.SelectedValue, (int)CmbSecondTherapistUpdate.SelectedValue, TxtRemarksUpdate.Text,
+                TxtSummaryUpdate.Text, Globals.ConnectedUserID, now, null, null, null, null, null, null, null, null, null, appId);
             foreach (DataGridViewRow row in DgPatientsUpdate.Rows)
             {
                 bool result;
@@ -339,11 +397,53 @@ int id = System.Convert.ToInt32(daAp.InsertQuery(Int32.Parse(txtMeetingNumberAdd
                     result = row.Cells["Active"].Value.ToString() == "True";
                 else result = false;
 
-                //daAFP.UpdateQuery(id, (int)CmbMeetingTypeAdd.SelectedValue, Int32.Parse(row.Cells["ID"].Value.ToString()), result);
                 daAFP.UpdateQuery((int)CmbMeetingTypeUpdate.SelectedValue, result, appId);
             }
 
             MessageBox.Show("טיפול עודכן בהצלחה");
+        }
+
+        private void CmbDateUpdate_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ClinicTableAdapters.AppointmentsTableAdapter da = new ClinicTableAdapters.AppointmentsTableAdapter();
+            Clinic.AppointmentsDataTable dt = da.GetDataByGroupIDAppointmentTypeAndDAte((int)CmbGroupIdUpdate.SelectedValue, (int)CmbMeetingTypeUpdate.SelectedValue, (DateTime)CmbDateUpdate.SelectedValue);
+            if (dt.Rows.Count > 0)
+            {
+                CmbMeetingNumberUpdate.DataSource = dt;
+                DateTime d = (DateTime)CmbDateUpdate.SelectedValue;
+                TxtDateUpdate.Text = d.ToString("dd/MM/yyyy");
+            }
+            else
+            {
+
+                TxtRemarksUpdate.Text = String.Empty;
+                TxtSummaryUpdate.Text = String.Empty;
+                TxtWrittenByDateUpdate.Text = String.Empty;
+                TxtWrittenByUpdate.Text = String.Empty;
+                DgPatientsUpdate.Rows.Clear();
+                TxtDateUpdate.Text = string.Empty;
+
+
+            }
+        }
+
+        private void CmbMeetingTypeUpdate_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ClinicTableAdapters.AppointmentsTableAdapter da = new ClinicTableAdapters.AppointmentsTableAdapter();
+            Clinic.AppointmentsDataTable dt = da.GetDataByGroupNumberAndAppointmentType((int)CmbGroupIdUpdate.SelectedValue,(int)CmbMeetingTypeUpdate.SelectedValue);
+            if (dt.Rows.Count > 0)
+                CmbDateUpdate.DataSource = dt;
+            else
+            {
+
+                TxtRemarksUpdate.Text = String.Empty;
+                TxtSummaryUpdate.Text = String.Empty;
+                TxtWrittenByDateUpdate.Text = String.Empty;
+                TxtWrittenByUpdate.Text = String.Empty;
+                DgPatientsUpdate.Rows.Clear();
+
+
+            }
         }
 
 

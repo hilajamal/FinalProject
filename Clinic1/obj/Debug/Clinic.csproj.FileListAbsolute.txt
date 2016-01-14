@@ -34,7 +34,10 @@ C:\Users\User\Desktop\פרויקט סוף - מערכות מידע\github\Clinic1
 C:\Users\admin\Documents\Visual Studio 2013\Projects\Clinic1\Clinic1\obj\Debug\Clinic1.F_Intake.resources
 C:\Users\admin\Documents\Visual Studio 2013\Projects\Clinic1\Clinic1\obj\Debug\Clinic1.F_Intake_Board.resources
 C:\Users\admin\Documents\Visual Studio 2013\Projects\Clinic1\Clinic1\obj\Debug\Clinic1.F_Meetings.resources
+C:\Users\admin\Documents\Visual Studio 2013\Projects\Clinic1\Clinic1\obj\Debug\Clinic1.F_DoctorMeeting.resources
+C:\Users\admin\Documents\Visual Studio 2013\Projects\Clinic1\Clinic1\obj\Debug\Clinic1.F_Reports.resources
+C:\Users\admin\Documents\Visual Studio 2013\Projects\Clinic1\Clinic1\obj\Debug\Clinic1.F_History.resources
+C:\Users\admin\Documents\Visual Studio 2013\Projects\Clinic1\Clinic1\obj\Debug\Clinic1.F_ChooseDates.resources
+C:\Users\admin\Documents\Visual Studio 2013\Projects\Clinic1\Clinic1\bin\Debug\Microsoft.Office.Tools.Excel.v4.0.Utilities.dll
+C:\Users\admin\Documents\Visual Studio 2013\Projects\Clinic1\Clinic1\bin\Debug\Microsoft.Office.Tools.Excel.v4.0.Utilities.xml
 C:\Users\admin\Documents\Visual Studio 2013\Projects\Clinic1\Clinic1\obj\Debug\Clinic.csprojResolveAssemblyReference.cache
-C:\Users\User\Desktop\פרויקט סוף - מערכות מידע\github\Clinic1\obj\Debug\Clinic.csprojResolveAssemblyReference.cache
-C:\Users\User\Desktop\פרויקט סוף - מערכות מידע\github\Clinic1\obj\Debug\Clinic1.F_Intake_Board.resources
-C:\Users\User\Desktop\פרויקט סוף - מערכות מידע\github\Clinic1\obj\Debug\Clinic1.F_Meetings.resources
