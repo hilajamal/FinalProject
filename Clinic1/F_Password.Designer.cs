@@ -35,6 +35,7 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.BtnLogIn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BtnShowPassword = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,7 +95,7 @@
             this.BtnLogIn.BackColor = System.Drawing.Color.CornflowerBlue;
             this.BtnLogIn.Font = new System.Drawing.Font("David", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLogIn.ForeColor = System.Drawing.Color.Black;
-            this.BtnLogIn.Location = new System.Drawing.Point(188, 168);
+            this.BtnLogIn.Location = new System.Drawing.Point(180, 252);
             this.BtnLogIn.Name = "BtnLogIn";
             this.BtnLogIn.Size = new System.Drawing.Size(155, 57);
             this.BtnLogIn.TabIndex = 26;
@@ -112,6 +113,18 @@
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
             // 
+            // BtnShowPassword
+            // 
+            this.BtnShowPassword.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnShowPassword.Font = new System.Drawing.Font("David", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnShowPassword.Location = new System.Drawing.Point(131, 150);
+            this.BtnShowPassword.Name = "BtnShowPassword";
+            this.BtnShowPassword.Size = new System.Drawing.Size(84, 33);
+            this.BtnShowPassword.TabIndex = 28;
+            this.BtnShowPassword.Text = "הצג סיסמה";
+            this.BtnShowPassword.UseVisualStyleBackColor = false;
+            this.BtnShowPassword.Click += new System.EventHandler(this.BtnShowPassword_Click);
+            // 
             // F_Password
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -119,7 +132,8 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(541, 248);
+            this.ClientSize = new System.Drawing.Size(568, 358);
+            this.Controls.Add(this.BtnShowPassword);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BtnLogIn);
             this.Controls.Add(this.txtPassword);
@@ -129,6 +143,7 @@
             this.Name = "F_Password";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.F_Password_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -143,5 +158,6 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button BtnLogIn;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button BtnShowPassword;
     }
 }

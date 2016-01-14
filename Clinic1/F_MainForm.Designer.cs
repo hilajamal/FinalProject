@@ -237,6 +237,7 @@
             this.Name = "F_MainForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.F_MainForm_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

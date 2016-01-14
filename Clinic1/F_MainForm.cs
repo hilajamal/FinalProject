@@ -106,6 +106,12 @@ namespace Clinic1
             history.Show();
         }
 
+        private void F_MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+
+        }
+
      
     }
 }

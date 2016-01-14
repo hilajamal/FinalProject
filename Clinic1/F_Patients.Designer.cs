@@ -90,9 +90,7 @@
             this.BtnClearFieldsUpdate = new System.Windows.Forms.Button();
             this.CmbRaceUpdate = new System.Windows.Forms.ComboBox();
             this.TxtLastNameUpdate = new System.Windows.Forms.TextBox();
-            this.TxtMainTherapistUpdate = new System.Windows.Forms.TextBox();
             this.label45 = new System.Windows.Forms.Label();
-            this.TxtSecondTherapistUpdate = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
             this.CmbPatientID = new System.Windows.Forms.ComboBox();
             this.CmbCountryOfBirthUpdate = new System.Windows.Forms.ComboBox();
@@ -143,6 +141,8 @@
             this.label43 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.CMbMainTherapistUpdate = new System.Windows.Forms.ComboBox();
+            this.CmbSecondTherapistUpdate = new System.Windows.Forms.ComboBox();
             this.TabGroups.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -791,14 +791,14 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage2.Controls.Add(this.CmbSecondTherapistUpdate);
+            this.tabPage2.Controls.Add(this.CMbMainTherapistUpdate);
             this.tabPage2.Controls.Add(this.TxtBirthDateUpdate);
             this.tabPage2.Controls.Add(this.ExitNoSaveUpdate);
             this.tabPage2.Controls.Add(this.BtnClearFieldsUpdate);
             this.tabPage2.Controls.Add(this.CmbRaceUpdate);
             this.tabPage2.Controls.Add(this.TxtLastNameUpdate);
-            this.tabPage2.Controls.Add(this.TxtMainTherapistUpdate);
             this.tabPage2.Controls.Add(this.label45);
-            this.tabPage2.Controls.Add(this.TxtSecondTherapistUpdate);
             this.tabPage2.Controls.Add(this.label46);
             this.tabPage2.Controls.Add(this.CmbPatientID);
             this.tabPage2.Controls.Add(this.CmbCountryOfBirthUpdate);
@@ -914,42 +914,22 @@
             this.TxtLastNameUpdate.Size = new System.Drawing.Size(120, 23);
             this.TxtLastNameUpdate.TabIndex = 138;
             // 
-            // TxtMainTherapistUpdate
-            // 
-            this.TxtMainTherapistUpdate.BackColor = System.Drawing.Color.Gainsboro;
-            this.TxtMainTherapistUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtMainTherapistUpdate.Location = new System.Drawing.Point(6, 296);
-            this.TxtMainTherapistUpdate.Name = "TxtMainTherapistUpdate";
-            this.TxtMainTherapistUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.TxtMainTherapistUpdate.Size = new System.Drawing.Size(124, 23);
-            this.TxtMainTherapistUpdate.TabIndex = 137;
-            // 
             // label45
             // 
             this.label45.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label45.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label45.Location = new System.Drawing.Point(136, 291);
+            this.label45.Location = new System.Drawing.Point(136, 319);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(100, 27);
             this.label45.TabIndex = 136;
             this.label45.Text = "מטפל ראשי";
             this.label45.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
-            // TxtSecondTherapistUpdate
-            // 
-            this.TxtSecondTherapistUpdate.BackColor = System.Drawing.Color.Gainsboro;
-            this.TxtSecondTherapistUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtSecondTherapistUpdate.Location = new System.Drawing.Point(6, 334);
-            this.TxtSecondTherapistUpdate.Name = "TxtSecondTherapistUpdate";
-            this.TxtSecondTherapistUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.TxtSecondTherapistUpdate.Size = new System.Drawing.Size(124, 23);
-            this.TxtSecondTherapistUpdate.TabIndex = 135;
-            // 
             // label46
             // 
             this.label46.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label46.Location = new System.Drawing.Point(136, 329);
+            this.label46.Location = new System.Drawing.Point(136, 354);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(98, 27);
             this.label46.TabIndex = 134;
@@ -1484,6 +1464,28 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // CMbMainTherapistUpdate
+            // 
+            this.CMbMainTherapistUpdate.BackColor = System.Drawing.Color.Gainsboro;
+            this.CMbMainTherapistUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMbMainTherapistUpdate.FormattingEnabled = true;
+            this.CMbMainTherapistUpdate.Location = new System.Drawing.Point(6, 326);
+            this.CMbMainTherapistUpdate.Name = "CMbMainTherapistUpdate";
+            this.CMbMainTherapistUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.CMbMainTherapistUpdate.Size = new System.Drawing.Size(124, 24);
+            this.CMbMainTherapistUpdate.TabIndex = 199;
+            // 
+            // CmbSecondTherapistUpdate
+            // 
+            this.CmbSecondTherapistUpdate.BackColor = System.Drawing.Color.Gainsboro;
+            this.CmbSecondTherapistUpdate.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CmbSecondTherapistUpdate.FormattingEnabled = true;
+            this.CmbSecondTherapistUpdate.Location = new System.Drawing.Point(6, 361);
+            this.CmbSecondTherapistUpdate.Name = "CmbSecondTherapistUpdate";
+            this.CmbSecondTherapistUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.CmbSecondTherapistUpdate.Size = new System.Drawing.Size(124, 24);
+            this.CmbSecondTherapistUpdate.TabIndex = 200;
+            // 
             // F_Patients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1604,9 +1606,7 @@
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.TextBox TxtMainTherapistUpdate;
         private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.TextBox TxtSecondTherapistUpdate;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.TextBox TxtLastNameUpdate;
         private System.Windows.Forms.ComboBox CmbRace;
@@ -1619,5 +1619,7 @@
         private System.Windows.Forms.Label LblID;
         private System.Windows.Forms.MaskedTextBox TxtBirthDate;
         private System.Windows.Forms.MaskedTextBox TxtBirthDateUpdate;
+        private System.Windows.Forms.ComboBox CmbSecondTherapistUpdate;
+        private System.Windows.Forms.ComboBox CMbMainTherapistUpdate;
     }
 }

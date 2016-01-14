@@ -13,7 +13,7 @@ namespace Clinic1
 {
     public partial class F_Patients : Form
     {
-        int OriginalID = 0;
+         int OriginalID = 0;
         public F_Patients()
         {
             InitializeComponent();
@@ -126,6 +126,32 @@ namespace Clinic1
             CmbRaceUpdate.ValueMember = "ID";
             CmbRaceUpdate.SelectedIndex = 0;
 
+            ClinicTableAdapters.WorkersTableAdapter daTherapistsUpdate = new ClinicTableAdapters.WorkersTableAdapter();
+            Clinic.WorkersDataTable dtWorkers = new Clinic.WorkersDataTable();
+            DataRow row = dtWorkers.NewRow();
+            row["ID"] = 0;
+            row["FullName"] = "";
+            dtWorkers.Rows.InsertAt(row, 0);
+            dtWorkers.Merge(daTherapistsUpdate.GetDataByActiveWorkers());
+            CMbMainTherapistUpdate.DataSource = dtWorkers;
+            CMbMainTherapistUpdate.AutoCompleteMode = AutoCompleteMode.Append;
+            CMbMainTherapistUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CMbMainTherapistUpdate.DisplayMember = "FullName";
+            CMbMainTherapistUpdate.ValueMember = "ID";
+
+            Clinic.WorkersDataTable dtWorkers2 = new Clinic.WorkersDataTable();
+            DataRow row2 = dtWorkers.NewRow();
+            row2["ID"] = 0;
+            row2["FullName"] = "";
+            dtWorkers2.ImportRow(row2);
+            dtWorkers2.Merge(daTherapistsUpdate.GetDataByActiveWorkers());
+            CmbSecondTherapistUpdate.DataSource = dtWorkers2;
+            CmbSecondTherapistUpdate.AutoCompleteMode = AutoCompleteMode.Append;
+            CmbSecondTherapistUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CmbSecondTherapistUpdate.DisplayMember = "FullName";
+            CmbSecondTherapistUpdate.ValueMember = "ID";
+            CmbSecondTherapistUpdate.SelectedIndex = 0;
+
               }
 
         private void BtnAddNewPatient_Click(object sender, EventArgs e)
@@ -181,7 +207,7 @@ namespace Clinic1
                 int race = (int)CmbRace.SelectedValue;
                 string apotropus =TxtApotropus.Text.ToString();
                ClinicTableAdapters.PatientsTableAdapter da = new ClinicTableAdapters.PatientsTableAdapter();
-                da.Insert(id, firstname, lastname, fullName, father, mother, country, gender, city, street, streetNum, zipCode, email, phonehome, phonecellular, phonework, phonefather, phonemother, phoneanother, phonecontact, null, null, insurence, familydoctor, notes, race, apotropus, rs,false,null,false,null);
+                da.Insert(id, firstname, lastname, fullName, father, mother, country, gender, city, street, streetNum, zipCode, email, phonehome, phonecellular, phonework, phonefather, phonemother, phoneanother, phonecontact, 0,0, insurence, familydoctor, notes, race, apotropus, rs,false,null,false,null,DateTime.Now);
                 MessageBox.Show("מטופל נוסף בהצלחה");
 
 
@@ -476,8 +502,8 @@ namespace Clinic1
             TxtPhoneFatherUpdate.Text = dr["PhoneFather"].ToString();
             TxtPhoneMotherUpdate.Text = dr["PhoneMother"].ToString();
             TxtPhoneContactUpdate.Text = dr["PhoneContact"].ToString();
-            //TxtMainTherapistUpdate.Text = dr["FirstName"].ToString();
-            //TxtSecondTherapistUpdate.Text = dr["FirstName"].ToString();
+            CMbMainTherapistUpdate.SelectedValue = Int32.Parse(dr["MainTherapist"].ToString());
+            CmbSecondTherapistUpdate.SelectedValue = Int32.Parse(dr["SecondTherapist"].ToString());
             TxtStreetUpdate.Text = dr["Street"].ToString();
             TxtStreetNumberUpdate.Text = dr["StreetNumber"].ToString();
             TxtZipCodeUpdate.Text = dr["ZipCode"].ToString();
@@ -536,13 +562,18 @@ namespace Clinic1
                 string notes = TxtNotesUpdate.Text.ToString();
                 int race = (int)CmbRaceUpdate.SelectedValue;
                 string apotropus = TxtApotropusUpdate.Text.ToString();
+                int mainTherapist = (int)CMbMainTherapistUpdate.SelectedValue;
+                  int secondTherapist;
+                  if (CmbSecondTherapistUpdate.SelectedValue != null)
+                      secondTherapist = (int)CmbSecondTherapistUpdate.SelectedValue;
+                  else secondTherapist = 0;
 
 
 
 
 
                 ClinicTableAdapters.PatientsTableAdapter da = new ClinicTableAdapters.PatientsTableAdapter();
-                da.UpdateQuery(id, firstname, lastname, fullName, father, mother, country, gender, city, street, streetNum, zipCode, email, phonehome, phonecellular, phonework, phonefather, phonemother, phoneanother, phonecontact, null, null, insurence, familydoctor, notes, race, apotropus,rs, OriginalID);
+                da.UpdateQuery(id, firstname, lastname, fullName, father, mother, country, gender, city, street, streetNum, zipCode, email, phonehome, phonecellular, phonework, phonefather, phonemother, phoneanother, phonecontact, mainTherapist, secondTherapist, insurence, familydoctor, notes, race, apotropus, rs, OriginalID);
                 MessageBox.Show("פרטי מטופל עודכנו בהצלחה");
 
 

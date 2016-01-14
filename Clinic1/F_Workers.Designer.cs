@@ -53,6 +53,8 @@
             this.CmbPermissions = new System.Windows.Forms.ComboBox();
             this.BtnExitNoSavePermissions = new System.Windows.Forms.Button();
             this.BtnSavePermissions = new System.Windows.Forms.Button();
+            this.TxtEmail = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DgWorkers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,7 +90,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DgWorkers.DefaultCellStyle = dataGridViewCellStyle3;
-            this.DgWorkers.Location = new System.Drawing.Point(194, 42);
+            this.DgWorkers.Location = new System.Drawing.Point(72, 23);
             this.DgWorkers.MultiSelect = false;
             this.DgWorkers.Name = "DgWorkers";
             this.DgWorkers.ReadOnly = true;
@@ -105,7 +107,7 @@
             dataGridViewCellStyle5.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DgWorkers.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.DgWorkers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgWorkers.Size = new System.Drawing.Size(559, 423);
+            this.DgWorkers.Size = new System.Drawing.Size(782, 423);
             this.DgWorkers.TabIndex = 0;
             // 
             // BtnAddNewWorker
@@ -288,7 +290,7 @@
             // 
             this.LblPermission.BackColor = System.Drawing.Color.White;
             this.LblPermission.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPermission.Location = new System.Drawing.Point(520, 321);
+            this.LblPermission.Location = new System.Drawing.Point(520, 317);
             this.LblPermission.Name = "LblPermission";
             this.LblPermission.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.LblPermission.Size = new System.Drawing.Size(104, 24);
@@ -300,7 +302,7 @@
             // 
             this.CmbPermissions.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbPermissions.FormattingEnabled = true;
-            this.CmbPermissions.Location = new System.Drawing.Point(359, 321);
+            this.CmbPermissions.Location = new System.Drawing.Point(359, 317);
             this.CmbPermissions.Name = "CmbPermissions";
             this.CmbPermissions.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CmbPermissions.Size = new System.Drawing.Size(100, 24);
@@ -332,6 +334,27 @@
             this.BtnSavePermissions.Visible = false;
             this.BtnSavePermissions.Click += new System.EventHandler(this.BtnSavePermissions_Click);
             // 
+            // TxtEmail
+            // 
+            this.TxtEmail.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtEmail.Location = new System.Drawing.Point(359, 362);
+            this.TxtEmail.Name = "TxtEmail";
+            this.TxtEmail.Size = new System.Drawing.Size(100, 23);
+            this.TxtEmail.TabIndex = 36;
+            this.TxtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("David", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(522, 360);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label1.Size = new System.Drawing.Size(100, 22);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "דואר אלקטרוני";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // F_Workers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -358,6 +381,8 @@
             this.Controls.Add(this.LblID);
             this.Controls.Add(this.CmbPermissions);
             this.Controls.Add(this.LblPermission);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.TxtEmail);
             this.Name = "F_Workers";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -389,5 +414,7 @@
         private System.Windows.Forms.ComboBox CmbPermissions;
         private System.Windows.Forms.Button BtnExitNoSavePermissions;
         private System.Windows.Forms.Button BtnSavePermissions;
+        private System.Windows.Forms.TextBox TxtEmail;
+        private System.Windows.Forms.Label label1;
     }
 }

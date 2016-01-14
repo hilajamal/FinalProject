@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Mail;
 
 namespace Clinic1
 {
@@ -38,6 +39,8 @@ namespace Clinic1
             var col5 = new DataGridViewComboBoxColumn();
             var col6 = new DataGridViewCheckBoxColumn();
             var col7 = new DataGridViewTextBoxColumn();
+            var col8 = new DataGridViewTextBoxColumn();
+
 
             ClinicTableAdapters.PermissionTypeTableAdapter daPermissions = new ClinicTableAdapters.PermissionTypeTableAdapter();
 
@@ -75,6 +78,10 @@ namespace Clinic1
             col7.Name = "FullName";
             DgWorkers.Columns.Add(col7);
 
+            col8.HeaderText = "דואר אלקטרוני";
+            col8.DataPropertyName = "Email";
+            col8.Name = "Email";
+            DgWorkers.Columns.Add(col8);
 
             DgWorkers.Columns["FullName"].Visible = false;
             DgWorkers.Columns["Permission"].Visible = false;
@@ -107,6 +114,8 @@ namespace Clinic1
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
+
+
             ClinicTableAdapters.WorkersTableAdapter daWorkers = new ClinicTableAdapters.WorkersTableAdapter();
             if (!ValidateWorkerTextBox() == false)
             {
@@ -116,7 +125,7 @@ namespace Clinic1
                 if (workerCheck.Rows.Count == 0)
                 {
                     int perm = Int32.Parse(CmbPermissions.SelectedValue.ToString());
-                    daWorkers.Insert(Int32.Parse(TxtID.Text), TxtFirstName.Text, fullname, TxtLastName.Text, perm, true,TxtPassword.Text);
+                    daWorkers.Insert(Int32.Parse(TxtID.Text), TxtFirstName.Text, fullname, TxtLastName.Text, perm, true, TxtPassword.Text,TxtEmail.Text);
                     BtnAddNewWorker.Visible = true;
                     BtnPermissions.Visible = true;
                     workerCheck = daWorkers.GetData();
@@ -215,6 +224,24 @@ namespace Clinic1
                     First_ItemNull = true;
                 }
                 HasErrors = true;
+                 }
+                try
+                {
+                    var test = new MailAddress(TxtEmail.Text);
+                }
+                catch (Exception e)
+                {
+                    if (First_ItemNull == true)
+                    {
+                        str.Append(", דואר אלקטרוני תקין");
+                    }
+                    else
+                    {
+                        str.Append(" דואר אלקטרוני תקין");
+                        First_ItemNull = true;
+                    }
+                    HasErrors = true;
+                
             }
 
             if (HasErrors)

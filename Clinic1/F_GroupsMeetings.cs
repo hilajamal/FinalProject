@@ -115,15 +115,29 @@ namespace Clinic1
 
             ClinicTableAdapters.WorkersTableAdapter daWorker = new ClinicTableAdapters.WorkersTableAdapter();
             Clinic.WorkersDataTable dtWorkers1 = daWorker.GetDataByActiveWorkers();
-            Clinic.WorkersDataTable dtWorkers2 = daWorker.GetDataByActiveWorkers();
+            Clinic.WorkersDataTable dtWorkers2 = new Clinic.WorkersDataTable();
             Clinic.WorkersDataTable dtWorkers3 = daWorker.GetDataByActiveWorkers();
-            Clinic.WorkersDataTable dtWorkers4 = daWorker.GetDataByActiveWorkers();
-            
+            Clinic.WorkersDataTable dtWorkers4 = new Clinic.WorkersDataTable();
+
+
+            DataRow row = dtWorkers2.NewRow();
+            row["ID"] = 0;
+            row["FullName"] = "";
+            dtWorkers2.Rows.InsertAt(row, 0);
+            dtWorkers2.Merge(daWorker.GetDataByActiveWorkers());
+
+            DataRow row2 = dtWorkers4.NewRow();
+            row2["ID"] = 0;
+            row2["FullName"] = "";
+            dtWorkers4.Rows.InsertAt(row2, 0);
+            dtWorkers4.Merge(daWorker.GetDataByActiveWorkers());
+       
             CmbMainTherapistAdd.DataSource = dtWorkers1;
             CmbSecondTherapistAdd.DataSource = dtWorkers2;
             CmbMainTherapistUpdate.DataSource = dtWorkers3;
             CmbSecondTherapistUpdate.DataSource = dtWorkers4;
-
+            CmbSecondTherapistAdd.SelectedIndex = 0;
+            CmbSecondTherapistUpdate.SelectedIndex = 0;
 
             CmbMainTherapistAdd.AutoCompleteSource = AutoCompleteSource.ListItems;
             CmbMainTherapistAdd.DisplayMember = "FullName";

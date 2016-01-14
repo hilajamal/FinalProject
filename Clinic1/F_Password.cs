@@ -12,6 +12,7 @@ namespace Clinic1
 {
     public partial class F_Password : Form
     {
+        public bool first = true;
         ToolTip toolTip1 = new ToolTip();
 
                         public F_Password()
@@ -89,6 +90,28 @@ namespace Clinic1
         {
             if (e.KeyCode == Keys.Enter)
             BtnLogIn.PerformClick();
+        }
+
+        private void BtnShowPassword_Click(object sender, EventArgs e)
+        {
+            if (first == true)
+            {
+                txtPassword.PasswordChar = '\0';
+                first = false;
+                BtnShowPassword.Text = "הסתר סיסמה";
+            }
+            else
+            {
+                txtPassword.PasswordChar = '*';
+                first = true;
+                BtnShowPassword.Text = "הצג סיסמה";
+
+            }
+        }
+
+        private void F_Password_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
