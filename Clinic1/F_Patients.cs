@@ -25,6 +25,11 @@ namespace Clinic1
         private void addCombos()
         {
 
+            CmbPatientID.AutoCompleteMode = AutoCompleteMode.Append;
+            CmbPatientID.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CmbPatientID.DisplayMember = "ID";
+            CmbPatientID.ValueMember = "ID";
+
             ClinicTableAdapters.GenderTableAdapter daGender = new ClinicTableAdapters.GenderTableAdapter();
             Clinic.GenderDataTable dtGender = daGender.GetData();
             CmbGender.DataSource = dtGender;
@@ -78,12 +83,9 @@ namespace Clinic1
             Clinic.PatientsDataTable dtPatients = daPatients.GetData();
 
             //PatientsID
-            CmbPatientID.AutoCompleteMode = AutoCompleteMode.Append;
-            CmbPatientID.AutoCompleteSource = AutoCompleteSource.ListItems;
-            CmbPatientID.DisplayMember = "ID";
-            CmbPatientID.ValueMember = "ID";
             CmbPatientID.DataSource = dtPatients;
-            
+     
+
             Clinic.CountryDataTable countriesUpdate = countryDa.GetData();
             CmbCountryOfBirthUpdate.DataSource = countriesUpdate;
             CmbCountryOfBirthUpdate.AutoCompleteMode = AutoCompleteMode.Append;

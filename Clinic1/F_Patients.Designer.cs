@@ -83,6 +83,7 @@
             this.LblFatherName = new System.Windows.Forms.Label();
             this.LblLastName = new System.Windows.Forms.Label();
             this.LblFirstName = new System.Windows.Forms.Label();
+            this.LblID = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.TxtBirthDateUpdate = new System.Windows.Forms.MaskedTextBox();
             this.ExitNoSaveUpdate = new System.Windows.Forms.Button();
@@ -776,7 +777,17 @@
             this.LblFirstName.Text = "שם פרטי";
             this.LblFirstName.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
+            // LblID
+            // 
+            this.LblID.Font = new System.Drawing.Font("David", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.LblID.Location = new System.Drawing.Point(773, 5);
+            this.LblID.Name = "LblID";
+            this.LblID.Size = new System.Drawing.Size(122, 31);
+            this.LblID.TabIndex = 0;
+            this.LblID.Text = "תעודת זהות";
+            this.LblID.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;

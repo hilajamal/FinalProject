@@ -80,11 +80,12 @@ namespace Clinic1
 
          //PatientsIDUpdate
          Clinic.PatientsDataTable dtPatientsUpdate = daPatients.GetDataByAppointmentTypeID(6);
-         CmbPatientIDUpdate.DataSource = dtPatientsUpdate;
          CmbPatientIDUpdate.AutoCompleteMode = AutoCompleteMode.Append;
          CmbPatientIDUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
          CmbPatientIDUpdate.DisplayMember = "ID";
          CmbPatientIDUpdate.ValueMember = "ID";
+         CmbPatientIDUpdate.DataSource = dtPatientsUpdate;
+    
          if (CmbPatientIDUpdate.Items.Count > 0)
          {
              CmbPatientIDUpdate.SelectedIndex = -1;

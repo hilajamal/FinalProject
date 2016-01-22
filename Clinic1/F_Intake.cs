@@ -26,7 +26,10 @@ namespace Clinic1
 
         public void addCols()
         {
-
+            CmblPatientId.AutoCompleteMode = AutoCompleteMode.Append;
+            CmblPatientId.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CmblPatientId.DisplayMember = "ID";
+            CmblPatientId.ValueMember = "ID";
 
             CmbAppointmenrNumber.AutoCompleteMode = AutoCompleteMode.Append;
             CmbAppointmenrNumber.AutoCompleteSource = AutoCompleteSource.ListItems;
@@ -34,6 +37,8 @@ namespace Clinic1
             CmbAppointmenrNumber.ValueMember = "AppointmentNumber";
 
             DgDiagnosesUpdate.AutoGenerateColumns = false;
+            DgDiagnoses.AutoGenerateColumns = false;
+
             TxtWrittenByDateAdd.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
             TxtWrittenByAdd.Text = Globals.ConnectedUserName;
              HourPickerStartAdd.ShowUpDown = true;
@@ -56,11 +61,7 @@ namespace Clinic1
 
             //PatientsIDAdd
             CmblPatientId.DataSource = dtPatients;
-            CmblPatientId.AutoCompleteMode = AutoCompleteMode.Append;
-            CmblPatientId.AutoCompleteSource = AutoCompleteSource.ListItems;
-            CmblPatientId.DisplayMember = "ID";
-            CmblPatientId.ValueMember = "ID";
-            CmblPatientId.SelectedIndex = 0;
+      
 
             //PatientsNameAdd
             CmbPatientName.DataSource = dtPatients;

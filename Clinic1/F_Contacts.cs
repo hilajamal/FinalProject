@@ -151,7 +151,7 @@ namespace Clinic1
             TxtRemarksUpdate.Text = dt.Rows[0]["Remarks"].ToString();
             TxtRelationUpdate.Text = dt.Rows[0]["Relationship"].ToString();
             TxtContentsUpdate.Text = dt.Rows[0]["Contents"].ToString();
-            TxtContactNameUpdate.Text = dt.Rows[0]["ContactPersonFName"].ToString();
+            TxtContactNameUpdate.Text = dt.Rows[0]["ContactName"].ToString();
             CmbWorkerUpdate.SelectedValue = Int32.Parse(dt.Rows[0]["WorkerID"].ToString());
             TxtContactTypeUpdate.Text = dt.Rows[0]["ContactType"].ToString();
             OriginalID = Int32.Parse(dt.Rows[0]["ID"].ToString());

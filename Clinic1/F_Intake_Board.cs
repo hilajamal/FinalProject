@@ -25,7 +25,6 @@ namespace Clinic1
             ClinicTableAdapters.PatientsTableAdapter daPatients = new ClinicTableAdapters.PatientsTableAdapter();
 
             Clinic.PatientsDataTable dtPatients = daPatients.GetPatientsWaitingForIntakeBoard();
-
             CmbPatientIDUpdate.AutoCompleteMode = AutoCompleteMode.Append;
             CmbPatientIDUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
             CmbPatientIDUpdate.DisplayMember = "ID";
@@ -89,7 +88,7 @@ namespace Clinic1
 
             //PatientsIDAdd
             CmbPatientIDUpdate.DataSource = dtPatientsUpdate;
-          
+    
             if (CmbPatientIDUpdate.Items.Count > 0)
             {
                 CmbPatientIDUpdate.SelectedIndex = -1;

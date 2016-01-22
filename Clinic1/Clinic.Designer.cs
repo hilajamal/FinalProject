@@ -9491,6 +9491,8 @@ namespace Clinic1 {
             
             private global::System.Data.DataColumn columnttype;
             
+            private global::System.Data.DataColumn columnID1;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public PatientsForTherapistDataTable() {
@@ -9582,6 +9584,14 @@ namespace Clinic1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ID1Column {
+                get {
+                    return this.columnID1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -9617,7 +9627,7 @@ namespace Clinic1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PatientsForTherapistRow AddPatientsForTherapistRow(int ID, string wFirst, string wLast, int pID, string FirstName, string LastName, string ttype) {
+            public PatientsForTherapistRow AddPatientsForTherapistRow(int ID, string wFirst, string wLast, int pID, string FirstName, string LastName, string ttype, string ID1) {
                 PatientsForTherapistRow rowPatientsForTherapistRow = ((PatientsForTherapistRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
@@ -9626,7 +9636,8 @@ namespace Clinic1 {
                         pID,
                         FirstName,
                         LastName,
-                        ttype};
+                        ttype,
+                        ID1};
                 rowPatientsForTherapistRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPatientsForTherapistRow);
                 return rowPatientsForTherapistRow;
@@ -9656,6 +9667,7 @@ namespace Clinic1 {
                 this.columnFirstName = base.Columns["FirstName"];
                 this.columnLastName = base.Columns["LastName"];
                 this.columnttype = base.Columns["ttype"];
+                this.columnID1 = base.Columns["ID1"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9675,6 +9687,8 @@ namespace Clinic1 {
                 base.Columns.Add(this.columnLastName);
                 this.columnttype = new global::System.Data.DataColumn("ttype", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnttype);
+                this.columnID1 = new global::System.Data.DataColumn("ID1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID1);
                 this.columnID.AllowDBNull = false;
                 this.columnwFirst.MaxLength = 2147483647;
                 this.columnwLast.MaxLength = 50;
@@ -9683,6 +9697,9 @@ namespace Clinic1 {
                 this.columnLastName.MaxLength = 50;
                 this.columnttype.AllowDBNull = false;
                 this.columnttype.MaxLength = 9;
+                this.columnID1.AllowDBNull = false;
+                this.columnID1.Caption = "ID";
+                this.columnID1.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15048,6 +15065,17 @@ namespace Clinic1 {
                 }
                 set {
                     this[this.tablePatientsForTherapist.ttypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ID1 {
+                get {
+                    return ((string)(this[this.tablePatientsForTherapist.ID1Column]));
+                }
+                set {
+                    this[this.tablePatientsForTherapist.ID1Column] = value;
                 }
             }
             
@@ -26295,7 +26323,7 @@ WHERE        (ID = @Original_ID)";
             command.Parameters[1].Value = ((int)(PatientID));
             command.Parameters[2].Value = ((int)(WorkerID));
             if ((ContactName == null)) {
-                throw new global::System.ArgumentNullException("ContactPersonFName");
+                command.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
                 command.Parameters[3].Value = ((string)(ContactName));
@@ -29071,13 +29099,13 @@ ORDER BY EndDate DESC";
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "PatientsForTherapist";
-            tableMapping.ColumnMappings.Add("ID", "ID");
             tableMapping.ColumnMappings.Add("wFirst", "wFirst");
             tableMapping.ColumnMappings.Add("wLast", "wLast");
             tableMapping.ColumnMappings.Add("pID", "pID");
             tableMapping.ColumnMappings.Add("FirstName", "FirstName");
             tableMapping.ColumnMappings.Add("LastName", "LastName");
             tableMapping.ColumnMappings.Add("ttype", "ttype");
+            tableMapping.ColumnMappings.Add("ID", "ID1");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -29094,8 +29122,8 @@ ORDER BY EndDate DESC";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, wFirst, wLast, pID, FirstName, LastName, ttype FROM dbo.PatientsForThe" +
-                "rapist";
+            this._commandCollection[0].CommandText = "SELECT        ID, wFirst, wLast, pID, FirstName, LastName, ttype\r\nFROM           " +
+                " PatientsForTherapist\r\nWHERE        (ttype = \'מטפל ראשי\')";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

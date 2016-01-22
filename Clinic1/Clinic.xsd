@@ -2484,23 +2484,25 @@ WHERE        (ADate &gt;= @Start) AND (ADate &lt;= @End)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PatientsForTherapistTableAdapter" GeneratorDataComponentClassName="PatientsForTherapistTableAdapter" Name="PatientsForTherapist" UserDataComponentName="PatientsForTherapistTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ClinicDBConnectionString (Settings)" DbObjectName="hr2016.dbo.PatientsForTherapist" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ClinicDBConnectionString (Settings)" DbObjectName="hr2016.dbo.PatientsForTherapist" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT ID, wFirst, wLast, pID, FirstName, LastName, ttype FROM dbo.PatientsForTherapist</CommandText>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ID, wFirst, wLast, pID, FirstName, LastName, ttype
+FROM            PatientsForTherapist
+WHERE        (ttype = 'מטפל ראשי')</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="ID" DataSetColumn="ID" />
               <Mapping SourceColumn="wFirst" DataSetColumn="wFirst" />
               <Mapping SourceColumn="wLast" DataSetColumn="wLast" />
               <Mapping SourceColumn="pID" DataSetColumn="pID" />
               <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
               <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
               <Mapping SourceColumn="ttype" DataSetColumn="ttype" />
+              <Mapping SourceColumn="ID" DataSetColumn="ID1" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -3097,7 +3099,7 @@ ORDER BY WID, Date</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Medicines" msprop:Generator_TableClassName="MedicinesDataTable" msprop:Generator_TableVarName="tableMedicines" msprop:Generator_TablePropName="Medicines" msprop:Generator_RowDeletingName="MedicinesRowDeleting" msprop:Generator_RowChangingName="MedicinesRowChanging" msprop:Generator_RowEvHandlerName="MedicinesRowChangeEventHandler" msprop:Generator_RowDeletedName="MedicinesRowDeleted" msprop:Generator_UserTableName="Medicines" msprop:Generator_RowChangedName="MedicinesRowChanged" msprop:Generator_RowEvArgName="MedicinesRowChangeEvent" msprop:Generator_RowClassName="MedicinesRow">
+        <xs:element name="Medicines" msprop:Generator_TableClassName="MedicinesDataTable" msprop:Generator_TableVarName="tableMedicines" msprop:Generator_RowChangedName="MedicinesRowChanged" msprop:Generator_TablePropName="Medicines" msprop:Generator_RowDeletingName="MedicinesRowDeleting" msprop:Generator_RowChangingName="MedicinesRowChanging" msprop:Generator_RowEvHandlerName="MedicinesRowChangeEventHandler" msprop:Generator_RowDeletedName="MedicinesRowDeleted" msprop:Generator_RowClassName="MedicinesRow" msprop:Generator_UserTableName="Medicines" msprop:Generator_RowEvArgName="MedicinesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -3111,7 +3113,7 @@ ORDER BY WID, Date</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="MedicinesForPatients" msprop:Generator_TableClassName="MedicinesForPatientsDataTable" msprop:Generator_TableVarName="tableMedicinesForPatients" msprop:Generator_TablePropName="MedicinesForPatients" msprop:Generator_RowDeletingName="MedicinesForPatientsRowDeleting" msprop:Generator_RowChangingName="MedicinesForPatientsRowChanging" msprop:Generator_RowEvHandlerName="MedicinesForPatientsRowChangeEventHandler" msprop:Generator_RowDeletedName="MedicinesForPatientsRowDeleted" msprop:Generator_UserTableName="MedicinesForPatients" msprop:Generator_RowChangedName="MedicinesForPatientsRowChanged" msprop:Generator_RowEvArgName="MedicinesForPatientsRowChangeEvent" msprop:Generator_RowClassName="MedicinesForPatientsRow">
+        <xs:element name="MedicinesForPatients" msprop:Generator_TableClassName="MedicinesForPatientsDataTable" msprop:Generator_TableVarName="tableMedicinesForPatients" msprop:Generator_RowChangedName="MedicinesForPatientsRowChanged" msprop:Generator_TablePropName="MedicinesForPatients" msprop:Generator_RowDeletingName="MedicinesForPatientsRowDeleting" msprop:Generator_RowChangingName="MedicinesForPatientsRowChanging" msprop:Generator_RowEvHandlerName="MedicinesForPatientsRowChangeEventHandler" msprop:Generator_RowDeletedName="MedicinesForPatientsRowDeleted" msprop:Generator_RowClassName="MedicinesForPatientsRow" msprop:Generator_UserTableName="MedicinesForPatients" msprop:Generator_RowEvArgName="MedicinesForPatientsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -3131,7 +3133,7 @@ ORDER BY WID, Date</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="AppointmentsByPatientsview" msprop:Generator_TableClassName="AppointmentsByPatientsviewDataTable" msprop:Generator_TableVarName="tableAppointmentsByPatientsview" msprop:Generator_RowChangedName="AppointmentsByPatientsviewRowChanged" msprop:Generator_TablePropName="AppointmentsByPatientsview" msprop:Generator_RowDeletingName="AppointmentsByPatientsviewRowDeleting" msprop:Generator_RowChangingName="AppointmentsByPatientsviewRowChanging" msprop:Generator_RowEvHandlerName="AppointmentsByPatientsviewRowChangeEventHandler" msprop:Generator_RowDeletedName="AppointmentsByPatientsviewRowDeleted" msprop:Generator_RowClassName="AppointmentsByPatientsviewRow" msprop:Generator_UserTableName="AppointmentsByPatientsview" msprop:Generator_RowEvArgName="AppointmentsByPatientsviewRowChangeEvent">
+        <xs:element name="AppointmentsByPatientsview" msprop:Generator_TableClassName="AppointmentsByPatientsviewDataTable" msprop:Generator_TableVarName="tableAppointmentsByPatientsview" msprop:Generator_TablePropName="AppointmentsByPatientsview" msprop:Generator_RowDeletingName="AppointmentsByPatientsviewRowDeleting" msprop:Generator_RowChangingName="AppointmentsByPatientsviewRowChanging" msprop:Generator_RowEvHandlerName="AppointmentsByPatientsviewRowChangeEventHandler" msprop:Generator_RowDeletedName="AppointmentsByPatientsviewRowDeleted" msprop:Generator_UserTableName="AppointmentsByPatientsview" msprop:Generator_RowChangedName="AppointmentsByPatientsviewRowChanged" msprop:Generator_RowEvArgName="AppointmentsByPatientsviewRowChangeEvent" msprop:Generator_RowClassName="AppointmentsByPatientsviewRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="PatientID" msprop:Generator_ColumnVarNameInTable="columnPatientID" msprop:Generator_ColumnPropNameInRow="PatientID" msprop:Generator_ColumnPropNameInTable="PatientIDColumn" msprop:Generator_UserColumnName="PatientID" type="xs:int" minOccurs="0" />
@@ -3168,7 +3170,7 @@ ORDER BY WID, Date</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="AllPatients" msprop:Generator_TableClassName="AllPatientsDataTable" msprop:Generator_TableVarName="tableAllPatients" msprop:Generator_RowChangedName="AllPatientsRowChanged" msprop:Generator_TablePropName="AllPatients" msprop:Generator_RowDeletingName="AllPatientsRowDeleting" msprop:Generator_RowChangingName="AllPatientsRowChanging" msprop:Generator_RowEvHandlerName="AllPatientsRowChangeEventHandler" msprop:Generator_RowDeletedName="AllPatientsRowDeleted" msprop:Generator_RowClassName="AllPatientsRow" msprop:Generator_UserTableName="AllPatients" msprop:Generator_RowEvArgName="AllPatientsRowChangeEvent">
+        <xs:element name="AllPatients" msprop:Generator_TableClassName="AllPatientsDataTable" msprop:Generator_TableVarName="tableAllPatients" msprop:Generator_TablePropName="AllPatients" msprop:Generator_RowDeletingName="AllPatientsRowDeleting" msprop:Generator_RowChangingName="AllPatientsRowChanging" msprop:Generator_RowEvHandlerName="AllPatientsRowChangeEventHandler" msprop:Generator_RowDeletedName="AllPatientsRowDeleted" msprop:Generator_UserTableName="AllPatients" msprop:Generator_RowChangedName="AllPatientsRowChanged" msprop:Generator_RowEvArgName="AllPatientsRowChangeEvent" msprop:Generator_RowClassName="AllPatientsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -3327,7 +3329,7 @@ ORDER BY WID, Date</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="WaithingForIntake" msprop:Generator_TableClassName="WaithingForIntakeDataTable" msprop:Generator_TableVarName="tableWaithingForIntake" msprop:Generator_TablePropName="WaithingForIntake" msprop:Generator_RowDeletingName="WaithingForIntakeRowDeleting" msprop:Generator_RowChangingName="WaithingForIntakeRowChanging" msprop:Generator_RowEvHandlerName="WaithingForIntakeRowChangeEventHandler" msprop:Generator_RowDeletedName="WaithingForIntakeRowDeleted" msprop:Generator_UserTableName="WaithingForIntake" msprop:Generator_RowChangedName="WaithingForIntakeRowChanged" msprop:Generator_RowEvArgName="WaithingForIntakeRowChangeEvent" msprop:Generator_RowClassName="WaithingForIntakeRow">
+        <xs:element name="WaithingForIntake" msprop:Generator_TableClassName="WaithingForIntakeDataTable" msprop:Generator_TableVarName="tableWaithingForIntake" msprop:Generator_RowChangedName="WaithingForIntakeRowChanged" msprop:Generator_TablePropName="WaithingForIntake" msprop:Generator_RowDeletingName="WaithingForIntakeRowDeleting" msprop:Generator_RowChangingName="WaithingForIntakeRowChanging" msprop:Generator_RowEvHandlerName="WaithingForIntakeRowChangeEventHandler" msprop:Generator_RowDeletedName="WaithingForIntakeRowDeleted" msprop:Generator_RowClassName="WaithingForIntakeRow" msprop:Generator_UserTableName="WaithingForIntake" msprop:Generator_RowEvArgName="WaithingForIntakeRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -3371,7 +3373,7 @@ ORDER BY WID, Date</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PatientsForTherapist" msprop:Generator_TableClassName="PatientsForTherapistDataTable" msprop:Generator_TableVarName="tablePatientsForTherapist" msprop:Generator_RowChangedName="PatientsForTherapistRowChanged" msprop:Generator_TablePropName="PatientsForTherapist" msprop:Generator_RowDeletingName="PatientsForTherapistRowDeleting" msprop:Generator_RowChangingName="PatientsForTherapistRowChanging" msprop:Generator_RowEvHandlerName="PatientsForTherapistRowChangeEventHandler" msprop:Generator_RowDeletedName="PatientsForTherapistRowDeleted" msprop:Generator_RowClassName="PatientsForTherapistRow" msprop:Generator_UserTableName="PatientsForTherapist" msprop:Generator_RowEvArgName="PatientsForTherapistRowChangeEvent">
+        <xs:element name="PatientsForTherapist" msprop:Generator_TableClassName="PatientsForTherapistDataTable" msprop:Generator_TableVarName="tablePatientsForTherapist" msprop:Generator_TablePropName="PatientsForTherapist" msprop:Generator_RowDeletingName="PatientsForTherapistRowDeleting" msprop:Generator_RowChangingName="PatientsForTherapistRowChanging" msprop:Generator_RowEvHandlerName="PatientsForTherapistRowChangeEventHandler" msprop:Generator_RowDeletedName="PatientsForTherapistRowDeleted" msprop:Generator_UserTableName="PatientsForTherapist" msprop:Generator_RowChangedName="PatientsForTherapistRowChanged" msprop:Generator_RowEvArgName="PatientsForTherapistRowChangeEvent" msprop:Generator_RowClassName="PatientsForTherapistRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -3411,10 +3413,17 @@ ORDER BY WID, Date</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="ID1" msdata:Caption="ID" msprop:Generator_ColumnVarNameInTable="columnID1" msprop:Generator_ColumnPropNameInRow="ID1" msprop:Generator_ColumnPropNameInTable="ID1Column" msprop:Generator_UserColumnName="ID1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="AppointmentssForTherapist" msprop:Generator_TableClassName="AppointmentssForTherapistDataTable" msprop:Generator_TableVarName="tableAppointmentssForTherapist" msprop:Generator_TablePropName="AppointmentssForTherapist" msprop:Generator_RowDeletingName="AppointmentssForTherapistRowDeleting" msprop:Generator_RowChangingName="AppointmentssForTherapistRowChanging" msprop:Generator_RowEvHandlerName="AppointmentssForTherapistRowChangeEventHandler" msprop:Generator_RowDeletedName="AppointmentssForTherapistRowDeleted" msprop:Generator_UserTableName="AppointmentssForTherapist" msprop:Generator_RowChangedName="AppointmentssForTherapistRowChanged" msprop:Generator_RowEvArgName="AppointmentssForTherapistRowChangeEvent" msprop:Generator_RowClassName="AppointmentssForTherapistRow">
+        <xs:element name="AppointmentssForTherapist" msprop:Generator_TableClassName="AppointmentssForTherapistDataTable" msprop:Generator_TableVarName="tableAppointmentssForTherapist" msprop:Generator_RowChangedName="AppointmentssForTherapistRowChanged" msprop:Generator_TablePropName="AppointmentssForTherapist" msprop:Generator_RowDeletingName="AppointmentssForTherapistRowDeleting" msprop:Generator_RowChangingName="AppointmentssForTherapistRowChanging" msprop:Generator_RowEvHandlerName="AppointmentssForTherapistRowChangeEventHandler" msprop:Generator_RowDeletedName="AppointmentssForTherapistRowDeleted" msprop:Generator_RowClassName="AppointmentssForTherapistRow" msprop:Generator_UserTableName="AppointmentssForTherapist" msprop:Generator_RowEvArgName="AppointmentssForTherapistRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="WID" msprop:Generator_ColumnVarNameInTable="columnWID" msprop:Generator_ColumnPropNameInRow="WID" msprop:Generator_ColumnPropNameInTable="WIDColumn" msprop:Generator_UserColumnName="WID" type="xs:int" minOccurs="0" />

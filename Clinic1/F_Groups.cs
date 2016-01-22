@@ -89,14 +89,16 @@ namespace Clinic1
             CmbGroupIdUpdate.DisplayMember = "GroupNumber";
             CmbGroupIdUpdate.ValueMember = "GroupNumber";
             CmbGroupIdUpdate.DataSource = dtGroups;
-            CmbGroupIdUpdate.SelectedIndex = 0;
+            DgPatientsUpdate.DataSource = daPatients.GetDataByPatientIDInnerJoinPatients(Int32.Parse(CmbGroupIdUpdate.SelectedValue.ToString()));
+            DgPatientsUpdate.Refresh();
+
+            //Group Name
+            CmbGroupNameUpdate.DataSource = dtGroups;
             CmbGroupNameUpdate.AutoCompleteMode = AutoCompleteMode.Append;
             CmbGroupNameUpdate.AutoCompleteSource = AutoCompleteSource.ListItems;
             CmbGroupNameUpdate.DisplayMember = "Name";
             CmbGroupNameUpdate.ValueMember = "GroupNumber";
-            DgPatientsUpdate.DataSource = daPatients.GetDataByPatientIDInnerJoinPatients(Int32.Parse(CmbGroupIdUpdate.SelectedValue.ToString()));
-            DgPatientsUpdate.Refresh();
-            CmbGroupNameUpdate.DataSource = dtGroups;
+            handeled = true;
             CmbGroupNameUpdate.SelectedIndex = 0;
 
                        

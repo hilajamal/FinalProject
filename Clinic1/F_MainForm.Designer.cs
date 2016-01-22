@@ -42,6 +42,7 @@
             this.BtnDoctor = new System.Windows.Forms.Button();
             this.LblName = new System.Windows.Forms.Label();
             this.BtnHistory = new System.Windows.Forms.Button();
+            this.Btn_OpenFiles = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -66,7 +67,7 @@
             this.btnContacts.Name = "btnContacts";
             this.btnContacts.Size = new System.Drawing.Size(214, 135);
             this.btnContacts.TabIndex = 1;
-            this.btnContacts.Text = "מגעים";
+            this.btnContacts.Text = "קשר טלפוני/הערות";
             this.btnContacts.UseVisualStyleBackColor = false;
             this.btnContacts.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -213,6 +214,16 @@
             this.BtnHistory.UseVisualStyleBackColor = false;
             this.BtnHistory.Click += new System.EventHandler(this.BtnHistory_Click);
             // 
+            // Btn_OpenFiles
+            // 
+            this.Btn_OpenFiles.Location = new System.Drawing.Point(120, 23);
+            this.Btn_OpenFiles.Name = "Btn_OpenFiles";
+            this.Btn_OpenFiles.Size = new System.Drawing.Size(75, 23);
+            this.Btn_OpenFiles.TabIndex = 13;
+            this.Btn_OpenFiles.Text = "files";
+            this.Btn_OpenFiles.UseVisualStyleBackColor = true;
+            this.Btn_OpenFiles.Click += new System.EventHandler(this.Btn_OpenFiles_Click);
+            // 
             // F_MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,6 +232,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(783, 669);
+            this.Controls.Add(this.Btn_OpenFiles);
             this.Controls.Add(this.BtnHistory);
             this.Controls.Add(this.LblName);
             this.Controls.Add(this.BtnDoctor);
@@ -258,6 +270,7 @@
         private System.Windows.Forms.Button BtnDoctor;
         private System.Windows.Forms.Label LblName;
         private System.Windows.Forms.Button BtnHistory;
+        private System.Windows.Forms.Button Btn_OpenFiles;
 
     }
 }

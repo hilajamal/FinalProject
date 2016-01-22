@@ -112,6 +112,12 @@ namespace Clinic1
 
         }
 
+        private void Btn_OpenFiles_Click(object sender, EventArgs e)
+        {
+            F_FilesForP filesForPatient = new F_FilesForP();
+            filesForPatient.Show();
+        }
+
      
     }
 }
